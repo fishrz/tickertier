@@ -4,6 +4,24 @@ from __future__ import annotations
 from importlib import import_module
 from typing import Callable
 
+# Tickers that are present in `prices` for benchmarking (e.g. QQQ for `tank`/`reverse_idx`)
+# but are NOT contestants in any award.
+BENCHMARK_TICKERS: frozenset[str] = frozenset({"QQQ"})
+
+
+def _filter_benchmarks(results: list[tuple[str, float, dict]]) -> list[tuple[str, float, dict]]:
+    return [r for r in results if r[0] not in BENCHMARK_TICKERS]
+
+
+def _wrap(fn: Callable) -> Callable:
+    """Strip benchmark tickers from any award's output."""
+    def wrapped(*args, **kwargs):
+        return _filter_benchmarks(fn(*args, **kwargs))
+    wrapped.__name__ = getattr(fn, "__name__", "compute")
+    wrapped.__wrapped__ = fn
+    return wrapped
+
+
 # code → (module path relative to data.awards, periods supported, group)
 _AWARDS: dict[str, tuple[str, list[str], str]] = {
     # Daily
@@ -37,7 +55,7 @@ def list_awards() -> list[str]:
 def get_award(code: str) -> tuple[Callable, list[str], str]:
     mod_path, periods, group = _AWARDS[code]
     mod = import_module(f"data.awards.{mod_path}")
-    return mod.compute, periods, group
+    return _wrap(mod.compute), periods, group
 
 
 def awards_for_period(period: str) -> list[str]:
