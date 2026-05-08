@@ -1,0 +1,42 @@
+:root {
+  --bg: #0F0E14;
+  --surface: #1A1825;
+  --surface-2: #252233;
+  --border: #2D2A3D;
+  --text: #F5F3FF;
+  --muted: #8A8499;
+  --gold: #FFB800;
+  --gold-soft: #FFB80022;
+
+  --tier-fire: #FF3D71;
+  --tier-crown: #FFB800;
+  --tier-jade: #22D3A8;
+  --tier-npc: #6B7280;
+  --tier-poop: #A855F7;
+  --tier-skull: #1F1F23;
+}
+
+html, body, #root {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.zh {
+  font-family: 'Noto Sans SC', 'Inter', sans-serif;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 8px; }
