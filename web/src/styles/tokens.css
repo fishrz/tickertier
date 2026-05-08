@@ -1,42 +1,85 @@
+/* ============================================================
+ * 夯榜 · Design Tokens
+ * 设计语言：体育杂志 × 报纸编辑设计 × 棒球球员卡
+ * 配色：报纸黑 + 奶油白 + 旧奖杯金（数字色仅 2 个）
+ * ============================================================ */
+
 :root {
-  --bg: #0F0E14;
-  --surface: #1A1825;
-  --surface-2: #252233;
-  --border: #2D2A3D;
-  --text: #F5F3FF;
-  --muted: #8A8499;
-  --gold: #FFB800;
-  --gold-soft: #FFB80022;
+  /* —— 三色主面 —— */
+  --ink:        #0A0A0A;   /* 报纸黑 */
+  --paper:      #F5F0E8;   /* 奶油白（有体温的纸本色） */
+  --paper-2:    #ECE6D8;   /* 加深一档的纸 */
+  --rule:       #1A1A1A;   /* 分割线（比 ink 略浅，避免刺眼） */
+  --mute:       #8A8378;   /* 灰墨：caption / 次要文字 */
 
-  --tier-fire: #FF3D71;
-  --tier-crown: #FFB800;
-  --tier-jade: #22D3A8;
-  --tier-npc: #6B7280;
-  --tier-poop: #A855F7;
-  --tier-skull: #1F1F23;
+  /* —— accent 旧奖杯金（仅一种 accent） —— */
+  --gold:       #C9A961;   /* 主金 */
+  --gold-dim:   #8C7340;   /* 暗金 */
+
+  /* —— 数字色（全场只在涨跌数字上出现） —— */
+  --pos:        #2F7A4F;   /* 沉绿 */
+  --neg:        #B8362F;   /* 沉红 */
+
+  /* —— Tier accent（仅用于 stripe / chip 边框，不铺背景） —— */
+  --tier-fire:  var(--gold);        /* 🔥 夯死了 */
+  --tier-crown: var(--gold-dim);    /* 👑 顶级 */
+  --tier-jade:  var(--ink);         /* 💪 人上人 */
+  --tier-npc:   var(--mute);        /* 😐 NPC */
+  --tier-poop:  rgba(10,10,10,.35); /* 💩 拉完了 */
+  --tier-skull: var(--neg);         /* ☠️ 答辩 */
+
+  /* —— 字体 —— */
+  --serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+  --sans:  'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  --mono:  'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+
+  /* —— 几何 —— */
+  --radius: 0px;            /* 报纸感：无圆角 */
+  --hairline: 1px solid var(--ink);
+  --rule-thick: 2px solid var(--ink);
+  --rule-masthead: 4px solid var(--ink);
+
+  /* —— 节奏 —— */
+  --page-max: 1280px;
+  --page-pad-x: 48px;
+  --page-pad-y: 56px;
 }
 
-html, body, #root {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100%;
-}
-
+/* —— 全局重置 —— */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { background: var(--paper); color: var(--ink); }
 body {
-  font-family: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
-  font-size: 15px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+::selection { background: var(--ink); color: var(--paper); }
 
-.tabular {
-  font-variant-numeric: tabular-nums;
-  font-family: 'Inter', system-ui, sans-serif;
+/* —— 链接最小化 —— */
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--gold-dim); }
+
+/* —— 数字一律 tabular —— */
+.num, .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* —— 工具类 —— */
+.kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mute);
 }
+.serif { font-family: var(--serif); }
+.pos { color: var(--pos); }
+.neg { color: var(--neg); }
 
-.zh {
-  font-family: 'Noto Sans SC', 'Inter', sans-serif;
+/* —— 媒体响应 —— */
+@media (max-width: 900px) {
+  :root {
+    --page-pad-x: 20px;
+    --page-pad-y: 32px;
+  }
 }
-
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 8px; }

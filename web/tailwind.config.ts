@@ -5,14 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: 'var(--bg)',
-        surface: 'var(--surface)',
-        'surface-2': 'var(--surface-2)',
-        border: 'var(--border)',
-        text: 'var(--text)',
-        muted: 'var(--muted)',
+        ink: 'var(--ink)',
+        paper: 'var(--paper)',
+        'paper-2': 'var(--paper-2)',
+        rule: 'var(--rule)',
+        mute: 'var(--mute)',
         gold: 'var(--gold)',
-        'gold-soft': 'var(--gold-soft)',
+        'gold-dim': 'var(--gold-dim)',
+        pos: 'var(--pos)',
+        neg: 'var(--neg)',
         'tier-fire': 'var(--tier-fire)',
         'tier-crown': 'var(--tier-crown)',
         'tier-jade': 'var(--tier-jade)',
@@ -21,12 +22,16 @@ export default {
         'tier-skull': 'var(--tier-skull)',
       },
       fontFamily: {
-        sans: ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],
-        zh: ['"Noto Sans SC"', 'Inter', 'sans-serif'],
+        serif: ['"Noto Serif SC"', 'Songti SC', 'serif'],
+        sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       maxWidth: {
         page: '1280px',
+      },
+      borderRadius: {
+        none: '0',
+        DEFAULT: '0',
       },
     },
   },

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>颁奖之夜 · 2026-05-08</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:        #0A0A0A;        /* 报纸黑 */
+    --paper:      #F5F0E8;        /* 奶油白 */
+    --paper-2:    #ECE6D8;        /* 加深一档 */
+    --rule:       #1A1A1A;        /* 分割线 */
+    --mute:       #8A8378;        /* 灰墨 */
+    --gold:       #C9A961;        /* 旧奖杯金 */
+    --gold-dim:   #8C7340;
+    --pos:        #2F7A4F;        /* 沉绿 */
+    --neg:        #B8362F;        /* 沉红 */
+    --serif: 'Noto Serif SC', 'Songti SC', serif;
+    --sans:  'Noto Sans SC', system-ui, sans-serif;
+    --mono:  'JetBrains Mono', 'SF Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--ink); color: var(--paper); }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 56px 48px 120px; }
+
+  /* ====== MASTHEAD ====== */
+  .masthead {
+    border-top: 4px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 0 22px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .brand .dot { color: var(--gold); }
+  .meta-line {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--mute);
+    display: flex;
+    gap: 28px;
+  }
+  .meta-line b { color: var(--ink); font-weight: 500; }
+
+  /* ====== HERO TITLE ====== */
+  .hero {
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--ink);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: end;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: clamp(64px, 9vw, 128px);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold-dim);
+    font-weight: 700;
+  }
+  .hero-side {
+    text-align: right;
+    font-family: var(--mono);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--mute);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .hero-side .big {
+    font-family: var(--serif);
+    font-size: 56px;
+    color: var(--ink);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+  }
+
+  /* ====== TIER SUMMARY BAR ====== */
+  .tier-bar-section {
+    padding: 28px 0 0;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 32px;
+  }
+  .section-kicker {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 14px;
+  }
+  .tier-bar {
+    display: flex;
+    height: 8px;
+    margin-bottom: 12px;
+  }
+  .tier-bar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--mute);
+  }
+  .tier-bar-legend span b { color: var(--ink); font-weight: 500; }
+
+  /* ====== AWARDS GRID ====== */
+  .awards {
+    padding: 48px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+  .card {
+    padding: 28px 24px 24px;
+    border-right: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+  }
+  .card:nth-child(3n) { border-right: 0; }
+  .card-head { margin-bottom: 22px; min-height: 64px; }
+  .card-title {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .card-sub {
+    font-size: 12px;
+    color: var(--mute);
+    letter-spacing: 0.05em;
+  }
+  .winners { display: flex; flex-direction: column; gap: 10px; }
+  .winner {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: baseline;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid var(--paper-2);
+  }
+  .winner:first-child {
+    border-top: 2px solid var(--ink);
+    padding-top: 12px;
+  }
+  .winner.empty { opacity: 0.3; }
+  .medal {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--gold-dim);
+    line-height: 1;
+  }
+  .winner:first-child .medal {
+    color: var(--gold);
+    font-size: 22px;
+  }
+  .ticker {
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+  .winner:first-child .ticker { font-size: 22px; }
+  .metric {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  .winner:first-child .metric { font-size: 16px; font-weight: 700; }
+  .metric.pos { color: var(--pos); }
+  .metric.neg { color: var(--neg); }
+
+  /* ====== TIER TABLE ====== */
+  .tier-section { padding: 56px 0 0; }
+  .tier-section h2 {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .tier-section .lede {
+    font-size: 14px;
+    color: var(--mute);
+    margin-bottom: 32px;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  .tier-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .tier-row {
+    border-bottom: 1px solid var(--ink);
+  }
+  .tier-row:last-child { border-bottom: 0; }
+  .tier-label {
+    width: 200px;
+    padding: 24px 24px 24px 0;
+    vertical-align: top;
+    border-right: 1px solid var(--ink);
+    position: relative;
+  }
+  .tier-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+    width: 4px;
+    background: var(--gold);
+  }
+  .tier-row[data-tier="🔥 夯死了"] .tier-label::before { background: var(--gold); }
+  .tier-row[data-tier="👑 顶级"] .tier-label::before { background: var(--gold-dim); }
+  .tier-row[data-tier="💪 人上人"] .tier-label::before { background: var(--ink); }
+  .tier-row[data-tier="😐 NPC"] .tier-label::before { background: var(--mute); }
+  .tier-row[data-tier="💩 拉完了"] .tier-label::before { background: var(--ink); opacity: 0.4; }
+  .tier-row[data-tier="☠️ 答辩"] .tier-label::before { background: var(--neg); }
+
+  .tier-label { padding-left: 20px; }
+  .tier-name {
+    font-family: var(--serif);
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .tier-count {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .tier-chips {
+    padding: 24px;
+    line-height: 2;
+  }
+  .chip {
+    display: inline-block;
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 13px;
+    padding: 4px 10px;
+    margin: 2px 4px 2px 0;
+    border: 1px solid var(--ink);
+    background: var(--paper);
+    transition: background 0.1s;
+    cursor: default;
+  }
+  .chip:hover { background: var(--ink); color: var(--paper); }
+  .tier-row[data-tier="🔥 夯死了"] .chip {
+    background: var(--ink); color: var(--gold); border-color: var(--ink);
+  }
+  .tier-row[data-tier="🔥 夯死了"] .chip:hover { background: var(--gold); color: var(--ink); }
+  .tier-row[data-tier="☠️ 答辩"] .chip {
+    background: var(--neg); color: var(--paper); border-color: var(--neg);
+  }
+
+  /* ====== FOOTER ====== */
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 4px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--mute);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 900px) {
+    .wrap { padding: 32px 20px 80px; }
+    .awards { grid-template-columns: 1fr; }
+    .card { border-right: 0; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-side { text-align: left; }
+    .tier-label { width: 130px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="brand">夯榜<span class="dot">.</span> <span style="font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:0.2em;color:var(--mute);margin-left:8px">DAILY AWARDS</span></div>
+    <div class="meta-line">
+      <span>VOL. <b>I</b></span>
+      <span>ISSUE <b>756</b></span>
+      <span><b>2026-05-08</b></span>
+      <span>UNIVERSE <b>81</b></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>今日<em>颁奖</em><br/>之夜</h1>
+    <div class="hero-side">
+      <div class="big">9</div>
+      <div>项今日奖颁出</div>
+      <div style="margin-top:14px">大盘 QQQ <b style="color:var(--neg);font-family:var(--mono)">−0.42%</b></div>
+    </div>
+  </section>
+
+  <section class="tier-bar-section">
+    <div class="section-kicker">— 今日全场 Tier 分布 —</div>
+    <div class="tier-bar"><div class="bar-seg" style="flex:5; background:var(--gold)" title="🔥 夯死了 5支"></div><div class="bar-seg" style="flex:12; background:var(--gold-dim)" title="👑 顶级 12支"></div><div class="bar-seg" style="flex:24; background:var(--ink)" title="💪 人上人 24支"></div><div class="bar-seg" style="flex:24; background:var(--mute)" title="😐 NPC 24支"></div><div class="bar-seg" style="flex:15; background:var(--ink)" title="💩 拉完了 15支"></div><div class="bar-seg" style="flex:1; background:var(--ink)" title="☠️ 答辩 1支"></div></div>
+    <div class="tier-bar-legend">
+      <span>🔥 夯死了 <b>5</b></span><span>👑 顶级 <b>12</b></span><span>💪 人上人 <b>24</b></span><span>😐 NPC <b>24</b></span><span>💩 拉完了 <b>15</b></span><span>☠️ 答辩 <b>1</b></span>
+    </div>
+  </section>
+
+  <section class="awards">
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">🪄 绝地翻身奖</div>
+        <div class="card-sub">主打一个不装了</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">MXL</span><span class="metric pos">+9.65%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">AXTI</span><span class="metric pos">+7.02%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">COHR</span><span class="metric pos">+6.20%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">💤 NPC 之光</div>
+        <div class="card-sub">在的，活着，不动</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">LSRCY</span><span class="metric pos">+0.00%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">ADI</span><span class="metric pos">+0.97%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">GOOG</span><span class="metric pos">+0.98%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">💩 今日答辩</div>
+        <div class="card-sub">建议退市</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">CRWV</span><span class="metric neg">-11.17%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">SIVEF</span><span class="metric neg">-4.92%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">NBIS</span><span class="metric neg">-2.89%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">🏆 今日股王</div>
+        <div class="card-sub">夯到飞起</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">AKAM</span><span class="metric pos">+16.59%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">MXL</span><span class="metric pos">+16.55%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">KORU</span><span class="metric pos">+15.42%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">🎭 影帝奖</div>
+        <div class="card-sub">开盘装大佬，收盘装死</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">AKAM</span><span class="metric neg">-6.46%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">BE</span><span class="metric neg">-6.07%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">ALAB</span><span class="metric neg">-5.05%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">💰 顶梁柱奖</div>
+        <div class="card-sub">全家就指望你了</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">MU</span><span class="metric pos">5386.20</span></div><div class="winner"><span class="medal">②</span><span class="ticker">NVDA</span><span class="metric pos">290.50</span></div><div class="winner"><span class="medal">③</span><span class="ticker">ASML</span><span class="metric pos">238.03</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">📈 暴兵奖</div>
+        <div class="card-sub">主力进场了家人们</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">AKAM</span><span class="metric pos">+102.43%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">DRAM</span><span class="metric pos">+56.60%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">AAOI</span><span class="metric pos">+45.39%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">🎢 过山车之王</div>
+        <div class="card-sub">早上人上人，下午拉完了</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">AXTI</span><span class="metric pos">+12.89%</span></div><div class="winner"><span class="medal">②</span><span class="ticker">POET</span><span class="metric pos">+11.12%</span></div><div class="winner"><span class="medal">③</span><span class="ticker">MXL</span><span class="metric pos">+10.56%</span></div>
+      </div>
+    </article>
+    
+    <article class="card">
+      <header class="card-head">
+        <div class="card-title">🩸 拖后腿奖</div>
+        <div class="card-sub">建议清仓谢罪</div>
+      </header>
+      <div class="winners">
+        <div class="winner"><span class="medal">①</span><span class="ticker">CRWV</span><span class="metric neg">-575.60</span></div><div class="winner"><span class="medal">②</span><span class="ticker">OKLO</span><span class="metric neg">-85.80</span></div><div class="winner empty"><span class="medal">③</span><span class="ticker">—</span><span class="metric">—</span></div>
+      </div>
+    </article>
+    
+  </section>
+
+  <section class="tier-section">
+    <div class="section-kicker">— 完整 Tier 榜 —</div>
+    <h2>夯<em style="color:var(--gold-dim);font-style:italic">/</em>顶<em style="color:var(--gold-dim);font-style:italic">/</em>NPC<em style="color:var(--gold-dim);font-style:italic">/</em>拉</h2>
+    <p class="lede">81 支 AI 基建标的按今日综合表现（涨跌相对 QQQ 修正 + 振幅 + 量能）分档。点 ticker 看详情。</p>
+    <table class="tier-table">
+      
+    <tr class="tier-row" data-tier="🔥 夯死了">
+      <td class="tier-label">
+        <div class="tier-name">🔥 夯死了</div>
+        <div class="tier-count">5 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">AKAM</span><span class="chip">AXTI</span><span class="chip">KORU</span><span class="chip">MXL</span><span class="chip">WOLF</span></td>
+    </tr>
+    
+    <tr class="tier-row" data-tier="👑 顶级">
+      <td class="tier-label">
+        <div class="tier-name">👑 顶级</div>
+        <div class="tier-count">12 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">AAOI</span><span class="chip">AEHR</span><span class="chip">AMD</span><span class="chip">COHR</span><span class="chip">DRAM</span><span class="chip">GLW</span><span class="chip">INTC</span><span class="chip">KLIC</span><span class="chip">MU</span><span class="chip">POET</span><span class="chip">QCOM</span><span class="chip">SNDK</span></td>
+    </tr>
+    
+    <tr class="tier-row" data-tier="💪 人上人">
+      <td class="tier-label">
+        <div class="tier-name">💪 人上人</div>
+        <div class="tier-count">24 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">AMAT</span><span class="chip">AMSC</span><span class="chip">AOSL</span><span class="chip">ARM</span><span class="chip">ASML</span><span class="chip">ASX</span><span class="chip">AVGO</span><span class="chip">CIEN</span><span class="chip">COHU</span><span class="chip">DELL</span><span class="chip">FORM</span><span class="chip">GFS</span><span class="chip">JBL</span><span class="chip">KLAC</span><span class="chip">LITE</span><span class="chip">LRCX</span><span class="chip">MOD</span><span class="chip">MRVL</span><span class="chip">MX</span><span class="chip">NVDA</span><span class="chip">NVMI</span><span class="chip">PLAB</span><span class="chip">STX</span><span class="chip">WDC</span></td>
+    </tr>
+    
+    <tr class="tier-row" data-tier="😐 NPC">
+      <td class="tier-label">
+        <div class="tier-name">😐 NPC</div>
+        <div class="tier-count">24 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">ADI</span><span class="chip">AMKR</span><span class="chip">ANET</span><span class="chip">BE</span><span class="chip">CAMT</span><span class="chip">CLS</span><span class="chip">CRDO</span><span class="chip">CSCO</span><span class="chip">ENTG</span><span class="chip">ETN</span><span class="chip">FN</span><span class="chip">GEV</span><span class="chip">GOOG</span><span class="chip">LEU</span><span class="chip">LSCC</span><span class="chip">LWLG</span><span class="chip">MCHP</span><span class="chip">NVT</span><span class="chip">NVTS</span><span class="chip">SMCI</span><span class="chip">TSEM</span><span class="chip">TSM</span><span class="chip">VICR</span><span class="chip">VRT</span></td>
+    </tr>
+    
+    <tr class="tier-row" data-tier="💩 拉完了">
+      <td class="tier-label">
+        <div class="tier-name">💩 拉完了</div>
+        <div class="tier-count">15 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">ALAB</span><span class="chip">CEG</span><span class="chip">ENPH</span><span class="chip">LSRCY</span><span class="chip">NBIS</span><span class="chip">NXPI</span><span class="chip">OKLO</span><span class="chip">ORCL</span><span class="chip">RGTI</span><span class="chip">RMBS</span><span class="chip">SIMO</span><span class="chip">SIVEF</span><span class="chip">SNPS</span><span class="chip">TLN</span><span class="chip">VST</span></td>
+    </tr>
+    
+    <tr class="tier-row" data-tier="☠️ 答辩">
+      <td class="tier-label">
+        <div class="tier-name">☠️ 答辩</div>
+        <div class="tier-count">1 支</div>
+      </td>
+      <td class="tier-chips"><span class="chip">CRWV</span></td>
+    </tr>
+    
+    </table>
+  </section>
+
+  <footer>
+    <span>夯榜 · 个人娱乐用 · 不构成投资建议</span>
+    <span>POWERED BY DUCKDB · YFINANCE · FINNHUB</span>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -16,6 +16,11 @@ export async function getAwardsToday(): Promise<AwardsTodayResponse> {
   return data
 }
 
+export async function getTodayTiers(): Promise<{ date: string; members: Record<string, string[]> }> {
+  const { data } = await api.get('/awards/today/tiers')
+  return data
+}
+
 export async function getAwardsPeriod(period: string, key: string) {
   const { data } = await api.get(`/awards/period/${period}/${key}`)
   return data

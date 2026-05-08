@@ -62,6 +62,23 @@ def today(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> TodayAwards:
     return TodayAwards(date=key, awards=groups, tier_distribution=tier_dist)
 
 
+@router.get("/today/tiers")
+def today_tiers(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
+    """Return today's tier members grouped by tier name."""
+    row = con.execute("SELECT MAX(date) FROM tiers").fetchone()
+    if not row or not row[0]:
+        raise HTTPException(404, "no tiers")
+    key = row[0]
+    rows = con.execute(
+        "SELECT tier, ticker FROM tiers WHERE date = ? AND ticker != 'QQQ' ORDER BY tier, ticker",
+        [key],
+    ).fetchall()
+    members: dict[str, list[str]] = {}
+    for tier, tk in rows:
+        members.setdefault(tier, []).append(tk)
+    return {"date": str(key), "members": members}
+
+
 @router.get("/period/{period}/{key}", response_model=TodayAwards)
 def period_awards(
     period: str, key: str, con: duckdb.DuckDBPyConnection = Depends(get_db)

@@ -48,4 +48,18 @@ export function formatAmount(v: number): string {
   return `${sign}¥${abs.toFixed(0)}`
 }
 
-export const MEDALS = ['🥇', '🥈', '🥉'] as const
+// Magazine-style numerals (球员卡 / 排名感), not emoji medals
+export const MEDALS = ['①', '②', '③'] as const
+
+// Awards where being on the list is "bad" (color metric red regardless of sign)
+const NEGATIVE_AWARDS = new Set(['tank', 'crash', 'high_dive', 'daily_clown', 'traitor', 'silver_curse'])
+// Awards where being on the list is "good" (color metric green)
+const POSITIVE_AWARDS = new Set(['champion', 'stock_king', 'comeback', 'rocket', 'pillar', 'earnings_god'])
+
+export function metricTone(code: string, value: number): 'pos' | 'neg' | 'neutral' {
+  if (NEGATIVE_AWARDS.has(code)) return 'neg'
+  if (POSITIVE_AWARDS.has(code)) return 'pos'
+  if (value > 0) return 'pos'
+  if (value < 0) return 'neg'
+  return 'neutral'
+}

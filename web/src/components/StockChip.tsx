@@ -1,22 +1,18 @@
 import { Link } from 'react-router-dom'
-import { PersonaPill } from './PersonaPill'
 
-export interface StockChipProps {
+interface Props {
   ticker: string
-  persona?: string | null
-  clickable?: boolean
+  className?: string
 }
 
-export function StockChip({ ticker, persona, clickable = true }: StockChipProps) {
-  const inner = (
-    <span className="font-mono text-[14px] text-text hover:text-gold transition-colors">
-      {ticker}
-    </span>
-  )
+// Mono ticker chip — inline element, hairline border, no rounded corners.
+export function StockChip({ ticker, className = '' }: Props) {
   return (
-    <span className="inline-flex flex-col items-start gap-1">
-      {clickable ? <Link to={`/stock/${ticker}`}>{inner}</Link> : inner}
-      {persona ? <PersonaPill persona={persona} /> : null}
-    </span>
+    <Link
+      to={`/stock/${ticker}`}
+      className={`inline-block font-mono font-medium text-[13px] px-2.5 py-1 border border-ink bg-paper text-ink hover:bg-ink hover:text-paper transition-colors ${className}`}
+    >
+      {ticker}
+    </Link>
   )
 }

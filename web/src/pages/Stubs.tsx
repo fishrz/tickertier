@@ -1,29 +1,37 @@
-import { useParams } from 'react-router-dom'
-
-function Stub({ title, sub }: { title: string; sub?: string }) {
+// Stub pages for routes not yet built
+export function StockDetail() {
   return (
-    <div className="flex flex-col items-center justify-center py-32 text-center">
-      <div className="text-6xl mb-6">🚧</div>
-      <h2 className="zh text-text">{title}</h2>
-      {sub ? <div className="text-muted mt-3 zh">{sub}</div> : null}
-      <div className="text-muted mt-2 zh">建设中</div>
+    <div className="py-32 text-center">
+      <div className="kicker mb-4">— COMING SOON —</div>
+      <h1 className="font-serif font-black text-[64px]">股票履历</h1>
+      <p className="text-mute mt-4">D4 任务，敬请期待</p>
     </div>
   )
 }
-
-export function StockDetail() {
-  const { ticker } = useParams()
-  return <Stub title="个股详情" sub={ticker ? `代码 ${ticker}` : undefined} />
-}
-
 export function HallOfFame() {
-  return <Stub title="名人堂" />
+  return (
+    <div className="py-32 text-center">
+      <div className="kicker mb-4">— COMING SOON —</div>
+      <h1 className="font-serif font-black text-[64px]">名人堂</h1>
+      <p className="text-mute mt-4">D5 任务</p>
+    </div>
+  )
 }
-
 export function Race() {
-  return <Stub title="Race 赛道" />
+  return (
+    <div className="py-32 text-center">
+      <div className="kicker mb-4">— COMING SOON —</div>
+      <h1 className="font-serif font-black text-[64px]">排名变迁</h1>
+      <p className="text-mute mt-4">D6 任务</p>
+    </div>
+  )
 }
-
 export function Portfolio() {
-  return <Stub title="持仓" />
+  return (
+    <div className="py-32 text-center">
+      <div className="kicker mb-4">— COMING SOON —</div>
+      <h1 className="font-serif font-black text-[64px]">我的持仓</h1>
+      <p className="text-mute mt-4">D7 任务</p>
+    </div>
+  )
 }

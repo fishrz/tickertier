@@ -1,96 +1,89 @@
 import { useQuery } from '@tanstack/react-query'
-import { getAwardsToday } from '@/lib/api'
+import { getAwardsToday, getTodayTiers } from '@/lib/api'
+import { Hero } from '@/components/Hero'
+import { TierBar } from '@/components/TierBar'
 import { AwardCard } from '@/components/AwardCard'
-import { TierDistributionBar } from '@/components/TierDistributionBar'
-import { formatPercent } from '@/lib/format'
-import type { AwardGroup } from '@/types'
+import { TierTable } from '@/components/TierTable'
 
-function findAward(awards: AwardGroup[], code: string): AwardGroup | undefined {
-  return awards.find((a) => a.code === code)
-}
-
-function StatTile({ label, ticker, value }: { label: string; ticker?: string; value?: string }) {
-  return (
-    <div className="rounded-xl border border-border bg-surface px-4 py-3 min-w-0">
-      <div className="text-xs text-muted zh truncate">{label}</div>
-      <div className="flex items-baseline gap-2 mt-1 min-w-0">
-        <span className="font-mono text-sm text-text truncate">{ticker ?? '—'}</span>
-        <span className="tabular text-gold font-semibold text-lg">{value ?? '—'}</span>
-      </div>
-    </div>
-  )
+// Narrative ordering — major awards first, then drama, then rhythm
+const ORDER_HINT = [
+  'champion', 'stock_king',          // 主奖
+  'crap', 'tank', 'daily_clown',     // 反派
+  'comeback', 'rocket',              // 戏剧
+  'high_dive', 'roller_coaster', 'volatile', 'oscar',
+  'gap', 'gambler',
+  'workhorse', 'silver_curse',
+  'steady_grind', 'antifragile',
+  'reverse_idx', 'npc_god',
+  'pillar', 'traitor',
+  'earnings_god',
+]
+function awardRank(code: string): number {
+  for (let i = 0; i < ORDER_HINT.length; i++) {
+    if (code.includes(ORDER_HINT[i])) return i
+  }
+  return 999
 }
 
 export default function Today() {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ['awards-today'],
-    queryFn: getAwardsToday,
-  })
+  const awardsQ = useQuery({ queryKey: ['awards', 'today'], queryFn: getAwardsToday })
+  const tiersQ = useQuery({ queryKey: ['tiers', 'today'], queryFn: getTodayTiers })
 
-  if (isLoading) {
+  if (awardsQ.isLoading) {
     return (
-      <div className="space-y-6">
-        <div className="h-32 rounded-2xl bg-surface animate-pulse" />
-        <div className="h-12 rounded-2xl bg-surface animate-pulse" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="h-48 rounded-2xl bg-surface animate-pulse" />
-          ))}
-        </div>
+      <div className="py-32 text-center kicker">— LOADING —</div>
+    )
+  }
+  if (awardsQ.isError || !awardsQ.data) {
+    return (
+      <div className="py-32 text-center text-neg font-mono text-sm">
+        加载失败: {(awardsQ.error as Error)?.message || '未知错误'}
       </div>
     )
   }
 
-  if (isError || !data) {
-    return <div className="text-muted zh py-20 text-center">今日颁奖数据暂未生成</div>
-  }
-
-  const champion = findAward(data.awards, 'champion')
-  const clown = findAward(data.awards, 'daily_clown')
-  const rocket = findAward(data.awards, 'rocket') ?? champion
-  const crash = findAward(data.awards, 'crash') ?? clown
+  const data = awardsQ.data
+  const sorted = [...data.awards].sort((a, b) => awardRank(a.code) - awardRank(b.code))
+  const totalTiers = Object.values(data.tier_distribution).reduce((a, b) => a + b, 0)
 
   return (
-    <div className="space-y-8">
-      {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-        <div className="lg:col-span-3">
-          <h1 className="zh">🎖️ 今日颁奖典礼</h1>
-          <div className="text-muted text-sm mt-2 tabular">截至 {data.date}</div>
-        </div>
-        <div className="lg:col-span-2 grid grid-cols-2 gap-3">
-          <StatTile
-            label="今日股王"
-            ticker={champion?.winners[0]?.ticker}
-            value={champion?.winners[0] ? formatPercent(champion.winners[0].metric) : undefined}
-          />
-          <StatTile
-            label="今日答辩"
-            ticker={clown?.winners[0]?.ticker}
-            value={clown?.winners[0] ? formatPercent(clown.winners[0].metric) : undefined}
-          />
-          <StatTile
-            label="最大涨幅"
-            ticker={rocket?.winners[0]?.ticker}
-            value={rocket?.winners[0] ? formatPercent(rocket.winners[0].metric) : undefined}
-          />
-          <StatTile
-            label="最大跌幅"
-            ticker={crash?.winners[0]?.ticker}
-            value={crash?.winners[0] ? formatPercent(crash.winners[0].metric) : undefined}
-          />
-        </div>
-      </section>
+    <>
+      <Hero
+        title="今日颁奖之夜"
+        emphasis="颁奖"
+        bigStat={data.awards.length}
+        bigStatLabel="项今日奖颁出"
+        bottomLine={
+          <>
+            UNIVERSE <b className="text-ink font-mono font-medium">{totalTiers}</b> 支
+          </>
+        }
+      />
 
-      {/* TIER BAR */}
-      <TierDistributionBar distribution={data.tier_distribution} />
+      <TierBar distribution={data.tier_distribution} />
 
-      {/* WATERFALL */}
-      <section className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-        {data.awards.map((a, i) => (
-          <AwardCard key={a.code} award={a} index={i} />
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-b border-ink">
+        {sorted.map((a) => (
+          <AwardCard key={a.code} award={a} />
         ))}
       </section>
-    </div>
+
+      <section className="pt-14">
+        <div className="kicker mb-2">— 完整 TIER 榜 —</div>
+        <h2 className="font-serif font-black text-[56px] leading-none tracking-[-0.03em] mb-2">
+          夯<em className="not-italic text-gold-dim italic font-bold">/</em>顶
+          <em className="not-italic text-gold-dim italic font-bold">/</em>NPC
+          <em className="not-italic text-gold-dim italic font-bold">/</em>拉
+        </h2>
+        <p className="text-sm text-mute mb-8 max-w-[600px] leading-relaxed">
+          81 支 AI 基建标的按今日综合表现（涨跌相对 QQQ 修正 + 振幅 + 量能）分档。点 ticker 看履历。
+        </p>
+        {tiersQ.data ? (
+          <TierTable members={tiersQ.data.members} />
+        ) : (
+          <div className="py-12 text-center kicker">— LOADING TIERS —</div>
+        )}
+      </section>
+    </>
   )
 }
