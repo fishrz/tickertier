@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.duckdb
+*.duckdb.wal
+*.parquet
+node_modules/
+.next/
+out/
+.DS_Store
+.env
+.env.local
