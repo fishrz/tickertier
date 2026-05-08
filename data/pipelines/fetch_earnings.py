@@ -12,9 +12,11 @@ Cache:
 """
 from __future__ import annotations
 
+import argparse
 import json
 import logging
 import os
+import sys
 import time
 from datetime import date, timedelta
 from pathlib import Path
@@ -181,6 +183,22 @@ def run(con=None, sleep_fn=time.sleep) -> int:
     return total
 
 
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description="Fetch Finnhub earnings data into DuckDB.")
+    parser.add_argument(
+        "--skip-missing-key",
+        action="store_true",
+        help="Exit successfully when FINNHUB_API_KEY is not set.",
+    )
+    args = parser.parse_args(argv)
+
+    if args.skip_missing_key and not os.environ.get("FINNHUB_API_KEY"):
+        log.warning("FINNHUB_API_KEY is not set; skipping fetch_earnings")
+        raise SystemExit(0)
+
+    run()
+
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    run()
+    main(sys.argv[1:])

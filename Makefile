@@ -1,19 +1,23 @@
-.PHONY: install test seed daily api web dev clean
+SHELL := /bin/bash
+.PHONY: install test seed daily health api web dev clean
 
 install:
 	uv venv && uv pip install -e ".[dev]"
 
 test:
-	pytest -q
+	uv run pytest -q
 
 seed:  ## 一次性 3 年回溯
-	python -m data.pipelines.compute_awards --backfill 2023-01-01
+	uv run python -m data.pipelines.compute_awards --backfill 2023-01-01
 
 daily:  ## 每日增量 (美东收盘后)
-	python -m data.pipelines.compute_awards --daily
+	uv run python scripts/run_daily.py
+
+health:  ## 检查最新 prices / awards / 81 ticker tier 覆盖
+	uv run python -m scripts.health
 
 api:
-	uvicorn api.main:app --reload --port 8001
+	uv run uvicorn api.main:app --reload --port 8001
 
 web:
 	cd web && pnpm dev

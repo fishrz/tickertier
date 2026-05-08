@@ -116,3 +116,13 @@ def test_get_client_raises_without_key(monkeypatch):
     monkeypatch.delenv("FINNHUB_API_KEY", raising=False)
     with pytest.raises(RuntimeError):
         fe._get_client()
+
+
+def test_main_skip_missing_key_exits_successfully(monkeypatch):
+    monkeypatch.delenv("FINNHUB_API_KEY", raising=False)
+    monkeypatch.setattr(fe, "run", lambda: (_ for _ in ()).throw(RuntimeError("should not run")))
+
+    with pytest.raises(SystemExit) as exc:
+        fe.main(["--skip-missing-key"])
+
+    assert exc.value.code == 0

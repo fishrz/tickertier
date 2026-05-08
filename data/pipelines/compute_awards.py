@@ -18,9 +18,7 @@ import pandas_market_calendars as mcal
 from data.awards._helpers import period_key_for
 from data.awards.registry import awards_for_period, get_award
 from data.awards.tier import compute_tiers
-from data.db import get_conn, init_schema, universe
-from data.pipelines.compute_metrics import compute_metrics
-from data.pipelines.fetch_prices import run_incremental
+from data.db import get_conn, init_schema
 
 log = logging.getLogger(__name__)
 
@@ -176,8 +174,6 @@ def run_backfill(con, start: date, end: date | None = None) -> None:
 def run_daily(con) -> None:
     init_schema(con)
     _ensure_positions(con)
-    run_incremental(con)
-    compute_metrics(con)
     today = con.execute("SELECT max(date) FROM prices").fetchone()[0]
     if today is None:
         log.warning("no prices, skipping daily")

@@ -26,6 +26,23 @@ make dev   # 前端 :3000 + API :8001
 
 🔥 夯死了 / 👑 顶级 / 💪 人上人 / 😐 NPC / 💩 拉完了 / ☠️ 答辩
 
+## Operations
+
+每日更新链路：
+
+```bash
+make daily   # fetch_prices -> compute_metrics -> fetch_earnings -> compute_awards -> personas
+make health  # 检查最新 prices / daily awards / 81 ticker tier 覆盖
+```
+
+Cron 包装脚本：
+
+```bash
+./scripts/daily.sh
+```
+
+它会写 `logs/daily-YYYYMMDD.log`，并用 `/tmp/stock-awards-daily.lock` 防止 DuckDB 并发写入。WSL crontab 示例见 `docs/CRON.md`。
+
 ## License
 
 MIT (personal use)
