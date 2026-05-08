@@ -35,16 +35,33 @@ class LeaderboardEntry(BaseModel):
     total: int
 
 
+class AwardTopEntry(BaseModel):
+    ticker: str
+    total_wins: int
+    gold: int
+    silver: int
+    bronze: int
+
+
+class MedalEntry(BaseModel):
+    code: str
+    name: str
+    count: int
+    latest_date: str | None = None
+    best_rank: int | None = None
+
 class StockProfile(BaseModel):
     ticker: str
     name: str
     theme: str
     persona: str | None = None
     medal_count: dict[str, int]
+    medal_history: list[MedalEntry] = []
     tier_distribution: dict[str, float]
     last_close: float
     last_pct_change: float
     recent_30d: list[dict]
+    best_award: MedalEntry | None = None
 
 
 class RaceFrame(BaseModel):
@@ -70,11 +87,16 @@ class Position(BaseModel):
     tier_today: str | None = None
 
 
+class Highlight(BaseModel):
+    ticker: str
+    contribution: float
+
+
 class PortfolioToday(BaseModel):
     as_of: str
     total_market_value: float
     total_unrealized_pnl: float
     today_pnl: float
-    pillar: dict | None = None
-    traitor: dict | None = None
+    pillar: Highlight | None = None
+    traitor: Highlight | None = None
     positions: list[Position]

@@ -8,7 +8,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 
 from api.awards_meta import meta_for
 from api.deps import get_db
-from api.models import AwardGroup, AwardWinner, LeaderboardEntry, TodayAwards
+from api.models import AwardGroup, AwardTopEntry, AwardWinner, LeaderboardEntry, TodayAwards
 
 router = APIRouter(prefix="/awards", tags=["awards"])
 
@@ -103,10 +103,13 @@ def leaderboard(
     limit: int = Query(20, ge=1, le=200),
     con: duckdb.DuckDBPyConnection = Depends(get_db),
 ) -> list[LeaderboardEntry]:
-    if period not in {"D", "W", "M", "Q", "H", "Y", "E"}:
-        raise HTTPException(400, "invalid period")
+    valid = {"D", "W", "M", "Q", "H", "Y", "E", "ALL"}
+    if period not in valid:
+        raise HTTPException(400, f"invalid period, must be one of {sorted(valid)}")
+    where = "1=1" if period == "ALL" else "a.period = ?"
+    params: list = [] if period == "ALL" else [period]
     rows = con.execute(
-        """
+        f"""
         SELECT a.ticker,
                SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
                SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
@@ -114,17 +117,50 @@ def leaderboard(
                COUNT(*) AS total,
                (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
         FROM awards a
-        WHERE a.period = ?
+        WHERE {where}
         GROUP BY a.ticker
         ORDER BY gold DESC, total DESC, a.ticker
         LIMIT ?
         """,
-        [period, limit],
+        params + [limit],
     ).fetchall()
     return [
         LeaderboardEntry(
             ticker=r[0], gold=int(r[1]), silver=int(r[2]), bronze=int(r[3]),
             total=int(r[4]), persona=r[5],
+        )
+        for r in rows
+    ]
+
+
+@router.get("/by-code/{code}/top", response_model=list[AwardTopEntry])
+def by_code_top(
+    code: str,
+    n: int = Query(3, ge=1, le=50),
+    con: duckdb.DuckDBPyConnection = Depends(get_db),
+) -> list[AwardTopEntry]:
+    """Return top N historical winners for a given award code, ranked by gold then total wins."""
+    rows = con.execute(
+        """
+        SELECT a.ticker,
+               COUNT(*) AS total_wins,
+               SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+               SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+               SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze
+        FROM awards a
+        WHERE a.award_code = ?
+        GROUP BY a.ticker
+        ORDER BY gold DESC, total_wins DESC, a.ticker
+        LIMIT ?
+        """,
+        [code, n],
+    ).fetchall()
+    if not rows:
+        raise HTTPException(404, f"no results for award code '{code}'")
+    return [
+        AwardTopEntry(
+            ticker=r[0], total_wins=int(r[1]),
+            gold=int(r[2]), silver=int(r[3]), bronze=int(r[4]),
         )
         for r in rows
     ]

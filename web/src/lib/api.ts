@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { AwardsTodayResponse, HealthResponse, PortfolioToday, StockDetail } from '@/types'
+import type { AwardsTodayResponse, HealthResponse, PortfolioToday, StockDetail, LeaderboardEntry, AwardTopEntry } from '@/types'
 
 export const api = axios.create({
   baseURL: '/api',
@@ -26,8 +26,13 @@ export async function getAwardsPeriod(period: string, key: string) {
   return data
 }
 
-export async function getLeaderboard(period = 'D', limit = 20) {
+export async function getLeaderboard(period = 'D', limit = 20): Promise<LeaderboardEntry[]> {
   const { data } = await api.get('/awards/leaderboard', { params: { period, limit } })
+  return data
+}
+
+export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEntry[]> {
+  const { data } = await api.get(`/awards/by-code/${code}/top`, { params: { n } })
   return data
 }
 

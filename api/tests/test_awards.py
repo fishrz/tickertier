@@ -32,3 +32,26 @@ def test_leaderboard(fake_db):
     nvda = next(x for x in rows if x["ticker"] == "NVDA")
     assert nvda["gold"] >= 1
     assert nvda["persona"]
+
+
+def test_leaderboard_all(fake_db):
+    r = fake_db.get("/awards/leaderboard?period=ALL&limit=5")
+    assert r.status_code == 200
+    rows = r.json()
+    assert len(rows) > 0
+    assert rows[0]["total"] >= rows[0]["gold"] + rows[0]["silver"] + rows[0]["bronze"]
+
+
+def test_by_code_top(fake_db):
+    r = fake_db.get("/awards/by-code/daily_king/top?n=3")
+    assert r.status_code == 200
+    rows = r.json()
+    assert len(rows) > 0
+    assert rows[0]["ticker"]
+    assert rows[0]["gold"] >= 1
+    assert rows[0]["total_wins"] >= rows[0]["gold"]
+
+
+def test_by_code_top_404(fake_db):
+    r = fake_db.get("/awards/by-code/nonexistent_code/top?n=3")
+    assert r.status_code == 404
