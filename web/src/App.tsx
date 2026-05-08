@@ -2,8 +2,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Layout } from '@/components/Layout'
 import Today from '@/pages/Today'
 import Preview from '@/pages/Preview'
+import StockDetail from '@/pages/StockDetail'
+import HallOfFame from '@/pages/HallOfFame'
+import Race from '@/pages/Race'
 import Portfolio from '@/pages/Portfolio'
-import { StockDetail, HallOfFame, Race } from '@/pages/Stubs'
 
 export default function App() {
   return (

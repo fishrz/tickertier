@@ -91,3 +91,20 @@ export interface PortfolioToday {
   traitor?: { ticker: string; contribution: number } | null
   positions: PortfolioPosition[]
 }
+
+export interface LeaderboardEntry {
+  ticker: string
+  persona: string | null
+  gold: number
+  silver: number
+  bronze: number
+  total: number
+}
+
+export interface AwardTopEntry {
+  ticker: string
+  total_wins: number
+  gold: number
+  silver: number
+  bronze: number
+}

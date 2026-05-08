@@ -8,15 +8,6 @@ export function StockDetail() {
     </div>
   )
 }
-export function HallOfFame() {
-  return (
-    <div className="py-32 text-center">
-      <div className="kicker mb-4">— COMING SOON —</div>
-      <h1 className="font-serif font-black text-[64px]">名人堂</h1>
-      <p className="text-mute mt-4">D5 任务</p>
-    </div>
-  )
-}
 export function Race() {
   return (
     <div className="py-32 text-center">
