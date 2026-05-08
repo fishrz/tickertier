@@ -114,6 +114,8 @@ def run_backfill(con, years: int = 3) -> None:
     end = date.today() + timedelta(days=1)
     start = end - timedelta(days=int(365 * years) + 5)
     tickers = [u["ticker"] for u in universe()]
+    if "QQQ" not in tickers:
+        tickers = tickers + ["QQQ"]  # benchmark, used by tank/reverse_idx/tier
     df = fetch_prices(tickers, start, end)
     n = upsert_prices(con, df)
     log.info("backfill: upserted %d rows for %d tickers", n, len(tickers))
@@ -130,6 +132,8 @@ def run_incremental(con) -> None:
         log.info("incremental: nothing to fetch (last=%s)", last)
         return
     tickers = [u["ticker"] for u in universe()]
+    if "QQQ" not in tickers:
+        tickers = tickers + ["QQQ"]
     df = fetch_prices(tickers, start, end)
     n = upsert_prices(con, df)
     log.info("incremental: upserted %d rows", n)

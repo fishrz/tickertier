@@ -30,6 +30,9 @@ build-backend = "setuptools.build_meta"
 [tool.pytest.ini_options]
 testpaths = ["data/tests", "api/tests"]
 addopts = "-q"
+markers = [
+    "integration: hits real external APIs (set INTEGRATION=1 to run)",
+]
 
 [tool.ruff]
 line-length = 100
