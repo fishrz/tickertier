@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: stock-awards
+Version: 0.1.0
+Summary: 美股颁奖娱乐平台 — 每日给你的自选/持仓股票颁奖、评 tier、做名人堂
+Requires-Python: >=3.11
+Requires-Dist: yfinance>=0.2.50
+Requires-Dist: duckdb>=1.0
+Requires-Dist: pandas>=2.0
+Requires-Dist: pyarrow>=15.0
+Requires-Dist: finnhub-python>=2.4
+Requires-Dist: fastapi>=0.115
+Requires-Dist: uvicorn[standard]>=0.30
+Requires-Dist: pydantic>=2.6
+Requires-Dist: scikit-learn>=1.4
+Requires-Dist: pandas-market-calendars>=4.3
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Requires-Dist: ruff>=0.5; extra == "dev"
