@@ -32,25 +32,54 @@ export interface HealthResponse {
   as_of: string
 }
 
+export interface MedalEntry {
+  code: string
+  name: string
+  count: number
+  latest_date?: string | null
+  best_rank?: number | null
+}
+
 export interface StockDetail {
   ticker: string
   name: string
   theme?: string | null
   persona?: string | null
-  medal_count: number
+  medal_count: Record<string, number>
+  medal_history: MedalEntry[]
   tier_distribution: Record<string, number>
   last_close?: number | null
   last_pct_change?: number | null
-  recent_30d?: Array<{ date: string; close: number; pct_change?: number }>
+  recent_30d?: Array<{ date: string; close: number; pct_change?: number; tier?: string }>
 }
 
 export interface PortfolioPosition {
   ticker: string
-  name?: string
   shares: number
+  avg_cost: number
+  last_close: number
   market_value: number
   unrealized_pnl: number
   today_pnl: number
+  today_pct: number
+  tier_today: string | null
+}
+
+export interface RaceEntry {
+  ticker: string
+  value: number
+  rank: number
+}
+
+export interface RaceFrame {
+  date: string
+  entries: RaceEntry[]
+}
+
+export interface RaceResponse {
+  metric: string
+  period: string
+  frames: RaceFrame[]
 }
 
 export interface PortfolioToday {
@@ -58,7 +87,7 @@ export interface PortfolioToday {
   total_market_value: number
   total_unrealized_pnl: number
   today_pnl: number
-  pillar?: { ticker: string; pnl: number } | null
-  traitor?: { ticker: string; pnl: number } | null
+  pillar?: { ticker: string; contribution: number } | null
+  traitor?: { ticker: string; contribution: number } | null
   positions: PortfolioPosition[]
 }
