@@ -8,6 +8,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 
 from api.deps import get_db
 from api.models import StockProfile
+from api.awards_meta import AWARD_META, meta_for
 from data.db import universe
 
 router = APIRouter(prefix="/stocks", tags=["stocks"])
@@ -45,11 +46,35 @@ def stock_profile(
         total = sum(c for _, c in rows) or 1
         tier_dist = {t: c / total for t, c in rows}
 
-    # medal counts
+# medal counts
     med_rows = con.execute(
         "SELECT award_code, COUNT(*) FROM awards WHERE ticker = ? GROUP BY award_code", [ticker]
     ).fetchall()
     medal_count = {code: int(c) for code, c in med_rows}
+
+    # medal_history: per award_code, count + latest_date + best rank
+    med_hist_rows = con.execute(
+        """
+        SELECT award_code, COUNT(*) as cnt,
+               MAX(period_key) as latest_date,
+               MIN(rank) as best_rank
+        FROM awards
+        WHERE ticker = ?
+        GROUP BY award_code
+        ORDER BY cnt DESC
+        """,
+        [ticker],
+    ).fetchall()
+    medal_history = [
+        {
+            "code": code,
+            "name": meta_for(code)["name"],
+            "count": int(cnt),
+            "latest_date": latest,
+            "best_rank": int(best) if best else None,
+        }
+        for code, cnt, latest, best in med_hist_rows
+    ]
 
     # last close + pct change
     last = con.execute(
@@ -95,6 +120,7 @@ def stock_profile(
         theme=info.get("theme", ""),
         persona=persona,
         medal_count=medal_count,
+        medal_history=medal_history,
         tier_distribution=tier_dist,
         last_close=last_close,
         last_pct_change=last_pct,
