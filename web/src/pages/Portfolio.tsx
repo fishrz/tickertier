@@ -180,7 +180,7 @@ export default function Portfolio() {
 
       {/* Tier distribution — held stocks only */}
       <section className="pb-12">
-        <TierBar distribution={heldDistribution} />
+        <TierBar distribution={heldDistribution} label="持仓 TIER 分布" />
       </section>
     </>
   )

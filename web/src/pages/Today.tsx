@@ -49,8 +49,12 @@ export default function Today() {
   return (
     <>
       <Hero
-        title="今日颁奖之夜"
-        emphasis="颁奖"
+        title={
+          <>
+            <span className="block">今日</span>
+            <span className="block"><em className="not-italic font-bold text-gold-dim italic">颁奖</em>之夜</span>
+          </>
+        }
         bigStat={data.awards.length}
         bigStatLabel="项今日奖颁出"
         bottomLine={

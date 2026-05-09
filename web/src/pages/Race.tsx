@@ -18,7 +18,7 @@ const PERIODS = [
 ] as const
 
 const TOP_N = 15
-const INTERVAL_MS = 120 // ~8fps per frame, smooth enough at 1x
+const BASE_INTERVAL_MS = 80 // ~12.5fps base; at 1x usable, 2x/4x smooth enough
 
 // ── Helpers ─────────────────────────────────────────────────────
 function formatMetric(metric: string, v: number): string {
@@ -26,8 +26,8 @@ function formatMetric(metric: string, v: number): string {
     const sign = v > 0 ? '+' : ''
     return `${sign}${v.toFixed(2)}%`
   }
-  // medal_count
-  return `${Math.round(v)} 🏅`
+  // medal_count — plain number, no emoji per visual language
+  return `${Math.round(v)}`
 }
 
 function formatDate(d: string, period: string): string {
@@ -108,7 +108,7 @@ export default function Race() {
 
   const { data, isLoading, isError, error } = useQuery<RaceResponse>({
     queryKey: ['race', metricKey, period],
-    queryFn: () => getRace(metricKey === 'medal_count' ? 'medals' : 'cum_return' as any, period),
+    queryFn: () => getRace(metricKey === 'medal_count' ? 'medals' : 'cum_return', period),
   })
 
   const frames = data?.frames ?? []
@@ -135,7 +135,7 @@ export default function Race() {
       if (intervalRef.current) clearInterval(intervalRef.current)
       return
     }
-    const ms = INTERVAL_MS / speed
+    const ms = BASE_INTERVAL_MS / speed
     intervalRef.current = setInterval(tick, ms)
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)

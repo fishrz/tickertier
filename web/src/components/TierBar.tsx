@@ -16,12 +16,13 @@ const ORDER: TierName[] = [
 
 interface Props {
   distribution: Record<string, number>
+  label?: string
 }
 
-export function TierBar({ distribution }: Props) {
+export function TierBar({ distribution, label = '今日全场 TIER 分布' }: Props) {
   return (
     <section className="pt-7 pb-8 border-b border-ink">
-      <div className="kicker mb-3.5">— 今日全场 TIER 分布 —</div>
+      <div className="kicker mb-3.5">— {label} —</div>
       <div className="flex h-2 mb-3">
         {ORDER.map((t) => {
           const n = distribution[t] || 0

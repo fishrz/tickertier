@@ -1,7 +1,7 @@
 // Hero block — magazine-style giant headline + side stats
 interface HeroProps {
-  title: string
-  emphasis?: string  // italic gold-dim word inside title
+  title: React.ReactNode
+  emphasis?: string  // legacy: italic gold-dim word inside string title
   subtitle?: string
   bigStat?: string | number
   bigStatLabel?: string
@@ -9,9 +9,9 @@ interface HeroProps {
 }
 
 export function Hero({ title, emphasis, subtitle, bigStat, bigStatLabel, bottomLine }: HeroProps) {
-  // Inject emphasis into title if present
+  // If title is a string AND emphasis given, split it; else render as-is (ReactNode)
   const renderTitle = () => {
-    if (!emphasis || !title.includes(emphasis)) {
+    if (typeof title !== 'string' || !emphasis || !title.includes(emphasis)) {
       return title
     }
     const [before, after] = title.split(emphasis)
