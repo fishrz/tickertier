@@ -1,10 +1,19 @@
 <div align="center">
 
-# 夯榜 · Stock Awards 🎖️
+# tickrtier
+### 夯股 · the daily tier-list for your tickers
 
-**给你的自选/持仓美股每天颁奖。**
-夯死了 → 顶级 → 人上人 → NPC → 拉完了 → 答辩。
-主打娱乐，附带参考价值。
+[中文](./README.zh-CN.md) · **[English](./README.md)**
+
+A self-hosted entertainment layer over your watchlist.
+Every day, your stocks get awards and a tier.
+🔥 夯死了 (S) → 👑 顶级 (A) → 💪 人上人 (B) → 😐 NPC (C) → 💩 拉完了 (D) → ☠️ 答辩 (F)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Made with uv](https://img.shields.io/badge/made%20with-uv-7a3fff)](https://github.com/astral-sh/uv)
+[![Backend](https://img.shields.io/badge/backend-FastAPI%20%2B%20DuckDB-009688)]()
+[![Frontend](https://img.shields.io/badge/frontend-React%20%2B%20Vite%20%2B%20D3-61dafb)]()
+[![Personal Use](https://img.shields.io/badge/use-personal-blue)]()
 
 ![home](docs/img/home.png)
 
@@ -12,77 +21,97 @@
 
 ---
 
-## 这是什么
+## Why this exists
 
-一个把"每天盯盘"变成"每天颁奖典礼"的本地 web app。
+I spent half a year building a watchlist of 81 AI-infrastructure stocks. NVDA, the obvious ones, plus a long tail of optical-transport, HBM, EDA, and networking-silicon names that nobody talks about. Every trading day I'd scan the whole list, open to close.
 
-我盯了半年 AI 基建美股，发现 **80 多支标的每天的剧情比电视剧还精彩** —— 有的高开低走（影帝），有的早盘装死下午原地起飞（绝地翻身），有的振幅 20% 收平（过山车之王）。看着看着就想：与其每天瞪着红绿数字，不如给它们颁个奖。
+After a while I noticed something: **the daily price action across these 81 names is more entertaining than most TV drama.**
 
-于是有了这个：
+Some open at the highs and close at the lows — pure Oscar-bait. Some look dead all morning then rocket in the afternoon. Some put up a 20% intraday range and close flat, leaving you motion-sick. Some sit there all day, no volume, single-digit range — you reload thinking the data feed is broken.
 
-- **22 个奖项**，每天自动评选，名字全是网络梗（"今日答辩"、"NPC 之光"、"我的眼泪奖"）
-- **6 档 tier 体系**，把 81 支股票按当日综合表现切档分配
-- **名人堂**，看哪只票历史上拿了多少金银铜
-- **Bar Chart Race**，年度颁奖典礼风格，看排名一帧帧变迁
-- **持仓战报**，按你真实持仓单独算 6 个奖（顶梁柱 / 拖后腿 / 钞能力 / ...）
+One day, staring at a wall of red and green, I thought: instead of refreshing prices and getting anxious, **what if I just gave them awards?**
 
-数据全部来自真实行情（yfinance + Finnhub），但**严肃性为零，娱乐性满分**。
+Today's Champion. Today's Disaster. The Comeback Kid. The Drama Queen. NPC of the Day. The Curse of the Galaxy. The names wrote themselves, and the more I wrote the more fun it got.
+
+So that's tickrtier (夯股). It's not a serious investing tool. It's an entertainment skin over real market data — turning your daily watch routine from *"refresh and worry"* into *"tune in for the awards show."* That's it. That's the pitch.
 
 ---
 
-## 截图
+## Screenshots
 
 <table>
 <tr>
-<td width="50%"><b>🎭 今日颁奖之夜</b><br/>13 个奖一次发完，下方 tier 榜把 81 支股切六档<br/><img src="docs/img/home.png"/></td>
-<td width="50%"><b>📊 持仓战报</b><br/>真持仓 → 顶梁柱 / 拖后腿 / 仓位之王<br/><img src="docs/img/portfolio.png"/></td>
+<td width="50%"><b>🎭 Today's Awards</b><br/>13 awards handed out, plus a six-tier ranking of the entire universe<br/><img src="docs/img/home.png"/></td>
+<td width="50%"><b>📊 Portfolio Battle Report</b><br/>Real holdings → MVP / Worst / Top Position / Tears<br/><img src="docs/img/portfolio.png"/></td>
 </tr>
 <tr>
-<td width="50%"><b>🏛️ 名人堂</b><br/>累计奖牌榜 + 8 种人格分类（Earnings Drama Queen / NPC 系列 / ...）<br/><img src="docs/img/hall.png"/></td>
-<td width="50%"><b>🏁 排名变迁 Race</b><br/>D3 bar chart race，可调速、可拖时间轴<br/><img src="docs/img/race.png"/></td>
+<td width="50%"><b>🏛️ Hall of Fame</b><br/>All-time medal table + 8-class personality clustering<br/><img src="docs/img/hall.png"/></td>
+<td width="50%"><b>🏁 Race</b><br/>D3 bar chart race over arbitrary date ranges<br/><img src="docs/img/race.png"/></td>
 </tr>
 </table>
 
 ---
 
-## 22 个奖项
+## The 22 awards
 
-### 日常奖 (8)
-| 奖项 | 标准 | 文案 |
+Three buckets. Daily awards run every trading day. Periodic awards run on rolling windows. Portfolio awards only appear once you drop in a `data/portfolio.json`.
+
+### Daily (8)
+
+| Award | Criterion | Vibe |
 |---|---|---|
-| 🏆 今日股王 | 当日涨幅 #1 | 夯到飞起 |
-| 💩 今日答辩 | 当日跌幅 #1 | 建议退市 |
-| 🪄 绝地翻身奖 | 日内最低 → 收盘反弹幅度 | 主打一个不装了 |
-| 🎢 过山车之王 | 日内振幅 (high-low)/open | 早上人上人，下午拉完了 |
-| 🎭 影帝奖 | 高开低走，最高 → 收盘跌幅 | 开盘装大佬，收盘装死 |
-| 💤 NPC 之光 | 振幅 + 量能双低 | 在的，活着，不动 |
-| 📈 暴兵奖 | 量能 / 20 日均量 | 主力进场了家人们 |
-| 🛡️ 抗跌之王 | QQQ 红盘日里逆势上涨 | 跌的不是我跌的是大盘 |
+| 🏆 Champion | Highest daily return | "Absolute unit" |
+| 💩 Disaster | Lowest daily return | "Delist this" |
+| 🪄 Comeback Kid | Intraday low → close rebound % | "Dead and reborn in one session" |
+| 🎢 Rollercoaster | Intraday range as % of open | "Up bad, down bad, both" |
+| 🎭 Drama Queen | High → close drawdown (gap-up reversal) | "Won the open, lost the day" |
+| 💤 NPC of the Day | Lowest range × volume | "Present. Alive. Motionless." |
+| 📈 Volume Spike | Volume / 20-day average | "Someone showed up" |
+| 🛡️ Defender | Up while QQQ is red | "Not me, the market" |
 
-### 周期奖 (7)
-| 奖项 | 周期 | 标准 |
+### Periodic (7)
+
+| Award | Window | Criterion |
 |---|---|---|
-| 🐎 劳模奖 | 月/季/年 | 阳线天数最多 |
-| 🧘 稳如老狗 | 月/季 | 累计正收益 + std 最低 |
-| 🎰 赌徒之王 | 周/月 | 累计振幅最大 |
-| 💰 财报赢家 | 单次 earnings | 财报后 1d 涨幅 |
-| 😱 财报翻车 | 单次 earnings | 财报后 1d 跌幅 |
-| 🪞 反指奖 | 月/季 | 跟跌不跟涨（上行 β 低、下行 β 高） |
-| 💀 银河诅咒 | 任意 | 连续阴线最多天数 |
+| 🐎 Workhorse | Month / quarter / year | Most green days |
+| 🧘 Steady Eddie | Month / quarter | Positive cumulative return + lowest std |
+| 🎰 Degenerate | Week / month | Largest cumulative range |
+| 💰 Earnings Winner | Per-event | +1d return after earnings |
+| 😱 Earnings Disaster | Per-event | -1d return after earnings |
+| 🪞 Anti-Indicator | Month / quarter | Low up-beta, high down-beta |
+| 💀 Curse of the Galaxy | Any | Longest streak of red days |
 
-### 持仓奖 (6) ｜ 仅在配置 `data/portfolio.json` 后启用
-| 奖项 | 标准 |
+### Portfolio (6) — requires `data/portfolio.json`
+
+| Award | Criterion |
 |---|---|
-| 💰 顶梁柱奖 | 当日盈利贡献 #1 |
-| 🩸 拖后腿奖 | 当日亏损贡献 #1 |
-| 💸 钞能力之王 | 累计浮盈 #1 |
-| 😭 我的眼泪奖 | 累计浮亏 #1 |
-| 👑 仓位之王 | 持仓占账户百分比 #1 |
-| 🧠 人间清醒奖 | 相对成本回报率 #1（买在脚踝上的天选之子） |
+| 💰 MVP | Top P&L contributor today |
+| 🩸 Liability | Worst P&L contributor today |
+| 💸 Cash Cow | Largest unrealized gain |
+| 😭 The Tears | Largest unrealized loss |
+| 👑 Top Position | Largest % of account |
+| 🧠 Genius Entry | Highest return-on-cost |
 
 ---
 
-## 架构
+## The six-tier ladder
+
+After the awards are handed out, the entire universe gets sorted into six tiers based on a composite of the day's metrics. The labels aren't ranked by Sharpe — they're ranked by emotional intensity.
+
+```
+🔥 夯死了 / On Fire     (S)   The day belonged to it.
+👑 顶级   / Top Tier    (A)   Crushed it, but not godlike.
+💪 人上人 / Above Avg   (B)   Comfortably above the pack.
+😐 NPC    / NPC         (C)   Neither happy nor sad. Existing.
+💩 拉完了 / Cooked      (D)   Rough day.
+☠️ 答辩   / Catastrophe (F)   Pour one out.
+```
+
+Why six tiers and not five? The first version had five. After a week of running it I realized that "ordinary bad" (down a few percent) and "actually catastrophic" (down 10% on bad guidance) feel completely different — bundling them together flattened the whole ladder. The ☠️ tier exists to give the truly cooked names the dignity of their own row.
+
+---
+
+## Architecture
 
 ```
 ┌─────────────────┐     ┌──────────────┐     ┌─────────────────┐
@@ -104,120 +133,118 @@
    scripts/daily.sh
 ```
 
-- **数据层**：DuckDB 单文件，所有计算用 SQL/pandas 在本地跑，零外部依赖
-- **算法层**：每个奖项一个 Python 模块（`data/awards/<bucket>/<award>.py`），实现 `compute(date) -> [Winner]` 接口，由 `registry.py` 注册
-- **API 层**：FastAPI 4 个 route（awards / stocks / race / portfolio）
-- **前端**：React + Vite + Tailwind，杂志/报刊视觉语言，4 个主页面 + 个股详情页
-- **人格分类**：KMeans 把 81 支股按多维表现指标聚成 8 个 persona（Earnings Drama Queen、NPC 系列、稳健型选手、大起大落选手 ……）
+- **Storage** — Single-file DuckDB. Everything runs in-process via SQL and pandas. Zero external dependencies.
+- **Awards** — Each award is a Python module under `data/awards/<bucket>/<award>.py` exposing a `compute(date) -> [Winner]` interface. Registered through `registry.py`.
+- **API** — FastAPI with four routes (awards / stocks / race / portfolio).
+- **Frontend** — React + Vite + Tailwind. Magazine-style visual language, four pages plus a per-stock detail view.
+- **Personas** — KMeans clusters the universe into 8 personality classes based on multi-dimensional behavior (Earnings Drama Queen, NPC family, Steady Performer, Wild Swinger, etc).
 
 ---
 
-## Quick Start
+## Quick start
 
 ```bash
-# 1. 装依赖（用 uv，比 pip 快 10x）
+# 1. Install (uv is ~10x faster than pip)
 make install
 source .venv/bin/activate
 
-# 2. 配置股票池
+# 2. Pick your universe
 cp data/universe.example.json data/universe.json
-# 编辑成你自己的 ticker 列表
+# Edit to your own ticker list
 
-# 3. 配置持仓（可选，启用持仓奖）
+# 3. Optional: drop in a portfolio to unlock the portfolio awards
 cp data/portfolio.example.json data/portfolio.json
-# 填入持仓数量、成本
 
-# 4. 一次性回溯过去 3 年（约 10 分钟，看你池子大小）
+# 4. Backfill 3 years of history (~10 minutes depending on universe size)
 make seed
 
-# 5. 起服务
-make dev      # 前端 :3000 + API :8001 同时起
+# 5. Run it
+make dev      # frontend :3000 + API :8001 in parallel
 ```
 
-打开 http://localhost:3000，开始看戏。
+Open http://localhost:3000 and enjoy the show.
 
 ---
 
 ## Operations
 
-### 每日更新链路
-
 ```bash
 make daily    # fetch_prices → compute_metrics → fetch_earnings → compute_awards → personas
-make health   # 检查最新 prices / daily awards / 全 universe tier 覆盖
+make health   # verify latest prices / daily awards / full universe tier coverage
 ```
 
-### Cron 自动跑
+Cron entrypoint:
 
 ```bash
 ./scripts/daily.sh
 ```
 
-写 `logs/daily-YYYYMMDD.log`，用 `/tmp/stock-awards-daily.lock` 防 DuckDB 并发写。WSL crontab 示例见 [`docs/CRON.md`](docs/CRON.md)。
+Logs to `logs/daily-YYYYMMDD.log`. Uses `/tmp/stock-awards-daily.lock` (flock) to prevent concurrent DuckDB writes. Sample WSL crontab in [`docs/CRON.md`](docs/CRON.md).
 
 ---
 
-## 项目结构
+## Project structure
 
 ```
-stock-awards/
-├── api/                  # FastAPI 后端
+tickrtier/
+├── api/                  # FastAPI backend
 │   ├── routes/           # awards / stocks / race / portfolio
-│   ├── awards_meta.py    # 奖项元数据（名字、文案、规则说明）
+│   ├── awards_meta.py    # award metadata (name, copy, rules)
 │   └── tests/
 ├── data/
-│   ├── awards/           # 22 个奖项算法
-│   │   ├── daily/        # 8 个日常奖
-│   │   ├── periodic/     # 7 个周期奖
-│   │   ├── portfolio/    # 6 个持仓奖
-│   │   ├── tier.py       # 六档 tier 切档
-│   │   └── registry.py   # 奖项注册表
-│   ├── pipelines/        # 数据管道（fetch / compute）
-│   ├── universe.json     # 你的自选股池（gitignored）
-│   └── portfolio.json    # 你的真实持仓（gitignored）
-├── web/                  # React 前端
+│   ├── awards/           # 22 award implementations
+│   │   ├── daily/        # 8 daily awards
+│   │   ├── periodic/     # 7 periodic awards
+│   │   ├── portfolio/    # 6 portfolio awards
+│   │   ├── tier.py       # six-tier classifier
+│   │   └── registry.py   # award registry
+│   ├── pipelines/        # data pipelines (fetch / compute)
+│   ├── universe.json     # your watchlist (gitignored)
+│   └── portfolio.json    # your holdings (gitignored)
+├── web/                  # React frontend
 │   └── src/pages/        # Today / Hall / Race / Portfolio / StockDetail
 ├── scripts/
-│   ├── daily.sh          # cron 入口
-│   └── seed.sh           # 3 年回溯
+│   ├── daily.sh          # cron entrypoint
+│   └── seed.sh           # 3-year backfill
 ├── docs/
 │   ├── CRON.md
-│   └── img/              # README 截图
-└── reports/              # 验收报告 / smoke tests
+│   └── img/              # README screenshots
+└── reports/              # acceptance / smoke tests
 ```
 
 ---
 
-## 设计与决策
+## Design decisions
 
-- **为什么 DuckDB 不是 Postgres**：80 支股 × 3 年 ≈ 60k 行，单文件 50MB，全部 SQL 跑分析比起 server 数据库轻 100 倍。回溯 + 跨期聚合是 DuckDB 的主场。
-- **为什么不做用户系统 / 票选**：单人版 2 周能跑通，加上登录注册 + 反作弊 + 内容审核就是 3 倍工期。先把单人体验打磨到爽再说。
-- **为什么奖项名要中二**：娱乐感来自**人话**而不是 Sharpe ratio。"今日答辩" 和 "Bottom Performer" 在严肃性上一致，但只有前一个会让你想截图发朋友圈。
-- **为什么 tier 表分 6 档不是 5**：原本设计 5 档（夯/顶/人上人/NPC/拉），后来发现真正惨烈的票（-10% 起步）和"普通拉"在情感强度上完全不同，必须独立拎出来叫"☠️ 答辩"。
+**DuckDB instead of Postgres.** 80 stocks × 3 years ≈ 60k rows, ~50MB on disk. Running analytics in-process via SQL is roughly 100x lighter than standing up a server database. Backfill plus cross-window aggregation is exactly DuckDB's home turf. At this scale Postgres would be pure overhead.
 
-详细实施计划：`~/.hermes/plans/2026-05-08-stock-awards-platform.md`。
+**No accounts, no voting in v1.** Single-player ships in two weeks. Add login + abuse prevention + moderation and you've tripled the scope. The fun of this project is *"the names I picked got these awards today"* — not crowdsourced rankings. Polish the solo experience first.
+
+**Award names are deliberately playful.** Entertainment value comes from the language, not the math. "今日答辩" and "Bottom Performer" are mathematically identical, but only one of them makes you screenshot it for a group chat. Half of whether a tool is fun is what you decide to call things.
+
+**Six tiers, not five.** Original design had five. After a week of real use, "ordinary down day" and "down 10% on a guide-cut" felt completely different but landed in the same bucket. The ☠️ tier (答辩) exists because the truly cooked names deserve their own row.
 
 ---
 
-## 技术栈
+## Stack
 
-| 层 | 选型 |
+| Layer | Choice |
 |---|---|
-| 后端 | Python 3.11 · FastAPI · pydantic v2 |
-| 数据库 | DuckDB |
-| 行情/财报 | yfinance · finnhub-python |
-| 调度 | cron + flock |
-| 前端 | React 18 · Vite · TypeScript · Tailwind CSS |
-| 图表 | Recharts (常规) · D3 (bar chart race) |
-| 测试 | pytest · vitest |
-| 包管理 | uv |
+| Backend | Python 3.11 · FastAPI · pydantic v2 |
+| Database | DuckDB |
+| Market data | yfinance · finnhub-python |
+| Scheduling | cron + flock |
+| Frontend | React 18 · Vite · TypeScript · Tailwind CSS |
+| Charts | Recharts (standard) · D3 (bar chart race) |
+| Tests | pytest · vitest |
+| Packaging | uv · pnpm |
 
 ---
 
 ## License
 
-MIT (personal use)
+MIT, personal use.
 
 ---
 
-<sub>免责声明：本平台所有奖项、tier、文案均为娱乐用途，**不构成任何投资建议**。POWERED BY DUCKDB · YFINANCE · FINNHUB</sub>
+<sub>⚠️ <b>Disclaimer</b>: All awards, tiers, copy, and persona classifications are <b>for entertainment only</b> and do <b>not</b> constitute investment advice. Make your own decisions based on your own research and risk tolerance. POWERED BY DUCKDB · YFINANCE · FINNHUB</sub>
