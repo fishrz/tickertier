@@ -1,8 +1,8 @@
 import { Fragment } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { LineChart, Line, ResponsiveContainer, Tooltip } from 'recharts'
-import { getStock } from '@/lib/api'
+import { getStock, getStockRelated } from '@/lib/api'
 import { formatPercent } from '@/lib/format'
 import { PersonaPill } from '@/components/PersonaPill'
 import { TierBadge } from '@/components/TierBadge'
@@ -243,6 +243,64 @@ export default function StockDetail() {
           </div>
         )}
       </section>
+      {/* ── Related stocks (same persona / same theme) ── */}
+      <RelatedSection ticker={d.ticker} />
     </>
+  )
+}
+
+function RelatedSection({ ticker }: { ticker: string }) {
+  const r = useQuery({
+    queryKey: ['stock-related', ticker],
+    queryFn: () => getStockRelated(ticker, 8),
+    enabled: !!ticker,
+  })
+  if (r.isLoading || !r.data) return null
+  const { same_persona, same_theme, self_persona, self_theme } = r.data
+  if (same_persona.length === 0 && same_theme.length === 0) return null
+
+  const Chip = ({ t }: { t: { ticker: string; persona: string | null } }) => (
+    <Link
+      to={`/stock/${t.ticker}`}
+      className="border border-ink px-3 py-1.5 font-mono text-[12px] tabular-nums hover:bg-ink hover:text-paper transition-colors"
+      title={t.persona ?? ''}
+    >
+      {t.ticker}
+    </Link>
+  )
+
+  return (
+    <section className="py-10 border-t border-ink">
+      <div className="kicker mb-4">— 同道中人 —</div>
+      <h2 className="font-serif font-black text-[48px] leading-[1.05] tracking-[-0.02em] mb-6">
+        相关<em className="not-italic text-gold-dim italic font-bold">股票</em>
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {same_persona.length > 0 && (
+          <div>
+            <div className="font-mono text-[11px] uppercase tracking-wider text-mute mb-3">
+              同人物 · {self_persona ?? '—'}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {same_persona.map((t) => (
+                <Chip key={t.ticker} t={t} />
+              ))}
+            </div>
+          </div>
+        )}
+        {same_theme.length > 0 && (
+          <div>
+            <div className="font-mono text-[11px] uppercase tracking-wider text-mute mb-3">
+              同板块 · {self_theme || '—'}
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {same_theme.map((t) => (
+                <Chip key={t.ticker} t={t} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   )
 }

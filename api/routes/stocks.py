@@ -155,3 +155,70 @@ def stock_medals(
             {"rank": rank, "period_key": key, "metric": metric, "meta": meta or {}}
         )
     return {"ticker": ticker, "period": period, "medals": by_code}
+
+
+@router.get("/{ticker}/related")
+def stock_related(
+    ticker: str,
+    limit: int = Query(8, ge=1, le=20),
+    con: duckdb.DuckDBPyConnection = Depends(get_db),
+) -> dict:
+    """Find related stocks by (persona match) + (same theme), excluding self.
+
+    Returns two lists: same_persona and same_theme. Each item has ticker + persona + theme.
+    """
+    ticker = ticker.upper()
+    uni = _universe_lookup()
+    if ticker not in uni:
+        raise HTTPException(404, f"unknown ticker {ticker}")
+    info = uni[ticker]
+    theme = info.get("theme", "")
+
+    # self persona
+    p_row = con.execute(
+        "SELECT persona FROM personas WHERE ticker = ?", [ticker]
+    ).fetchone()
+    self_persona = p_row[0] if p_row else None
+
+    same_persona: list[dict] = []
+    if self_persona:
+        rows = con.execute(
+            """
+            SELECT ticker, persona FROM personas
+            WHERE persona = ? AND ticker != ?
+            ORDER BY ticker
+            LIMIT ?
+            """,
+            [self_persona, ticker, limit],
+        ).fetchall()
+        for t, persona in rows:
+            tinfo = uni.get(t, {})
+            same_persona.append(
+                {"ticker": t, "persona": persona, "theme": tinfo.get("theme", "")}
+            )
+
+    # same theme (from universe)
+    same_theme = []
+    for t, tinfo in uni.items():
+        if t == ticker:
+            continue
+        if tinfo.get("theme") == theme and theme:
+            tp_row = con.execute(
+                "SELECT persona FROM personas WHERE ticker = ?", [t]
+            ).fetchone()
+            same_theme.append(
+                {
+                    "ticker": t,
+                    "persona": tp_row[0] if tp_row else None,
+                    "theme": tinfo.get("theme", ""),
+                }
+            )
+    same_theme = sorted(same_theme, key=lambda x: x["ticker"])[:limit]
+
+    return {
+        "ticker": ticker,
+        "self_persona": self_persona,
+        "self_theme": theme,
+        "same_persona": same_persona,
+        "same_theme": same_theme,
+    }

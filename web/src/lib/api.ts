@@ -36,6 +36,24 @@ export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEn
   return data
 }
 
+export interface RelatedStock {
+  ticker: string
+  persona: string | null
+  theme: string
+}
+export interface RelatedResponse {
+  ticker: string
+  self_persona: string | null
+  self_theme: string
+  same_persona: RelatedStock[]
+  same_theme: RelatedStock[]
+}
+
+export async function getStockRelated(ticker: string, limit = 8): Promise<RelatedResponse> {
+  const { data } = await api.get(`/stocks/${ticker}/related`, { params: { limit } })
+  return data
+}
+
 export async function getStock(ticker: string): Promise<StockDetail> {
   const { data } = await api.get(`/stocks/${ticker}`)
   return data

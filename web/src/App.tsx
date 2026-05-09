@@ -1,11 +1,23 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { lazy, Suspense } from 'react'
 import { Layout } from '@/components/Layout'
 import Today from '@/pages/Today'
-import Preview from '@/pages/Preview'
-import StockDetail from '@/pages/StockDetail'
-import HallOfFame from '@/pages/HallOfFame'
-import Race from '@/pages/Race'
-import Portfolio from '@/pages/Portfolio'
+
+// Heavy routes are lazy-loaded so the Today landing chunk stays small.
+// Each lazy() emits its own JS chunk, fetched only when the user navigates.
+const StockDetail = lazy(() => import('@/pages/StockDetail'))
+const HallOfFame = lazy(() => import('@/pages/HallOfFame'))
+const Race = lazy(() => import('@/pages/Race'))
+const Portfolio = lazy(() => import('@/pages/Portfolio'))
+const Preview = lazy(() => import('@/pages/Preview'))
+
+function PageFallback() {
+  return (
+    <div className="max-w-page mx-auto px-[var(--page-pad-x)] py-16">
+      <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-mute">载入中…</div>
+    </div>
+  )
+}
 
 export default function App() {
   return (
@@ -13,11 +25,46 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Today />} />
-          <Route path="stock/:ticker" element={<StockDetail />} />
-          <Route path="hall" element={<HallOfFame />} />
-          <Route path="race" element={<Race />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="preview" element={<Preview />} />
+          <Route
+            path="stock/:ticker"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <StockDetail />
+              </Suspense>
+            }
+          />
+          <Route
+            path="hall"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <HallOfFame />
+              </Suspense>
+            }
+          />
+          <Route
+            path="race"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <Race />
+              </Suspense>
+            }
+          />
+          <Route
+            path="portfolio"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <Portfolio />
+              </Suspense>
+            }
+          />
+          <Route
+            path="preview"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <Preview />
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

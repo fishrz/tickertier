@@ -61,8 +61,22 @@ Tier order (high → low):
 1. **Branch**: commit directly to `main` with a clear message (e.g. `feat(web): D4 stock detail page`).
 2. **Build before commit**: `cd web && NODE_ENV=development npm run build` must pass with no TS errors.
 3. **Backend tests**: if you touched `api/`, run `cd /mnt/c/Users/YuRu/Documents/Projects/stock-awards && pytest -q`.
-4. **Visual smoke**: after dev server is up, use `browser_cdp` (CDP at `http://127.0.0.1:9223`) to navigate to your page and dump `document.querySelector('h1')?.innerText` + key DOM counts. Save the result in your task summary.
-5. **Vite WSL trap**: only ONE vite instance can hold port 5173. Before `npm run dev`, run `pkill -f 'v\\ite' || true; rm -rf web/node_modules/.v\\ite`. Verify with `curl -s http://127.0.0.1:5173/src/pages/<YourPage>.tsx | head` that you see your CURRENT source, not stale.
+4. **Visual smoke (HARD RULES — read carefully)**:
+   - Use **`browser_cdp`** (stateless protocol calls). DO NOT use `browser_navigate` — it tries to auto-launch a fresh Chrome via the WSL bridge and will hang for 60s+ each call on this setup.
+   - Pre-flight probe: `curl -s -m 3 http://127.0.0.1:9223/json/version` — must return Chrome version JSON. If it doesn't, abort and `kanban_block`; do NOT auto-launch.
+   - Get a live page target: `curl -s http://127.0.0.1:9223/json | jq '.[] | select(.url|startswith("http://localhost:5173"))'`
+   - Drive via `Page.navigate` + `Runtime.evaluate` over the page's `webSocketDebuggerUrl`. See `scripts/cdp_e2e_probe.py` in the `hermes-multi-profile-fanout` skill for a working example.
+   - Save h1 + key DOM counts in your task summary.
+5. **Vite WSL trap (verification preflight — MUST run before smoke)**:
+   ```bash
+   ps aux | grep -E "vite" | grep -v grep | awk '{print $2}' | xargs -r kill -9
+   rm -rf web/node_modules/.vite web/dist
+   sleep 2
+   cd web && NODE_ENV=development nohup npm run dev > /tmp/vite.log 2>&1 &
+   sleep 10  # wait for "ready in" + dependency optimization
+   curl -s http://127.0.0.1:5173/ | grep -q '<div id="root">' || { echo "vite not ready"; exit 1; }
+   ```
+   If the page renders blank with `$RefreshReg$ is not defined` in console, the cache is stale — kill + clear + restart again. Verify with `curl -s http://127.0.0.1:5173/src/pages/<YourPage>.tsx | head` that you see CURRENT source.
 6. **Routes**: register your new page in `web/src/App.tsx` and ensure `Masthead.tsx` link works.
 7. **No SSR**: this is pure CSR Vite, no Next.js patterns.
 
