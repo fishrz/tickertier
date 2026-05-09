@@ -11,10 +11,14 @@ const METRICS = [
   { key: 'medal_count', label: '奖牌榜' },
 ] as const
 
-const PERIODS = [
-  { key: 'Y', label: '1年' },
-  { key: 'Q', label: '1季' },
-  { key: 'M', label: '1月' },
+// ── Range config — selects from/to window passed to API.
+// API auto-picks granularity from the date span: ≤180d=D, ≤730d=W, else M.
+// So 1月→daily, 1季→daily, 1年→weekly, 全部→monthly.
+const RANGES = [
+  { key: '1m', label: '近1月', days: 30 },
+  { key: '1q', label: '近1季', days: 92 },
+  { key: '1y', label: '近1年', days: 365 },
+  { key: 'all', label: '全部', days: null }, // null = no from/to filter
 ] as const
 
 const TOP_N = 15
@@ -70,20 +74,28 @@ function RaceBar({
   maxVal,
   metric,
   idx,
+  intervalMs,
 }: {
   entry: RaceEntry
   maxVal: number
   metric: string
   idx: number
+  intervalMs: number
 }) {
   const pct = maxVal > 0 ? Math.max((Math.abs(entry.value) / maxVal) * 100, 2) : 2
+  // Match transition duration to frame interval so the bar/row glides
+  // smoothly into place between ticks instead of snapping.
+  const moveDur = Math.max(intervalMs / 1000, 0.18)
 
   return (
     <motion.div
       layout
       initial={{ opacity: 0.6 }}
       animate={{ opacity: 1 }}
-      transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+      transition={{
+        layout: { type: 'tween', ease: 'easeInOut', duration: moveDur },
+        opacity: { duration: 0.2 },
+      }}
       className="flex items-center gap-3 mb-[6px]"
       style={{ height: 32 }}
     >
@@ -101,7 +113,7 @@ function RaceBar({
           layout
           className="absolute inset-y-0 left-0"
           style={{ width: `${pct}%`, background: tickerColor(entry.ticker) }}
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          transition={{ type: 'tween', ease: 'easeInOut', duration: moveDur }}
         />
       </div>
       {/* Value */}
@@ -119,19 +131,37 @@ function RaceBar({
 // ── Main page ───────────────────────────────────────────────────
 export default function Race() {
   const [metricKey, setMetricKey] = useState<string>('cum_return')
-  const [period, setPeriod] = useState<string>('Y')
+  const [rangeKey, setRangeKey] = useState<string>('1y')
   const [frameIdx, setFrameIdx] = useState(0)
   const [playing, setPlaying] = useState(true)
   const [speed, setSpeed] = useState(1)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
+  // Compute from/to from range key. Today is the upper bound.
+  const { fromIso, toIso } = useMemo(() => {
+    const cfg = RANGES.find((r) => r.key === rangeKey)
+    if (!cfg || cfg.days == null) return { fromIso: undefined, toIso: undefined }
+    const today = new Date()
+    const from = new Date(today)
+    from.setDate(from.getDate() - cfg.days)
+    const fmt = (d: Date) =>
+      `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+    return { fromIso: fmt(from), toIso: fmt(today) }
+  }, [rangeKey])
+
   const { data, isLoading, isError, error } = useQuery<RaceResponse>({
-    queryKey: ['race', metricKey, period],
-    queryFn: () => getRace(metricKey === 'medal_count' ? 'medals' : 'cum_return', period),
+    queryKey: ['race', metricKey, rangeKey],
+    queryFn: () =>
+      getRace(metricKey === 'medal_count' ? 'medals' : 'cum_return', {
+        from: fromIso,
+        to: toIso,
+      }),
   })
 
   const frames = data?.frames ?? []
+  const granularity = data?.period ?? 'D' // server-decided
   const currentFrame = frames[frameIdx] ?? null
+  const intervalMs = BASE_INTERVAL_MS / speed
   const maxVal = useMemo(() => {
     if (!currentFrame) return 100
     const vals = currentFrame.entries.map((e) => Math.abs(e.value))
@@ -172,7 +202,7 @@ export default function Race() {
   useEffect(() => {
     setFrameIdx(0)
     setPlaying(true)
-  }, [metricKey, period]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [metricKey, rangeKey]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Handlers ───────────────────────────────────────────────────
   const handlePlayPause = () => {
@@ -260,19 +290,19 @@ export default function Race() {
           ))}
         </div>
 
-        {/* Period selector */}
+        {/* Range selector */}
         <div className="flex gap-2 ml-4">
-          {PERIODS.map((p) => (
+          {RANGES.map((r) => (
             <button
-              key={p.key}
-              onClick={() => setPeriod(p.key)}
+              key={r.key}
+              onClick={() => setRangeKey(r.key)}
               className={`font-mono text-[11px] px-2 py-1 border transition-colors ${
-                period === p.key
+                rangeKey === r.key
                   ? 'border-ink bg-ink text-paper'
                   : 'border-ink text-mute hover:bg-paper-2'
               }`}
             >
-              {p.label}
+              {r.label}
             </button>
           ))}
         </div>
@@ -295,9 +325,9 @@ export default function Race() {
           style={{ accentColor: 'var(--gold)' }}
         />
         <div className="flex justify-between font-mono text-[10px] text-mute mt-1">
-          <span>{frames.length > 0 ? formatDate(frames[0].date, period) : ''}</span>
+          <span>{frames.length > 0 ? formatDate(frames[0].date, granularity) : ''}</span>
           <span>
-            {frames.length > 0 ? formatDate(frames[frames.length - 1].date, period) : ''}
+            {frames.length > 0 ? formatDate(frames[frames.length - 1].date, granularity) : ''}
           </span>
         </div>
       </div>
@@ -314,6 +344,7 @@ export default function Race() {
                   maxVal={maxVal}
                   metric={metricKey === 'medal_count' ? 'medals' : metricKey}
                   idx={idx}
+                  intervalMs={intervalMs}
                 />
               ))}
             </div>

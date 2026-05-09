@@ -7,6 +7,7 @@ import { StockChip } from '@/components/StockChip'
 import { PersonaPill } from '@/components/PersonaPill'
 import { MEDALS } from '@/lib/format'
 import { AWARD_META } from '@/lib/awards'
+import { AwardInfoButton } from '@/components/AwardInfoButton'
 
 type Period = 'D' | 'W' | 'M' | 'Q' | 'Y' | 'ALL'
 
@@ -157,8 +158,11 @@ function AwardCard({ code }: { code: string }) {
   return (
     <article className="px-6 pt-6 pb-5 border-b border-r border-ink last:border-r-0">
       <header className="mb-4">
-        <div className="font-serif font-black text-[22px] tracking-[-0.01em] leading-tight mb-1">
-          {meta?.name ?? code}
+        <div className="font-serif font-black text-[22px] tracking-[-0.01em] leading-tight mb-1 flex items-start gap-2">
+          <span className="flex-1 min-w-0">{meta?.name ?? code}</span>
+          <span className="pt-[7px] shrink-0">
+            <AwardInfoButton code={code} shortDesc={meta?.desc} />
+          </span>
         </div>
         <div className="text-[12px] text-mute tracking-wider">{meta?.desc ?? ''}</div>
       </header>

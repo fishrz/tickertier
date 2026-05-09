@@ -6,7 +6,7 @@ import json
 import duckdb
 from fastapi import APIRouter, Depends, HTTPException, Query
 
-from api.awards_meta import meta_for
+from api.awards_meta import AWARD_META, meta_for
 from api.deps import get_db
 from api.models import AwardGroup, AwardTopEntry, AwardWinner, LeaderboardEntry, TodayAwards
 
@@ -164,3 +164,62 @@ def by_code_top(
         )
         for r in rows
     ]
+
+
+
+@router.get("/meta/{code}")
+def award_meta(
+    code: str,
+    con: "duckdb.DuckDBPyConnection" = Depends(get_db),
+) -> dict:
+    """Full award metadata for the info modal: name, joke, criterion, formula,
+    plus historical top holders and total times awarded."""
+    if code not in AWARD_META:
+        raise HTTPException(404, f"unknown award code: {code}")
+    meta = dict(AWARD_META[code])
+    meta["code"] = code
+
+    # Top historical winners (rank=1) for this award
+    top = con.execute(
+        """
+        SELECT ticker, COUNT(*) AS wins
+        FROM awards
+        WHERE award_code = ? AND rank = 1
+        GROUP BY ticker
+        ORDER BY wins DESC, ticker ASC
+        LIMIT 8
+        """,
+        [code],
+    ).fetchall()
+
+    total = con.execute(
+        "SELECT COUNT(*) FROM awards WHERE award_code = ?",
+        [code],
+    ).fetchone()[0]
+
+    last = con.execute(
+        """
+        SELECT period_key, ticker, metric
+        FROM awards
+        WHERE award_code = ? AND rank = 1
+        ORDER BY period_key DESC
+        LIMIT 1
+        """,
+        [code],
+    ).fetchone()
+
+    return {
+        "meta": meta,
+        "top_holders": [{"ticker": t, "wins": int(w)} for t, w in top],
+        "total_awarded": int(total),
+        "last_winner": (
+            {"period_key": last[0], "ticker": last[1], "value": float(last[2]) if last[2] is not None else None}
+            if last else None
+        ),
+    }
+
+
+@router.get("/meta")
+def award_meta_all() -> dict:
+    """All award metadata in one call — used by the glossary page."""
+    return {code: dict(meta) | {"code": code} for code, meta in AWARD_META.items()}

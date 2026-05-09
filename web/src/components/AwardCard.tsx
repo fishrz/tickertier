@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { AwardGroup } from '@/types'
 import { formatMetric, MEDALS, metricTone } from '@/lib/format'
+import { AwardInfoButton } from './AwardInfoButton'
 
 interface Props {
   award: AwardGroup
@@ -14,8 +15,11 @@ export function AwardCard({ award }: Props) {
   return (
     <article className="px-6 pt-7 pb-6 border-r border-b border-ink last:border-r-0 [&:nth-child(3n)]:border-r-0">
       <header className="mb-5 min-h-[64px]">
-        <div className="font-serif font-black text-[26px] tracking-[-0.01em] leading-[1.1] mb-1.5">
-          {award.name}
+        <div className="font-serif font-black text-[26px] tracking-[-0.01em] leading-[1.1] mb-1.5 flex items-start gap-2">
+          <span className="flex-1 min-w-0">{award.name}</span>
+          <span className="pt-[10px] shrink-0">
+            <AwardInfoButton code={award.code} shortDesc={award.description} />
+          </span>
         </div>
         <div className="text-[12px] text-mute tracking-wider">
           {award.description}

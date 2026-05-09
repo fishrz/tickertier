@@ -64,12 +64,41 @@ export async function getStockMedals(ticker: string, period = 'Y') {
   return data
 }
 
-export async function getRace(metric = 'cum_return', period = 'Y') {
-  const { data } = await api.get('/race', { params: { metric, period } })
+export async function getRace(
+  metric = 'cum_return',
+  options: { from?: string; to?: string } = {}
+) {
+  const params: Record<string, string> = { metric }
+  if (options.from) params.from = options.from
+  if (options.to) params.to = options.to
+  const { data } = await api.get('/race', { params })
   return data
 }
 
 export async function getPortfolioToday(): Promise<PortfolioToday> {
   const { data } = await api.get('/portfolio/today')
+  return data
+}
+
+// ── Award metadata (for info modal) ────────────────────────────
+export interface AwardMeta {
+  code: string
+  name: string
+  desc: string
+  category: string
+  unit: string
+  criterion: string
+  formula: string
+}
+
+export interface AwardMetaResponse {
+  meta: AwardMeta
+  top_holders: { ticker: string; wins: number }[]
+  total_awarded: number
+  last_winner: { period_key: string; ticker: string; value: number | null } | null
+}
+
+export async function getAwardMeta(code: string): Promise<AwardMetaResponse> {
+  const { data } = await api.get(`/awards/meta/${code}`)
   return data
 }
