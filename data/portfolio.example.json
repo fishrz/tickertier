@@ -1,0 +1,43 @@
+{
+  "_comment": "示例持仓文件。复制为 data/portfolio.json 并填入你自己的真实持仓。该文件被 .gitignore 排除，不会提交。lottery=true 的小仓位（<lottery_threshold_pct）只展示不参与持仓奖评选。",
+  "as_of": "2026-01-01",
+  "lottery_threshold_pct": 0.005,
+  "account_summary": {
+    "total_assets_usd": 100000.00,
+    "cash_balance_usd": 20000.00,
+    "stock_market_value_usd": 80000.00
+  },
+  "positions": [
+    {
+      "ticker": "NVDA",
+      "shares": 50,
+      "avg_cost_usd": 450.00,
+      "current_price_usd": 520.00,
+      "market_value_usd": 26000.00,
+      "unrealized_pnl_usd": 3500.00,
+      "lottery": false
+    },
+    {
+      "ticker": "AMD",
+      "shares": 100,
+      "avg_cost_usd": 130.00,
+      "current_price_usd": 145.00,
+      "market_value_usd": 14500.00,
+      "unrealized_pnl_usd": 1500.00,
+      "lottery": false
+    },
+    {
+      "ticker": "ARM",
+      "shares": 5,
+      "avg_cost_usd": 80.00,
+      "current_price_usd": 95.00,
+      "market_value_usd": 475.00,
+      "unrealized_pnl_usd": 75.00,
+      "lottery": true
+    }
+  ],
+  "instruments_excluded": {
+    "_comment": "期权 / 加密 / 未支持的工具；只是元数据，不参与计算",
+    "options": []
+  }
+}
