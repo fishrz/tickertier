@@ -148,6 +148,38 @@ AWARD_META: dict[str, dict[str, str]] = {
         "criterion": "持仓中按真实仓位加权后，对账户拖累最大的股。",
         "formula": "argmin (shares × close × pct_change / 100)，金额负得最多。",
     },
+    "cash_king": {
+        "name": "💸 钞能力之王",
+        "desc": "实打实赚到钱的那个",
+        "category": "portfolio",
+        "unit": "amount",
+        "criterion": "持仓中累计浮盈金额最大的股。涨幅再猛，仓位小也白搭；这奖只看真金白银。",
+        "formula": "argmax (last_close − avg_cost) × shares，仅取浮盈 > 0 的持仓。",
+    },
+    "tear_jerker": {
+        "name": "😭 我的眼泪奖",
+        "desc": "套牢套到亲妈不认",
+        "category": "portfolio",
+        "unit": "amount",
+        "criterion": "持仓中累计浮亏金额最深的股。看一次哭一次。",
+        "formula": "argmin (last_close − avg_cost) × shares，仅取浮亏 < 0 的持仓。",
+    },
+    "big_position": {
+        "name": "👑 仓位之王",
+        "desc": "你就是我的全部",
+        "category": "portfolio",
+        "unit": "pct",
+        "criterion": "占整个账户市值比例最高的持仓。压舱石 or 单吊一注，一目了然。",
+        "formula": "argmax (shares × last_close) / Σ(shares × last_close) × 100。",
+    },
+    "buy_low": {
+        "name": "🧠 人间清醒奖",
+        "desc": "买在脚踝上的天选之子",
+        "category": "portfolio",
+        "unit": "pct",
+        "criterion": "成本价相对当前价折扣最大的持仓。证明你那次出手是真的清醒。",
+        "formula": "argmax (last_close − avg_cost) / avg_cost × 100，仅取浮盈 > 0。",
+    },
 }
 
 

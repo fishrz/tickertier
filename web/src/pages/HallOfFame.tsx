@@ -128,10 +128,7 @@ export default function HallOfFame() {
 
       {/* Top 20 leaderboard table */}
       <section className="mb-16">
-        <div className="kicker mb-3">— 累计奖牌榜 —</div>
-        <h2 className="font-serif font-black text-[40px] leading-none tracking-[-0.02em] mb-6">
-          金<em className="not-italic text-gold-dim font-bold">·</em>银<em className="not-italic text-gold-dim font-bold">·</em>铜
-        </h2>
+        <div className="kicker mb-6">— 累计奖牌榜 —</div>
 
         <table className="w-full border-collapse">
           <thead>
@@ -244,31 +241,121 @@ function AwardCard({ code }: { code: string }) {
 function TriviaBar({ rows }: { rows: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[] }) {
   if (!rows || rows.length === 0) return null
 
-  const topGold = rows.reduce((best, r) => r.gold > best.gold ? r : best, rows[0])
-  const mostMedals = rows.reduce((best, r) => r.total > best.total ? r : best, rows[0])
+  type Row = typeof rows[number]
+  type Trivia = { label: string; tip: string; ticker: string; tail: string; tone: 'gold' | 'silver' | 'bronze' | 'ink' }
+  const items: Trivia[] = []
+
+  // 千年老二 — silver 最多且 gold=0（专职陪跑）；如果没人 gold=0，就退化成 silver 最多
+  const silverChasers = rows.filter(r => r.silver > 0 && r.gold === 0)
+  const silverPool = silverChasers.length > 0 ? silverChasers : rows.filter(r => r.silver > 0)
+  if (silverPool.length > 0) {
+    const r = silverPool.reduce((b, x) => x.silver > b.silver ? x : b, silverPool[0])
+    items.push({
+      label: silverChasers.length > 0 ? '千年老二' : '银牌收藏家',
+      tip: silverChasers.length > 0
+        ? '银牌最多但从没拿过金牌：永远的第二名，专职陪跑。'
+        : '银牌数量最多的选手。',
+      ticker: r.ticker,
+      tail: `${r.silver} 银${r.gold === 0 ? ' · 0 金' : ''}`,
+      tone: 'silver',
+    })
+  }
+
+  // 铜牌专业户 — bronze 最多
+  const bronzePool = rows.filter(r => r.bronze > 0)
+  if (bronzePool.length > 0) {
+    const r = bronzePool.reduce((b, x) => x.bronze > b.bronze ? x : b, bronzePool[0])
+    items.push({
+      label: '铜牌专业户',
+      tip: '铜牌数量最多：常年卡在第三名，季军体质。',
+      ticker: r.ticker,
+      tail: `${r.bronze} 铜`,
+      tone: 'bronze',
+    })
+  }
+
+  // 黑马 — top 20 里排最靠后但还能拿到金牌
+  const horseList = rows.map((r, i) => ({ r, i })).filter(x => x.r.gold > 0)
+  if (horseList.length >= 2) {
+    const last = horseList[horseList.length - 1]
+    if (last.i >= 5) {
+      items.push({
+        label: '黑马',
+        tip: '总榜排名靠后，却还是抢到了金牌：以小博大的冷门选手。',
+        ticker: last.r.ticker,
+        tail: `第 ${last.i + 1} 名 · ${last.r.gold} 金`,
+        tone: 'gold',
+      })
+    }
+  }
+
+  // 雨露均沾 — 金银铜全有，且最少那项数最大（最均衡）
+  const balanced = rows.filter(r => r.gold > 0 && r.silver > 0 && r.bronze > 0)
+  if (balanced.length > 0) {
+    const r = balanced.reduce((b, x) => {
+      const xMin = Math.min(x.gold, x.silver, x.bronze)
+      const bMin = Math.min(b.gold, b.silver, b.bronze)
+      return xMin > bMin ? x : b
+    }, balanced[0])
+    items.push({
+      label: '雨露均沾',
+      tip: '金银铜三种奖牌都拿过，而且分布最均衡：稳健全能型选手。',
+      ticker: r.ticker,
+      tail: `${r.gold}/${r.silver}/${r.bronze}`,
+      tone: 'ink',
+    })
+  }
+
+  // 偏科生 — 只有一种颜色奖牌（且总数 ≥ 3 才够偏）
+  const oneColor = rows.filter(r => {
+    const colors = [r.gold > 0, r.silver > 0, r.bronze > 0].filter(Boolean).length
+    return colors === 1 && r.total >= 3
+  })
+  if (oneColor.length > 0) {
+    const r = oneColor.reduce((b, x) => x.total > b.total ? x : b, oneColor[0])
+    const which = r.gold > 0 ? `全 ${r.gold} 金` : r.silver > 0 ? `全 ${r.silver} 银` : `全 ${r.bronze} 铜`
+    items.push({
+      label: '偏科生',
+      tip: '只拿一种颜色的奖牌（≥3 枚）：要么全金要么全铜，没有中间地带。',
+      ticker: r.ticker,
+      tail: which,
+      tone: r.gold > 0 ? 'gold' : r.silver > 0 ? 'silver' : 'bronze',
+    })
+  }
+
+  // 去重 ticker（同一只占一个就够，避免一只票包揽 trivia）
+  const seen = new Set<string>()
+  const dedup = items.filter(it => {
+    if (seen.has(it.ticker)) return false
+    seen.add(it.ticker)
+    return true
+  }).slice(0, 4)
+
+  if (dedup.length === 0) return null
+
+  const toneClass: Record<Trivia['tone'], string> = {
+    gold: 'text-gold hover:text-gold-dim',
+    silver: 'text-ink hover:text-gold-dim',
+    bronze: 'text-ink/70 hover:text-gold-dim',
+    ink: 'text-ink hover:text-gold-dim',
+  }
 
   return (
-    <div className="flex flex-wrap gap-8 font-mono text-[13px] tracking-[0.04em]">
-      <div>
-        <span className="text-mute">金币王</span>{' '}
-        <Link to={`/stock/${topGold.ticker}`} className="font-bold text-gold hover:text-gold-dim">
-          {topGold.ticker}
-        </Link>
-        <span className="text-mute"> ({topGold.gold} 金)</span>
-      </div>
-      <div>
-        <span className="text-mute">奖牌王</span>{' '}
-        <Link to={`/stock/${mostMedals.ticker}`} className="font-bold text-ink hover:text-gold-dim">
-          {mostMedals.ticker}
-        </Link>
-        <span className="text-mute"> ({mostMedals.total} 枚)</span>
-      </div>
-      {mostMedals.persona && (
-        <div>
-          <span className="text-mute">人物</span>{' '}
-          <span className="text-gold-dim">{mostMedals.persona}</span>
+    <div className="flex flex-wrap gap-x-8 gap-y-3 font-mono text-[13px] tracking-[0.04em]">
+      {dedup.map((it) => (
+        <div key={it.label}>
+          <span
+            className="text-mute underline decoration-dotted decoration-mute/60 underline-offset-[3px] cursor-help"
+            title={it.tip}
+          >
+            {it.label}
+          </span>{' '}
+          <Link to={`/stock/${it.ticker}`} className={`font-bold ${toneClass[it.tone]}`}>
+            {it.ticker}
+          </Link>
+          <span className="text-mute"> ({it.tail})</span>
         </div>
-      )}
+      ))}
     </div>
   )
 }

@@ -6,6 +6,19 @@ export const api = axios.create({
   timeout: 15000,
 })
 
+export interface StatsResponse {
+  universe: number
+  awards: number
+  medals_awarded: number
+  data_from: string | null
+  data_to: string | null
+}
+
+export async function getStats(): Promise<StatsResponse> {
+  const r = await api.get('/stats')
+  return r.data
+}
+
 export async function getHealth(): Promise<HealthResponse> {
   const { data } = await api.get('/health')
   return data

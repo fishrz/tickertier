@@ -27,6 +27,22 @@ def health(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
     return {"status": "ok", "db_path": str(DB_PATH), "as_of": as_of}
 
 
+@app.get("/stats")
+def stats(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
+    """Lightweight footer/masthead stats: universe size, award count, data range."""
+    universe = con.execute("SELECT COUNT(DISTINCT ticker) FROM prices").fetchone()
+    award_codes = con.execute("SELECT COUNT(DISTINCT award_code) FROM awards").fetchone()
+    rng = con.execute("SELECT MIN(date), MAX(date) FROM prices").fetchone()
+    medals = con.execute("SELECT COUNT(*) FROM awards").fetchone()
+    return {
+        "universe": int(universe[0]) if universe else 0,
+        "awards": int(award_codes[0]) if award_codes else 0,
+        "medals_awarded": int(medals[0]) if medals else 0,
+        "data_from": str(rng[0]) if rng and rng[0] else None,
+        "data_to": str(rng[1]) if rng and rng[1] else None,
+    }
+
+
 app.include_router(awards.router)
 app.include_router(stocks.router)
 app.include_router(race.router)

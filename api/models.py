@@ -85,6 +85,7 @@ class Position(BaseModel):
     today_pnl: float
     today_pct: float
     tier_today: str | None = None
+    lottery: bool = False  # <0.5% portfolio MV — shown but excluded from awards
 
 
 class Highlight(BaseModel):
@@ -99,4 +100,6 @@ class PortfolioToday(BaseModel):
     today_pnl: float
     pillar: Highlight | None = None
     traitor: Highlight | None = None
+    # New: generic highlight map keyed by award code (cash_king / tear_jerker / big_position / buy_low / pillar / traitor)
+    highlights: dict[str, Highlight | None] = {}
     positions: list[Position]

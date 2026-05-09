@@ -20,4 +20,8 @@ export const AWARD_META: Record<string, { name: string; desc: string }> = {
   earnings_clown:  { name: '💼 财报现形', desc: '原形毕露' },
   pillar:          { name: '💰 顶梁柱奖', desc: '全家就指望你了' },
   traitor:         { name: '🩸 拖后腿奖', desc: '建议清仓谢罪' },
+  cash_king:       { name: '💸 钞能力之王', desc: '实打实赚到钱的那个' },
+  tear_jerker:     { name: '😭 我的眼泪奖', desc: '套牢套到亲妈不认' },
+  big_position:    { name: '👑 仓位之王', desc: '你就是我的全部' },
+  buy_low:         { name: '🧠 人间清醒奖', desc: '买在脚踝上的天选之子' },
 }

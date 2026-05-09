@@ -45,6 +45,10 @@ _AWARDS: dict[str, tuple[str, list[str], str]] = {
     # Portfolio
     "pillar": ("portfolio.pillar", ["D"], "portfolio"),
     "traitor": ("portfolio.traitor", ["D"], "portfolio"),
+    "cash_king": ("portfolio.cash_king", ["D"], "portfolio"),
+    "tear_jerker": ("portfolio.tear_jerker", ["D"], "portfolio"),
+    "big_position": ("portfolio.big_position", ["D"], "portfolio"),
+    "buy_low": ("portfolio.buy_low", ["D"], "portfolio"),
 }
 
 

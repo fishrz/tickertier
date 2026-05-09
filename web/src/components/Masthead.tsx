@@ -1,4 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
+import { getStats, getHealth } from '@/lib/api'
 
 const NAV = [
   { to: '/', label: '今日颁奖' },
@@ -7,10 +9,29 @@ const NAV = [
   { to: '/portfolio', label: '我的持仓' },
 ]
 
+function formatRange(from: string | null, to: string | null): string {
+  if (!from || !to) return '—'
+  // 2023-05-08 ~ 2026-05-08  →  '23.05 – 26.05'
+  const short = (d: string) => d.slice(2, 7).replace('-', '.')
+  return `${short(from)} – ${short(to)}`
+}
+
 export function Masthead() {
-  // Issue number = days since some epoch, just for flavor
-  const issue = Math.floor((Date.now() - new Date('2023-05-08').getTime()) / 86400000)
   const today = new Date().toISOString().slice(0, 10)
+  const statsQ = useQuery({
+    queryKey: ['stats'],
+    queryFn: getStats,
+    staleTime: 5 * 60 * 1000,
+  })
+  const s = statsQ.data
+
+  const healthQ = useQuery({
+    queryKey: ['health'],
+    queryFn: getHealth,
+    refetchInterval: 30 * 1000,  // 30s heartbeat
+    retry: 0,
+  })
+  const isLive = healthQ.isSuccess && healthQ.data?.status === 'ok'
 
   return (
     <header className="border-t-[4px] border-ink border-b border-ink">
@@ -37,10 +58,29 @@ export function Masthead() {
             </NavLink>
           ))}
         </nav>
-        <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-mute flex gap-6">
+        <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-mute flex gap-x-6 gap-y-1 flex-wrap">
           <span>VOL. <b className="text-ink font-medium">I</b></span>
-          <span>ISSUE <b className="text-ink font-medium">{issue}</b></span>
+          <span title="自选 + 持仓股票池总数">
+            STOCKS <b className="text-ink font-medium">{s ? s.universe : '—'}</b>
+          </span>
           <span><b className="text-ink font-medium">{today}</b></span>
+          <span
+            className="inline-flex items-center gap-1.5"
+            title={isLive ? '后端在线' : '后端离线 / 连接失败'}
+          >
+            <span
+              aria-hidden
+              className={
+                'inline-block w-[7px] h-[7px] rounded-full ' +
+                (isLive
+                  ? 'bg-[#16a34a] shadow-[0_0_6px_rgba(22,163,74,0.6)] animate-pulse'
+                  : 'bg-[#9ca3af]')
+              }
+            />
+            <b className={isLive ? 'text-ink font-medium' : 'text-mute font-medium'}>
+              {isLive ? 'LIVE' : 'OFFLINE'}
+            </b>
+          </span>
         </div>
       </div>
     </header>

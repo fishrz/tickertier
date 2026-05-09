@@ -63,6 +63,7 @@ export interface PortfolioPosition {
   today_pnl: number
   today_pct: number
   tier_today: string | null
+  lottery?: boolean
 }
 
 export interface RaceEntry {
@@ -89,6 +90,7 @@ export interface PortfolioToday {
   today_pnl: number
   pillar?: { ticker: string; contribution: number } | null
   traitor?: { ticker: string; contribution: number } | null
+  highlights?: Record<string, { ticker: string; contribution: number } | null>
   positions: PortfolioPosition[]
 }
 

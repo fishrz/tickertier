@@ -49,10 +49,14 @@ def _write_award(con, code: str, period: str, period_key: str, results: list[tup
 
 
 def _ensure_positions(con) -> None:
-    """Load portfolio.json into positions table if positions is empty."""
-    n = con.execute("SELECT count(*) FROM positions").fetchone()[0]
-    if n > 0:
-        return
+    """Sync portfolio.json → positions table.
+
+    portfolio.json is the source of truth. We re-sync (replace) on every call
+    so edits to the JSON take effect on the next compute_awards run. Positions
+    flagged ``lottery: true`` are skipped — they're shown in the holdings table
+    but excluded from portfolio award computation (weight too small to be
+    meaningful, e.g. 1-share lottery picks).
+    """
     if not PORTFOLIO_PATH.exists():
         return
     pf = json.loads(PORTFOLIO_PATH.read_text())
@@ -60,13 +64,17 @@ def _ensure_positions(con) -> None:
     rows = [
         (as_of, p["ticker"], float(p["shares"]), float(p.get("avg_cost", 0)))
         for p in pf.get("positions", [])
+        if not p.get("lottery", False)
     ]
-    if rows:
-        con.executemany(
-            "INSERT OR REPLACE INTO positions (date, ticker, shares, avg_cost) VALUES (?,?,?,?)",
-            rows,
-        )
-        log.info("positions: loaded %d rows from portfolio.json", len(rows))
+    if not rows:
+        return
+    # Replace the snapshot for this as_of date
+    con.execute("DELETE FROM positions WHERE date = ?", [as_of])
+    con.executemany(
+        "INSERT INTO positions (date, ticker, shares, avg_cost) VALUES (?,?,?,?)",
+        rows,
+    )
+    log.info("positions: synced %d rows from portfolio.json (as_of=%s)", len(rows), as_of)
 
 
 def run_daily_for(con, d: date) -> None:
