@@ -18,7 +18,26 @@ const PERIODS = [
 ] as const
 
 const TOP_N = 15
-const BASE_INTERVAL_MS = 80 // ~12.5fps base; at 1x usable, 2x/4x smooth enough
+const BASE_INTERVAL_MS = 240 // ~4fps base — readable at 1x; 0.5x for slow study, 2x for skim
+
+// Stable per-ticker color from a curated 8-slot palette.
+// Stays in the newspaper-black + gold + earth-tone family — no rainbow.
+const PALETTE = [
+  'var(--gold)',          // 旧奖杯金
+  'var(--ink)',           // 报纸黑
+  '#7d6a3a',              // 暗金/橄榄
+  '#3f5840',              // 深森林绿
+  '#7a3b2e',              // 干血色 / 砖红
+  '#4a4a4a',              // 中灰
+  '#8a6a4a',              // 铜
+  '#2c4257',              // 深石板蓝
+] as const
+
+function tickerColor(t: string): string {
+  let h = 0
+  for (let i = 0; i < t.length; i++) h = (h * 31 + t.charCodeAt(i)) >>> 0
+  return PALETTE[h % PALETTE.length]
+}
 
 // ── Helpers ─────────────────────────────────────────────────────
 function formatMetric(metric: string, v: number): string {
@@ -80,8 +99,8 @@ function RaceBar({
       <div className="flex-1 relative h-full">
         <motion.div
           layout
-          className="absolute inset-y-0 left-0 bg-gold"
-          style={{ width: `${pct}%` }}
+          className="absolute inset-y-0 left-0"
+          style={{ width: `${pct}%`, background: tickerColor(entry.ticker) }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         />
       </div>
@@ -226,7 +245,7 @@ export default function Race() {
 
         {/* Speed */}
         <div className="flex gap-2">
-          {[1, 2, 4].map((s) => (
+          {[0.5, 1, 2].map((s) => (
             <button
               key={s}
               onClick={() => setSpeed(s)}
