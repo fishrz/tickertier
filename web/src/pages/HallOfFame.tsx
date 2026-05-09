@@ -22,13 +22,13 @@ const WINDOWS: { key: Window; label: string }[] = [
 ]
 
 const GRANULARITIES: { key: Granularity; label: string; hint: string }[] = [
-  { key: 'ALL', label: '全部',   hint: '所有奖项' },
-  { key: 'D',   label: '日奖',   hint: '股王/答辩等' },
-  { key: 'W',   label: '周奖',   hint: '暴兵/抗揍' },
-  { key: 'M',   label: '月奖',   hint: '月度评选' },
-  { key: 'Q',   label: '季奖',   hint: '季度评选' },
-  { key: 'Y',   label: '年奖',   hint: '劳模/万年老二' },
-  { key: 'E',   label: '财报奖', hint: '封神/现形' },
+  { key: 'ALL', label: '全部',   hint: '所有奖项一起算' },
+  { key: 'D',   label: '每日',   hint: '日度评选：股王/答辩/过山车/影帝...' },
+  { key: 'W',   label: '每周',   hint: '周度评选：暴兵/抗揍/反指' },
+  { key: 'M',   label: '每月',   hint: '月度评选' },
+  { key: 'Q',   label: '每季',   hint: '季度评选' },
+  { key: 'Y',   label: '每年',   hint: '年度评选：劳模/万年老二/细水长流' },
+  { key: 'E',   label: '财报',   hint: '财报披露窗口：封神/现形' },
 ]
 
 export default function HallOfFame() {
@@ -77,11 +77,11 @@ export default function HallOfFame() {
         }
       />
 
-      {/* Dual-axis selector */}
-      <div className="border-t border-ink -mt-6 mb-10">
+      {/* Dual-axis selector — sits BELOW Hero, no negative margin (avoids border collision) */}
+      <div className="mb-10 mt-4">
         {/* Axis 1: time window — primary */}
-        <div className="flex items-baseline gap-4 px-1 pt-3 pb-2 border-b border-ink/20">
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-16">时间窗</span>
+        <div className="flex items-baseline gap-4 px-1 pt-3 pb-2 border-b border-ink/15">
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-20">时间窗</span>
           <div className="flex flex-wrap">
             {WINDOWS.map((w) => (
               <button
@@ -100,7 +100,7 @@ export default function HallOfFame() {
         </div>
         {/* Axis 2: award granularity — secondary */}
         <div className="flex items-baseline gap-4 px-1 pt-2 pb-2">
-          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-16">奖项粒度</span>
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-20">奖项类型</span>
           <div className="flex flex-wrap">
             {GRANULARITIES.map((g) => (
               <button
@@ -118,6 +118,12 @@ export default function HallOfFame() {
             ))}
           </div>
         </div>
+        {/* tiny inline help — only when something other than ALL is selected */}
+        {gran !== 'ALL' && (
+          <div className="mt-1 px-1 font-mono text-[11px] text-mute italic">
+            ↑ {GRANULARITIES.find(g => g.key === gran)?.hint}
+          </div>
+        )}
       </div>
 
       {/* Top 20 leaderboard table */}
@@ -132,10 +138,10 @@ export default function HallOfFame() {
             <tr className="border-b-[3px] border-ink text-left">
               <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 pr-3 text-mute">#</th>
               <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 pr-3 text-mute">Ticker</th>
-              <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 pr-3 text-mute">Persona</th>
-              <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 text-right text-mute">①</th>
-              <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 text-right text-mute">②</th>
-              <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 text-right text-mute">③</th>
+              <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 pr-3 text-mute">人物</th>
+              <th className="font-serif text-[13px] py-2 text-right font-bold text-gold">金</th>
+              <th className="font-serif text-[13px] py-2 text-right font-bold text-gold-dim">银</th>
+              <th className="font-serif text-[13px] py-2 text-right font-bold text-ink/60">铜</th>
               <th className="font-mono text-[11px] uppercase tracking-[0.15em] py-2 pl-6 text-right text-mute">总计</th>
             </tr>
           </thead>
@@ -248,14 +254,14 @@ function TriviaBar({ rows }: { rows: { ticker: string; gold: number; silver: num
         <Link to={`/stock/${topGold.ticker}`} className="font-bold text-gold hover:text-gold-dim">
           {topGold.ticker}
         </Link>
-        <span className="text-mute"> ({topGold.gold}①)</span>
+        <span className="text-mute"> ({topGold.gold} 金)</span>
       </div>
       <div>
         <span className="text-mute">奖牌王</span>{' '}
         <Link to={`/stock/${mostMedals.ticker}`} className="font-bold text-ink hover:text-gold-dim">
           {mostMedals.ticker}
         </Link>
-        <span className="text-mute"> ({mostMedals.total}枚)</span>
+        <span className="text-mute"> ({mostMedals.total} 枚)</span>
       </div>
       {mostMedals.persona && (
         <div>
