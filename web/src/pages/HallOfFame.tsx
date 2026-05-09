@@ -9,23 +9,35 @@ import { MEDALS } from '@/lib/format'
 import { AWARD_META } from '@/lib/awards'
 import { AwardInfoButton } from '@/components/AwardInfoButton'
 
-type Period = 'D' | 'W' | 'M' | 'Q' | 'Y' | 'ALL'
+type Window = '7d' | '30d' | '90d' | '180d' | '1y' | '3y' | 'all'
+type Granularity = 'ALL' | 'D' | 'W' | 'M' | 'Q' | 'H' | 'Y' | 'E'
 
-const PERIODS: { key: Period; label: string }[] = [
-  { key: 'D', label: 'D' },
-  { key: 'W', label: 'W' },
-  { key: 'M', label: 'M' },
-  { key: 'Q', label: 'Q' },
-  { key: 'Y', label: 'Y' },
-  { key: 'ALL', label: 'ALL' },
+const WINDOWS: { key: Window; label: string }[] = [
+  { key: '7d',  label: '近 7 日' },
+  { key: '30d', label: '近 30 日' },
+  { key: '90d', label: '近 90 日' },
+  { key: '1y',  label: '近 1 年' },
+  { key: '3y',  label: '近 3 年' },
+  { key: 'all', label: '全部' },
+]
+
+const GRANULARITIES: { key: Granularity; label: string; hint: string }[] = [
+  { key: 'ALL', label: '全部',   hint: '所有奖项' },
+  { key: 'D',   label: '日奖',   hint: '股王/答辩等' },
+  { key: 'W',   label: '周奖',   hint: '暴兵/抗揍' },
+  { key: 'M',   label: '月奖',   hint: '月度评选' },
+  { key: 'Q',   label: '季奖',   hint: '季度评选' },
+  { key: 'Y',   label: '年奖',   hint: '劳模/万年老二' },
+  { key: 'E',   label: '财报奖', hint: '封神/现形' },
 ]
 
 export default function HallOfFame() {
-  const [period, setPeriod] = useState<Period>('ALL')
+  const [win, setWin] = useState<Window>('1y')
+  const [gran, setGran] = useState<Granularity>('ALL')
 
   const lbQ = useQuery({
-    queryKey: ['leaderboard', period],
-    queryFn: () => getLeaderboard(period, 20),
+    queryKey: ['leaderboard', win, gran],
+    queryFn: () => getLeaderboard({ window: win, granularity: gran, limit: 20 }),
   })
 
   if (lbQ.isLoading) {
@@ -40,6 +52,8 @@ export default function HallOfFame() {
   }
 
   const rows = lbQ.data
+  const winLabel = WINDOWS.find((w) => w.key === win)?.label ?? win
+  const granLabel = GRANULARITIES.find((g) => g.key === gran)?.label ?? gran
 
   return (
     <>
@@ -56,26 +70,54 @@ export default function HallOfFame() {
         bigStatLabel="支股票上榜"
         bottomLine={
           <span>
-            周期 <b className="text-ink font-mono font-medium">{period === 'ALL' ? '全部' : period}</b>
+            <b className="text-ink font-mono font-medium">{winLabel}</b>
+            <span className="text-mute"> · </span>
+            <b className="text-ink font-mono font-medium">{granLabel}</b>
           </span>
         }
       />
 
-      {/* Period switcher */}
-      <div className="flex gap-0 border-t border-ink -mt-6 mb-10">
-        {PERIODS.map((p) => (
-          <button
-            key={p.key}
-            onClick={() => setPeriod(p.key)}
-            className={`font-mono text-[13px] tracking-[0.15em] uppercase px-5 py-3 border-b-[3px] transition-colors ${
-              period === p.key
-                ? 'bg-ink text-gold border-gold'
-                : 'bg-paper text-mute border-transparent hover:text-ink'
-            }`}
-          >
-            {p.label}
-          </button>
-        ))}
+      {/* Dual-axis selector */}
+      <div className="border-t border-ink -mt-6 mb-10">
+        {/* Axis 1: time window — primary */}
+        <div className="flex items-baseline gap-4 px-1 pt-3 pb-2 border-b border-ink/20">
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-16">时间窗</span>
+          <div className="flex flex-wrap">
+            {WINDOWS.map((w) => (
+              <button
+                key={w.key}
+                onClick={() => setWin(w.key)}
+                className={`font-mono text-[12px] tracking-[0.05em] px-3 py-1.5 border-b-[2px] transition-colors ${
+                  win === w.key
+                    ? 'text-ink border-gold font-bold'
+                    : 'text-mute border-transparent hover:text-ink'
+                }`}
+              >
+                {w.label}
+              </button>
+            ))}
+          </div>
+        </div>
+        {/* Axis 2: award granularity — secondary */}
+        <div className="flex items-baseline gap-4 px-1 pt-2 pb-2">
+          <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-mute shrink-0 w-16">奖项粒度</span>
+          <div className="flex flex-wrap">
+            {GRANULARITIES.map((g) => (
+              <button
+                key={g.key}
+                onClick={() => setGran(g.key)}
+                title={g.hint}
+                className={`font-mono text-[12px] tracking-[0.05em] px-3 py-1.5 border-b-[2px] transition-colors ${
+                  gran === g.key
+                    ? 'text-ink border-ink font-bold'
+                    : 'text-mute border-transparent hover:text-ink'
+                }`}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Top 20 leaderboard table */}

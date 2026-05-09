@@ -97,17 +97,68 @@ def period_awards(
     return TodayAwards(date=key, awards=groups, tier_distribution=tier_dist)
 
 
+_VALID_GRAN = {"D", "W", "M", "Q", "H", "Y", "E", "ALL"}
+_WINDOW_DAYS = {"7d": 7, "30d": 30, "90d": 90, "180d": 180, "1y": 365, "3y": 365 * 3}
+
+# DuckDB SQL expression mapping each award row to a real calendar date,
+# regardless of which period bucket it lives in. Used for time-window filtering.
+_AS_OF_EXPR = """
+    CASE a.period
+        WHEN 'D' THEN CAST(a.period_key AS DATE)
+        WHEN 'E' THEN CAST(a.period_key AS DATE)
+        WHEN 'W' THEN strptime(a.period_key || '-1', '%G-W%V-%u')::DATE
+        WHEN 'M' THEN CAST(a.period_key || '-01' AS DATE)
+        WHEN 'Q' THEN make_date(
+            CAST(split_part(a.period_key, '-Q', 1) AS INTEGER),
+            (CAST(split_part(a.period_key, '-Q', 2) AS INTEGER) - 1) * 3 + 1,
+            1
+        )
+        WHEN 'H' THEN make_date(
+            CAST(split_part(a.period_key, '-H', 1) AS INTEGER),
+            CASE WHEN split_part(a.period_key, '-H', 2) = '1' THEN 1 ELSE 7 END,
+            1
+        )
+        WHEN 'Y' THEN make_date(CAST(a.period_key AS INTEGER), 1, 1)
+    END
+"""
+
+
 @router.get("/leaderboard", response_model=list[LeaderboardEntry])
 def leaderboard(
-    period: str = Query("D"),
+    # New dual-axis params (preferred):
+    window: str = Query("all"),         # 7d / 30d / 90d / 180d / 1y / 3y / all
+    granularity: str = Query("ALL"),    # D / W / M / Q / H / Y / E / ALL
+    # Legacy single-axis param (back-compat — maps onto granularity if window default):
+    period: str | None = Query(None),
     limit: int = Query(20, ge=1, le=200),
     con: duckdb.DuckDBPyConnection = Depends(get_db),
 ) -> list[LeaderboardEntry]:
-    valid = {"D", "W", "M", "Q", "H", "Y", "E", "ALL"}
-    if period not in valid:
-        raise HTTPException(400, f"invalid period, must be one of {sorted(valid)}")
-    where = "1=1" if period == "ALL" else "a.period = ?"
-    params: list = [] if period == "ALL" else [period]
+    # Legacy compat: ?period=X behaves like granularity=X, window=all
+    if period is not None:
+        if period not in _VALID_GRAN:
+            raise HTTPException(400, f"invalid period, must be one of {sorted(_VALID_GRAN)}")
+        granularity = period
+    if granularity not in _VALID_GRAN:
+        raise HTTPException(400, f"invalid granularity, must be one of {sorted(_VALID_GRAN)}")
+    if window != "all" and window not in _WINDOW_DAYS:
+        raise HTTPException(400, f"invalid window, must be 'all' or one of {sorted(_WINDOW_DAYS)}")
+
+    clauses = ["1=1"]
+    params: list = []
+    if granularity != "ALL":
+        clauses.append("a.period = ?")
+        params.append(granularity)
+    if window != "all":
+        # Use the most recent award date as anchor so a stale db doesn't drop everything
+        anchor_row = con.execute(f"SELECT MAX({_AS_OF_EXPR}) FROM awards a").fetchone()
+        if anchor_row and anchor_row[0]:
+            cutoff = anchor_row[0]
+            from datetime import timedelta
+            cutoff = cutoff - timedelta(days=_WINDOW_DAYS[window])
+            clauses.append(f"{_AS_OF_EXPR} >= ?")
+            params.append(cutoff)
+    where = " AND ".join(clauses)
+
     rows = con.execute(
         f"""
         SELECT a.ticker,
@@ -119,6 +170,7 @@ def leaderboard(
         FROM awards a
         WHERE {where}
         GROUP BY a.ticker
+        HAVING COUNT(*) > 0
         ORDER BY gold DESC, total DESC, a.ticker
         LIMIT ?
         """,

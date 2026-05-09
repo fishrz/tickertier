@@ -26,9 +26,14 @@ export async function getAwardsPeriod(period: string, key: string) {
   return data
 }
 
-export async function getLeaderboard(period = 'D', limit = 20): Promise<LeaderboardEntry[]> {
-  const { data } = await api.get('/awards/leaderboard', { params: { period, limit } })
-  return data
+export async function getLeaderboard(
+  params: { window?: string; granularity?: string; limit?: number } = {},
+): Promise<LeaderboardEntry[]> {
+  const { window = 'all', granularity = 'ALL', limit = 20 } = params
+  const r = await api.get<LeaderboardEntry[]>('/awards/leaderboard', {
+    params: { window, granularity, limit },
+  })
+  return r.data
 }
 
 export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEntry[]> {
