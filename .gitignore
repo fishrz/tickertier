@@ -4,7 +4,6 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .coverage
-*.duckdb
 *.duckdb.wal
 *.parquet
 node_modules/
@@ -15,7 +14,3 @@ uv.lock
 .DS_Store
 .env
 .env.local
-
-# Personal data — never commit
-data/portfolio.json
-docs/positions.json

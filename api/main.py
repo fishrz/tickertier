@@ -13,21 +13,21 @@ app = FastAPI(title="Stock Awards API", version="0.1")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],  # tighten after first deploy
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-@app.get("/health")
+@app.get("/api/health")
 def health(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
     row = con.execute("SELECT MAX(date) FROM prices").fetchone()
     as_of = str(row[0]) if row and row[0] else None
     return {"status": "ok", "db_path": str(DB_PATH), "as_of": as_of}
 
 
-@app.get("/stats")
+@app.get("/api/stats")
 def stats(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
     """Lightweight footer/masthead stats: universe size, award count, data range."""
     universe = con.execute("SELECT COUNT(DISTINCT ticker) FROM prices").fetchone()
@@ -43,7 +43,7 @@ def stats(con: duckdb.DuckDBPyConnection = Depends(get_db)) -> dict:
     }
 
 
-app.include_router(awards.router)
-app.include_router(stocks.router)
-app.include_router(race.router)
-app.include_router(portfolio.router)
+app.include_router(awards.router, prefix="/api")
+app.include_router(stocks.router, prefix="/api")
+app.include_router(race.router, prefix="/api")
+app.include_router(portfolio.router, prefix="/api")
