@@ -9,13 +9,6 @@ const NAV = [
   { to: '/portfolio', label: '我的持仓' },
 ]
 
-function formatRange(from: string | null, to: string | null): string {
-  if (!from || !to) return '—'
-  // 2023-05-08 ~ 2026-05-08  →  '23.05 – 26.05'
-  const short = (d: string) => d.slice(2, 7).replace('-', '.')
-  return `${short(from)} – ${short(to)}`
-}
-
 export function Masthead() {
   const today = new Date().toISOString().slice(0, 10)
   const statsQ = useQuery({

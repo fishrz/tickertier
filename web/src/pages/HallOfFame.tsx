@@ -241,7 +241,6 @@ function AwardCard({ code }: { code: string }) {
 function TriviaBar({ rows }: { rows: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[] }) {
   if (!rows || rows.length === 0) return null
 
-  type Row = typeof rows[number]
   type Trivia = { label: string; tip: string; ticker: string; tail: string; tone: 'gold' | 'silver' | 'bronze' | 'ink' }
   const items: Trivia[] = []
 
