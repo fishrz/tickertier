@@ -2,8 +2,8 @@ name: Daily Pipeline & JSON Export
 
 on:
   schedule:
-    # Weekdays at 10:45 UTC (6:45 AM ET)
-    - cron: '45 10 * * 1-5'
+    # Daily at 22:00 UTC — after US market close + data settle (ET 17:00/18:00 DST)
+    - cron: '0 22 * * *'  # 22:00 UTC daily — after US market close + data settle
   workflow_dispatch:
 
 permissions:
