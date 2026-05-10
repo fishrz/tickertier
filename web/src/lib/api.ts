@@ -34,9 +34,22 @@ function fetchJSON<T>(path: string): Promise<T> {
 
 // ── Raw JSON shapes (match the static export files) ────────────
 
+interface AggregatedMedal {
+  code: string
+  name: string
+  count: number
+  gold: number
+  silver: number
+  bronze: number
+  best_rank: number | null
+  latest_period_key: string | null
+  period: string | null
+}
+
 interface StockRow {
   ticker: string
   name: string
+  theme: string | null
   close: number | null
   pct_change: number | null
   intraday_amp: number | null
@@ -44,9 +57,9 @@ interface StockRow {
   tier: string | null
   awards_count: number
   persona: string | null
-  medal_history: { period: string; period_key: string; award_code: string; rank: number }[]
+  medal_history: AggregatedMedal[]
   tier_distribution: Record<string, number>
-  recent_30d: { date: string; close: number | null; pct_change: number | null }[]
+  recent_30d: { date: string; close: number | null; pct_change: number | null; tier: string | null }[]
 }
 
 interface TiersFile {
@@ -57,6 +70,8 @@ interface TiersFile {
 interface HallFile {
   all_time: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]
   by_period: Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number }[]>
+  windows: Record<string, Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]>>
+  by_award_code: Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]>
 }
 
 interface RaceGranularity {
@@ -304,17 +319,21 @@ export async function getLeaderboard(
   params: { window?: string; granularity?: string; limit?: number } = {},
 ): Promise<LeaderboardEntry[]> {
   const file = await fetchJSON<HallFile>('/data/hall.json')
-  const { window, limit = 20 } = params
+  const { window = 'all', granularity = 'ALL', limit = 20 } = params
 
-  let rows: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona?: string | null }[]
+  let rows: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona?: string | null }[] = []
 
-  if (window && file.by_period && file.by_period[window]) {
+  // Prefer the windows × granularity matrix
+  const winBucket = file.windows?.[window]
+  if (winBucket) {
+    rows = winBucket[granularity] ?? winBucket.ALL ?? []
+  }
+  // Fallback to legacy by_period (case-insensitive partial match)
+  if (rows.length === 0 && file.by_period && file.by_period[window]) {
     rows = file.by_period[window]
-  } else if (window && file.by_period) {
-    // Try to find a matching period key (case-insensitive partial match)
-    const key = Object.keys(file.by_period).find((k) => k.toLowerCase() === window.toLowerCase())
-    rows = key ? file.by_period[key] : file.all_time
-  } else {
+  }
+  // Last resort: all-time
+  if (rows.length === 0) {
     rows = file.all_time
   }
 
@@ -328,10 +347,16 @@ export async function getLeaderboard(
   }))
 }
 
-export async function getAwardTopByCode(_code: string, _n = 3): Promise<AwardTopEntry[]> {
-  // Per-award breakdown not available in static data.
-  // Return empty so the UI gracefully shows "—".
-  return []
+export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEntry[]> {
+  const file = await fetchJSON<HallFile>('/data/hall.json')
+  const rows = file.by_award_code?.[code] ?? []
+  return rows.slice(0, n).map((r) => ({
+    ticker: r.ticker,
+    total_wins: r.total,
+    gold: r.gold,
+    silver: r.silver,
+    bronze: r.bronze,
+  }))
 }
 
 export async function getRace(
@@ -348,7 +373,22 @@ export async function getRace(
     Q: 'quarterly', quarterly: 'quarterly',
     Y: 'yearly', yearly: 'yearly',
   }
-  const key = granMap[options.granularity ?? ''] ?? 'monthly'
+
+  // If caller explicitly passed granularity, use it.
+  // Otherwise auto-pick from the date span: ≤45d=D, ≤200d=W, ≤800d=M, ≤2000d=Q, else Y.
+  let key: keyof RaceFile
+  if (options.granularity && granMap[options.granularity]) {
+    key = granMap[options.granularity]
+  } else if (options.from && options.to) {
+    const span = (new Date(options.to).getTime() - new Date(options.from).getTime()) / 86400000
+    if (span <= 45) key = 'daily'
+    else if (span <= 200) key = 'weekly'
+    else if (span <= 800) key = 'monthly'
+    else if (span <= 2000) key = 'quarterly'
+    else key = 'yearly'
+  } else {
+    key = 'monthly'
+  }
   const data = file[key]
 
   // Filter frames by date range if requested
@@ -503,30 +543,47 @@ export async function getStock(ticker: string): Promise<StockDetail> {
   const stock = stocks.find((s) => s.ticker === ticker)
   if (!stock) throw new Error(`Stock ${ticker} not found`)
 
+  // medal_history is now pre-aggregated per award_code in stocks.json
+  // (one entry per award code, with gold/silver/bronze counts).
+  const total_gold = stock.medal_history.reduce((s, m) => s + m.gold, 0)
+  const total_silver = stock.medal_history.reduce((s, m) => s + m.silver, 0)
+  const total_bronze = stock.medal_history.reduce((s, m) => s + m.bronze, 0)
+
   return {
     ticker: stock.ticker,
     name: stock.name,
-    theme: null,        // not in static data
+    theme: stock.theme,
     persona: stock.persona,
-    medal_count: { total: stock.awards_count },
+    medal_count: {
+      gold: total_gold,
+      silver: total_silver,
+      bronze: total_bronze,
+      total: stock.awards_count,
+    },
     medal_history: stock.medal_history.map((m) => ({
-      code: m.award_code,
-      name: m.award_code,
-      count: 1,
-      latest_date: m.period_key,
-      best_rank: m.rank,
+      code: m.code,
+      name: m.name,
+      count: m.count,
+      latest_date: m.latest_period_key,
+      best_rank: m.best_rank,
     })),
     tier_distribution: stock.tier_distribution,
     last_close: stock.close,
     last_pct_change: stock.pct_change,
     recent_30d: stock.recent_30d
       .filter((r) => r.close != null)
-      .map((r) => ({ date: r.date, close: r.close as number, pct_change: r.pct_change ?? undefined })),
+      .map((r) => ({
+        date: r.date,
+        close: r.close as number,
+        pct_change: r.pct_change ?? undefined,
+        tier: r.tier ?? undefined,
+      })),
   }
 }
 
 export async function getStockMedals(_ticker: string, _period = 'Y') {
-  // Not available in static data
+  // Per-period medal breakdown not exported.
+  // The aggregated counts live on getStock().medal_history.
   return []
 }
 
@@ -534,14 +591,17 @@ export async function getStockRelated(ticker: string, limit = 8): Promise<Relate
   const stocks = await getStocks()
   const stock = stocks.find((s) => s.ticker === ticker)
   const self_persona = stock?.persona ?? null
-  const self_theme = '' // not in static data
+  const self_theme = stock?.theme ?? ''
 
   const same_persona: RelatedStock[] = stocks
     .filter((s) => s.ticker !== ticker && s.persona === self_persona && self_persona != null)
     .slice(0, limit)
-    .map((s) => ({ ticker: s.ticker, persona: s.persona, theme: '' }))
+    .map((s) => ({ ticker: s.ticker, persona: s.persona, theme: s.theme ?? '' }))
 
-  const same_theme: RelatedStock[] = [] // no theme data
+  const same_theme: RelatedStock[] = stocks
+    .filter((s) => s.ticker !== ticker && s.theme && s.theme === self_theme)
+    .slice(0, limit)
+    .map((s) => ({ ticker: s.ticker, persona: s.persona, theme: s.theme ?? '' }))
 
   return { ticker, self_persona, self_theme, same_persona, same_theme }
 }

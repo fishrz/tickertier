@@ -152,14 +152,42 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         ).fetchall()
         aw_rows = con.execute("SELECT ticker, COUNT(*) FROM awards GROUP BY ticker").fetchall()
         aw_by_ticker = {ticker: int(count) for ticker, count in aw_rows}
-        # medal_history per ticker
+        # medal_history per ticker — AGGREGATED by award_code (NOT raw rows).
+        # Each entry: {code, name, count, gold, silver, bronze, latest_period_key,
+        #              latest_period, best_rank}. This is what the StockDetail
+        # 获奖履历 grid renders — one card per award type.
         mh_rows = con.execute(
-            "SELECT ticker, period, period_key, award_code, rank FROM awards ORDER BY ticker, period_key DESC"
+            """
+            SELECT ticker, award_code,
+                   COUNT(*) AS total,
+                   SUM(CASE WHEN rank = 1 THEN 1 ELSE 0 END) AS gold,
+                   SUM(CASE WHEN rank = 2 THEN 1 ELSE 0 END) AS silver,
+                   SUM(CASE WHEN rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                   MIN(rank) AS best_rank,
+                   MAX(period_key) AS latest_pk,
+                   ANY_VALUE(period) AS any_period
+            FROM awards
+            GROUP BY ticker, award_code
+            ORDER BY ticker, total DESC
+            """
         ).fetchall()
         medal_hist_by_ticker: dict[str, list[dict]] = {}
-        for mtk, mperiod, mpk, mcode, mrank in mh_rows:
+        for mtk, mcode, mtotal, mgold, msilver, mbronze, mbest, mlatest, mperiod in mh_rows:
+            try:
+                m = meta_for(mcode)
+                pretty_name = m.get("name") or mcode
+            except Exception:
+                pretty_name = mcode
             medal_hist_by_ticker.setdefault(mtk, []).append({
-                "period": mperiod, "period_key": str(mpk), "award_code": mcode, "rank": int(mrank),
+                "code": mcode,
+                "name": pretty_name,
+                "count": int(mtotal),
+                "gold": int(mgold),
+                "silver": int(msilver),
+                "bronze": int(mbronze),
+                "best_rank": int(mbest) if mbest is not None else None,
+                "latest_period_key": str(mlatest) if mlatest else None,
+                "period": mperiod,
             })
 
         # tier_distribution per ticker (last 90 days)
@@ -180,30 +208,35 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
             total = sum(counts.values())
             tier_dist_by_ticker[tdk] = {t: round(c / total, 4) for t, c in counts.items()} if total > 0 else {}
 
-        # recent_30d per ticker
+        # recent_30d per ticker — INCLUDES tier per day
         r30_rows = con.execute(
             """
-            SELECT p.ticker, p.date, p.close, dm.pct_change
+            SELECT p.ticker, p.date, p.close, dm.pct_change, t.tier
             FROM prices p
             LEFT JOIN daily_metrics dm ON dm.ticker = p.ticker AND dm.date = p.date
+            LEFT JOIN tiers t ON t.ticker = p.ticker AND t.date = p.date
             WHERE p.date >= (SELECT MAX(date) - INTERVAL 45 DAY FROM prices)
-            ORDER BY p.ticker, p.date DESC
+            ORDER BY p.ticker, p.date ASC
             """
         ).fetchall()
         recent_by_ticker: dict[str, list[dict]] = {}
-        for rtk, rd, rc, rp in r30_rows:
-            if len(recent_by_ticker.get(rtk, [])) >= 30:
-                continue
+        for rtk, rd, rc, rp, rtier in r30_rows:
             recent_by_ticker.setdefault(rtk, []).append({
-                "date": str(rd), "close": round(float(rc), 2) if rc else None,
+                "date": str(rd),
+                "close": round(float(rc), 2) if rc else None,
                 "pct_change": round(float(rp), 4) if rp is not None else None,
+                "tier": rtier,
             })
+        # Trim to last 30 (we read up to 45 calendar days; ~30 trading days)
+        for k in recent_by_ticker:
+            recent_by_ticker[k] = recent_by_ticker[k][-30:]
 
         for tk, close, pct, amp, vr20, tier, persona, _tier_dist_raw in rows:
             info = uni_map.get(tk, {})
             stock_rows.append({
                 "ticker": tk,
                 "name": info.get("name", tk),
+                "theme": info.get("theme"),
                 "close": round(float(close), 2) if close else None,
                 "pct_change": round(float(pct), 4) if pct is not None else None,
                 "intraday_amp": round(float(amp), 4) if amp is not None else None,
@@ -224,56 +257,6 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
     print("[race.json]")
     BENCH = frozenset({"QQQ"})
     bench_sql = ",".join(f"'{t}'" for t in BENCH) or "''"
-    bounds = con.execute(f"SELECT MIN(date), MAX(date) FROM prices WHERE ticker NOT IN ({bench_sql})").fetchone()
-    race_frames = []
-    if bounds and bounds[0]:
-        db_min, db_max = bounds
-        end = db_max
-        start = max(db_min, end - timedelta(days=365 * 3))
-        frame_dates_rows = con.execute(
-            f"""
-            SELECT MAX(date) FROM prices
-            WHERE ticker NOT IN ({bench_sql}) AND date BETWEEN ? AND ?
-            GROUP BY date_trunc('month', date)
-            ORDER BY 1
-            """,
-            [start, end],
-        ).fetchall()
-        frame_dates = [r[0] for r in frame_dates_rows]
-        if frame_dates:
-            base = con.execute(
-                f"""
-                SELECT ticker, FIRST(close ORDER BY date) AS base
-                FROM prices
-                WHERE ticker NOT IN ({bench_sql}) AND date >= ?
-                GROUP BY ticker
-                """,
-                [start],
-            ).fetchall()
-            base_map = {t: float(b) for t, b in base if b}
-            ph = ",".join(["?"] * len(frame_dates))
-            close_rows = con.execute(
-                f"""
-                SELECT ticker, date, close
-                FROM prices
-                WHERE ticker NOT IN ({bench_sql}) AND date IN ({ph})
-                """,
-                list(frame_dates),
-            ).fetchall()
-            by_date: dict = {}
-            for tk, d, c in close_rows:
-                if tk not in base_map:
-                    continue
-                by_date.setdefault(d, []).append((tk, (float(c) - base_map[tk]) / base_map[tk] * 100.0))
-            for d in frame_dates:
-                entries = sorted(by_date.get(d, []), key=lambda x: x[1], reverse=True)[:20]
-                race_frames.append({
-                    "date": str(d),
-                    "entries": [
-                        {"ticker": tk, "value": round(v, 4), "rank": i + 1}
-                        for i, (tk, v) in enumerate(entries)
-                    ],
-                })
     # ── Multi-granularity race data ──
     def build_race_frames(granularity: str, trunc_expr: str) -> list[dict]:
         """Build race frames for a given granularity."""
@@ -354,37 +337,140 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         print("  WARNING: data/portfolio.json not found")
 
     # ── 5. hall.json ──────────────────────────────────────────────
+    # Schema:
+    #   {
+    #     "all_time": [...],                       # legacy / fallback
+    #     "by_period": {"2026-05": [...], ...},    # legacy month/quarter/year keys
+    #     "windows": {                             # NEW: time-window × granularity matrix
+    #       "7d":  {"ALL": [...], "D": [...], "W": [...], ...},
+    #       "30d": {...}, "90d": ..., "1y": ..., "3y": ..., "all": ...
+    #     },
+    #     "by_award_code": {                       # NEW: top 5 per award code (各项之王)
+    #       "daily_king": [{ticker, gold, silver, bronze, total, persona}, ...],
+    #       ...
+    #     }
+    #   }
     print("[hall.json]")
-    hall_rows = con.execute(
+
+    def _agg_query(where_sql: str, params: list) -> list[dict]:
+        sql = f"""
+            SELECT a.ticker,
+                   SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                   SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                   SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                   COUNT(*) AS total,
+                   (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
+            FROM awards a
+            {where_sql}
+            GROUP BY a.ticker
+            HAVING COUNT(*) > 0
+            ORDER BY gold DESC, total DESC, a.ticker
         """
-        SELECT a.ticker,
-               SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
-               SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
-               SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
-               COUNT(*) AS total,
-               (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
-        FROM awards a
-        GROUP BY a.ticker
-        HAVING COUNT(*) > 0
-        ORDER BY gold DESC, total DESC, a.ticker
-        """,
-    ).fetchall()
-    hall_data = [
-        {
-            "ticker": r[0],
-            "gold": int(r[1]),
-            "silver": int(r[2]),
-            "bronze": int(r[3]),
-            "total": int(r[4]),
-            "persona": r[5],
-        }
-        for r in hall_rows
-    ]
-    # ── Period-grouped hall of fame ──
-    # Generate period keys: last 6 months, recent quarters, current year
+        return [
+            {"ticker": r[0], "gold": int(r[1]), "silver": int(r[2]),
+             "bronze": int(r[3]), "total": int(r[4]), "persona": r[5]}
+            for r in con.execute(sql, params).fetchall()
+        ]
+
+    # all_time (legacy + fallback)
+    hall_data = _agg_query("", [])
+
+    # ── windows × granularity ──
+    # Window → cutoff date for daily-period awards.
+    # Non-daily periods (W/M/Q/Y/E/H) are matched by lexicographic period_key
+    # comparison after we derive a sensible cutoff key for each granularity.
     today_dt = date.today()
-    period_keys = []
-    # Last 6 months (precise month arithmetic)
+    win_days = {"7d": 7, "30d": 30, "90d": 90, "180d": 180, "1y": 365, "3y": 365 * 3, "all": None}
+
+    GRANULARITIES = ["ALL", "D", "W", "M", "Q", "Y", "E", "H"]
+
+    def _window_cutoff(days: int | None) -> date | None:
+        if days is None:
+            return None
+        return today_dt - timedelta(days=days)
+
+    def _window_pk_lower_bound(period: str, days: int | None) -> str | None:
+        """Return a lexicographic lower-bound period_key for a granularity."""
+        if days is None:
+            return None
+        cutoff = today_dt - timedelta(days=days)
+        if period == "D" or period == "E" or period == "H":
+            return cutoff.isoformat()
+        if period == "W":
+            iso_year, iso_week, _ = cutoff.isocalendar()
+            return f"{iso_year}-W{iso_week:02d}"
+        if period == "M":
+            return f"{cutoff.year}-{cutoff.month:02d}"
+        if period == "Q":
+            q = (cutoff.month - 1) // 3 + 1
+            return f"{cutoff.year}-Q{q}"
+        if period == "Y":
+            return str(cutoff.year)
+        return cutoff.isoformat()
+
+    windows_data: dict[str, dict[str, list[dict]]] = {}
+    for win_key, days in win_days.items():
+        per_gran: dict[str, list[dict]] = {}
+        for gran in GRANULARITIES:
+            if gran == "ALL":
+                if days is None:
+                    per_gran[gran] = hall_data[:50]
+                else:
+                    # Mixed-period filter: each period uses its own pk lower bound.
+                    where_clauses = []
+                    params: list = []
+                    for p in ["D", "W", "M", "Q", "Y", "E", "H"]:
+                        lb = _window_pk_lower_bound(p, days)
+                        if lb:
+                            where_clauses.append(f"(a.period = '{p}' AND CAST(a.period_key AS VARCHAR) >= ?)")
+                            params.append(lb)
+                    where_sql = "WHERE " + " OR ".join(where_clauses) if where_clauses else ""
+                    per_gran[gran] = _agg_query(where_sql, params)[:50]
+            else:
+                if days is None:
+                    per_gran[gran] = _agg_query("WHERE a.period = ?", [gran])[:50]
+                else:
+                    lb = _window_pk_lower_bound(gran, days)
+                    if lb is None:
+                        per_gran[gran] = _agg_query("WHERE a.period = ?", [gran])[:50]
+                    else:
+                        per_gran[gran] = _agg_query(
+                            "WHERE a.period = ? AND CAST(a.period_key AS VARCHAR) >= ?",
+                            [gran, lb],
+                        )[:50]
+        windows_data[win_key] = per_gran
+
+    # ── by_award_code (各项之王 top 5) ──
+    award_codes = [r[0] for r in con.execute(
+        "SELECT DISTINCT award_code FROM awards ORDER BY award_code"
+    ).fetchall()]
+    by_award_code: dict[str, list[dict]] = {}
+    for code in award_codes:
+        rows_top = con.execute(
+            """
+            SELECT a.ticker,
+                   SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                   SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                   SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                   COUNT(*) AS total,
+                   (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
+            FROM awards a
+            WHERE a.award_code = ?
+            GROUP BY a.ticker
+            HAVING COUNT(*) > 0
+            ORDER BY gold DESC, total DESC, a.ticker
+            LIMIT 5
+            """,
+            [code],
+        ).fetchall()
+        by_award_code[code] = [
+            {"ticker": r[0], "gold": int(r[1]), "silver": int(r[2]),
+             "bronze": int(r[3]), "total": int(r[4]), "persona": r[5]}
+            for r in rows_top
+        ]
+
+    # ── legacy by_period (month/quarter/year keys, for backwards compat) ──
+    period_keys: list[str] = []
     for i in range(6):
         m = today_dt.month - i
         y = today_dt.year
@@ -392,77 +478,38 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
             m += 12
             y -= 1
         period_keys.append(f"{y}-{m:02d}")
-    period_keys = list(dict.fromkeys(period_keys))  # dedupe preserving order
-    # Quarters
     for y in range(today_dt.year, today_dt.year - 1, -1):
         for q in range(4, 0, -1):
             period_keys.append(f"{y}-Q{q}")
-    # Years
     for y in range(today_dt.year, today_dt.year - 2, -1):
         period_keys.append(str(y))
     period_keys = list(dict.fromkeys(period_keys))
 
     hall_by_period: dict[str, list[dict]] = {}
     for pk in period_keys:
-        # Determine SQL filter based on period key format
         if "-Q" in pk:
             year, qnum = pk.split("-Q")
             qstart = int(qnum) * 3 - 2
             qend = int(qnum) * 3
-            p_rows = con.execute(
-                """
-                SELECT a.ticker,
-                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
-                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
-                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
-                       COUNT(*) AS total
-                FROM awards a
-                WHERE a.period = 'D' AND a.period_key >= ? AND a.period_key <= ?
-                GROUP BY a.ticker
-                HAVING COUNT(*) > 0
-                ORDER BY gold DESC, total DESC, a.ticker
-                """,
+            p_rows = _agg_query(
+                "WHERE a.period = 'D' AND a.period_key >= ? AND a.period_key <= ?",
                 [f"{year}-{qstart:02d}-01", f"{year}-{qend:02d}-31"],
-            ).fetchall()
-        elif len(pk) == 4 and pk.isdigit():
-            p_rows = con.execute(
-                """
-                SELECT a.ticker,
-                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
-                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
-                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
-                       COUNT(*) AS total
-                FROM awards a
-                WHERE a.period = 'D' AND CAST(a.period_key AS VARCHAR) LIKE ?
-                GROUP BY a.ticker
-                HAVING COUNT(*) > 0
-                ORDER BY gold DESC, total DESC, a.ticker
-                """,
-                [f"{pk}%"],
-            ).fetchall()
+            )
         else:
-            # Monthly: YYYY-MM
-            p_rows = con.execute(
-                """
-                SELECT a.ticker,
-                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
-                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
-                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
-                       COUNT(*) AS total
-                FROM awards a
-                WHERE a.period = 'D' AND CAST(a.period_key AS VARCHAR) LIKE ?
-                GROUP BY a.ticker
-                HAVING COUNT(*) > 0
-                ORDER BY gold DESC, total DESC, a.ticker
-                """,
+            p_rows = _agg_query(
+                "WHERE a.period = 'D' AND CAST(a.period_key AS VARCHAR) LIKE ?",
                 [f"{pk}%"],
-            ).fetchall()
+            )
         hall_by_period[pk] = [
-            {"ticker": r[0], "gold": int(r[1]), "silver": int(r[2]), "bronze": int(r[3]), "total": int(r[4])}
-            for r in p_rows
+            {k: v for k, v in r.items() if k != "persona"} for r in p_rows
         ]
 
-    jwrite("hall.json", {"all_time": hall_data, "by_period": hall_by_period})
+    jwrite("hall.json", {
+        "all_time": hall_data[:50],
+        "by_period": hall_by_period,
+        "windows": windows_data,
+        "by_award_code": by_award_code,
+    })
 
     # ── 6. meta.json ──────────────────────────────────────────────
     print("[meta.json]")
