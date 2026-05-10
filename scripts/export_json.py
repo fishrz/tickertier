@@ -1,7 +1,7 @@
 """Export static JSON snapshots from awards.duckdb for the frontend.
 
 Reads from awards.duckdb (read_only=True) and writes 6 JSON files to
-web/public/data/ for the Vite/SvelteKit static frontend.
+web/public/data/ for the Vite/React static frontend.
 
 Run: python scripts/export_json.py
 """
@@ -19,7 +19,8 @@ UNIVERSE_PATH = ROOT / "data" / "universe.json"
 OUT_DIR = ROOT / "web" / "public" / "data"
 
 # ── award metadata (inline to avoid import-path headaches) ─────────────
-from api.awards_meta import AWARD_META, meta_for  # noqa: E402
+sys.path.insert(0, str(ROOT))
+from api.awards_meta import meta_for  # noqa: E402
 
 # ── helpers ────────────────────────────────────────────────────────────
 
@@ -126,16 +127,9 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         {"ticker": tk, "tier": tier, "score": round(float(sc), 4), "rank_pct": round(float(rp), 4)}
         for tk, tier, sc, rp in tiers_rows
     ]
-    members: dict[str, list[str]] = {}
-    for tk, tier, *_ in tiers_rows:
-        if tk == "QQQ":
-            continue
-        members.setdefault(tier, []).append(tk)
-    jwrite("tiers.json", {
-        "date": str(t_key) if t_key else None,
-        "tiers": tiers_data,
-        "members": members,
-    })
+    # Static frontend contract: flat array of tier rows. web/src/lib/api.ts
+    # groups this array client-side for the tier bar.
+    jwrite("tiers.json", tiers_data)
 
     # ── 3. stocks.json ────────────────────────────────────────────
     print("[stocks.json]")
@@ -157,53 +151,10 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
             """,
             [max_price_date],
         ).fetchall()
-        aw_rows = con.execute("SELECT ticker, award_code, COUNT(*) FROM awards GROUP BY ticker, award_code").fetchall()
-        aw_by_ticker: dict[str, dict[str, int]] = {}
-        for ticker, code, count in aw_rows:
-            aw_by_ticker.setdefault(ticker, {})[code] = int(count)
-        med_hist_rows = con.execute(
-            """
-            SELECT award_code, ticker, COUNT(*) AS cnt, MAX(period_key) AS latest_date, MIN(rank) AS best_rank
-            FROM awards
-            GROUP BY award_code, ticker
-            ORDER BY ticker, cnt DESC, award_code
-            """
-        ).fetchall()
-        hist_by_ticker: dict[str, list[dict]] = {}
-        for code, ticker, cnt, latest, best in med_hist_rows:
-            hist_by_ticker.setdefault(ticker, []).append({
-                "code": code,
-                "name": meta_for(code)["name"],
-                "count": int(cnt),
-                "latest_date": str(latest) if latest is not None else None,
-                "best_rank": int(best) if best is not None else None,
-            })
-        recent_rows = con.execute(
-            """
-            SELECT p.ticker, p.date, p.close, dm.pct_change, t.tier
-            FROM prices p
-            LEFT JOIN daily_metrics dm ON dm.ticker = p.ticker AND dm.date = p.date
-            LEFT JOIN tiers t ON t.ticker = p.ticker AND t.date = p.date
-            WHERE p.date >= ? - INTERVAL 45 DAY
-            ORDER BY p.ticker, p.date DESC
-            """,
-            [max_price_date],
-        ).fetchall()
-        recent_by_ticker: dict[str, list[dict]] = {}
-        for tk, d, close, pct, tier in recent_rows:
-            bucket = recent_by_ticker.setdefault(tk, [])
-            if len(bucket) < 30:
-                bucket.append({
-                    "date": str(d),
-                    "close": float(close),
-                    "pct_change": float(pct) if pct is not None else 0.0,
-                    "tier": tier,
-                })
+        aw_rows = con.execute("SELECT ticker, COUNT(*) FROM awards GROUP BY ticker").fetchall()
+        aw_by_ticker = {ticker: int(count) for ticker, count in aw_rows}
         for tk, close, pct, amp, vr20, tier, persona, tier_dist_raw in rows:
             info = uni_map.get(tk, {})
-            medal_count = aw_by_ticker.get(tk, {})
-            recent_30d = list(reversed(recent_by_ticker.get(tk, [])))
-            tier_distribution = _meta_to_dict(tier_dist_raw) if tier_dist_raw else {}
             stock_rows.append({
                 "ticker": tk,
                 "name": info.get("name", tk),
@@ -212,22 +163,13 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
                 "intraday_amp": round(float(amp), 4) if amp is not None else None,
                 "vol_ratio_20": round(float(vr20), 4) if vr20 is not None else None,
                 "tier": tier,
-                "awards_count": sum(medal_count.values()),
+                "awards_count": aw_by_ticker.get(tk, 0),
                 "persona": persona,
             })
-            stock_detail[tk] = {
-                "ticker": tk,
-                "name": info.get("name", tk),
-                "theme": info.get("theme", ""),
-                "persona": persona,
-                "medal_count": medal_count,
-                "medal_history": hist_by_ticker.get(tk, []),
-                "tier_distribution": tier_distribution,
-                "last_close": float(close) if close is not None else 0.0,
-                "last_pct_change": float(pct) if pct is not None else 0.0,
-                "recent_30d": recent_30d,
-            }
-    jwrite("stocks.json", {"stocks": stock_rows, "by_ticker": stock_detail})
+    # Static frontend contract: compact list for homepage/portfolio lookup.
+    # Detailed by-ticker payloads are intentionally omitted to keep the daily
+    # snapshot small and match web/src/lib/api.ts.
+    jwrite("stocks.json", stock_rows)
 
     # ── 4. race.json ──────────────────────────────────────────────
     print("[race.json]")
@@ -314,99 +256,7 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
     ]
     jwrite("hall.json", hall_data)
 
-    # ── 6. portfolio.json ─────────────────────────────────────────
-    print("[portfolio.json]")
-    as_of_row = con.execute("SELECT MAX(date) FROM positions").fetchone()
-    portfolio = {
-        "as_of": None,
-        "total_market_value": 0.0,
-        "total_unrealized_pnl": 0.0,
-        "today_pnl": 0.0,
-        "pillar": None,
-        "traitor": None,
-        "highlights": {},
-        "positions": [],
-    }
-    if as_of_row and as_of_row[0]:
-        as_of = as_of_row[0]
-        position_rows = con.execute(
-            """
-            SELECT pos.ticker, pos.shares, pos.avg_cost, pr.close AS last_close, dm.pct_change, t.tier
-            FROM positions pos
-            LEFT JOIN prices pr ON pr.ticker = pos.ticker
-                AND pr.date = (SELECT MAX(date) FROM prices WHERE ticker = pos.ticker)
-            LEFT JOIN daily_metrics dm ON dm.ticker = pos.ticker AND dm.date = pr.date
-            LEFT JOIN tiers t ON t.ticker = pos.ticker AND t.date = pr.date
-            WHERE pos.date = ?
-            ORDER BY pos.ticker
-            """,
-            [as_of],
-        ).fetchall()
-        positions = []
-        total_mv = total_upnl = total_today = 0.0
-        for tk, shares, avg_cost, last_close, pct, tier in position_rows:
-            last_close = float(last_close) if last_close is not None else 0.0
-            shares = float(shares)
-            avg_cost = float(avg_cost)
-            pct = float(pct) if pct is not None else 0.0
-            mv = shares * last_close
-            upnl = (last_close - avg_cost) * shares
-            prev_close = last_close / (1 + pct) if (1 + pct) != 0 else last_close
-            today_pnl = (last_close - prev_close) * shares
-            positions.append({
-                "ticker": tk,
-                "shares": shares,
-                "avg_cost": avg_cost,
-                "last_close": last_close,
-                "market_value": mv,
-                "unrealized_pnl": upnl,
-                "today_pnl": today_pnl,
-                "today_pct": pct,
-                "tier_today": tier,
-                "lottery": False,
-            })
-            total_mv += mv
-            total_upnl += upnl
-            total_today += today_pnl
-        pillar = traitor = None
-        highlights = {}
-        if positions:
-            best = max(positions, key=lambda p: p["today_pnl"])
-            worst = min(positions, key=lambda p: p["today_pnl"])
-            pillar = {"ticker": best["ticker"], "contribution": best["today_pnl"]}
-            traitor = {"ticker": worst["ticker"], "contribution": worst["today_pnl"]}
-            gainers = [p for p in positions if p["unrealized_pnl"] > 0]
-            losers = [p for p in positions if p["unrealized_pnl"] < 0]
-            cash_king = max(gainers, key=lambda p: p["unrealized_pnl"]) if gainers else None
-            tear_jerker = min(losers, key=lambda p: p["unrealized_pnl"]) if losers else None
-            big_pos = max(positions, key=lambda p: p["market_value"])
-            big_pct = (big_pos["market_value"] / total_mv * 100.0) if total_mv > 0 else 0.0
-            priced = [p for p in positions if p["avg_cost"] > 0]
-            def gain_pct(p: dict) -> float:
-                return (p["last_close"] - p["avg_cost"]) / p["avg_cost"] * 100.0
-            priced_gainers = [p for p in priced if gain_pct(p) > 0]
-            buy_low = max(priced_gainers, key=gain_pct) if priced_gainers else None
-            highlights = {
-                "pillar": pillar,
-                "traitor": traitor,
-                "cash_king": {"ticker": cash_king["ticker"], "contribution": cash_king["unrealized_pnl"]} if cash_king else None,
-                "tear_jerker": {"ticker": tear_jerker["ticker"], "contribution": tear_jerker["unrealized_pnl"]} if tear_jerker else None,
-                "big_position": {"ticker": big_pos["ticker"], "contribution": big_pct},
-                "buy_low": {"ticker": buy_low["ticker"], "contribution": gain_pct(buy_low)} if buy_low else None,
-            }
-        portfolio = {
-            "as_of": str(as_of),
-            "total_market_value": total_mv,
-            "total_unrealized_pnl": total_upnl,
-            "today_pnl": total_today,
-            "pillar": pillar,
-            "traitor": traitor,
-            "highlights": highlights,
-            "positions": positions,
-        }
-    jwrite("portfolio.json", portfolio)
-
-    # ── 7. meta.json ──────────────────────────────────────────────
+    # ── 6. meta.json ──────────────────────────────────────────────
     print("[meta.json]")
     aw_count_row = con.execute("SELECT COUNT(*) FROM awards").fetchone()
     aw_count = int(aw_count_row[0]) if aw_count_row else 0
