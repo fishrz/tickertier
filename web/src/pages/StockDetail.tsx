@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
-import { LineChart, Line, ResponsiveContainer, Tooltip } from 'recharts'
+import { LineChart, Line, ResponsiveContainer, Tooltip, YAxis, XAxis } from 'recharts'
 import { getStock, getStockRelated } from '@/lib/api'
 import { formatPercent } from '@/lib/format'
 import { PersonaPill } from '@/components/PersonaPill'
@@ -97,38 +97,89 @@ export default function StockDetail() {
         </div>
       </section>
 
-      {/* ── 30d sparkline ── */}
-      {d.recent_30d && d.recent_30d.length > 1 && (
-        <section className="py-8 border-b border-ink">
-          <div className="kicker mb-4">— 30 日走势 —</div>
-          <div className="h-[120px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={d.recent_30d} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-                <Line
-                  type="monotone"
-                  dataKey="close"
-                  stroke="var(--ink)"
-                  strokeWidth={1}
-                  dot={sparklineDot(d.recent_30d)}
-                  activeDot={false}
-                />
-                <Tooltip
-                  contentStyle={{ background: 'var(--paper)', border: '1px solid var(--ink)', fontSize: '12px', fontFamily: 'var(--mono)' }}
-                  labelFormatter={(v) => `${v}`}
-                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                  formatter={(value: any) => value != null ? [`$${Number(value).toFixed(2)}`, '收盘'] : ['—', '收盘']}
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-          {/* Date range footer */}
-          <div className="flex items-baseline gap-2 mt-2 font-mono text-[11px] text-mute">
-            <span>{d.recent_30d[0].date}</span>
-            <span className="flex-1 border-b border-dotted border-mute/40" />
-            <span>{d.recent_30d[d.recent_30d.length - 1].date}</span>
-          </div>
-        </section>
-      )}
+      {/* ── 30d trend chart ── */}
+      {d.recent_30d && d.recent_30d.length > 1 && (() => {
+        const series = d.recent_30d.filter((r) => r.close != null) as Array<{ date: string; close: number; tier?: string }>
+        if (series.length < 2) return null
+        const startPx = series[0].close
+        const endPx = series[series.length - 1].close
+        const totalPct = (endPx - startPx) / startPx
+        const closes = series.map((s) => s.close)
+        const minC = Math.min(...closes)
+        const maxC = Math.max(...closes)
+        const pad = (maxC - minC) * 0.08 || maxC * 0.02
+        const trendCls = totalPct > 0 ? 'text-pos' : totalPct < 0 ? 'text-neg' : 'text-ink'
+        const trendStroke = totalPct >= 0 ? 'var(--pos, #1a7a3a)' : 'var(--neg)'
+        return (
+          <section className="py-8 border-b border-ink">
+            <div className="flex items-baseline justify-between mb-4 flex-wrap gap-2">
+              <div className="kicker">— 30 日走势 —</div>
+              <div className={`font-mono text-[13px] tabular-nums font-bold ${trendCls}`}>
+                {formatPercent(totalPct)} <span className="text-mute font-normal">· 30D</span>
+              </div>
+            </div>
+            <div className="h-[220px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={series} margin={{ top: 8, right: 16, bottom: 4, left: 8 }}>
+                  <YAxis
+                    domain={[minC - pad, maxC + pad]}
+                    tick={{ fontSize: 10, fontFamily: 'var(--mono)', fill: 'var(--mute)' }}
+                    tickFormatter={(v) => `$${Number(v).toFixed(0)}`}
+                    width={44}
+                    axisLine={{ stroke: 'var(--mute)', strokeOpacity: 0.3 }}
+                    tickLine={false}
+                  />
+                  <XAxis
+                    dataKey="date"
+                    tick={{ fontSize: 10, fontFamily: 'var(--mono)', fill: 'var(--mute)' }}
+                    tickFormatter={(v: string) => v?.slice(5) ?? ''}
+                    interval="preserveStartEnd"
+                    minTickGap={40}
+                    axisLine={{ stroke: 'var(--mute)', strokeOpacity: 0.3 }}
+                    tickLine={false}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="close"
+                    stroke={trendStroke}
+                    strokeWidth={1.6}
+                    dot={sparklineDot(d.recent_30d)}
+                    activeDot={{ r: 4, fill: 'var(--gold)', stroke: 'var(--ink)', strokeWidth: 1 }}
+                  />
+                  <Tooltip
+                    contentStyle={{
+                      background: 'var(--paper)',
+                      border: '1px solid var(--ink)',
+                      fontSize: '11px',
+                      fontFamily: 'var(--mono)',
+                      padding: '6px 10px',
+                    }}
+                    cursor={{ stroke: 'var(--ink)', strokeOpacity: 0.25, strokeDasharray: '3 3' }}
+                    labelFormatter={(label) => String(label)}
+                    formatter={(value: unknown) => {
+                      if (value == null) return ['—', '收盘']
+                      const px = Number(value)
+                      const pct = (px - startPx) / startPx
+                      const sign = pct > 0 ? '+' : ''
+                      return [`$${px.toFixed(2)}  (${sign}${(pct * 100).toFixed(1)}% vs 起点)`, '收盘']
+                    }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+            {/* Endpoints footer */}
+            <div className="flex items-baseline gap-3 mt-3 font-mono text-[11px] text-mute tabular-nums">
+              <span className="text-ink">{series[0].date}</span>
+              <span className="text-ink/70">${startPx.toFixed(2)}</span>
+              <span className="flex-1 border-b border-dotted border-mute/40" />
+              <span className={trendCls}>{formatPercent(totalPct)}</span>
+              <span className="flex-1 border-b border-dotted border-mute/40" />
+              <span className="text-ink">{series[series.length - 1].date}</span>
+              <span className="text-ink/70">${endPx.toFixed(2)}</span>
+            </div>
+          </section>
+        )
+      })()}
 
       {/* ── Medal Cabinet ── */}
       {d.medal_history.length > 0 && (
