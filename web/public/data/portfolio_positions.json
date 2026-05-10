@@ -1,0 +1,295 @@
+{
+  "_comment": "真实持仓数据（来自 docs/positions.json，2026-05-08 快照）。仅含正股；期权见 instruments_excluded。lottery=true 的小仓不参与持仓奖项评选（阈值 <0.5% 持仓 MV）但会展示在明细表中。",
+  "as_of": "2026-05-08",
+  "lottery_threshold_pct": 0.005,
+  "account_summary": {
+    "total_assets_usd": 189142.76,
+    "cash_balance_usd": 71722.11,
+    "stock_market_value_usd": 124160.22
+  },
+  "positions": [
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "shares": 16.0,
+      "avg_cost": 901.875,
+      "lottery": false
+    },
+    {
+      "ticker": "MU",
+      "name": "美光科技",
+      "shares": 17.0,
+      "avg_cost": 526.013,
+      "lottery": false
+    },
+    {
+      "ticker": "WDC",
+      "name": "西部数据",
+      "shares": 20.0,
+      "avg_cost": 417.25,
+      "lottery": false
+    },
+    {
+      "ticker": "SNDK",
+      "name": "闪迪",
+      "shares": 5.0,
+      "avg_cost": 1030.0,
+      "lottery": false
+    },
+    {
+      "ticker": "ALAB",
+      "name": "Astera Labs",
+      "shares": 38.0,
+      "avg_cost": 145.831,
+      "lottery": false
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings",
+      "shares": 20.0,
+      "avg_cost": 290.0,
+      "lottery": false
+    },
+    {
+      "ticker": "CRDO",
+      "name": "Credo Technology",
+      "shares": 35.0,
+      "avg_cost": 135.625,
+      "lottery": false
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent",
+      "shares": 19.0,
+      "avg_cost": 298.361,
+      "lottery": false
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra Energy",
+      "shares": 40.0,
+      "avg_cost": 155.0,
+      "lottery": false
+    },
+    {
+      "ticker": "ORCL",
+      "name": "甲骨文",
+      "shares": 25.0,
+      "avg_cost": 148.0,
+      "lottery": false
+    },
+    {
+      "ticker": "STX",
+      "name": "希捷科技",
+      "shares": 6.0,
+      "avg_cost": 746.667,
+      "lottery": false
+    },
+    {
+      "ticker": "AAOI",
+      "name": "Applied Optoelectronics",
+      "shares": 30.0,
+      "avg_cost": 158.603,
+      "lottery": false
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "shares": 19.0,
+      "avg_cost": 182.316,
+      "lottery": false
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena",
+      "shares": 7.0,
+      "avg_cost": 484.0,
+      "lottery": false
+    },
+    {
+      "ticker": "DRAM",
+      "name": "Roundhill Memory",
+      "shares": 70.0,
+      "avg_cost": 36.8,
+      "lottery": false
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "shares": 10.0,
+      "avg_cost": 285.0,
+      "lottery": false
+    },
+    {
+      "ticker": "AEHR",
+      "name": "Aehr Test Systems",
+      "shares": 30.0,
+      "avg_cost": 95.0,
+      "lottery": false
+    },
+    {
+      "ticker": "LWLG",
+      "name": "Lightwave Logic",
+      "shares": 150.0,
+      "avg_cost": 13.0,
+      "lottery": false
+    },
+    {
+      "ticker": "NVTS",
+      "name": "纳微半导体",
+      "shares": 130.0,
+      "avg_cost": 17.036,
+      "lottery": false
+    },
+    {
+      "ticker": "INTC",
+      "name": "英特尔",
+      "shares": 15.0,
+      "avg_cost": 114.0,
+      "lottery": false
+    },
+    {
+      "ticker": "GLW",
+      "name": "康宁",
+      "shares": 10.0,
+      "avg_cost": 153.0,
+      "lottery": false
+    },
+    {
+      "ticker": "FN",
+      "name": "Fabrinet",
+      "shares": 3.0,
+      "avg_cost": 700.0,
+      "lottery": false
+    },
+    {
+      "ticker": "MRVL",
+      "name": "迈威尔科技",
+      "shares": 10.0,
+      "avg_cost": 155.0,
+      "lottery": false
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "shares": 10.0,
+      "avg_cost": 155.0,
+      "lottery": false
+    },
+    {
+      "ticker": "AVGO",
+      "name": "博通",
+      "shares": 2.0,
+      "avg_cost": 375.0,
+      "lottery": false
+    },
+    {
+      "ticker": "FORM",
+      "name": "FormFactor",
+      "shares": 2.0,
+      "avg_cost": 135.0,
+      "lottery": true
+    },
+    {
+      "ticker": "POET",
+      "name": "POET Technologies",
+      "shares": 1.0,
+      "avg_cost": 8.0,
+      "lottery": true
+    }
+  ],
+  "instruments_excluded": {
+    "_comment": "期权 / 价差仓位。Phase 1 不参与持仓奖项；Phase 2 接入期权战报。",
+    "count": 11,
+    "items": [
+      {
+        "name": "垂直策略 0515C1200/1300",
+        "ticker": "SNDK",
+        "qty": 1,
+        "mv": 9228.71,
+        "price": 92.287,
+        "cost": 25.0
+      },
+      {
+        "name": "垂直策略 0515C920/970",
+        "ticker": "LITE",
+        "qty": 1,
+        "mv": 1617.37,
+        "price": 16.174,
+        "cost": 17.0
+      },
+      {
+        "name": "垂直策略 0515C210/250",
+        "ticker": "ALAB",
+        "qty": 2,
+        "mv": 959.94,
+        "price": 4.8,
+        "cost": 10.0
+      },
+      {
+        "name": "ALAB CALL 260618 260",
+        "ticker": "ALAB",
+        "qty": 1,
+        "mv": 637.5,
+        "price": 6.38,
+        "cost": 6.8
+      },
+      {
+        "name": "MU CALL 260515 530",
+        "ticker": "MU",
+        "qty": -1,
+        "mv": -21783.59,
+        "price": 217.84,
+        "cost": 17.54
+      },
+      {
+        "name": "垂直策略 0618C190/230",
+        "ticker": "CRDO",
+        "qty": 1,
+        "mv": 1245.19,
+        "price": 12.452,
+        "cost": 11.8
+      },
+      {
+        "name": "COHR CALL 260515 350",
+        "ticker": "COHR",
+        "qty": 1,
+        "mv": 929.38,
+        "price": 9.29,
+        "cost": 8.0
+      },
+      {
+        "name": "VRT CALL 260618 350",
+        "ticker": "VRT",
+        "qty": -1,
+        "mv": -2580.0,
+        "price": 25.8,
+        "cost": 19.5
+      },
+      {
+        "name": "VRT CALL 260515 320",
+        "ticker": "VRT",
+        "qty": 1,
+        "mv": 2441.12,
+        "price": 24.41,
+        "cost": 17.6
+      },
+      {
+        "name": "垂直策略 0618C175/200",
+        "ticker": "AAOI",
+        "qty": 1,
+        "mv": 529.83,
+        "price": 5.298,
+        "cost": 5.7
+      },
+      {
+        "name": "ANET CALL 260515 170",
+        "ticker": "ANET",
+        "qty": 2,
+        "mv": 34.98,
+        "price": 0.17,
+        "cost": 8.74
+      }
+    ]
+  }
+}

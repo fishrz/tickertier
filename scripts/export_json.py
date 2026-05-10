@@ -129,14 +129,13 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
     ]
     # Static frontend contract: flat array of tier rows. web/src/lib/api.ts
     # groups this array client-side for the tier bar.
-    jwrite("tiers.json", tiers_data)
+    jwrite("tiers.json", {"date": str(t_key) if t_key else None, "tiers": tiers_data})
 
     # ── 3. stocks.json ────────────────────────────────────────────
     print("[stocks.json]")
     pd_row = con.execute("SELECT MAX(date) FROM prices").fetchone()
     max_price_date = pd_row[0] if pd_row and pd_row[0] else None
     stock_rows = []
-    stock_detail: dict[str, dict] = {}
     if max_price_date:
         rows = con.execute(
             """
@@ -153,7 +152,54 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         ).fetchall()
         aw_rows = con.execute("SELECT ticker, COUNT(*) FROM awards GROUP BY ticker").fetchall()
         aw_by_ticker = {ticker: int(count) for ticker, count in aw_rows}
-        for tk, close, pct, amp, vr20, tier, persona, tier_dist_raw in rows:
+        # medal_history per ticker
+        mh_rows = con.execute(
+            "SELECT ticker, period, period_key, award_code, rank FROM awards ORDER BY ticker, period_key DESC"
+        ).fetchall()
+        medal_hist_by_ticker: dict[str, list[dict]] = {}
+        for mtk, mperiod, mpk, mcode, mrank in mh_rows:
+            medal_hist_by_ticker.setdefault(mtk, []).append({
+                "period": mperiod, "period_key": str(mpk), "award_code": mcode, "rank": int(mrank),
+            })
+
+        # tier_distribution per ticker (last 90 days)
+        td_rows = con.execute(
+            """
+            SELECT ticker, tier, COUNT(*) as cnt
+            FROM tiers
+            WHERE date >= (SELECT MAX(date) - INTERVAL 90 DAY FROM tiers)
+            GROUP BY ticker, tier
+            ORDER BY ticker
+            """
+        ).fetchall()
+        tier_counts_by_ticker: dict[str, dict[str, int]] = {}
+        for tdk, td_tier, td_cnt in td_rows:
+            tier_counts_by_ticker.setdefault(tdk, {})[td_tier] = int(td_cnt)
+        tier_dist_by_ticker: dict[str, dict[str, float]] = {}
+        for tdk, counts in tier_counts_by_ticker.items():
+            total = sum(counts.values())
+            tier_dist_by_ticker[tdk] = {t: round(c / total, 4) for t, c in counts.items()} if total > 0 else {}
+
+        # recent_30d per ticker
+        r30_rows = con.execute(
+            """
+            SELECT p.ticker, p.date, p.close, dm.pct_change
+            FROM prices p
+            LEFT JOIN daily_metrics dm ON dm.ticker = p.ticker AND dm.date = p.date
+            WHERE p.date >= (SELECT MAX(date) - INTERVAL 45 DAY FROM prices)
+            ORDER BY p.ticker, p.date DESC
+            """
+        ).fetchall()
+        recent_by_ticker: dict[str, list[dict]] = {}
+        for rtk, rd, rc, rp in r30_rows:
+            if len(recent_by_ticker.get(rtk, [])) >= 30:
+                continue
+            recent_by_ticker.setdefault(rtk, []).append({
+                "date": str(rd), "close": round(float(rc), 2) if rc else None,
+                "pct_change": round(float(rp), 4) if rp is not None else None,
+            })
+
+        for tk, close, pct, amp, vr20, tier, persona, _tier_dist_raw in rows:
             info = uni_map.get(tk, {})
             stock_rows.append({
                 "ticker": tk,
@@ -165,6 +211,9 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
                 "tier": tier,
                 "awards_count": aw_by_ticker.get(tk, 0),
                 "persona": persona,
+                "medal_history": medal_hist_by_ticker.get(tk, []),
+                "tier_distribution": tier_dist_by_ticker.get(tk, {}),
+                "recent_30d": recent_by_ticker.get(tk, []),
             })
     # Static frontend contract: compact list for homepage/portfolio lookup.
     # Detailed by-ticker payloads are intentionally omitted to keep the daily
@@ -225,7 +274,84 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
                         for i, (tk, v) in enumerate(entries)
                     ],
                 })
-    jwrite("race.json", {"metric": "cum_return", "period": "M", "frames": race_frames})
+    # ── Multi-granularity race data ──
+    def build_race_frames(granularity: str, trunc_expr: str) -> list[dict]:
+        """Build race frames for a given granularity."""
+        BENCH = frozenset({"QQQ"})
+        bench_sql = ",".join(f"'{t}'" for t in BENCH) or "''"
+        bounds = con.execute(f"SELECT MIN(date), MAX(date) FROM prices WHERE ticker NOT IN ({bench_sql})").fetchone()
+        frames = []
+        if not bounds or not bounds[0]:
+            return frames
+        db_min, db_max = bounds
+        end = db_max
+        # Lookback depends on granularity
+        lookback = {"D": 90, "W": 365, "M": 365 * 3, "Q": 365 * 5, "Y": 365 * 10}
+        start = max(db_min, end - timedelta(days=lookback.get(granularity, 365 * 3)))
+        frame_dates_rows = con.execute(
+            f"""
+            SELECT MAX(date) FROM prices
+            WHERE ticker NOT IN ({bench_sql}) AND date BETWEEN ? AND ?
+            GROUP BY {trunc_expr}
+            ORDER BY 1
+            """,
+            [start, end],
+        ).fetchall()
+        frame_dates = [r[0] for r in frame_dates_rows]
+        if not frame_dates:
+            return frames
+        base = con.execute(
+            f"""
+            SELECT ticker, FIRST(close ORDER BY date) AS base
+            FROM prices
+            WHERE ticker NOT IN ({bench_sql}) AND date >= ?
+            GROUP BY ticker
+            """,
+            [start],
+        ).fetchall()
+        bmap = {t: float(b) for t, b in base if b}
+        ph = ",".join(["?"] * len(frame_dates))
+        close_rows = con.execute(
+            f"""
+            SELECT ticker, date, close
+            FROM prices
+            WHERE ticker NOT IN ({bench_sql}) AND date IN ({ph})
+            """,
+            list(frame_dates),
+        ).fetchall()
+        by_date: dict = {}
+        for tk, d, c in close_rows:
+            if tk not in bmap:
+                continue
+            by_date.setdefault(d, []).append((tk, (float(c) - bmap[tk]) / bmap[tk] * 100.0))
+        for d in frame_dates:
+            entries = sorted(by_date.get(d, []), key=lambda x: x[1], reverse=True)[:20]
+            frames.append({
+                "date": str(d),
+                "entries": [
+                    {"ticker": tk, "value": round(v, 4), "rank": i + 1}
+                    for i, (tk, v) in enumerate(entries)
+                ],
+            })
+        return frames
+
+    race_data = {
+        "daily": {"period": "D", "frames": build_race_frames("D", "date")},
+        "weekly": {"period": "W", "frames": build_race_frames("W", "date_trunc('week', date)")},
+        "monthly": {"period": "M", "frames": build_race_frames("M", "date_trunc('month', date)")},
+        "quarterly": {"period": "Q", "frames": build_race_frames("Q", "date_trunc('quarter', date)")},
+        "yearly": {"period": "Y", "frames": build_race_frames("Y", "date_trunc('year', date)")},
+    }
+    jwrite("race.json", race_data)
+
+    # ── 7. portfolio_positions.json ────────────────────────────────
+    print("[portfolio_positions.json]")
+    portfolio_src = ROOT / "data" / "portfolio.json"
+    if portfolio_src.exists():
+        portfolio_data = json.loads(portfolio_src.read_text())
+        jwrite("portfolio_positions.json", portfolio_data)
+    else:
+        print("  WARNING: data/portfolio.json not found")
 
     # ── 5. hall.json ──────────────────────────────────────────────
     print("[hall.json]")
@@ -254,7 +380,89 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         }
         for r in hall_rows
     ]
-    jwrite("hall.json", hall_data)
+    # ── Period-grouped hall of fame ──
+    # Generate period keys: last 6 months, recent quarters, current year
+    today_dt = date.today()
+    period_keys = []
+    # Last 6 months (precise month arithmetic)
+    for i in range(6):
+        m = today_dt.month - i
+        y = today_dt.year
+        while m <= 0:
+            m += 12
+            y -= 1
+        period_keys.append(f"{y}-{m:02d}")
+    period_keys = list(dict.fromkeys(period_keys))  # dedupe preserving order
+    # Quarters
+    for y in range(today_dt.year, today_dt.year - 1, -1):
+        for q in range(4, 0, -1):
+            period_keys.append(f"{y}-Q{q}")
+    # Years
+    for y in range(today_dt.year, today_dt.year - 2, -1):
+        period_keys.append(str(y))
+    period_keys = list(dict.fromkeys(period_keys))
+
+    hall_by_period: dict[str, list[dict]] = {}
+    for pk in period_keys:
+        # Determine SQL filter based on period key format
+        if "-Q" in pk:
+            year, qnum = pk.split("-Q")
+            qstart = int(qnum) * 3 - 2
+            qend = int(qnum) * 3
+            p_rows = con.execute(
+                """
+                SELECT a.ticker,
+                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                       COUNT(*) AS total
+                FROM awards a
+                WHERE a.period = 'D' AND a.period_key >= ? AND a.period_key <= ?
+                GROUP BY a.ticker
+                HAVING COUNT(*) > 0
+                ORDER BY gold DESC, total DESC, a.ticker
+                """,
+                [f"{year}-{qstart:02d}-01", f"{year}-{qend:02d}-31"],
+            ).fetchall()
+        elif len(pk) == 4 and pk.isdigit():
+            p_rows = con.execute(
+                """
+                SELECT a.ticker,
+                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                       COUNT(*) AS total
+                FROM awards a
+                WHERE a.period = 'D' AND CAST(a.period_key AS VARCHAR) LIKE ?
+                GROUP BY a.ticker
+                HAVING COUNT(*) > 0
+                ORDER BY gold DESC, total DESC, a.ticker
+                """,
+                [f"{pk}%"],
+            ).fetchall()
+        else:
+            # Monthly: YYYY-MM
+            p_rows = con.execute(
+                """
+                SELECT a.ticker,
+                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                       COUNT(*) AS total
+                FROM awards a
+                WHERE a.period = 'D' AND CAST(a.period_key AS VARCHAR) LIKE ?
+                GROUP BY a.ticker
+                HAVING COUNT(*) > 0
+                ORDER BY gold DESC, total DESC, a.ticker
+                """,
+                [f"{pk}%"],
+            ).fetchall()
+        hall_by_period[pk] = [
+            {"ticker": r[0], "gold": int(r[1]), "silver": int(r[2]), "bronze": int(r[3]), "total": int(r[4])}
+            for r in p_rows
+        ]
+
+    jwrite("hall.json", {"all_time": hall_data, "by_period": hall_by_period})
 
     # ── 6. meta.json ──────────────────────────────────────────────
     print("[meta.json]")

@@ -44,22 +44,32 @@ interface StockRow {
   tier: string | null
   awards_count: number
   persona: string | null
+  medal_history: { period: string; period_key: string; award_code: string; rank: number }[]
+  tier_distribution: Record<string, number>
+  recent_30d: { date: string; close: number | null; pct_change: number | null }[]
 }
 
-interface TierRow {
-  ticker: string
-  tier: string
-  score: number
-  rank_pct: number
+interface TiersFile {
+  date: string | null
+  tiers: { ticker: string; tier: string; score: number; rank_pct: number }[]
 }
 
-interface HallRow {
-  ticker: string
-  gold: number
-  silver: number
-  bronze: number
-  total: number
-  persona: string | null
+interface HallFile {
+  all_time: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]
+  by_period: Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number }[]>
+}
+
+interface RaceGranularity {
+  period: string
+  frames: { date: string; entries: { ticker: string; value: number; rank: number }[] }[]
+}
+
+interface RaceFile {
+  daily: RaceGranularity
+  weekly: RaceGranularity
+  monthly: RaceGranularity
+  quarterly: RaceGranularity
+  yearly: RaceGranularity
 }
 
 interface MetaFile {
@@ -263,8 +273,12 @@ export async function getStats(): Promise<StatsResponse> {
 }
 
 export async function getHealth(): Promise<HealthResponse> {
-  // No backend — always "offline"
-  return { status: 'offline', db_path: '', as_of: '' }
+  try {
+    const m = await fetchJSON<MetaFile>('/data/meta.json')
+    return { status: 'ok', db_path: '', as_of: m.last_updated ?? '' }
+  } catch {
+    return { status: 'offline', db_path: '', as_of: '' }
+  }
 }
 
 export async function getAwardsToday(): Promise<AwardsTodayResponse> {
@@ -272,13 +286,13 @@ export async function getAwardsToday(): Promise<AwardsTodayResponse> {
 }
 
 export async function getTodayTiers(): Promise<{ date: string; members: Record<string, string[]> }> {
-  const rows = await fetchJSON<TierRow[]>('/data/tiers.json')
+  const file = await fetchJSON<TiersFile>('/data/tiers.json')
   const members: Record<string, string[]> = {}
-  for (const r of rows) {
+  for (const r of file.tiers) {
     if (!members[r.tier]) members[r.tier] = []
     members[r.tier].push(r.ticker)
   }
-  return { date: '', members }
+  return { date: file.date ?? '', members }
 }
 
 export async function getAwardsPeriod(_period: string, _key: string) {
@@ -289,11 +303,29 @@ export async function getAwardsPeriod(_period: string, _key: string) {
 export async function getLeaderboard(
   params: { window?: string; granularity?: string; limit?: number } = {},
 ): Promise<LeaderboardEntry[]> {
-  const rows = await fetchJSON<HallRow[]>('/data/hall.json')
-  const { limit = 20 } = params
-  // Static snapshot: window/granularity filters not supported.
-  // Return top N by total medals (already sorted by gold desc in export).
-  return rows.slice(0, limit)
+  const file = await fetchJSON<HallFile>('/data/hall.json')
+  const { window, limit = 20 } = params
+
+  let rows: { ticker: string; gold: number; silver: number; bronze: number; total: number; persona?: string | null }[]
+
+  if (window && file.by_period && file.by_period[window]) {
+    rows = file.by_period[window]
+  } else if (window && file.by_period) {
+    // Try to find a matching period key (case-insensitive partial match)
+    const key = Object.keys(file.by_period).find((k) => k.toLowerCase() === window.toLowerCase())
+    rows = key ? file.by_period[key] : file.all_time
+  } else {
+    rows = file.all_time
+  }
+
+  return rows.slice(0, limit).map((r) => ({
+    ticker: r.ticker,
+    persona: r.persona ?? null,
+    gold: r.gold,
+    silver: r.silver,
+    bronze: r.bronze,
+    total: r.total,
+  }))
 }
 
 export async function getAwardTopByCode(_code: string, _n = 3): Promise<AwardTopEntry[]> {
@@ -304,14 +336,20 @@ export async function getAwardTopByCode(_code: string, _n = 3): Promise<AwardTop
 
 export async function getRace(
   metric = 'cum_return',
-  options: { from?: string; to?: string } = {},
+  options: { from?: string; to?: string; granularity?: string } = {},
 ): Promise<RaceResponse> {
-  const data = await fetchJSON<RaceResponse>('/data/race.json')
+  const file = await fetchJSON<RaceFile>('/data/race.json')
 
-  // Static file only has cum_return data
-  if (metric !== 'cum_return' && metric !== 'medals') {
-    return { metric, period: data.period, frames: [] }
+  // Map requested granularity to file key
+  const granMap: Record<string, keyof RaceFile> = {
+    D: 'daily', daily: 'daily',
+    W: 'weekly', weekly: 'weekly',
+    M: 'monthly', monthly: 'monthly',
+    Q: 'quarterly', quarterly: 'quarterly',
+    Y: 'yearly', yearly: 'yearly',
   }
+  const key = granMap[options.granularity ?? ''] ?? 'monthly'
+  const data = file[key]
 
   // Filter frames by date range if requested
   let frames = data.frames
@@ -323,11 +361,11 @@ export async function getRace(
     })
   }
 
-  return { ...data, frames }
+  return { metric, period: data.period, frames }
 }
 
 export async function getPortfolioToday(): Promise<PortfolioToday> {
-  // Read positions from localStorage
+  // Read positions from localStorage; seed from static file if empty
   const STORAGE_KEY = 'tickertier_portfolio'
   let userPositions: { ticker: string; shares: number; avg_cost: number }[] = []
   try {
@@ -335,6 +373,23 @@ export async function getPortfolioToday(): Promise<PortfolioToday> {
     if (raw) userPositions = JSON.parse(raw)
   } catch {
     // ignore
+  }
+
+  if (userPositions.length === 0) {
+    try {
+      const portfolioFile = await fetchJSON<{ positions: { ticker: string; shares: number; avg_cost: number }[] }>('/data/portfolio_positions.json')
+      if (portfolioFile?.positions?.length > 0) {
+        userPositions = portfolioFile.positions.map((p) => ({
+          ticker: p.ticker,
+          shares: p.shares,
+          avg_cost: p.avg_cost,
+        }))
+        // Seed localStorage for future loads
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(userPositions))
+      }
+    } catch {
+      // File not available — that's fine
+    }
   }
 
   const stocks = await getStocks()
@@ -454,11 +509,19 @@ export async function getStock(ticker: string): Promise<StockDetail> {
     theme: null,        // not in static data
     persona: stock.persona,
     medal_count: { total: stock.awards_count },
-    medal_history: [],   // not in static data
-    tier_distribution: {},
+    medal_history: stock.medal_history.map((m) => ({
+      code: m.award_code,
+      name: m.award_code,
+      count: 1,
+      latest_date: m.period_key,
+      best_rank: m.rank,
+    })),
+    tier_distribution: stock.tier_distribution,
     last_close: stock.close,
     last_pct_change: stock.pct_change,
-    recent_30d: undefined, // not in static data
+    recent_30d: stock.recent_30d
+      .filter((r) => r.close != null)
+      .map((r) => ({ date: r.date, close: r.close as number, pct_change: r.pct_change ?? undefined })),
   }
 }
 

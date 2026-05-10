@@ -22,11 +22,8 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance duckdb pandas pyarrow finnhub-python pandas-market-calendars scikit-learn
 
-      - name: Fetch prices (incremental)
-        run: python -m data.pipelines.fetch_prices --incremental
-
-      - name: Compute daily awards
-        run: python -m data.pipelines.compute_awards --daily
+      - name: Run daily pipeline
+        run: python scripts/run_daily.py
 
       - name: Export JSON snapshots
         run: python scripts/export_json.py
