@@ -9,6 +9,7 @@ const StockDetail = lazy(() => import('@/pages/StockDetail'))
 const HallOfFame = lazy(() => import('@/pages/HallOfFame'))
 const Race = lazy(() => import('@/pages/Race'))
 const Portfolio = lazy(() => import('@/pages/Portfolio'))
+const PortfolioEdit = lazy(() => import('@/pages/PortfolioEdit'))
 const Preview = lazy(() => import('@/pages/Preview'))
 
 function PageFallback() {
@@ -62,6 +63,14 @@ export default function App() {
             element={
               <Suspense fallback={<PageFallback />}>
                 <Preview />
+              </Suspense>
+            }
+          />
+          <Route
+            path="portfolio/edit"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <PortfolioEdit />
               </Suspense>
             }
           />

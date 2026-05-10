@@ -1,10 +1,76 @@
-import axios from 'axios'
-import type { AwardsTodayResponse, HealthResponse, PortfolioToday, StockDetail, LeaderboardEntry, AwardTopEntry } from '@/types'
+// ── Static JSON fetcher ────────────────────────────────────────
+// All data is fetched from /data/*.json (Vite public directory).
+// No backend / API server needed — purely static deployment.
 
-export const api = axios.create({
-  baseURL: '/api',
-  timeout: 15000,
-})
+import type {
+  AwardsTodayResponse,
+  HealthResponse,
+  PortfolioToday,
+  PortfolioPosition,
+  StockDetail,
+  LeaderboardEntry,
+  AwardTopEntry,
+  RaceResponse,
+} from '@/types'
+
+// ── Module-level JSON cache ────────────────────────────────────
+// Fetch each URL once per page load; subsequent calls return the
+// cached promise.  React Query adds a second layer of dedup on top.
+
+const _cache = new Map<string, Promise<any>>()
+
+function fetchJSON<T>(path: string): Promise<T> {
+  if (!_cache.has(path)) {
+    _cache.set(
+      path,
+      fetch(path).then((r) => {
+        if (!r.ok) throw new Error(`Failed to load ${path}: ${r.status}`)
+        return r.json()
+      }),
+    )
+  }
+  return _cache.get(path)!
+}
+
+// ── Raw JSON shapes (match the static export files) ────────────
+
+interface StockRow {
+  ticker: string
+  name: string
+  close: number | null
+  pct_change: number | null
+  intraday_amp: number | null
+  vol_ratio_20: number | null
+  tier: string | null
+  awards_count: number
+  persona: string | null
+}
+
+interface TierRow {
+  ticker: string
+  tier: string
+  score: number
+  rank_pct: number
+}
+
+interface HallRow {
+  ticker: string
+  gold: number
+  silver: number
+  bronze: number
+  total: number
+  persona: string | null
+}
+
+interface MetaFile {
+  last_updated: string
+  universe: number
+  awards: number
+  data_from: string | null
+  data_to: string | null
+}
+
+// ── Exported interfaces (kept for backwards compat) ────────────
 
 export interface StatsResponse {
   universe: number
@@ -12,46 +78,6 @@ export interface StatsResponse {
   medals_awarded: number
   data_from: string | null
   data_to: string | null
-}
-
-export async function getStats(): Promise<StatsResponse> {
-  const r = await api.get('/stats')
-  return r.data
-}
-
-export async function getHealth(): Promise<HealthResponse> {
-  const { data } = await api.get('/health')
-  return data
-}
-
-export async function getAwardsToday(): Promise<AwardsTodayResponse> {
-  const { data } = await api.get('/awards/today')
-  return data
-}
-
-export async function getTodayTiers(): Promise<{ date: string; members: Record<string, string[]> }> {
-  const { data } = await api.get('/awards/today/tiers')
-  return data
-}
-
-export async function getAwardsPeriod(period: string, key: string) {
-  const { data } = await api.get(`/awards/period/${period}/${key}`)
-  return data
-}
-
-export async function getLeaderboard(
-  params: { window?: string; granularity?: string; limit?: number } = {},
-): Promise<LeaderboardEntry[]> {
-  const { window = 'all', granularity = 'ALL', limit = 20 } = params
-  const r = await api.get<LeaderboardEntry[]>('/awards/leaderboard', {
-    params: { window, granularity, limit },
-  })
-  return r.data
-}
-
-export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEntry[]> {
-  const { data } = await api.get(`/awards/by-code/${code}/top`, { params: { n } })
-  return data
 }
 
 export interface RelatedStock {
@@ -67,38 +93,6 @@ export interface RelatedResponse {
   same_theme: RelatedStock[]
 }
 
-export async function getStockRelated(ticker: string, limit = 8): Promise<RelatedResponse> {
-  const { data } = await api.get(`/stocks/${ticker}/related`, { params: { limit } })
-  return data
-}
-
-export async function getStock(ticker: string): Promise<StockDetail> {
-  const { data } = await api.get(`/stocks/${ticker}`)
-  return data
-}
-
-export async function getStockMedals(ticker: string, period = 'Y') {
-  const { data } = await api.get(`/stocks/${ticker}/medals`, { params: { period } })
-  return data
-}
-
-export async function getRace(
-  metric = 'cum_return',
-  options: { from?: string; to?: string } = {}
-) {
-  const params: Record<string, string> = { metric }
-  if (options.from) params.from = options.from
-  if (options.to) params.to = options.to
-  const { data } = await api.get('/race', { params })
-  return data
-}
-
-export async function getPortfolioToday(): Promise<PortfolioToday> {
-  const { data } = await api.get('/portfolio/today')
-  return data
-}
-
-// ── Award metadata (for info modal) ────────────────────────────
 export interface AwardMeta {
   code: string
   name: string
@@ -116,7 +110,388 @@ export interface AwardMetaResponse {
   last_winner: { period_key: string; ticker: string; value: number | null } | null
 }
 
+// ── Award metadata (mirrors api/awards_meta.py) ───────────────
+
+const AWARD_META_MAP: Record<string, AwardMeta> = {
+  daily_king: {
+    code: 'daily_king', name: '🏆 今日股王', desc: '夯到飞起',
+    category: 'daily', unit: 'pct',
+    criterion: '当天涨幅最大的那只股，简单粗暴。',
+    formula: 'argmax (close − prev_close) / prev_close × 100，排除 QQQ 等基准。Top 3 上榜。',
+  },
+  daily_clown: {
+    code: 'daily_clown', name: '💩 今日答辩', desc: '建议退市',
+    category: 'daily', unit: 'pct',
+    criterion: '当天跌得最惨的股，今天它最丢人。',
+    formula: 'argmin (close − prev_close) / prev_close × 100，排除基准。Top 3 上榜。',
+  },
+  roller_coaster: {
+    code: 'roller_coaster', name: '🎢 过山车之王', desc: '早上人上人，下午拉完了',
+    category: 'daily', unit: 'amp',
+    criterion: '当天日内振幅最大的股，K 线像心电图。',
+    formula: 'argmax (high − low) / prev_close × 100。',
+  },
+  oscar: {
+    code: 'oscar', name: '🎭 影帝奖', desc: '开盘装大佬，收盘装死',
+    category: 'daily', unit: 'pct',
+    criterion: '开盘高开高走，收盘原形毕露。装得最像的就是影帝。',
+    formula: '在 gap > 0 的股票里，argmin fade，其中 fade = (close − high) / high × 100。',
+  },
+  comeback: {
+    code: 'comeback', name: '🪄 绝地翻身奖', desc: '主打一个不装了',
+    category: 'daily', unit: 'pct',
+    criterion: '盘中触底之后猛拉，最终红盘报收。主打一个绝地反击。',
+    formula: '在 pct_change > 0 的股票里，argmax rebound = (close − low) / low × 100。',
+  },
+  npc_god: {
+    code: 'npc_god', name: '💤 NPC 之光', desc: '在的，活着，不动',
+    category: 'daily', unit: 'amp',
+    criterion: '当天波澜不惊+成交量低迷的股，全场最 NPC。',
+    formula: 'vol_ratio_20 < 0.7 的股里，argmin intraday_amp。',
+  },
+  pump_army: {
+    code: 'pump_army', name: '📈 暴兵奖', desc: '主力进场了家人们',
+    category: 'daily', unit: 'count',
+    criterion: '红盘日里量能爆发最猛的，疑似主力进场。',
+    formula: '在 pct_change > 0 的股票里，argmax vol_ratio_20 = volume / 20日均量。',
+  },
+  tank: {
+    code: 'tank', name: '🛡️ 抗揍奖', desc: '大盘红我绿，反向 indicator 王',
+    category: 'daily', unit: 'pct',
+    criterion: '大盘明显下跌的日子里，跌得最少甚至上涨的那只。',
+    formula: '前提：QQQ pct_change ≤ −0.5%。取 argmax(ticker.pct_change − QQQ.pct_change)。',
+  },
+  reverse_idx: {
+    code: 'reverse_idx', name: '🪦 反指奖', desc: '陪跑十级运动员',
+    category: 'periodic', unit: 'pct',
+    criterion: '周期内跟 QQQ 走势最反着来的股，标准的反指。',
+    formula: '按日级 pct_change 与 QQQ 计算 Pearson 相关系数，取最负的。',
+  },
+  steady_grind: {
+    code: 'steady_grind', name: '🐢 细水长流奖', desc: '老老实实赚钱',
+    category: 'periodic', unit: 'pct',
+    criterion: '周期内涨幅稳健、波动又小的股。不靠暴涨，靠长跑。',
+    formula: '周期累计收益 / 日级收益标准差（年化），即 Sharpe-like ratio。',
+  },
+  gambler: {
+    code: 'gambler', name: '🎰 赌狗之友奖', desc: '心脏起搏器赞助商',
+    category: 'periodic', unit: 'amp',
+    criterion: '周期内累计振幅最大的股，最适合心跳爱好者。',
+    formula: 'Σ intraday_amp_t over period，取 sum 最大的 ticker。',
+  },
+  workhorse: {
+    code: 'workhorse', name: '🏅 劳模奖', desc: '奖项收割机',
+    category: 'periodic', unit: 'medals',
+    criterion: '周期内拿过最多日度金牌的股，奖项含金量直接拉满。',
+    formula: 'count(awards where rank=1 AND period=\'D\') GROUP BY ticker，取最高。',
+  },
+  silver_curse: {
+    code: 'silver_curse', name: '🪑 万年老二奖', desc: '一人之下万人之上的疲惫感',
+    category: 'periodic', unit: 'medals',
+    criterion: '周期内拿了最多次「亚军」的股。永远第二，痛并快乐。',
+    formula: 'count(awards where rank=2 AND period=\'D\') GROUP BY ticker。',
+  },
+  earnings_god: {
+    code: 'earnings_god', name: '💼 财报封神', desc: '数字会自己说话',
+    category: 'earnings', unit: 'pct',
+    criterion: '财报次日跳得最猛的股，业绩直接干到位。',
+    formula: 'next_day_pct = (T+1 close − T close) / T close × 100，取最大值。',
+  },
+  earnings_clown: {
+    code: 'earnings_clown', name: '💼 财报现形', desc: '原形毕露',
+    category: 'earnings', unit: 'pct',
+    criterion: '财报次日跌得最惨的股，业绩直接破防。',
+    formula: 'next_day_pct = (T+1 close − T close) / T close × 100，取最小值。',
+  },
+  pillar: {
+    code: 'pillar', name: '💰 顶梁柱奖', desc: '全家就指望你了',
+    category: 'portfolio', unit: 'amount',
+    criterion: '持仓中按真实仓位加权后，对账户当日盈亏贡献最大的股。',
+    formula: 'argmax (shares × close × pct_change / 100)。',
+  },
+  traitor: {
+    code: 'traitor', name: '🩸 拖后腿奖', desc: '建议清仓谢罪',
+    category: 'portfolio', unit: 'amount',
+    criterion: '持仓中按真实仓位加权后，对账户拖累最大的股。',
+    formula: 'argmin (shares × close × pct_change / 100)。',
+  },
+  cash_king: {
+    code: 'cash_king', name: '💸 钞能力之王', desc: '实打实赚到钱的那个',
+    category: 'portfolio', unit: 'amount',
+    criterion: '持仓中累计浮盈金额最大的股。',
+    formula: 'argmax (last_close − avg_cost) × shares，仅取浮盈 > 0 的持仓。',
+  },
+  tear_jerker: {
+    code: 'tear_jerker', name: '😭 我的眼泪奖', desc: '套牢套到亲妈不认',
+    category: 'portfolio', unit: 'amount',
+    criterion: '持仓中累计浮亏金额最深的股。看一次哭一次。',
+    formula: 'argmin (last_close − avg_cost) × shares，仅取浮亏 < 0。',
+  },
+  big_position: {
+    code: 'big_position', name: '👑 仓位之王', desc: '你就是我的全部',
+    category: 'portfolio', unit: 'pct',
+    criterion: '占整个账户市值比例最高的持仓。',
+    formula: 'argmax (shares × last_close) / Σ(shares × last_close) × 100。',
+  },
+  buy_low: {
+    code: 'buy_low', name: '🧠 人间清醒奖', desc: '买在脚踝上的天选之子',
+    category: 'portfolio', unit: 'pct',
+    criterion: '成本价相对当前价折扣最大的持仓。',
+    formula: 'argmax (last_close − avg_cost) / avg_cost × 100，仅取浮盈 > 0。',
+  },
+}
+
+// ── Shared data helpers ────────────────────────────────────────
+
+let _stocksPromise: Promise<StockRow[]> | null = null
+function getStocks(): Promise<StockRow[]> {
+  if (!_stocksPromise) _stocksPromise = fetchJSON<StockRow[]>('/data/stocks.json')
+  return _stocksPromise
+}
+
+// ── API functions ──────────────────────────────────────────────
+
+export async function getStats(): Promise<StatsResponse> {
+  const m = await fetchJSON<MetaFile>('/data/meta.json')
+  return {
+    universe: m.universe,
+    awards: m.awards,
+    medals_awarded: m.awards,
+    data_from: m.data_from,
+    data_to: m.data_to,
+  }
+}
+
+export async function getHealth(): Promise<HealthResponse> {
+  // No backend — always "offline"
+  return { status: 'offline', db_path: '', as_of: '' }
+}
+
+export async function getAwardsToday(): Promise<AwardsTodayResponse> {
+  return fetchJSON('/data/today.json')
+}
+
+export async function getTodayTiers(): Promise<{ date: string; members: Record<string, string[]> }> {
+  const rows = await fetchJSON<TierRow[]>('/data/tiers.json')
+  const members: Record<string, string[]> = {}
+  for (const r of rows) {
+    if (!members[r.tier]) members[r.tier] = []
+    members[r.tier].push(r.ticker)
+  }
+  return { date: '', members }
+}
+
+export async function getAwardsPeriod(_period: string, _key: string) {
+  // Not available in static data
+  return null
+}
+
+export async function getLeaderboard(
+  params: { window?: string; granularity?: string; limit?: number } = {},
+): Promise<LeaderboardEntry[]> {
+  const rows = await fetchJSON<HallRow[]>('/data/hall.json')
+  const { limit = 20 } = params
+  // Static snapshot: window/granularity filters not supported.
+  // Return top N by total medals (already sorted by gold desc in export).
+  return rows.slice(0, limit)
+}
+
+export async function getAwardTopByCode(_code: string, _n = 3): Promise<AwardTopEntry[]> {
+  // Per-award breakdown not available in static data.
+  // Return empty so the UI gracefully shows "—".
+  return []
+}
+
+export async function getRace(
+  metric = 'cum_return',
+  options: { from?: string; to?: string } = {},
+): Promise<RaceResponse> {
+  const data = await fetchJSON<RaceResponse>('/data/race.json')
+
+  // Static file only has cum_return data
+  if (metric !== 'cum_return' && metric !== 'medals') {
+    return { metric, period: data.period, frames: [] }
+  }
+
+  // Filter frames by date range if requested
+  let frames = data.frames
+  if (options.from || options.to) {
+    frames = frames.filter((f) => {
+      if (options.from && f.date < options.from) return false
+      if (options.to && f.date > options.to) return false
+      return true
+    })
+  }
+
+  return { ...data, frames }
+}
+
+export async function getPortfolioToday(): Promise<PortfolioToday> {
+  // Read positions from localStorage
+  const STORAGE_KEY = 'tickertier_portfolio'
+  let userPositions: { ticker: string; shares: number; avg_cost: number }[] = []
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (raw) userPositions = JSON.parse(raw)
+  } catch {
+    // ignore
+  }
+
+  const stocks = await getStocks()
+  const stockMap = new Map(stocks.map((s) => [s.ticker, s]))
+
+  const rawPositions = userPositions
+    .map((p) => {
+      const stock = stockMap.get(p.ticker)
+      if (!stock || stock.close == null) return null
+      const last_close = stock.close
+      const pct_change = stock.pct_change ?? 0
+      const market_value = p.shares * last_close
+      const unrealized_pnl = (last_close - p.avg_cost) * p.shares
+      // Approximate today P&L: shares × close × pct_change
+      // pct_change is a fraction (e.g. 0.0654 = 6.54%)
+      const today_pnl = p.shares * last_close * pct_change
+      const today_pct = pct_change
+      return {
+        ticker: p.ticker,
+        shares: p.shares,
+        avg_cost: p.avg_cost,
+        last_close,
+        market_value,
+        unrealized_pnl,
+        today_pnl,
+        today_pct,
+        tier_today: stock.tier ?? null,
+        lottery: false as boolean | undefined,
+      }
+    })
+    .filter((p): p is NonNullable<typeof p> => p !== null)
+
+  const positions = rawPositions as PortfolioPosition[]
+
+  const total_market_value = positions.reduce((s, p) => s + p.market_value, 0)
+  const total_unrealized_pnl = positions.reduce((s, p) => s + p.unrealized_pnl, 0)
+  const today_pnl = positions.reduce((s, p) => s + p.today_pnl, 0)
+
+  // Mark lottery positions (< 0.5% of portfolio)
+  for (const p of positions) {
+    p.lottery = total_market_value > 0 && (p.market_value / total_market_value) < 0.005
+  }
+
+  // Compute highlights (non-lottery positions only)
+  type HL = { ticker: string; contribution: number } | null
+  const live = positions.filter((p) => !p.lottery)
+
+  function argmax(arr: PortfolioPosition[], fn: (p: PortfolioPosition) => number): HL {
+    if (arr.length === 0) return null
+    let best = arr[0]
+    let bestVal = fn(best)
+    for (let i = 1; i < arr.length; i++) {
+      const v = fn(arr[i])
+      if (v > bestVal) { best = arr[i]; bestVal = v }
+    }
+    return { ticker: best.ticker, contribution: bestVal }
+  }
+
+  function argmin(arr: PortfolioPosition[], fn: (p: PortfolioPosition) => number): HL {
+    if (arr.length === 0) return null
+    let best = arr[0]
+    let bestVal = fn(best)
+    for (let i = 1; i < arr.length; i++) {
+      const v = fn(arr[i])
+      if (v < bestVal) { best = arr[i]; bestVal = v }
+    }
+    return { ticker: best.ticker, contribution: bestVal }
+  }
+
+  const pillar: HL = argmax(live, (p) => p.today_pnl)
+  const traitor: HL = argmin(live, (p) => p.today_pnl)
+  const cash_king: HL = argmax(
+    live.filter((p) => p.unrealized_pnl > 0),
+    (p) => p.unrealized_pnl,
+  )
+  const tear_jerker: HL = argmin(
+    live.filter((p) => p.unrealized_pnl < 0),
+    (p) => p.unrealized_pnl,
+  )
+  const big_position: HL = argmax(live, (p) =>
+    total_market_value > 0 ? (p.market_value / total_market_value) * 100 : 0,
+  )
+  const buy_low: HL = argmax(
+    live.filter((p) => p.unrealized_pnl > 0),
+    (p) => ((p.last_close - p.avg_cost) / p.avg_cost) * 100,
+  )
+
+  const highlights: PortfolioToday['highlights'] = {
+    pillar,
+    traitor,
+    cash_king,
+    tear_jerker,
+    big_position,
+    buy_low,
+  }
+
+  return {
+    as_of: '',
+    total_market_value,
+    total_unrealized_pnl,
+    today_pnl,
+    pillar,
+    traitor,
+    highlights,
+    positions,
+  }
+}
+
+export async function getStock(ticker: string): Promise<StockDetail> {
+  const stocks = await getStocks()
+  const stock = stocks.find((s) => s.ticker === ticker)
+  if (!stock) throw new Error(`Stock ${ticker} not found`)
+
+  return {
+    ticker: stock.ticker,
+    name: stock.name,
+    theme: null,        // not in static data
+    persona: stock.persona,
+    medal_count: { total: stock.awards_count },
+    medal_history: [],   // not in static data
+    tier_distribution: {},
+    last_close: stock.close,
+    last_pct_change: stock.pct_change,
+    recent_30d: undefined, // not in static data
+  }
+}
+
+export async function getStockMedals(_ticker: string, _period = 'Y') {
+  // Not available in static data
+  return []
+}
+
+export async function getStockRelated(ticker: string, limit = 8): Promise<RelatedResponse> {
+  const stocks = await getStocks()
+  const stock = stocks.find((s) => s.ticker === ticker)
+  const self_persona = stock?.persona ?? null
+  const self_theme = '' // not in static data
+
+  const same_persona: RelatedStock[] = stocks
+    .filter((s) => s.ticker !== ticker && s.persona === self_persona && self_persona != null)
+    .slice(0, limit)
+    .map((s) => ({ ticker: s.ticker, persona: s.persona, theme: '' }))
+
+  const same_theme: RelatedStock[] = [] // no theme data
+
+  return { ticker, self_persona, self_theme, same_persona, same_theme }
+}
+
 export async function getAwardMeta(code: string): Promise<AwardMetaResponse> {
-  const { data } = await api.get(`/awards/meta/${code}`)
-  return data
+  const meta = AWARD_META_MAP[code]
+  if (!meta) {
+    throw new Error(`Unknown award: ${code}`)
+  }
+  return {
+    meta,
+    top_holders: [],       // not available in static data
+    total_awarded: 0,
+    last_winner: null,
+  }
 }

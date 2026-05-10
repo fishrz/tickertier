@@ -306,9 +306,17 @@ export default function Portfolio() {
       {/* Holdings table */}
       <section className="pt-10 pb-4">
         <div className="kicker mb-2">— 完整持仓 —</div>
-        <h2 className="font-serif font-black text-[48px] leading-none tracking-[-0.03em] mb-2">
-          持仓列表
-        </h2>
+        <div className="flex items-end gap-4 mb-2">
+          <h2 className="font-serif font-black text-[48px] leading-none tracking-[-0.03em]">
+            持仓列表
+          </h2>
+          <Link
+            to="/portfolio/edit"
+            className="font-mono text-[11px] uppercase tracking-[0.12em] text-mute hover:text-gold transition-colors border-b border-dotted border-mute pb-0.5 mb-1"
+          >
+            编辑持仓
+          </Link>
+        </div>
         <p className="text-sm text-mute mb-8 max-w-[600px] leading-relaxed">
           默认按 Tier 排序，点表头切换排序字段（再点一次反向）。点 ticker 看个股履历。彩票仓固定置底。
         </p>

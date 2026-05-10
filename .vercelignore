@@ -1,0 +1,16 @@
+# Vercel uploads only the static Vite app for deployment.
+# The Python/FastAPI API remains in the repository for local/data work but is
+# intentionally excluded from the Vercel source bundle.
+/api/
+/data/
+/scripts/
+/docs/
+/reports/
+/.venv/
+/.pytest_cache/
+__pycache__/
+*.duckdb
+*.duckdb.wal
+*.parquet
+/patch.py
+/patch_app.py

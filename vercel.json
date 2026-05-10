@@ -2,13 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "cd web && npm install && npm run build",
   "outputDirectory": "web/dist",
-  "framework": "vite",
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/main.py" }
-  ],
-  "functions": {
-    "api/main.py": {
-      "includeFiles": "data/**"
-    }
-  }
+  "framework": "vite"
 }
