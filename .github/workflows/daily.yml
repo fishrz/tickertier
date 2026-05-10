@@ -28,6 +28,13 @@ jobs:
       - name: Export JSON snapshots
         run: python scripts/export_json.py
 
+      - name: Notify Telegram
+        if: success()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: |
+          python scripts/notify_telegram.py || echo "telegram notify failed (non-fatal)"
+
       - name: Commit JSON files
         run: |
           git config user.name "github-actions[bot]"
