@@ -51,6 +51,8 @@ export interface StockDetail {
   last_close?: number | null
   last_pct_change?: number | null
   recent_30d?: Array<{ date: string; close: number; pct_change?: number; tier?: string }>
+  streak_top_tier_days?: number
+  streak_in_awards_days?: number
 }
 
 export interface PortfolioPosition {

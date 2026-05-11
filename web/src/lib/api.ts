@@ -578,6 +578,8 @@ export async function getStock(ticker: string): Promise<StockDetail> {
         pct_change: r.pct_change ?? undefined,
         tier: r.tier ?? undefined,
       })),
+    streak_top_tier_days: (stock as any).streak_top_tier_days ?? 0,
+    streak_in_awards_days: (stock as any).streak_in_awards_days ?? 0,
   }
 }
 

@@ -231,6 +231,58 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         for k in recent_by_ticker:
             recent_by_ticker[k] = recent_by_ticker[k][-30:]
 
+        # streak metrics per ticker
+        #   streak_top_tier_days  = consecutive days (from latest) where tier ∈ {🔥 夯死了, 👑 顶级}
+        #   streak_in_awards_days = consecutive days (from latest) where ticker
+        #                           appears as rank=1 winner in any period='D' award
+        TOP_TIERS = ("🔥 夯死了", "👑 顶级")
+        tier_streak_rows = con.execute(
+            """
+            SELECT ticker, date, tier
+            FROM tiers
+            ORDER BY ticker, date DESC
+            """
+        ).fetchall()
+        streak_top: dict[str, int] = {}
+        seen_tk: set[str] = set()
+        for tk_s, _d, tier_s in tier_streak_rows:
+            if tk_s not in streak_top:
+                streak_top[tk_s] = 0
+            if tk_s in seen_tk:
+                # already broken
+                continue
+            if tier_s in TOP_TIERS:
+                streak_top[tk_s] += 1
+            else:
+                seen_tk.add(tk_s)
+
+        award_streak_rows = con.execute(
+            """
+            SELECT DISTINCT ticker, period_key
+            FROM awards
+            WHERE period='D' AND rank=1 AND ticker IS NOT NULL
+            ORDER BY ticker, period_key DESC
+            """
+        ).fetchall()
+        # period_key for D is YYYY-MM-DD
+        trading_dates = [r[0] for r in con.execute(
+            "SELECT DISTINCT date FROM tiers ORDER BY date DESC"
+        ).fetchall()]
+        trading_set_ordered = [str(d) for d in trading_dates]
+        # group winners by ticker
+        winners_by_tk: dict[str, set[str]] = {}
+        for tk_a, pk_a in award_streak_rows:
+            winners_by_tk.setdefault(tk_a, set()).add(pk_a)
+        streak_in_awards: dict[str, int] = {}
+        for tk_a, wset in winners_by_tk.items():
+            cnt = 0
+            for d in trading_set_ordered:
+                if d in wset:
+                    cnt += 1
+                else:
+                    break
+            streak_in_awards[tk_a] = cnt
+
         for tk, close, pct, amp, vr20, tier, persona, _tier_dist_raw in rows:
             info = uni_map.get(tk, {})
             stock_rows.append({
@@ -247,6 +299,8 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
                 "medal_history": medal_hist_by_ticker.get(tk, []),
                 "tier_distribution": tier_dist_by_ticker.get(tk, {}),
                 "recent_30d": recent_by_ticker.get(tk, []),
+                "streak_top_tier_days": streak_top.get(tk, 0),
+                "streak_in_awards_days": streak_in_awards.get(tk, 0),
             })
     # Static frontend contract: compact list for homepage/portfolio lookup.
     # Detailed by-ticker payloads are intentionally omitted to keep the daily

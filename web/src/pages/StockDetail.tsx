@@ -286,11 +286,33 @@ export default function StockDetail() {
             </div>
           )}
         </div>
-        {/* Current tier */}
-        {d.recent_30d && d.recent_30d.length > 0 && d.recent_30d[d.recent_30d.length - 1].tier && (
-          <div className="mt-5 flex items-center gap-3">
-            <span className="font-mono text-[11px] text-mute uppercase tracking-wider">当日 tier</span>
-            <TierBadge tier={d.recent_30d[d.recent_30d.length - 1].tier!} />
+        {/* Current tier + streak badges */}
+        {((d.recent_30d && d.recent_30d.length > 0 && d.recent_30d[d.recent_30d.length - 1].tier) ||
+          (d.streak_top_tier_days ?? 0) > 1 ||
+          (d.streak_in_awards_days ?? 0) > 1) && (
+          <div className="mt-5 flex flex-wrap items-center gap-3">
+            {d.recent_30d && d.recent_30d.length > 0 && d.recent_30d[d.recent_30d.length - 1].tier && (
+              <>
+                <span className="font-mono text-[11px] text-mute uppercase tracking-wider">当日 tier</span>
+                <TierBadge tier={d.recent_30d[d.recent_30d.length - 1].tier!} />
+              </>
+            )}
+            {(d.streak_top_tier_days ?? 0) > 1 && (
+              <span
+                className="inline-flex items-center gap-1 px-2 py-1 rounded font-mono text-[11px] font-bold border border-gold/40 bg-gold/10 text-gold"
+                title="连续多日处于 顶级/夯死了 tier"
+              >
+                🔥 连续 {d.streak_top_tier_days} 日 顶级/夯死了
+              </span>
+            )}
+            {(d.streak_in_awards_days ?? 0) > 1 && (
+              <span
+                className="inline-flex items-center gap-1 px-2 py-1 rounded font-mono text-[11px] font-bold border border-ink/30 bg-ink/5 text-ink"
+                title="连续多日拿到日内奖项 rank 1"
+              >
+                🏆 连续 {d.streak_in_awards_days} 日 摘金
+              </span>
+            )}
           </div>
         )}
       </section>
