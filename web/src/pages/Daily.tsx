@@ -144,6 +144,53 @@ export default function Daily() {
       {/* ── Tier distribution ── */}
       <TierBar distribution={data.tier_distribution} />
 
+      {/* ── Tier movers (today vs previous day) ── */}
+      {data.tier_movers && data.tier_movers.length > 0 && (() => {
+        const ups = data.tier_movers!.filter((m) => m.delta > 0).slice(0, 5)
+        const downs = data.tier_movers!.filter((m) => m.delta < 0).slice(-5)
+        return (
+          <section className="py-6 border-b border-ink">
+            <div className="kicker mb-3">— 今日升降一览 —</div>
+            <div className="flex flex-wrap gap-x-8 gap-y-3 font-mono text-[13px]">
+              {ups.length > 0 && (
+                <div className="flex items-baseline gap-3">
+                  <span className="text-pos font-bold">↑ 升级</span>
+                  <span className="text-ink">
+                    {ups.map((m) => (
+                      <Link
+                        key={m.ticker}
+                        to={`/stock/${m.ticker}`}
+                        className="mr-3 hover:underline"
+                        title={`${m.prev} → ${m.now}`}
+                      >
+                        {m.ticker} <span className="text-pos">(+{m.delta})</span>
+                      </Link>
+                    ))}
+                  </span>
+                </div>
+              )}
+              {downs.length > 0 && (
+                <div className="flex items-baseline gap-3">
+                  <span className="text-neg font-bold">↓ 降级</span>
+                  <span className="text-ink">
+                    {downs.map((m) => (
+                      <Link
+                        key={m.ticker}
+                        to={`/stock/${m.ticker}`}
+                        className="mr-3 hover:underline"
+                        title={`${m.prev} → ${m.now}`}
+                      >
+                        {m.ticker} <span className="text-neg">({m.delta})</span>
+                      </Link>
+                    ))}
+                  </span>
+                </div>
+              )}
+            </div>
+          </section>
+        )
+      })()}
+
       {/* ── Stats line ── */}
       <section className="py-6 border-b border-ink flex items-baseline gap-6 flex-wrap font-mono text-[12px] uppercase tracking-[0.1em] text-mute">
         <span>UNIVERSE <b className="text-ink font-bold">{totalUniverse}</b> 支</span>

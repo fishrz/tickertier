@@ -64,6 +64,7 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
 
     # ── 1. today.json ──────────────────────────────────────────────
     print("[today.json]")
+    tier_movers: list[dict] = []
     row = con.execute("SELECT MAX(period_key) FROM awards WHERE period = 'D'").fetchone()
     if not row or not row[0]:
         print("  WARNING: no daily awards found; writing empty today.json")
@@ -104,10 +105,48 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         ).fetchall()
         tier_dist = {t: int(c) for t, c in tier_rows}
 
+        # ── tier movers: today vs previous trading day ────────────────
+        # Order tiers from best → worst so we can compute delta as
+        # "how many tier-steps moved up" (positive = upgrade, negative = downgrade).
+        TIER_ORDER = ["🔥 夯死了", "👑 顶级", "💪 人上人", "😐 NPC", "💩 拉完了", "☠️ 答辩"]
+        tier_rank = {t: i for i, t in enumerate(TIER_ORDER)}
+        prev_row = con.execute(
+            "SELECT MAX(date) FROM tiers WHERE date < ?", [today_key]
+        ).fetchone()
+        if prev_row and prev_row[0]:
+            prev_key = str(prev_row[0])
+            cur_rows = con.execute(
+                "SELECT ticker, tier FROM tiers WHERE date = ?", [today_key]
+            ).fetchall()
+            prev_rows = con.execute(
+                "SELECT ticker, tier FROM tiers WHERE date = ?", [prev_key]
+            ).fetchall()
+            cur_map = {tk: t for tk, t in cur_rows}
+            prev_map = {tk: t for tk, t in prev_rows}
+            for tk, cur_t in cur_map.items():
+                prev_t = prev_map.get(tk)
+                if not prev_t or prev_t == cur_t:
+                    continue
+                if cur_t not in tier_rank or prev_t not in tier_rank:
+                    continue
+                # delta > 0 = upgraded (moved to better tier)
+                delta = tier_rank[prev_t] - tier_rank[cur_t]
+                if delta == 0:
+                    continue
+                tier_movers.append({
+                    "ticker": tk,
+                    "prev": prev_t,
+                    "now": cur_t,
+                    "delta": delta,
+                })
+            # Sort: biggest upgrades first, then biggest downgrades
+            tier_movers.sort(key=lambda r: (-r["delta"], r["ticker"]))
+
     jwrite("today.json", {
         "date": today_key,
         "awards": today_awards,
         "tier_distribution": tier_dist,
+        "tier_movers": tier_movers,
     })
 
     # ── 2. tiers.json ─────────────────────────────────────────────

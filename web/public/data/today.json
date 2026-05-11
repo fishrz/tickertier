@@ -9,31 +9,31 @@
         {
           "rank": 1,
           "ticker": "LITE",
-          "metric": 11.6716,
+          "metric": 11.6757,
           "meta": {
             "shares": 16.0,
-            "last_close": 903.4299926757812,
-            "market_value": 14454.8798828125
+            "last_close": 903.7999877929688,
+            "market_value": 14460.7998046875
           }
         },
         {
           "rank": 2,
           "ticker": "MU",
-          "metric": 10.2509,
+          "metric": 10.2506,
           "meta": {
             "shares": 17.0,
-            "last_close": 746.7899780273438,
-            "market_value": 12695.429626464844
+            "last_close": 746.8099975585938,
+            "market_value": 12695.769958496094
           }
         },
         {
           "rank": 3,
           "ticker": "WDC",
-          "metric": 7.7516,
+          "metric": 7.7511,
           "meta": {
             "shares": 20.0,
-            "last_close": 480.0050048828125,
-            "market_value": 9600.10009765625
+            "last_close": 480.0,
+            "market_value": 9600.0
           }
         }
       ]
@@ -66,11 +66,11 @@
         {
           "rank": 3,
           "ticker": "MU",
-          "metric": 41.9718,
+          "metric": 41.9756,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 746.7899780273438
+            "last_close": 746.8099975585938
           }
         }
       ]
@@ -83,11 +83,11 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 3753.2086,
+          "metric": 3753.549,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 746.7899780273438
+            "last_close": 746.8099975585938
           }
         },
         {
@@ -157,7 +157,7 @@
           "metric": -0.114,
           "meta": {
             "intraday_amp": 0.10245186387226958,
-            "vol_ratio_20": 1.5112503419236853
+            "vol_ratio_20": 1.5046601006101246
           }
         },
         {
@@ -166,7 +166,7 @@
           "metric": -0.0546,
           "meta": {
             "intraday_amp": 0.21770867906927102,
-            "vol_ratio_20": 1.9757935585753665
+            "vol_ratio_20": 1.966653753365577
           }
         },
         {
@@ -191,7 +191,7 @@
           "metric": 0.2658,
           "meta": {
             "intraday_amp": 0.1449137719558396,
-            "vol_ratio_20": 3.787957922123823
+            "vol_ratio_20": 3.691242131017813
           }
         },
         {
@@ -209,7 +209,7 @@
           "metric": 0.212,
           "meta": {
             "intraday_amp": 0.16692970185157072,
-            "vol_ratio_20": 1.085300924784083
+            "vol_ratio_20": 1.0753450384595993
           }
         }
       ]
@@ -290,10 +290,10 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 1702.7195,
+          "metric": 1703.0599,
           "meta": {
             "shares": 17.0,
-            "d_price": 100.15997314453125
+            "d_price": 100.17999267578125
           }
         },
         {
@@ -324,7 +324,7 @@
         {
           "rank": 1,
           "ticker": "AKAM",
-          "metric": 3.788,
+          "metric": 3.6912,
           "meta": {
             "pct_change": 0.26583257882813965
           }
@@ -340,7 +340,7 @@
         {
           "rank": 3,
           "ticker": "KLIC",
-          "metric": 1.9077,
+          "metric": 1.8893,
           "meta": {
             "pct_change": 0.045950097464250474
           }
@@ -373,7 +373,7 @@
           "ticker": "POET",
           "metric": 0.2109,
           "meta": {
-            "pct_change": 0.1416284018946861
+            "pct_change": 0.14300625224108487
           }
         }
       ]
@@ -454,8 +454,424 @@
     "☠️ 答辩": 3,
     "💩 拉完了": 14,
     "👑 顶级": 12,
-    "💪 人上人": 24,
     "🔥 夯死了": 5,
-    "😐 NPC": 23
-  }
+    "😐 NPC": 23,
+    "💪 人上人": 24
+  },
+  "tier_movers": [
+    {
+      "ticker": "KORU",
+      "prev": "☠️ 答辩",
+      "now": "🔥 夯死了",
+      "delta": 5
+    },
+    {
+      "ticker": "NVTS",
+      "prev": "☠️ 答辩",
+      "now": "🔥 夯死了",
+      "delta": 5
+    },
+    {
+      "ticker": "AEHR",
+      "prev": "☠️ 答辩",
+      "now": "👑 顶级",
+      "delta": 4
+    },
+    {
+      "ticker": "ALAB",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "AMKR",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "BE",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "COHR",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "LITE",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "MRVL",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "NVMI",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "RGTI",
+      "prev": "☠️ 答辩",
+      "now": "💪 人上人",
+      "delta": 3
+    },
+    {
+      "ticker": "AKAM",
+      "prev": "💪 人上人",
+      "now": "🔥 夯死了",
+      "delta": 2
+    },
+    {
+      "ticker": "AMSC",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "AOSL",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "CIEN",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "CRDO",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "DELL",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "ENTG",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "INTC",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "LEU",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "MX",
+      "prev": "💪 人上人",
+      "now": "🔥 夯死了",
+      "delta": 2
+    },
+    {
+      "ticker": "OKLO",
+      "prev": "☠️ 答辩",
+      "now": "😐 NPC",
+      "delta": 2
+    },
+    {
+      "ticker": "SNDK",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "AMAT",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "AMD",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "ARM",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "CAMT",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "CLS",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "COHU",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "DRAM",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "ETN",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "FN",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "GEV",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "JBL",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "LWLG",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "MU",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "NBIS",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "PLAB",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "SMCI",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "VICR",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "VRT",
+      "prev": "☠️ 答辩",
+      "now": "💩 拉完了",
+      "delta": 1
+    },
+    {
+      "ticker": "WDC",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "ADI",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "ANET",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "AXTI",
+      "prev": "🔥 夯死了",
+      "now": "👑 顶级",
+      "delta": -1
+    },
+    {
+      "ticker": "CEG",
+      "prev": "😐 NPC",
+      "now": "💩 拉完了",
+      "delta": -1
+    },
+    {
+      "ticker": "CSCO",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "FORM",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "GFS",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "GLW",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "LSRCY",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "NVT",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "QCOM",
+      "prev": "🔥 夯死了",
+      "now": "👑 顶级",
+      "delta": -1
+    },
+    {
+      "ticker": "RMBS",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "SIMO",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "STX",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "TLN",
+      "prev": "😐 NPC",
+      "now": "💩 拉完了",
+      "delta": -1
+    },
+    {
+      "ticker": "TSEM",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "TSM",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "ENPH",
+      "prev": "👑 顶级",
+      "now": "😐 NPC",
+      "delta": -2
+    },
+    {
+      "ticker": "KLIC",
+      "prev": "🔥 夯死了",
+      "now": "💪 人上人",
+      "delta": -2
+    },
+    {
+      "ticker": "MCHP",
+      "prev": "👑 顶级",
+      "now": "😐 NPC",
+      "delta": -2
+    },
+    {
+      "ticker": "MOD",
+      "prev": "💪 人上人",
+      "now": "💩 拉完了",
+      "delta": -2
+    },
+    {
+      "ticker": "NVDA",
+      "prev": "👑 顶级",
+      "now": "😐 NPC",
+      "delta": -2
+    },
+    {
+      "ticker": "ORCL",
+      "prev": "👑 顶级",
+      "now": "😐 NPC",
+      "delta": -2
+    },
+    {
+      "ticker": "SNPS",
+      "prev": "👑 顶级",
+      "now": "😐 NPC",
+      "delta": -2
+    },
+    {
+      "ticker": "WOLF",
+      "prev": "🔥 夯死了",
+      "now": "💪 人上人",
+      "delta": -2
+    },
+    {
+      "ticker": "GOOG",
+      "prev": "👑 顶级",
+      "now": "💩 拉完了",
+      "delta": -3
+    },
+    {
+      "ticker": "VST",
+      "prev": "👑 顶级",
+      "now": "💩 拉完了",
+      "delta": -3
+    }
+  ]
 }

@@ -20,10 +20,18 @@ export interface AwardGroup {
   winners: Winner[]
 }
 
+export interface TierMover {
+  ticker: string
+  prev: string
+  now: string
+  delta: number
+}
+
 export interface AwardsTodayResponse {
   date: string
   awards: AwardGroup[]
   tier_distribution: Record<string, number>
+  tier_movers?: TierMover[]
 }
 
 export interface HealthResponse {

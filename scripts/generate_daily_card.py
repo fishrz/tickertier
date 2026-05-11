@@ -113,6 +113,7 @@ CHIP_PAD_X = 14
 CHIP_PAD_Y = 7
 CHIP_SPACING_X = 8
 CHIP_SPACING_Y = 8
+MOVERS_HEIGHT = 90
 FOOTER_HEIGHT = 80
 SIDE_PAD = 40
 
@@ -156,6 +157,52 @@ def compute_row_height(
     chip_h = rows[0][0][2] if rows[0] else 36
     row_h = ROW_PAD_Y * 2 + len(rows) * chip_h + (len(rows) - 1) * CHIP_SPACING_Y
     return row_h, rows
+
+
+def render_movers(d: ImageDraw.ImageDraw, today: dict[str, Any], y: int) -> None:
+    """Render the tier movers strip: top upgrade(s) ↑ and top downgrade(s) ↓."""
+    movers = today.get("tier_movers") or []
+    if not movers:
+        return
+    ups = [m for m in movers if m.get("delta", 0) > 0][:3]
+    downs = [m for m in movers if m.get("delta", 0) < 0][-3:]
+
+    kicker = font(MONO, 13)
+    d.text(
+        (SIDE_PAD + 20, y + 14),
+        "TIER MOVERS  ·  今日升降一览",
+        fill=MUTE,
+        font=kicker,
+    )
+
+    label_fnt = font(CJK, 18)
+    body_fnt = font(MONO, 22)
+
+    line_y = y + 42
+    # Left column: upgrades
+    if ups:
+        d.text((SIDE_PAD + 20, line_y), "↑ 升级", fill=POS, font=label_fnt)
+        parts = [f"{m['ticker']} (+{m['delta']})" for m in ups]
+        d.text((SIDE_PAD + 110, line_y), "  ".join(parts), fill=INK, font=body_fnt)
+    # Right column: downgrades
+    if downs:
+        right_text_parts = [f"{m['ticker']} ({m['delta']})" for m in downs]
+        right_text = "  ".join(right_text_parts)
+        tb = d.textbbox((0, 0), right_text, font=body_fnt)
+        text_w = tb[2] - tb[0]
+        right_x = WIDTH - SIDE_PAD - 20 - text_w
+        label = "↓ 降级"
+        lb = d.textbbox((0, 0), label, font=label_fnt)
+        label_w = lb[2] - lb[0]
+        d.text((right_x - label_w - 16, line_y), label, fill=NEG, font=label_fnt)
+        d.text((right_x, line_y), right_text, fill=INK, font=body_fnt)
+
+    # Separator line under the band
+    d.line(
+        [(SIDE_PAD, y + MOVERS_HEIGHT - 1), (WIDTH - SIDE_PAD, y + MOVERS_HEIGHT - 1)],
+        fill=INK,
+        width=1,
+    )
 
 
 def render_header(d: ImageDraw.ImageDraw, today: dict[str, Any], meta: dict[str, Any]) -> None:
@@ -235,7 +282,7 @@ def render_card(today: dict[str, Any], meta: dict[str, Any], tiers_list: list[di
         layouts.append((key, tickers, row_h, rows))
         total_table_h += row_h
 
-    height = HEADER_HEIGHT + total_table_h + FOOTER_HEIGHT
+    height = HEADER_HEIGHT + total_table_h + MOVERS_HEIGHT + FOOTER_HEIGHT
     img = Image.new("RGB", (WIDTH, height), PAPER)
     d = ImageDraw.Draw(img)
 
@@ -308,6 +355,10 @@ def render_card(today: dict[str, Any], meta: dict[str, Any], tiers_list: list[di
         # Row separator
         d.line([(SIDE_PAD, y + row_h), (WIDTH - SIDE_PAD, y + row_h)], fill=INK, width=1)
         y += row_h
+
+    # Movers band
+    movers_y = y
+    render_movers(d, today, movers_y)
 
     # Footer
     foot_y = height - FOOTER_HEIGHT + 24
