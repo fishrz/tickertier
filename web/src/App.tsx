@@ -11,6 +11,7 @@ const Race = lazy(() => import('@/pages/Race'))
 const Portfolio = lazy(() => import('@/pages/Portfolio'))
 const PortfolioEdit = lazy(() => import('@/pages/PortfolioEdit'))
 const Preview = lazy(() => import('@/pages/Preview'))
+const Daily = lazy(() => import('@/pages/Daily'))
 
 function PageFallback() {
   return (
@@ -63,6 +64,14 @@ export default function App() {
             element={
               <Suspense fallback={<PageFallback />}>
                 <Preview />
+              </Suspense>
+            }
+          />
+          <Route
+            path="daily"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <Daily />
               </Suspense>
             }
           />

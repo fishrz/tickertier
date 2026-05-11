@@ -26,7 +26,7 @@ DATA_DIR = ROOT / "web" / "public" / "data"
 TODAY_JSON = DATA_DIR / "today.json"
 META_JSON = DATA_DIR / "meta.json"
 DEFAULT_CHAT_ID = "8509167029"
-APP_URL = "https://tickertier.vercel.app/"  # TODO(W2-T1): switch to /daily once page exists
+APP_URL = "https://tickertier.vercel.app/daily"
 
 
 def _load_json(path: Path) -> dict[str, Any]:
