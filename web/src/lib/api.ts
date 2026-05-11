@@ -46,7 +46,7 @@ interface AggregatedMedal {
   period: string | null
 }
 
-interface StockRow {
+export interface StockRow {
   ticker: string
   name: string
   theme: string | null
@@ -269,7 +269,7 @@ const AWARD_META_MAP: Record<string, AwardMeta> = {
 // ── Shared data helpers ────────────────────────────────────────
 
 let _stocksPromise: Promise<StockRow[]> | null = null
-function getStocks(): Promise<StockRow[]> {
+export function getStocks(): Promise<StockRow[]> {
   if (!_stocksPromise) _stocksPromise = fetchJSON<StockRow[]>('/data/stocks.json')
   return _stocksPromise
 }

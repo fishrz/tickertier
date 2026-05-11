@@ -10,6 +10,7 @@ const HallOfFame = lazy(() => import('@/pages/HallOfFame'))
 const Race = lazy(() => import('@/pages/Race'))
 const Portfolio = lazy(() => import('@/pages/Portfolio'))
 const PortfolioEdit = lazy(() => import('@/pages/PortfolioEdit'))
+const Watchlist = lazy(() => import('@/pages/Watchlist'))
 const Preview = lazy(() => import('@/pages/Preview'))
 const Daily = lazy(() => import('@/pages/Daily'))
 
@@ -80,6 +81,14 @@ export default function App() {
             element={
               <Suspense fallback={<PageFallback />}>
                 <PortfolioEdit />
+              </Suspense>
+            }
+          />
+          <Route
+            path="watch"
+            element={
+              <Suspense fallback={<PageFallback />}>
+                <Watchlist />
               </Suspense>
             }
           />

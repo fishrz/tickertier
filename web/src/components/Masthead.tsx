@@ -6,6 +6,7 @@ const NAV = [
   { to: '/', label: '今日颁奖' },
   { to: '/hall', label: '名人堂' },
   { to: '/race', label: '排名变迁' },
+  { to: '/watch', label: '关注' },
   { to: '/portfolio', label: '我的持仓' },
 ]
 

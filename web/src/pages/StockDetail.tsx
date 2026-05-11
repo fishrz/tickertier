@@ -7,6 +7,7 @@ import { formatPercent } from '@/lib/format'
 import { PersonaPill } from '@/components/PersonaPill'
 import { TierBadge } from '@/components/TierBadge'
 import { ShareButton } from '@/components/ShareButton'
+import { StarButton } from '@/components/StarButton'
 import type { MedalEntry } from '@/types'
 import type { StockDetail as StockDetailType } from '@/types'
 
@@ -95,7 +96,8 @@ export default function StockDetail() {
               最佳: {d.medal_history[0].name}
             </div>
           )}
-          <div className="mt-3 flex justify-end">
+          <div className="mt-3 flex justify-end gap-2">
+            <StarButton ticker={d.ticker} size="sm" />
             <ShareButton
               title={`夯股 · ${d.ticker} ${d.name}`}
               text={`${d.ticker} ${d.name}${d.last_pct_change != null ? ` ${d.last_pct_change >= 0 ? '+' : ''}${(d.last_pct_change * 100).toFixed(2)}%` : ''} · 累计 ${Object.values(d.medal_count).reduce((a, b) => a + b, 0)} 枚奖牌`}
