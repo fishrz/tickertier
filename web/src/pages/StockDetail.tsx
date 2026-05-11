@@ -99,7 +99,7 @@ export default function StockDetail() {
             <ShareButton
               title={`夯股 · ${d.ticker} ${d.name}`}
               text={`${d.ticker} ${d.name}${d.last_pct_change != null ? ` ${d.last_pct_change >= 0 ? '+' : ''}${(d.last_pct_change * 100).toFixed(2)}%` : ''} · 累计 ${Object.values(d.medal_count).reduce((a, b) => a + b, 0)} 枚奖牌`}
-              url={typeof window !== 'undefined' ? window.location.href : ''}
+              url={typeof window !== 'undefined' ? `${window.location.origin}/share/stock-${d.ticker}.html` : ''}
               size="sm"
             />
           </div>
