@@ -20,13 +20,18 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install yfinance duckdb pandas pyarrow finnhub-python pandas-market-calendars scikit-learn
+        run: |
+          pip install yfinance duckdb pandas pyarrow finnhub-python pandas-market-calendars scikit-learn Pillow
+          sudo apt-get update -y && sudo apt-get install -y --no-install-recommends fonts-wqy-zenhei fonts-dejavu-core
 
       - name: Run daily pipeline
         run: python scripts/run_daily.py
 
       - name: Export JSON snapshots
         run: python scripts/export_json.py
+
+      - name: Generate daily card
+        run: python scripts/generate_daily_card.py
 
       - name: Notify Telegram
         if: success()
@@ -39,9 +44,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add web/public/data/*.json
+          git add web/public/data/*.json web/public/data/cards/*.png
           if git diff --cached --quiet; then
-            echo "No JSON changes to commit"
+            echo "No JSON / card changes to commit"
           else
             git commit -m "chore: update data snapshots $(date -u +%Y-%m-%d)"
             git push
