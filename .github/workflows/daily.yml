@@ -33,9 +33,6 @@ jobs:
       - name: Generate daily card
         run: python scripts/generate_daily_card.py
 
-      - name: Generate per-stock OG images + share stubs
-        run: python scripts/generate_og_images.py
-
       - name: Notify Telegram
         if: success()
         env:
@@ -47,7 +44,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add web/public/data/*.json web/public/data/cards/*.png web/public/og/*.png web/public/share/*.html
+          git add web/public/data/*.json web/public/data/cards/*.png
           if git diff --cached --quiet; then
             echo "No JSON / card changes to commit"
           else
