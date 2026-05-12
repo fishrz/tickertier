@@ -72,6 +72,7 @@ interface HallFile {
   by_period: Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number }[]>
   windows: Record<string, Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]>>
   by_award_code: Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]>
+  by_award_code_windows?: Record<string, Record<string, { ticker: string; gold: number; silver: number; bronze: number; total: number; persona: string | null }[]>>
 }
 
 interface RaceGranularity {
@@ -165,7 +166,7 @@ const AWARD_META_MAP: Record<string, AwardMeta> = {
   comeback: {
     code: 'comeback', name: '🪄 绝地翻身奖', desc: '主打一个不装了',
     category: 'daily', unit: 'pct',
-    criterion: '盘中触底之后猛拉，最终红盘报收。主打一个绝地反击。',
+    criterion: '盘中触底之后猛拉，最终收涨。主打一个绝地反击。',
     formula: '在 pct_change > 0 的股票里，argmax rebound = (close − low) / low × 100。',
   },
   npc_god: {
@@ -177,11 +178,11 @@ const AWARD_META_MAP: Record<string, AwardMeta> = {
   pump_army: {
     code: 'pump_army', name: '📈 暴兵奖', desc: '主力进场了家人们',
     category: 'daily', unit: 'count',
-    criterion: '红盘日里量能爆发最猛的，疑似主力进场。',
+    criterion: '上涨日里量能爆发最猛的，疑似主力进场。',
     formula: '在 pct_change > 0 的股票里，argmax vol_ratio_20 = volume / 20日均量。',
   },
   tank: {
-    code: 'tank', name: '🛡️ 抗揍奖', desc: '大盘红我绿，反向 indicator 王',
+    code: 'tank', name: '🛡️ 抗揍奖', desc: '大盘崩我不崩，反向 indicator 王',
     category: 'daily', unit: 'pct',
     criterion: '大盘明显下跌的日子里，跌得最少甚至上涨的那只。',
     formula: '前提：QQQ pct_change ≤ −0.5%。取 argmax(ticker.pct_change − QQQ.pct_change)。',
@@ -347,9 +348,14 @@ export async function getLeaderboard(
   }))
 }
 
-export async function getAwardTopByCode(code: string, n = 3): Promise<AwardTopEntry[]> {
+export async function getAwardTopByCode(
+  code: string,
+  n = 3,
+  win: string = 'all',
+): Promise<AwardTopEntry[]> {
   const file = await fetchJSON<HallFile>('/data/hall.json')
-  const rows = file.by_award_code?.[code] ?? []
+  const windowed = file.by_award_code_windows?.[win]?.[code]
+  const rows = windowed ?? file.by_award_code?.[code] ?? []
   return rows.slice(0, n).map((r) => ({
     ticker: r.ticker,
     total_wins: r.total,
@@ -613,10 +619,32 @@ export async function getAwardMeta(code: string): Promise<AwardMetaResponse> {
   if (!meta) {
     throw new Error(`Unknown award: ${code}`)
   }
+  // Pull top holders + total awarded from hall.json (built nightly by export_json.py)
+  let top_holders: { ticker: string; wins: number }[] = []
+  let total_awarded = 0
+  let last_winner: AwardMetaResponse['last_winner'] = null
+  try {
+    const hall = await fetchJSON<HallFile>('/data/hall.json')
+    const rows = hall.by_award_code?.[code] ?? []
+    top_holders = rows.slice(0, 8).map((r) => ({ ticker: r.ticker, wins: r.total }))
+    total_awarded = rows.reduce((a, r) => a + r.total, 0)
+  } catch {
+    // hall.json may not be available in some environments; gracefully degrade
+  }
+  // Last winner from today.json if this award appears in today's slate
+  try {
+    const today = await fetchJSON<{ date: string; awards: { code: string; winners: { ticker: string }[] }[] }>('/data/today.json')
+    const a = today.awards?.find((x) => x.code === code)
+    if (a?.winners?.[0]?.ticker) {
+      last_winner = { period_key: today.date, ticker: a.winners[0].ticker, value: null }
+    }
+  } catch {
+    // ignore
+  }
   return {
     meta,
-    top_holders: [],       // not available in static data
-    total_awarded: 0,
-    last_winner: null,
+    top_holders,
+    total_awarded,
+    last_winner,
   }
 }

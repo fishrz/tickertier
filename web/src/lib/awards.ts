@@ -10,7 +10,7 @@ export const AWARD_META: Record<string, { name: string; desc: string }> = {
   comeback:        { name: '🪄 绝地翻身奖', desc: '主打一个不装了' },
   npc_god:         { name: '💤 NPC 之光', desc: '在的，活着，不动' },
   pump_army:       { name: '📈 暴兵奖', desc: '主力进场了家人们' },
-  tank:            { name: '🛡️ 抗揍奖', desc: '大盘红我绿，反向 indicator 王' },
+  tank:            { name: '🛡️ 抗揍奖', desc: '大盘崩我不崩，反向 indicator 王' },
   reverse_idx:    { name: '🪦 反指奖', desc: '陪跑十级运动员' },
   steady_grind:    { name: '🐢 细水长流奖', desc: '老老实实赚钱' },
   gambler:         { name: '🎰 赌狗之友奖', desc: '心脏起搏器赞助商' },

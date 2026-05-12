@@ -34,8 +34,10 @@ export function formatMetric(code: string, value: number): string {
 }
 
 export function formatPercent(v: number): string {
-  // API returns fractions for return metrics (0.0965 = 9.65%); also handle pre-scaled values
-  const scaled = Math.abs(v) < 1 ? v * 100 : v
+  // Convention: ALL percent inputs are fractions (0.0965 = 9.65%, 1.17 = 117%).
+  // Previously used `Math.abs(v) < 1` heuristic — broke for ≥100% returns
+  // (e.g. AAOI 30d = 1.17 → rendered as "+1.17%" instead of "+117.00%").
+  const scaled = v * 100
   const sign = scaled > 0 ? '+' : ''
   return `${sign}${scaled.toFixed(2)}%`
 }

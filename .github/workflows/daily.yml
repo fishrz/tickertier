@@ -33,12 +33,10 @@ jobs:
       - name: Generate daily card
         run: python scripts/generate_daily_card.py
 
-      - name: Notify Telegram
-        if: success()
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-        run: |
-          python scripts/notify_telegram.py || echo "telegram notify failed (non-fatal)"
+      # NOTE: Telegram push is intentionally disabled on the public mirror —
+      # the private repo runs the same pipeline and owns notification delivery
+      # to avoid duplicate messages. Do NOT add the TELEGRAM_BOT_TOKEN secret
+      # back to this repo unless you've also disabled the private repo's push.
 
       - name: Commit JSON files
         run: |

@@ -173,7 +173,7 @@ export default function HallOfFame() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-ink">
           {AWARD_CODES.map((code) => (
-            <AwardCard key={code} code={code} />
+            <AwardCard key={code} code={code} win={win} />
           ))}
         </div>
       </section>
@@ -192,11 +192,12 @@ const AWARD_CODES = Object.keys(AWARD_META)
 
 /* ─── Single award card with top 3 ─── */
 
-function AwardCard({ code }: { code: string }) {
+function AwardCard({ code, win }: { code: string; win: string }) {
   const meta = AWARD_META[code as keyof typeof AWARD_META]
+  const [expanded, setExpanded] = useState(false)
   const topQ = useQuery({
-    queryKey: ['award-top', code],
-    queryFn: () => getAwardTopByCode(code, 3),
+    queryKey: ['award-top', code, win, expanded ? 'full' : 'preview'],
+    queryFn: () => getAwardTopByCode(code, expanded ? 30 : 3, win),
     staleTime: 5 * 60 * 1000,
   })
 
@@ -213,24 +214,39 @@ function AwardCard({ code }: { code: string }) {
       </header>
       {topQ.isLoading ? (
         <div className="text-mute font-mono text-[12px] py-4">…</div>
-      ) : topQ.data ? (
-        <div className="flex flex-col gap-1.5">
-          {topQ.data.map((entry, i) => (
-            <div key={entry.ticker} className="flex items-baseline gap-2">
-              <span className={`font-serif font-bold leading-none ${i === 0 ? 'text-[18px] text-gold' : 'text-[15px] text-gold-dim'}`}>
-                {MEDALS[i]}
-              </span>
-              <Link to={`/stock/${entry.ticker}`} className="font-mono font-bold text-[14px] hover:text-gold-dim">
-                {entry.ticker}
-              </Link>
-              <span className="text-mute font-mono text-[12px] ml-auto tabular-nums">
-                {entry.gold}金 {entry.silver}银 {entry.bronze}铜
-              </span>
-            </div>
-          ))}
-        </div>
+      ) : topQ.data && topQ.data.length > 0 ? (
+        <>
+          <div className="flex flex-col gap-1.5">
+            {topQ.data.map((entry, i) => (
+              <div key={entry.ticker} className="flex items-baseline gap-2">
+                <span className={`font-mono leading-none tabular-nums w-6 text-right shrink-0 ${
+                  i < 3
+                    ? `font-serif font-bold ${i === 0 ? 'text-[18px] text-gold' : 'text-[15px] text-gold-dim'}`
+                    : 'text-[12px] text-mute'
+                }`}>
+                  {i < 3 ? MEDALS[i] : `${i + 1}.`}
+                </span>
+                <Link to={`/stock/${entry.ticker}`} className="font-mono font-bold text-[14px] hover:text-gold-dim">
+                  {entry.ticker}
+                </Link>
+                <span className="text-mute font-mono text-[12px] ml-auto tabular-nums">
+                  {entry.gold}金 {entry.silver}银 {entry.bronze}铜
+                </span>
+              </div>
+            ))}
+          </div>
+          {/* Expand toggle — only show if there might be more than 3 */}
+          {(!expanded || topQ.data.length >= 3) && (
+            <button
+              onClick={() => setExpanded((v) => !v)}
+              className="mt-3 font-mono text-[11px] tracking-[0.1em] uppercase text-mute hover:text-ink transition-colors"
+            >
+              {expanded ? '↑ 收起' : '↓ 查看完整列表'}
+            </button>
+          )}
+        </>
       ) : (
-        <div className="text-mute font-mono text-[12px] py-4">—</div>
+        <div className="text-mute font-mono text-[12px] py-4">该时段尚无得主</div>
       )}
     </article>
   )

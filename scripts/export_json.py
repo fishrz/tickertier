@@ -533,34 +533,69 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
                         )[:50]
         windows_data[win_key] = per_gran
 
-    # ── by_award_code (各项之王 top 5) ──
+    # ── by_award_code (各项之王 完整列表 + 时间窗) ──
     award_codes = [r[0] for r in con.execute(
         "SELECT DISTINCT award_code FROM awards ORDER BY award_code"
     ).fetchall()]
-    by_award_code: dict[str, list[dict]] = {}
-    for code in award_codes:
-        rows_top = con.execute(
-            """
-            SELECT a.ticker,
-                   SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
-                   SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
-                   SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
-                   COUNT(*) AS total,
-                   (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
-            FROM awards a
-            WHERE a.award_code = ?
-            GROUP BY a.ticker
-            HAVING COUNT(*) > 0
-            ORDER BY gold DESC, total DESC, a.ticker
-            LIMIT 5
-            """,
-            [code],
-        ).fetchall()
-        by_award_code[code] = [
+
+    def _award_code_top(code: str, lb: str | None, cap: int = 30) -> list[dict]:
+        """Top N tickers for a given award code, optionally filtered by date lower bound (period='D')."""
+        if lb is None:
+            rows = con.execute(
+                """
+                SELECT a.ticker,
+                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                       COUNT(*) AS total,
+                       (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
+                FROM awards a
+                WHERE a.award_code = ?
+                GROUP BY a.ticker
+                HAVING COUNT(*) > 0
+                ORDER BY gold DESC, total DESC, a.ticker
+                LIMIT ?
+                """,
+                [code, cap],
+            ).fetchall()
+        else:
+            rows = con.execute(
+                """
+                SELECT a.ticker,
+                       SUM(CASE WHEN a.rank = 1 THEN 1 ELSE 0 END) AS gold,
+                       SUM(CASE WHEN a.rank = 2 THEN 1 ELSE 0 END) AS silver,
+                       SUM(CASE WHEN a.rank = 3 THEN 1 ELSE 0 END) AS bronze,
+                       COUNT(*) AS total,
+                       (SELECT persona FROM personas p WHERE p.ticker = a.ticker) AS persona
+                FROM awards a
+                WHERE a.award_code = ?
+                  AND a.period = 'D'
+                  AND CAST(a.period_key AS VARCHAR) >= ?
+                GROUP BY a.ticker
+                HAVING COUNT(*) > 0
+                ORDER BY gold DESC, total DESC, a.ticker
+                LIMIT ?
+                """,
+                [code, lb, cap],
+            ).fetchall()
+        return [
             {"ticker": r[0], "gold": int(r[1]), "silver": int(r[2]),
              "bronze": int(r[3]), "total": int(r[4]), "persona": r[5]}
-            for r in rows_top
+            for r in rows
         ]
+
+    # All-time per-code (kept for backwards compat; now uncapped to 30)
+    by_award_code: dict[str, list[dict]] = {
+        code: _award_code_top(code, None, cap=30) for code in award_codes
+    }
+
+    # Per-window per-code: { '7d': { 'daily_king': [...], ... }, '30d': ..., 'all': ... }
+    by_award_code_windows: dict[str, dict[str, list[dict]]] = {}
+    for win_key, days in win_days.items():
+        lb = None if days is None else _window_pk_lower_bound("D", days)
+        by_award_code_windows[win_key] = {
+            code: _award_code_top(code, lb, cap=30) for code in award_codes
+        }
 
     # ── legacy by_period (month/quarter/year keys, for backwards compat) ──
     period_keys: list[str] = []
@@ -602,6 +637,7 @@ def export_snapshots(con, out_dir: Path = OUT_DIR, universe_path: Path = UNIVERS
         "by_period": hall_by_period,
         "windows": windows_data,
         "by_award_code": by_award_code,
+        "by_award_code_windows": by_award_code_windows,
     })
 
     # ── 6. meta.json ──────────────────────────────────────────────

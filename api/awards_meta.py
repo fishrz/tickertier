@@ -46,7 +46,7 @@ AWARD_META: dict[str, dict[str, str]] = {
         "desc": "主打一个不装了",
         "category": "daily",
         "unit": "pct",
-        "criterion": "盘中触底之后猛拉，最终红盘报收。主打一个绝地反击。",
+        "criterion": "盘中触底之后猛拉，最终收涨。主打一个绝地反击。",
         "formula": "在 pct_change > 0 的股票里，argmax rebound = (close − low) / low × 100。",
     },
     "npc_god": {
@@ -62,12 +62,12 @@ AWARD_META: dict[str, dict[str, str]] = {
         "desc": "主力进场了家人们",
         "category": "daily",
         "unit": "count",
-        "criterion": "红盘日里量能爆发最猛的，疑似主力进场。",
+        "criterion": "上涨日里量能爆发最猛的，疑似主力进场。",
         "formula": "在 pct_change > 0 的股票里，argmax vol_ratio_20 = volume / 20日均量。值是几就代表是平均量的几倍。",
     },
     "tank": {
         "name": "🛡️ 抗揍奖",
-        "desc": "大盘红我绿，反向 indicator 王",
+        "desc": "大盘崩我不崩，反向 indicator 王",
         "category": "daily",
         "unit": "pct",
         "criterion": "大盘明显下跌的日子里，跌得最少甚至上涨的那只。",
