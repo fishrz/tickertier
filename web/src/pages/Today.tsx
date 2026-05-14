@@ -5,24 +5,18 @@ import { TierBar } from '@/components/TierBar'
 import { AwardCard } from '@/components/AwardCard'
 import { TierTable } from '@/components/TierTable'
 
-// Narrative ordering — major awards first, then drama, then rhythm
+// Narrative ordering — major awards first, then drama, portfolio, rhythm
 const ORDER_HINT = [
-  'champion', 'stock_king',          // 主奖
-  'crap', 'tank', 'daily_clown',     // 反派
-  'comeback', 'rocket',              // 戏剧
-  'high_dive', 'roller_coaster', 'volatile', 'oscar',
-  'gap', 'gambler',
-  'workhorse', 'silver_curse',
-  'steady_grind', 'antifragile',
-  'reverse_idx', 'npc_god',
-  'pillar', 'traitor',
-  'earnings_god',
+  'daily_king',       // 今日股王必须第一
+  'daily_clown',      // 今日答辩第二
+  'comeback', 'roller_coaster', 'oscar', 'pump_army', 'npc_god', 'tank',
+  'pillar', 'traitor', 'cash_king', 'tear_jerker', 'big_position', 'buy_low',
+  'earnings_god', 'earnings_clown',
+  'workhorse', 'silver_curse', 'steady_grind', 'gambler', 'reverse_idx',
 ]
 function awardRank(code: string): number {
-  for (let i = 0; i < ORDER_HINT.length; i++) {
-    if (code.includes(ORDER_HINT[i])) return i
-  }
-  return 999
+  const exact = ORDER_HINT.indexOf(code)
+  return exact >= 0 ? exact : 999
 }
 
 export default function Today() {

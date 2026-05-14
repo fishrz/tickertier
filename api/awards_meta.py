@@ -170,7 +170,7 @@ AWARD_META: dict[str, dict[str, str]] = {
         "category": "portfolio",
         "unit": "pct",
         "criterion": "占整个账户市值比例最高的持仓。压舱石 or 单吊一注，一目了然。",
-        "formula": "argmax (shares × last_close) / Σ(shares × last_close) × 100。",
+        "formula": "argmax (shares × last_close) / Σ(shares × last_close)。展示时按百分比显示。",
     },
     "buy_low": {
         "name": "🧠 人间清醒奖",
@@ -178,7 +178,7 @@ AWARD_META: dict[str, dict[str, str]] = {
         "category": "portfolio",
         "unit": "pct",
         "criterion": "成本价相对当前价折扣最大的持仓。证明你那次出手是真的清醒。",
-        "formula": "argmax (last_close − avg_cost) / avg_cost × 100，仅取浮盈 > 0。",
+        "formula": "argmax (last_close − avg_cost) / avg_cost，仅取浮盈 > 0。展示时按百分比显示。",
     },
 }
 

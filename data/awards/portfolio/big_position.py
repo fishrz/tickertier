@@ -24,7 +24,7 @@ def compute(con, period_key: str, period: str = "D") -> list[tuple[str, float, d
         ),
         total AS (SELECT SUM(market_value) AS tot FROM mv)
         SELECT mv.ticker,
-               mv.market_value / total.tot * 100.0 AS weight_pct,
+               mv.market_value / total.tot AS weight_pct,
                mv.shares,
                mv.close,
                mv.market_value

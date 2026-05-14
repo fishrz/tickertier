@@ -257,13 +257,13 @@ const AWARD_META_MAP: Record<string, AwardMeta> = {
     code: 'big_position', name: '👑 仓位之王', desc: '你就是我的全部',
     category: 'portfolio', unit: 'pct',
     criterion: '占整个账户市值比例最高的持仓。',
-    formula: 'argmax (shares × last_close) / Σ(shares × last_close) × 100。',
+    formula: 'argmax (shares × last_close) / Σ(shares × last_close)。展示时按百分比显示。',
   },
   buy_low: {
     code: 'buy_low', name: '🧠 人间清醒奖', desc: '买在脚踝上的天选之子',
     category: 'portfolio', unit: 'pct',
     criterion: '成本价相对当前价折扣最大的持仓。',
-    formula: 'argmax (last_close − avg_cost) / avg_cost × 100，仅取浮盈 > 0。',
+    formula: 'argmax (last_close − avg_cost) / avg_cost，仅取浮盈 > 0。展示时按百分比显示。',
   },
 }
 

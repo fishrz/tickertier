@@ -2,30 +2,10 @@ import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { getAwardsToday, getTodayTiers } from '@/lib/api'
+import { formatMetric, formatPercent } from '@/lib/format'
 import { TierBar } from '@/components/TierBar'
 
 const TIER_ORDER = ['🔥 夯死了', '👑 顶级', '💪 人上人', '😐 NPC', '💩 拉完了', '☠️ 答辩']
-
-function formatPct(v: number): string {
-  const pct = Math.abs(v) <= 1 ? v * 100 : v
-  const sign = pct > 0 ? '+' : ''
-  return `${sign}${pct.toFixed(2)}%`
-}
-
-// Award codes where metric is a percent (return rate)
-const PCT_AWARDS = new Set([
-  'daily_king', 'daily_clown', 'champion', 'crap', 'tank', 'rocket', 'comeback',
-  'high_dive', 'roller_coaster', 'volatile', 'gap', 'buy_low', 'big_position',
-])
-
-function formatMetric(code: string, v: number): string {
-  if (PCT_AWARDS.has(code)) return formatPct(v)
-  // Generic numeric: dollars / counts — show with thousand separator
-  const abs = Math.abs(v)
-  if (abs >= 1000) return v.toLocaleString('en-US', { maximumFractionDigits: 0 })
-  if (abs >= 10) return v.toFixed(2)
-  return v.toFixed(3)
-}
 
 function findAward(awards: Array<{ code: string; name: string; winners: Array<{ rank: number; ticker: string; metric: number }> }>, code: string) {
   return awards.find((a) => a.code === code) || null
@@ -61,8 +41,8 @@ export default function Daily() {
   const rest = data.awards.filter((a) => !FEATURED.has(a.code))
 
   const handleShare = async () => {
-    const kingStr = king ? `🏆 ${king.ticker} ${formatPct(king.metric)}` : ''
-    const clownStr = clown ? `💩 ${clown.ticker} ${formatPct(clown.metric)}` : ''
+    const kingStr = king ? `🏆 ${king.ticker} ${formatPercent(king.metric)}` : ''
+    const clownStr = clown ? `💩 ${clown.ticker} ${formatPercent(clown.metric)}` : ''
     const text = `📅 ${data.date} · 夯股日报\n${kingStr}\n${clownStr}\n🌐 ${window.location.origin}/daily`
     try {
       if (navigator.share) {
@@ -115,7 +95,7 @@ export default function Daily() {
               {king.ticker}
             </div>
             <div className="font-mono font-bold text-pos text-[clamp(28px,4vw,44px)] tabular-nums mt-3">
-              {formatPct(king.metric)}
+              {formatPercent(king.metric)}
             </div>
             <div className="font-mono text-[11px] text-mute uppercase tracking-[0.15em] mt-3">
               今日最强 →
@@ -132,7 +112,7 @@ export default function Daily() {
               {clown.ticker}
             </div>
             <div className="font-mono font-bold text-neg text-[clamp(28px,4vw,44px)] tabular-nums mt-3">
-              {formatPct(clown.metric)}
+              {formatPercent(clown.metric)}
             </div>
             <div className="font-mono text-[11px] text-mute uppercase tracking-[0.15em] mt-3">
               今日最菜 →

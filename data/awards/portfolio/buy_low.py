@@ -16,7 +16,7 @@ def compute(con, period_key: str, period: str = "D") -> list[tuple[str, float, d
           WHERE p.date = (SELECT max(date) FROM prices WHERE ticker = p.ticker)
         )
         SELECT pos.ticker,
-               (latest.close - pos.avg_cost) / pos.avg_cost * 100.0 AS gain_pct,
+               (latest.close - pos.avg_cost) / pos.avg_cost AS gain_pct,
                pos.shares,
                pos.avg_cost,
                latest.close
