@@ -123,7 +123,7 @@
           "metric": 0.1627,
           "meta": {
             "pct_change": 0.10164551632417952,
-            "fade": -0.01858730270412375
+            "fade": -0.018556318636590796
           }
         },
         {
@@ -156,8 +156,8 @@
           "ticker": "POET",
           "metric": -0.2236,
           "meta": {
-            "intraday_amp": 0.2102576969910068,
-            "vol_ratio_20": 1.3536697250644283
+            "intraday_amp": 0.21001461898832818,
+            "vol_ratio_20": 1.357458308668171
           }
         },
         {
@@ -165,8 +165,8 @@
           "ticker": "KORU",
           "metric": -0.1832,
           "meta": {
-            "intraday_amp": 0.07009607788677218,
-            "vol_ratio_20": 1.4857634725198965
+            "intraday_amp": 0.07066139024108979,
+            "vol_ratio_20": 1.5075686439041283
           }
         },
         {
@@ -175,7 +175,7 @@
           "metric": -0.1119,
           "meta": {
             "intraday_amp": 0.09276732080328495,
-            "vol_ratio_20": 1.0326239238678192
+            "vol_ratio_20": 1.0340861209558923
           }
         }
       ]
@@ -190,8 +190,8 @@
           "ticker": "ENPH",
           "metric": 0.1016,
           "meta": {
-            "intraday_amp": 0.17499894521749695,
-            "vol_ratio_20": 2.3984784756943944
+            "intraday_amp": 0.17496350770364671,
+            "vol_ratio_20": 2.401218032013051
           }
         },
         {
@@ -200,7 +200,7 @@
           "metric": 0.0765,
           "meta": {
             "intraday_amp": 0.1768133696077922,
-            "vol_ratio_20": 0.7972835848931107
+            "vol_ratio_20": 0.7981405391429192
           }
         },
         {
@@ -209,7 +209,7 @@
           "metric": 0.0401,
           "meta": {
             "intraday_amp": 0.17571523641154801,
-            "vol_ratio_20": 0.7615814556410797
+            "vol_ratio_20": 0.7624222833695256
           }
         }
       ]
@@ -224,26 +224,26 @@
           "ticker": "GFS",
           "metric": 0.0236,
           "meta": {
-            "vol_ratio_20": 0.66917678342575,
+            "vol_ratio_20": 0.6696174557444339,
             "pct_change": -0.038055223428441774
           }
         },
         {
           "rank": 2,
-          "ticker": "LSRCY",
-          "metric": 0.0288,
+          "ticker": "COHU",
+          "metric": 0.0292,
           "meta": {
-            "vol_ratio_20": 0.10658075921441434,
-            "pct_change": -0.054826258579478884
+            "vol_ratio_20": 0.5681081517419201,
+            "pct_change": -0.03717319707633368
           }
         },
         {
           "rank": 3,
-          "ticker": "COHU",
-          "metric": 0.0292,
+          "ticker": "AMD",
+          "metric": 0.0348,
           "meta": {
-            "vol_ratio_20": 0.5681264835349262,
-            "pct_change": -0.03717319707633368
+            "vol_ratio_20": 0.6224987918721276,
+            "pct_change": -0.0569268521427791
           }
         }
       ]
@@ -297,7 +297,7 @@
         {
           "rank": 1,
           "ticker": "ENPH",
-          "metric": 2.3985,
+          "metric": 2.4012,
           "meta": {
             "pct_change": 0.10164551632417952
           }
@@ -305,7 +305,7 @@
         {
           "rank": 2,
           "ticker": "CSCO",
-          "metric": 1.5814,
+          "metric": 1.582,
           "meta": {
             "pct_change": 0.023197440781554314
           }
@@ -313,7 +313,7 @@
         {
           "rank": 3,
           "ticker": "ALAB",
-          "metric": 1.0086,
+          "metric": 1.0091,
           "meta": {
             "pct_change": 0.01766966977308224
           }
@@ -328,7 +328,7 @@
         {
           "rank": 1,
           "ticker": "POET",
-          "metric": 0.2103,
+          "metric": 0.21,
           "meta": {
             "pct_change": -0.223626616239224
           }
@@ -481,6 +481,12 @@
       "delta": 3
     },
     {
+      "ticker": "VST",
+      "prev": "💩 拉完了",
+      "now": "👑 顶级",
+      "delta": 3
+    },
+    {
       "ticker": "ALAB",
       "prev": "💪 人上人",
       "now": "🔥 夯死了",
@@ -523,12 +529,6 @@
       "delta": 2
     },
     {
-      "ticker": "GEV",
-      "prev": "💩 拉完了",
-      "now": "💪 人上人",
-      "delta": 2
-    },
-    {
       "ticker": "GOOG",
       "prev": "💩 拉完了",
       "now": "💪 人上人",
@@ -538,12 +538,6 @@
       "ticker": "STX",
       "prev": "😐 NPC",
       "now": "👑 顶级",
-      "delta": 2
-    },
-    {
-      "ticker": "VST",
-      "prev": "💩 拉完了",
-      "now": "💪 人上人",
       "delta": 2
     },
     {
@@ -565,21 +559,27 @@
       "delta": 1
     },
     {
+      "ticker": "GEV",
+      "prev": "💩 拉完了",
+      "now": "😐 NPC",
+      "delta": 1
+    },
+    {
       "ticker": "JBL",
       "prev": "💩 拉完了",
       "now": "😐 NPC",
       "delta": 1
     },
     {
-      "ticker": "KLIC",
+      "ticker": "LITE",
       "prev": "💪 人上人",
       "now": "👑 顶级",
       "delta": 1
     },
     {
-      "ticker": "LITE",
-      "prev": "💪 人上人",
-      "now": "👑 顶级",
+      "ticker": "LRCX",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
       "delta": 1
     },
     {
