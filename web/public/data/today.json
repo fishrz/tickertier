@@ -129,7 +129,7 @@
         {
           "rank": 2,
           "ticker": "NBIS",
-          "metric": 0.098,
+          "metric": 0.0983,
           "meta": {
             "pct_change": 0.020986127405025597,
             "fade": -0.010744904537856623
@@ -141,7 +141,7 @@
           "metric": 0.0964,
           "meta": {
             "pct_change": 0.09791472483188685,
-            "fade": -0.005252560388847955
+            "fade": -0.005265410695890277
           }
         }
       ]
@@ -156,8 +156,8 @@
           "ticker": "AXTI",
           "metric": -0.1084,
           "meta": {
-            "intraday_amp": 0.13802940053531051,
-            "vol_ratio_20": 1.0839447288461275
+            "intraday_amp": 0.13828868126208785,
+            "vol_ratio_20": 1.0854831410021917
           }
         },
         {
@@ -166,7 +166,7 @@
           "metric": -0.0887,
           "meta": {
             "intraday_amp": 0.1285165291030014,
-            "vol_ratio_20": 0.6696775543244242
+            "vol_ratio_20": 0.6710314849790312
           }
         },
         {
@@ -174,8 +174,8 @@
           "ticker": "AOSL",
           "metric": -0.0809,
           "meta": {
-            "intraday_amp": 0.10717474661140226,
-            "vol_ratio_20": 0.7872864112860735
+            "intraday_amp": 0.10721525940753128,
+            "vol_ratio_20": 0.7908407275061207
           }
         }
       ]
@@ -190,8 +190,8 @@
           "ticker": "DELL",
           "metric": 0.3276,
           "meta": {
-            "intraday_amp": 0.08478477526529263,
-            "vol_ratio_20": 4.033276374712456
+            "intraday_amp": 0.0847815988574172,
+            "vol_ratio_20": 4.327880194402126
           }
         },
         {
@@ -200,7 +200,7 @@
           "metric": 0.296,
           "meta": {
             "intraday_amp": 0.2812960026719735,
-            "vol_ratio_20": 4.923097898325228
+            "vol_ratio_20": 4.926262556123495
           }
         },
         {
@@ -209,7 +209,7 @@
           "metric": 0.116,
           "meta": {
             "intraday_amp": 0.10096857289771152,
-            "vol_ratio_20": 2.044893146976868
+            "vol_ratio_20": 2.0462958394654285
           }
         }
       ]
@@ -222,28 +222,28 @@
         {
           "rank": 1,
           "ticker": "LSRCY",
-          "metric": 0.0092,
+          "metric": 0.0102,
           "meta": {
-            "vol_ratio_20": 0.02861585364107625,
+            "vol_ratio_20": 0.49136521208888956,
             "pct_change": -0.010740075119964446
           }
         },
         {
           "rank": 2,
-          "ticker": "JBL",
-          "metric": 0.0291,
+          "ticker": "ASML",
+          "metric": 0.0307,
           "meta": {
-            "vol_ratio_20": 0.6046182051368043,
-            "pct_change": 0.0025024162721928003
+            "vol_ratio_20": 0.6635292665020253,
+            "pct_change": 0.004353045672390552
           }
         },
         {
           "rank": 3,
-          "ticker": "ASML",
-          "metric": 0.0307,
+          "ticker": "VST",
+          "metric": 0.0338,
           "meta": {
-            "vol_ratio_20": 0.6594810032895452,
-            "pct_change": 0.004353045672390552
+            "vol_ratio_20": 0.6434893364131942,
+            "pct_change": -0.0003119731229014167
           }
         }
       ]
@@ -324,7 +324,7 @@
         {
           "rank": 1,
           "ticker": "MX",
-          "metric": 4.9231,
+          "metric": 4.9263,
           "meta": {
             "pct_change": 0.29602359943655965
           }
@@ -332,7 +332,7 @@
         {
           "rank": 2,
           "ticker": "DELL",
-          "metric": 4.0333,
+          "metric": 4.3279,
           "meta": {
             "pct_change": 0.32758246291736315
           }
@@ -340,7 +340,7 @@
         {
           "rank": 3,
           "ticker": "AVGO",
-          "metric": 2.1284,
+          "metric": 2.1335,
           "meta": {
             "pct_change": 0.04732993360434157
           }
@@ -451,11 +451,11 @@
     }
   ],
   "tier_distribution": {
-    "💩 拉完了": 4,
-    "☠️ 答辩": 12,
     "🔥 夯死了": 5,
     "😐 NPC": 24,
     "💪 人上人": 24,
+    "💩 拉完了": 4,
+    "☠️ 答辩": 12,
     "👑 顶级": 12
   },
   "tier_movers": [
@@ -473,6 +473,12 @@
     },
     {
       "ticker": "ARM",
+      "prev": "💩 拉完了",
+      "now": "👑 顶级",
+      "delta": 3
+    },
+    {
+      "ticker": "FN",
       "prev": "💩 拉完了",
       "now": "👑 顶级",
       "delta": 3
@@ -502,12 +508,6 @@
       "delta": 3
     },
     {
-      "ticker": "ANET",
-      "prev": "😐 NPC",
-      "now": "👑 顶级",
-      "delta": 2
-    },
-    {
       "ticker": "CIEN",
       "prev": "😐 NPC",
       "now": "👑 顶级",
@@ -520,7 +520,7 @@
       "delta": 2
     },
     {
-      "ticker": "FN",
+      "ticker": "JBL",
       "prev": "💩 拉完了",
       "now": "💪 人上人",
       "delta": 2
@@ -544,13 +544,13 @@
       "delta": 2
     },
     {
-      "ticker": "VST",
-      "prev": "💩 拉完了",
+      "ticker": "AMSC",
+      "prev": "😐 NPC",
       "now": "💪 人上人",
-      "delta": 2
+      "delta": 1
     },
     {
-      "ticker": "AMSC",
+      "ticker": "ANET",
       "prev": "😐 NPC",
       "now": "💪 人上人",
       "delta": 1
@@ -598,12 +598,6 @@
       "delta": 1
     },
     {
-      "ticker": "JBL",
-      "prev": "💩 拉完了",
-      "now": "😐 NPC",
-      "delta": 1
-    },
-    {
       "ticker": "NVT",
       "prev": "😐 NPC",
       "now": "💪 人上人",
@@ -622,15 +616,15 @@
       "delta": 1
     },
     {
-      "ticker": "SNPS",
+      "ticker": "STX",
       "prev": "😐 NPC",
       "now": "💪 人上人",
       "delta": 1
     },
     {
-      "ticker": "STX",
-      "prev": "😐 NPC",
-      "now": "💪 人上人",
+      "ticker": "VST",
+      "prev": "💩 拉完了",
+      "now": "😐 NPC",
       "delta": 1
     },
     {
@@ -653,12 +647,6 @@
     },
     {
       "ticker": "CAMT",
-      "prev": "💪 人上人",
-      "now": "😐 NPC",
-      "delta": -1
-    },
-    {
-      "ticker": "COHR",
       "prev": "💪 人上人",
       "now": "😐 NPC",
       "delta": -1
