@@ -166,17 +166,6 @@
         "period": "D"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-01-30",
-        "period": "E"
-      },
-      {
         "code": "tear_jerker",
         "name": "😭 我的眼泪奖",
         "count": 1,
@@ -186,15 +175,26 @@
         "best_rank": 2,
         "latest_period_key": "2026-05-08",
         "period": "D"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-01-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2,
-      "😐 NPC": 0.075,
-      "🔥 夯死了": 0.3,
       "👑 顶级": 0.05,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.275
+      "☠️ 答辩": 0.275,
+      "💪 人上人": 0.2,
+      "😐 NPC": 0.075,
+      "🔥 夯死了": 0.3
     },
     "recent_30d": [
       {
@@ -427,17 +427,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 3,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 2,
-        "best_rank": 2,
-        "latest_period_key": "2025-07-23",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 3,
@@ -457,6 +446,17 @@
         "bronze": 0,
         "best_rank": 1,
         "latest_period_key": "2025-01-27",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 3,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 2,
+        "best_rank": 2,
+        "latest_period_key": "2025-07-23",
         "period": "D"
       },
       {
@@ -494,10 +494,10 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1,
-      "💩 拉完了": 0.175,
       "💪 人上人": 0.15,
-      "😐 NPC": 0.575
+      "😐 NPC": 0.575,
+      "👑 顶级": 0.1,
+      "💩 拉完了": 0.175
     },
     "recent_30d": [
       {
@@ -841,11 +841,11 @@
       }
     ],
     "tier_distribution": {
+      "👑 顶级": 0.325,
+      "☠️ 答辩": 0.2,
       "💪 人上人": 0.225,
       "🔥 夯死了": 0.125,
-      "😐 NPC": 0.125,
-      "👑 顶级": 0.325,
-      "☠️ 答辩": 0.2
+      "😐 NPC": 0.125
     },
     "recent_30d": [
       {
@@ -1111,17 +1111,6 @@
         "period": "W"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 12,
-        "gold": 5,
-        "silver": 3,
-        "bronze": 4,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-28",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 12,
@@ -1130,6 +1119,17 @@
         "bronze": 5,
         "best_rank": 1,
         "latest_period_key": "2026-03-03",
+        "period": "D"
+      },
+      {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 12,
+        "gold": 5,
+        "silver": 3,
+        "bronze": 4,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-28",
         "period": "D"
       },
       {
@@ -1167,12 +1167,12 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.2,
-      "☠️ 答辩": 0.075,
-      "👑 顶级": 0.15,
       "🔥 夯死了": 0.025,
       "😐 NPC": 0.25,
-      "💪 人上人": 0.3
+      "💪 人上人": 0.3,
+      "💩 拉完了": 0.2,
+      "☠️ 答辩": 0.075,
+      "👑 顶级": 0.15
     },
     "recent_30d": [
       {
@@ -1482,17 +1482,6 @@
         "period": "Q"
       },
       {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 3,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-06",
-        "period": "M"
-      },
-      {
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
         "count": 3,
@@ -1504,15 +1493,15 @@
         "period": "M"
       },
       {
-        "code": "cash_king",
-        "name": "💸 钞能力之王",
-        "count": 2,
-        "gold": 1,
-        "silver": 0,
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 3,
+        "gold": 0,
+        "silver": 2,
         "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-12",
-        "period": "D"
+        "best_rank": 2,
+        "latest_period_key": "2026-06",
+        "period": "M"
       },
       {
         "code": "npc_god",
@@ -1526,23 +1515,12 @@
         "period": "D"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
+        "code": "cash_king",
+        "name": "💸 钞能力之王",
+        "count": 2,
         "gold": 1,
         "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-07-30",
-        "period": "E"
-      },
-      {
-        "code": "buy_low",
-        "name": "🧠 人间清醒奖",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
+        "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2026-06-12",
         "period": "D"
@@ -1557,15 +1535,37 @@
         "best_rank": 3,
         "latest_period_key": "2026-06-12",
         "period": "D"
+      },
+      {
+        "code": "buy_low",
+        "name": "🧠 人间清醒奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-12",
+        "period": "D"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2025-07-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.375,
-      "😐 NPC": 0.175,
-      "🔥 夯死了": 0.075,
       "👑 顶级": 0.125,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.15
+      "☠️ 答辩": 0.15,
+      "💪 人上人": 0.375,
+      "😐 NPC": 0.175,
+      "🔥 夯死了": 0.075
     },
     "recent_30d": [
       {
@@ -1820,17 +1820,6 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-06",
-        "period": "W"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 2,
@@ -1840,14 +1829,25 @@
         "best_rank": 1,
         "latest_period_key": "2026-02-13",
         "period": "D"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 2,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 2,
+        "latest_period_key": "2026-06",
+        "period": "W"
       }
     ],
     "tier_distribution": {
+      "💩 拉完了": 0.175,
+      "☠️ 答辩": 0.05,
       "🔥 夯死了": 0.025,
       "😐 NPC": 0.35,
-      "💪 人上人": 0.4,
-      "💩 拉完了": 0.175,
-      "☠️ 答辩": 0.05
+      "💪 人上人": 0.4
     },
     "recent_30d": [
       {
@@ -2147,12 +2147,12 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.025,
-      "😐 NPC": 0.125,
-      "💪 人上人": 0.5,
       "☠️ 答辩": 0.05,
       "💩 拉完了": 0.125,
-      "👑 顶级": 0.175
+      "👑 顶级": 0.175,
+      "🔥 夯死了": 0.025,
+      "😐 NPC": 0.125,
+      "💪 人上人": 0.5
     },
     "recent_30d": [
       {
@@ -2396,17 +2396,6 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 8,
-        "gold": 3,
-        "silver": 2,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-12",
-        "period": "D"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 8,
@@ -2415,6 +2404,17 @@
         "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2026-01-15",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 8,
+        "gold": 3,
+        "silver": 2,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-12",
         "period": "D"
       },
       {
@@ -2452,11 +2452,11 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.1,
-      "👑 顶级": 0.15,
       "🔥 夯死了": 0.05,
       "😐 NPC": 0.25,
-      "💪 人上人": 0.45
+      "💪 人上人": 0.45,
+      "☠️ 答辩": 0.1,
+      "👑 顶级": 0.15
     },
     "recent_30d": [
       {
@@ -2766,17 +2766,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 5,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2024-09",
-        "period": "M"
-      },
-      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 5,
@@ -2784,6 +2773,17 @@
         "silver": 0,
         "bronze": 5,
         "best_rank": 3,
+        "latest_period_key": "2024-09",
+        "period": "M"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 5,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 3,
+        "best_rank": 1,
         "latest_period_key": "2024-09",
         "period": "M"
       },
@@ -2811,12 +2811,12 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.075,
-      "😐 NPC": 0.175,
-      "💪 人上人": 0.2,
       "💩 拉完了": 0.2,
       "☠️ 答辩": 0.05,
-      "👑 顶级": 0.3
+      "👑 顶级": 0.3,
+      "🔥 夯死了": 0.075,
+      "😐 NPC": 0.175,
+      "💪 人上人": 0.2
     },
     "recent_30d": [
       {
@@ -3127,11 +3127,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.45,
       "👑 顶级": 0.05,
       "💩 拉完了": 0.15,
-      "☠️ 答辩": 0.05
+      "☠️ 答辩": 0.05,
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.45
     },
     "recent_30d": [
       {
@@ -3464,12 +3464,12 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.075,
-      "💩 拉完了": 0.025,
-      "👑 顶级": 0.125,
       "🔥 夯死了": 0.1,
       "😐 NPC": 0.25,
-      "💪 人上人": 0.425
+      "💪 人上人": 0.425,
+      "☠️ 答辩": 0.075,
+      "💩 拉完了": 0.025,
+      "👑 顶级": 0.125
     },
     "recent_30d": [
       {
@@ -3746,17 +3746,6 @@
         "period": "D"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 4,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2024-W24",
-        "period": "W"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 4,
@@ -3765,6 +3754,17 @@
         "bronze": 3,
         "best_rank": 1,
         "latest_period_key": "2026-W12",
+        "period": "W"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 4,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2024-W24",
         "period": "W"
       },
       {
@@ -3794,9 +3794,9 @@
         "name": "🪑 万年老二奖",
         "count": 2,
         "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
+        "silver": 0,
+        "bronze": 2,
+        "best_rank": 3,
         "latest_period_key": "2026-06",
         "period": "M"
       },
@@ -3835,12 +3835,12 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.1,
-      "💩 拉完了": 0.125,
-      "👑 顶级": 0.175,
       "🔥 夯死了": 0.125,
       "😐 NPC": 0.25,
-      "💪 人上人": 0.225
+      "💪 人上人": 0.225,
+      "☠️ 答辩": 0.1,
+      "💩 拉完了": 0.125,
+      "👑 顶级": 0.175
     },
     "recent_30d": [
       {
@@ -4073,6 +4073,17 @@
         "period": "D"
       },
       {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 2,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2,
+        "best_rank": 3,
+        "latest_period_key": "2025-11-07",
+        "period": "D"
+      },
+      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 2,
@@ -4084,14 +4095,14 @@
         "period": "D"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 2,
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 1,
         "gold": 0,
-        "silver": 0,
-        "bronze": 2,
-        "best_rank": 3,
-        "latest_period_key": "2025-11-07",
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2024-10-15",
         "period": "D"
       },
       {
@@ -4115,23 +4126,12 @@
         "best_rank": 3,
         "latest_period_key": "2025-W03",
         "period": "W"
-      },
-      {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2024-10-15",
-        "period": "D"
       }
     ],
     "tier_distribution": {
+      "💩 拉完了": 0.15,
       "😐 NPC": 0.525,
-      "💪 人上人": 0.325,
-      "💩 拉完了": 0.15
+      "💪 人上人": 0.325
     },
     "recent_30d": [
       {
@@ -4420,10 +4420,10 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.525,
-      "😐 NPC": 0.35,
       "👑 顶级": 0.025,
-      "💩 拉完了": 0.1
+      "💩 拉完了": 0.1,
+      "💪 人上人": 0.525,
+      "😐 NPC": 0.35
     },
     "recent_30d": [
       {
@@ -4712,10 +4712,10 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1,
-      "👑 顶级": 0.075,
       "😐 NPC": 0.65,
-      "💪 人上人": 0.175
+      "💪 人上人": 0.175,
+      "💩 拉完了": 0.1,
+      "👑 顶级": 0.075
     },
     "recent_30d": [
       {
@@ -5028,8 +5028,8 @@
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
         "count": 15,
-        "gold": 12,
-        "silver": 0,
+        "gold": 11,
+        "silver": 1,
         "bronze": 3,
         "best_rank": 1,
         "latest_period_key": "2026-Q2",
@@ -5081,12 +5081,12 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.225,
-      "💩 拉完了": 0.025,
-      "👑 顶级": 0.125,
       "😐 NPC": 0.1,
       "🔥 夯死了": 0.35,
-      "💪 人上人": 0.175
+      "💪 人上人": 0.175,
+      "☠️ 答辩": 0.225,
+      "💩 拉完了": 0.025,
+      "👑 顶级": 0.125
     },
     "recent_30d": [
       {
@@ -5418,17 +5418,6 @@
         "period": "M"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2025-07-30",
-        "period": "E"
-      },
-      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 1,
@@ -5438,15 +5427,26 @@
         "best_rank": 2,
         "latest_period_key": "2025-11",
         "period": "M"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2025-07-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.175,
-      "🔥 夯死了": 0.1,
       "👑 顶级": 0.2,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.125
+      "☠️ 答辩": 0.125,
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.175,
+      "🔥 夯死了": 0.1
     },
     "recent_30d": [
       {
@@ -5679,17 +5679,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 21,
-        "gold": 1,
-        "silver": 10,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2025-11-10",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 21,
@@ -5698,6 +5687,17 @@
         "bronze": 10,
         "best_rank": 1,
         "latest_period_key": "2026-04-07",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 21,
+        "gold": 1,
+        "silver": 10,
+        "bronze": 10,
+        "best_rank": 1,
+        "latest_period_key": "2025-11-10",
         "period": "D"
       },
       {
@@ -5779,11 +5779,11 @@
       }
     ],
     "tier_distribution": {
+      "💪 人上人": 0.325,
+      "😐 NPC": 0.3,
       "👑 顶级": 0.15,
       "☠️ 答辩": 0.1,
-      "💩 拉完了": 0.125,
-      "💪 人上人": 0.325,
-      "😐 NPC": 0.3
+      "💩 拉完了": 0.125
     },
     "recent_30d": [
       {
@@ -5994,17 +5994,6 @@
         "period": "D"
       },
       {
-        "code": "pump_army",
-        "name": "📈 暴兵奖",
-        "count": 20,
-        "gold": 8,
-        "silver": 5,
-        "bronze": 7,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-17",
-        "period": "D"
-      },
-      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 20,
@@ -6013,6 +6002,17 @@
         "bronze": 6,
         "best_rank": 1,
         "latest_period_key": "2025-05-06",
+        "period": "D"
+      },
+      {
+        "code": "pump_army",
+        "name": "📈 暴兵奖",
+        "count": 20,
+        "gold": 8,
+        "silver": 5,
+        "bronze": 7,
+        "best_rank": 1,
+        "latest_period_key": "2026-02-17",
         "period": "D"
       },
       {
@@ -6093,17 +6093,6 @@
         "period": "D"
       },
       {
-        "code": "tear_jerker",
-        "name": "😭 我的眼泪奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-12",
-        "period": "D"
-      },
-      {
         "code": "earnings_clown",
         "name": "💼 财报现形",
         "count": 1,
@@ -6113,6 +6102,17 @@
         "best_rank": 3,
         "latest_period_key": "2025-04-30",
         "period": "E"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2024-02",
+        "period": "M"
       },
       {
         "code": "traitor",
@@ -6126,23 +6126,23 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
+        "code": "tear_jerker",
+        "name": "😭 我的眼泪奖",
         "count": 1,
         "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2024-02",
-        "period": "M"
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-06-12",
+        "period": "D"
       }
     ],
     "tier_distribution": {
+      "💪 人上人": 0.225,
+      "😐 NPC": 0.225,
       "👑 顶级": 0.15,
       "☠️ 答辩": 0.05,
-      "💩 拉完了": 0.35,
-      "💪 人上人": 0.225,
-      "😐 NPC": 0.225
+      "💩 拉完了": 0.35
     },
     "recent_30d": [
       {
@@ -6364,17 +6364,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 14,
-        "gold": 4,
-        "silver": 5,
-        "bronze": 5,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-13",
-        "period": "D"
-      },
-      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 14,
@@ -6383,6 +6372,17 @@
         "bronze": 7,
         "best_rank": 1,
         "latest_period_key": "2026-03-27",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 14,
+        "gold": 4,
+        "silver": 5,
+        "bronze": 5,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-13",
         "period": "D"
       },
       {
@@ -6419,17 +6419,6 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 6,
-        "gold": 2,
-        "silver": 0,
-        "bronze": 4,
-        "best_rank": 1,
-        "latest_period_key": "2025-H2",
-        "period": "W"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 6,
@@ -6438,6 +6427,17 @@
         "bronze": 0,
         "best_rank": 1,
         "latest_period_key": "2024-W37",
+        "period": "W"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 6,
+        "gold": 2,
+        "silver": 0,
+        "bronze": 4,
+        "best_rank": 1,
+        "latest_period_key": "2025-H2",
         "period": "W"
       },
       {
@@ -6453,12 +6453,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.3,
-      "💩 拉完了": 0.15,
-      "☠️ 答辩": 0.125,
       "💪 人上人": 0.175,
       "🔥 夯死了": 0.025,
-      "😐 NPC": 0.225
+      "😐 NPC": 0.225,
+      "👑 顶级": 0.3,
+      "💩 拉完了": 0.15,
+      "☠️ 答辩": 0.125
     },
     "recent_30d": [
       {
@@ -6724,17 +6724,6 @@
         "period": "D"
       },
       {
-        "code": "npc_god",
-        "name": "💤 NPC 之光",
-        "count": 11,
-        "gold": 2,
-        "silver": 3,
-        "bronze": 6,
-        "best_rank": 1,
-        "latest_period_key": "2024-11-12",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 11,
@@ -6746,15 +6735,15 @@
         "period": "W"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 4,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 2,
-        "best_rank": 2,
-        "latest_period_key": "2024-W49",
-        "period": "W"
+        "code": "npc_god",
+        "name": "💤 NPC 之光",
+        "count": 11,
+        "gold": 2,
+        "silver": 3,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2024-11-12",
+        "period": "D"
       },
       {
         "code": "tank",
@@ -6766,15 +6755,26 @@
         "best_rank": 1,
         "latest_period_key": "2025-10-22",
         "period": "D"
+      },
+      {
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 4,
+        "gold": 0,
+        "silver": 2,
+        "bronze": 2,
+        "best_rank": 2,
+        "latest_period_key": "2024-W49",
+        "period": "W"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.15,
-      "☠️ 答辩": 0.125,
-      "💩 拉完了": 0.15,
       "💪 人上人": 0.375,
       "😐 NPC": 0.175,
-      "🔥 夯死了": 0.025
+      "🔥 夯死了": 0.025,
+      "👑 顶级": 0.15,
+      "☠️ 答辩": 0.125,
+      "💩 拉完了": 0.15
     },
     "recent_30d": [
       {
@@ -7007,17 +7007,6 @@
         "period": "D"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 17,
-        "gold": 2,
-        "silver": 4,
-        "bronze": 11,
-        "best_rank": 1,
-        "latest_period_key": "2026-03-09",
-        "period": "D"
-      },
-      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 17,
@@ -7026,6 +7015,17 @@
         "bronze": 9,
         "best_rank": 1,
         "latest_period_key": "2026-03-04",
+        "period": "D"
+      },
+      {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 17,
+        "gold": 2,
+        "silver": 4,
+        "bronze": 11,
+        "best_rank": 1,
+        "latest_period_key": "2026-03-09",
         "period": "D"
       },
       {
@@ -7073,17 +7073,6 @@
         "period": "W"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2023-W25",
-        "period": "W"
-      },
-      {
         "code": "npc_god",
         "name": "💤 NPC 之光",
         "count": 1,
@@ -7093,14 +7082,25 @@
         "best_rank": 2,
         "latest_period_key": "2024-09-09",
         "period": "D"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2023-W25",
+        "period": "W"
       }
     ],
     "tier_distribution": {
+      "😐 NPC": 0.25,
+      "💪 人上人": 0.375,
       "☠️ 答辩": 0.125,
       "💩 拉完了": 0.075,
-      "👑 顶级": 0.175,
-      "😐 NPC": 0.25,
-      "💪 人上人": 0.375
+      "👑 顶级": 0.175
     },
     "recent_30d": [
       {
@@ -7411,11 +7411,11 @@
       }
     ],
     "tier_distribution": {
+      "💩 拉完了": 0.025,
+      "👑 顶级": 0.125,
       "😐 NPC": 0.225,
       "🔥 夯死了": 0.025,
-      "💪 人上人": 0.6,
-      "💩 拉完了": 0.025,
-      "👑 顶级": 0.125
+      "💪 人上人": 0.6
     },
     "recent_30d": [
       {
@@ -7748,12 +7748,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.225,
-      "☠️ 答辩": 0.2,
-      "💩 拉完了": 0.1,
       "💪 人上人": 0.2,
       "😐 NPC": 0.225,
-      "🔥 夯死了": 0.05
+      "🔥 夯死了": 0.05,
+      "👑 顶级": 0.225,
+      "☠️ 答辩": 0.2,
+      "💩 拉完了": 0.1
     },
     "recent_30d": [
       {
@@ -7964,17 +7964,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 36,
-        "gold": 12,
-        "silver": 10,
-        "bronze": 14,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 36,
@@ -7983,6 +7972,17 @@
         "bronze": 8,
         "best_rank": 1,
         "latest_period_key": "2026-03-20",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 36,
+        "gold": 12,
+        "silver": 10,
+        "bronze": 14,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-08",
         "period": "D"
       },
       {
@@ -8041,17 +8041,6 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 5,
-        "gold": 2,
-        "silver": 0,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2025-W32",
-        "period": "W"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 5,
@@ -8063,12 +8052,34 @@
         "period": "W"
       },
       {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 5,
+        "gold": 2,
+        "silver": 0,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2025-W32",
+        "period": "W"
+      },
+      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 5,
         "gold": 3,
         "silver": 1,
         "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2025-Q2",
+        "period": "M"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 4,
+        "gold": 4,
+        "silver": 0,
+        "bronze": 0,
         "best_rank": 1,
         "latest_period_key": "2025-Q2",
         "period": "M"
@@ -8085,17 +8096,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 4,
-        "gold": 4,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-Q2",
-        "period": "M"
-      },
-      {
         "code": "earnings_clown",
         "name": "💼 财报现形",
         "count": 1,
@@ -8108,12 +8108,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.35,
-      "💩 拉完了": 0.175,
-      "☠️ 答辩": 0.175,
       "💪 人上人": 0.15,
       "🔥 夯死了": 0.05,
-      "😐 NPC": 0.1
+      "😐 NPC": 0.1,
+      "👑 顶级": 0.35,
+      "💩 拉完了": 0.175,
+      "☠️ 答辩": 0.175
     },
     "recent_30d": [
       {
@@ -8413,10 +8413,10 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.075,
-      "💩 拉完了": 0.275,
       "💪 人上人": 0.2,
-      "😐 NPC": 0.45
+      "😐 NPC": 0.45,
+      "👑 顶级": 0.075,
+      "💩 拉完了": 0.275
     },
     "recent_30d": [
       {
@@ -8727,11 +8727,11 @@
       }
     ],
     "tier_distribution": {
+      "👑 顶级": 0.2,
+      "💩 拉完了": 0.25,
       "💪 人上人": 0.25,
       "😐 NPC": 0.275,
-      "🔥 夯死了": 0.025,
-      "👑 顶级": 0.2,
-      "💩 拉完了": 0.25
+      "🔥 夯死了": 0.025
     },
     "recent_30d": [
       {
@@ -8976,11 +8976,11 @@
       }
     ],
     "tier_distribution": {
+      "💩 拉完了": 0.1154,
+      "👑 顶级": 0.1923,
       "😐 NPC": 0.2308,
       "🔥 夯死了": 0.0769,
-      "💪 人上人": 0.3846,
-      "💩 拉完了": 0.1154,
-      "👑 顶级": 0.1923
+      "💪 人上人": 0.3846
     },
     "recent_30d": [
       {
@@ -9291,11 +9291,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.225,
-      "😐 NPC": 0.25,
       "👑 顶级": 0.15,
       "☠️ 答辩": 0.15,
-      "💩 拉完了": 0.225
+      "💩 拉完了": 0.225,
+      "💪 人上人": 0.225,
+      "😐 NPC": 0.25
     },
     "recent_30d": [
       {
@@ -9617,11 +9617,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.45,
-      "😐 NPC": 0.25,
       "👑 顶级": 0.1,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.1
+      "☠️ 答辩": 0.1,
+      "💪 人上人": 0.45,
+      "😐 NPC": 0.25
     },
     "recent_30d": [
       {
@@ -9921,11 +9921,11 @@
       }
     ],
     "tier_distribution": {
+      "😐 NPC": 0.325,
+      "💪 人上人": 0.25,
       "☠️ 答辩": 0.025,
       "💩 拉完了": 0.35,
-      "👑 顶级": 0.05,
-      "😐 NPC": 0.325,
-      "💪 人上人": 0.25
+      "👑 顶级": 0.05
     },
     "recent_30d": [
       {
@@ -10202,17 +10202,6 @@
         "period": "W"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 5,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 4,
-        "best_rank": 2,
-        "latest_period_key": "2025-11-04",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 5,
@@ -10221,6 +10210,17 @@
         "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2026-01-14",
+        "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 5,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 4,
+        "best_rank": 2,
+        "latest_period_key": "2025-11-04",
         "period": "D"
       },
       {
@@ -10247,12 +10247,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.125,
-      "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.15,
       "💪 人上人": 0.375,
       "😐 NPC": 0.225,
-      "🔥 夯死了": 0.025
+      "🔥 夯死了": 0.025,
+      "👑 顶级": 0.125,
+      "💩 拉完了": 0.1,
+      "☠️ 答辩": 0.15
     },
     "recent_30d": [
       {
@@ -10463,17 +10463,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 15,
-        "gold": 4,
-        "silver": 5,
-        "bronze": 6,
-        "best_rank": 1,
-        "latest_period_key": "2026-01-23",
-        "period": "D"
-      },
-      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 15,
@@ -10493,6 +10482,17 @@
         "bronze": 7,
         "best_rank": 1,
         "latest_period_key": "2026-01-08",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 15,
+        "gold": 4,
+        "silver": 5,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2026-01-23",
         "period": "D"
       },
       {
@@ -10574,12 +10574,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.15,
-      "💩 拉完了": 0.05,
-      "☠️ 答辩": 0.1,
       "💪 人上人": 0.475,
       "🔥 夯死了": 0.025,
-      "😐 NPC": 0.2
+      "😐 NPC": 0.2,
+      "👑 顶级": 0.15,
+      "💩 拉完了": 0.05,
+      "☠️ 答辩": 0.1
     },
     "recent_30d": [
       {
@@ -10890,11 +10890,11 @@
       }
     ],
     "tier_distribution": {
+      "😐 NPC": 0.25,
+      "💪 人上人": 0.45,
       "💩 拉完了": 0.2,
       "☠️ 答辩": 0.05,
-      "👑 顶级": 0.05,
-      "😐 NPC": 0.25,
-      "💪 人上人": 0.45
+      "👑 顶级": 0.05
     },
     "recent_30d": [
       {
@@ -11194,11 +11194,11 @@
       }
     ],
     "tier_distribution": {
+      "💩 拉完了": 0.15,
+      "👑 顶级": 0.225,
       "😐 NPC": 0.325,
       "🔥 夯死了": 0.025,
-      "💪 人上人": 0.275,
-      "💩 拉完了": 0.15,
-      "👑 顶级": 0.225
+      "💪 人上人": 0.275
     },
     "recent_30d": [
       {
@@ -11464,17 +11464,6 @@
         "period": "D"
       },
       {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 4,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 3,
-        "best_rank": 2,
-        "latest_period_key": "2024-08-01",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 4,
@@ -11483,6 +11472,17 @@
         "bronze": 3,
         "best_rank": 2,
         "latest_period_key": "2025-07-29",
+        "period": "D"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 4,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 3,
+        "best_rank": 2,
+        "latest_period_key": "2024-08-01",
         "period": "D"
       },
       {
@@ -11509,11 +11509,11 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.325,
-      "💪 人上人": 0.3,
       "☠️ 答辩": 0.1,
       "💩 拉完了": 0.1,
-      "👑 顶级": 0.175
+      "👑 顶级": 0.175,
+      "😐 NPC": 0.325,
+      "💪 人上人": 0.3
     },
     "recent_30d": [
       {
@@ -11824,11 +11824,11 @@
       }
     ],
     "tier_distribution": {
+      "👑 顶级": 0.1,
+      "💩 拉完了": 0.3,
       "💪 人上人": 0.2,
       "🔥 夯死了": 0.025,
-      "😐 NPC": 0.375,
-      "👑 顶级": 0.1,
-      "💩 拉完了": 0.3
+      "😐 NPC": 0.375
     },
     "recent_30d": [
       {
@@ -12139,12 +12139,12 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.2,
-      "☠️ 答辩": 0.05,
-      "👑 顶级": 0.275,
       "🔥 夯死了": 0.1,
       "😐 NPC": 0.125,
-      "💪 人上人": 0.25
+      "💪 人上人": 0.25,
+      "💩 拉完了": 0.2,
+      "☠️ 答辩": 0.05,
+      "👑 顶级": 0.275
     },
     "recent_30d": [
       {
@@ -12455,11 +12455,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.425,
-      "😐 NPC": 0.35,
       "👑 顶级": 0.05,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.075
+      "☠️ 答辩": 0.075,
+      "💪 人上人": 0.425,
+      "😐 NPC": 0.35
     },
     "recent_30d": [
       {
@@ -12781,11 +12781,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.375,
-      "😐 NPC": 0.45,
       "👑 顶级": 0.05,
       "☠️ 答辩": 0.025,
-      "💩 拉完了": 0.1
+      "💩 拉完了": 0.1,
+      "💪 人上人": 0.375,
+      "😐 NPC": 0.45
     },
     "recent_30d": [
       {
@@ -13096,12 +13096,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.425,
-      "🔥 夯死了": 0.025,
-      "😐 NPC": 0.45,
       "👑 顶级": 0.05,
       "💩 拉完了": 0.025,
-      "☠️ 答辩": 0.025
+      "☠️ 答辩": 0.025,
+      "💪 人上人": 0.425,
+      "🔥 夯死了": 0.025,
+      "😐 NPC": 0.45
     },
     "recent_30d": [
       {
@@ -13434,12 +13434,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1,
-      "🔥 夯死了": 0.225,
-      "😐 NPC": 0.075,
       "👑 顶级": 0.275,
       "☠️ 答辩": 0.2,
-      "💩 拉完了": 0.125
+      "💩 拉完了": 0.125,
+      "💪 人上人": 0.1,
+      "🔥 夯死了": 0.225,
+      "😐 NPC": 0.075
     },
     "recent_30d": [
       {
@@ -13727,17 +13727,6 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 11,
-        "gold": 4,
-        "silver": 4,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-W16",
-        "period": "W"
-      },
-      {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
         "count": 11,
@@ -13749,15 +13738,15 @@
         "period": "W"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 8,
-        "gold": 1,
-        "silver": 2,
-        "bronze": 5,
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 11,
+        "gold": 4,
+        "silver": 4,
+        "bronze": 3,
         "best_rank": 1,
-        "latest_period_key": "2025-Q3",
-        "period": "M"
+        "latest_period_key": "2026-W16",
+        "period": "W"
       },
       {
         "code": "npc_god",
@@ -13769,6 +13758,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-02-05",
         "period": "D"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 8,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 5,
+        "best_rank": 1,
+        "latest_period_key": "2025-Q3",
+        "period": "M"
       },
       {
         "code": "workhorse",
@@ -13783,12 +13783,12 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.2,
-      "🔥 夯死了": 0.05,
-      "💪 人上人": 0.25,
       "💩 拉完了": 0.15,
       "☠️ 答辩": 0.225,
-      "👑 顶级": 0.125
+      "👑 顶级": 0.125,
+      "😐 NPC": 0.2,
+      "🔥 夯死了": 0.05,
+      "💪 人上人": 0.25
     },
     "recent_30d": [
       {
@@ -14021,17 +14021,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 26,
-        "gold": 5,
-        "silver": 13,
-        "bronze": 8,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-13",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 26,
@@ -14043,14 +14032,14 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 10,
-        "gold": 2,
-        "silver": 5,
-        "bronze": 3,
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 26,
+        "gold": 5,
+        "silver": 13,
+        "bronze": 8,
         "best_rank": 1,
-        "latest_period_key": "2026-03-17",
+        "latest_period_key": "2026-04-13",
         "period": "D"
       },
       {
@@ -14062,6 +14051,17 @@
         "bronze": 3,
         "best_rank": 1,
         "latest_period_key": "2026-03-24",
+        "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 10,
+        "gold": 2,
+        "silver": 5,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-03-17",
         "period": "D"
       },
       {
@@ -14109,17 +14109,6 @@
         "period": "D"
       },
       {
-        "code": "pillar",
-        "name": "💰 顶梁柱奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-06-12",
-        "period": "D"
-      },
-      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 1,
@@ -14140,15 +14129,26 @@
         "best_rank": 2,
         "latest_period_key": "2026-W12",
         "period": "W"
+      },
+      {
+        "code": "pillar",
+        "name": "💰 顶梁柱奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-06-12",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2,
-      "☠️ 答辩": 0.2,
-      "💩 拉完了": 0.125,
       "💪 人上人": 0.225,
       "🔥 夯死了": 0.125,
-      "😐 NPC": 0.125
+      "😐 NPC": 0.125,
+      "👑 顶级": 0.2,
+      "☠️ 答辩": 0.2,
+      "💩 拉完了": 0.125
     },
     "recent_30d": [
       {
@@ -14370,17 +14370,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 3,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 3,
-        "best_rank": 3,
-        "latest_period_key": "2026-01-29",
-        "period": "D"
-      },
-      {
         "code": "pump_army",
         "name": "📈 暴兵奖",
         "count": 3,
@@ -14392,15 +14381,15 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 2,
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 3,
         "gold": 0,
         "silver": 0,
-        "bronze": 2,
+        "bronze": 3,
         "best_rank": 3,
-        "latest_period_key": "2025-W38",
-        "period": "W"
+        "latest_period_key": "2026-01-29",
+        "period": "D"
       },
       {
         "code": "daily_clown",
@@ -14425,6 +14414,17 @@
         "period": "D"
       },
       {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 2,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2,
+        "best_rank": 3,
+        "latest_period_key": "2025-W38",
+        "period": "W"
+      },
+      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 1,
@@ -14437,11 +14437,11 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.4,
-      "💪 人上人": 0.325,
       "☠️ 答辩": 0.05,
       "💩 拉完了": 0.125,
-      "👑 顶级": 0.1
+      "👑 顶级": 0.1,
+      "😐 NPC": 0.4,
+      "💪 人上人": 0.325
     },
     "recent_30d": [
       {
@@ -14752,11 +14752,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.4,
-      "😐 NPC": 0.3,
       "👑 顶级": 0.125,
       "☠️ 答辩": 0.075,
-      "💩 拉完了": 0.1
+      "💩 拉完了": 0.1,
+      "💪 人上人": 0.4,
+      "😐 NPC": 0.3
     },
     "recent_30d": [
       {
@@ -15078,12 +15078,12 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.275,
-      "☠️ 答辩": 0.05,
-      "👑 顶级": 0.075,
       "🔥 夯死了": 0.025,
       "😐 NPC": 0.275,
-      "💪 人上人": 0.3
+      "💪 人上人": 0.3,
+      "💩 拉完了": 0.275,
+      "☠️ 答辩": 0.05,
+      "👑 顶级": 0.075
     },
     "recent_30d": [
       {
@@ -15460,12 +15460,12 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.225,
-      "💩 拉完了": 0.1,
-      "👑 顶级": 0.2,
       "🔥 夯死了": 0.25,
       "😐 NPC": 0.05,
-      "💪 人上人": 0.175
+      "💪 人上人": 0.175,
+      "☠️ 答辩": 0.225,
+      "💩 拉完了": 0.1,
+      "👑 顶级": 0.2
     },
     "recent_30d": [
       {
@@ -15754,11 +15754,11 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.075,
-      "💩 拉完了": 0.075,
       "💪 人上人": 0.425,
       "🔥 夯死了": 0.025,
-      "😐 NPC": 0.4
+      "😐 NPC": 0.4,
+      "👑 顶级": 0.075,
+      "💩 拉完了": 0.075
     },
     "recent_30d": [
       {
@@ -16069,11 +16069,11 @@
       }
     ],
     "tier_distribution": {
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.3,
       "👑 顶级": 0.175,
       "💩 拉完了": 0.15,
-      "☠️ 答辩": 0.075,
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.3
+      "☠️ 答辩": 0.075
     },
     "recent_30d": [
       {
@@ -16328,17 +16328,6 @@
         "period": "D"
       },
       {
-        "code": "npc_god",
-        "name": "💤 NPC 之光",
-        "count": 4,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 2,
-        "best_rank": 2,
-        "latest_period_key": "2026-05-04",
-        "period": "D"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 4,
@@ -16350,14 +16339,14 @@
         "period": "M"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 3,
-        "gold": 1,
+        "code": "npc_god",
+        "name": "💤 NPC 之光",
+        "count": 4,
+        "gold": 0,
         "silver": 2,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-04-10",
+        "bronze": 2,
+        "best_rank": 2,
+        "latest_period_key": "2026-05-04",
         "period": "D"
       },
       {
@@ -16370,6 +16359,17 @@
         "best_rank": 2,
         "latest_period_key": "2026-W17",
         "period": "W"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 3,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2025-04-10",
+        "period": "D"
       },
       {
         "code": "tank",
@@ -16395,11 +16395,11 @@
       }
     ],
     "tier_distribution": {
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.375,
       "👑 顶级": 0.25,
       "💩 拉完了": 0.025,
-      "☠️ 答辩": 0.05,
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.375
+      "☠️ 答辩": 0.05
     },
     "recent_30d": [
       {
@@ -16734,10 +16734,10 @@
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
         "count": 1,
-        "gold": 0,
+        "gold": 1,
         "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
+        "bronze": 0,
+        "best_rank": 1,
         "latest_period_key": "2026-06",
         "period": "M"
       },
@@ -16776,12 +16776,12 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.175,
-      "☠️ 答辩": 0.05,
-      "👑 顶级": 0.225,
       "🔥 夯死了": 0.05,
       "😐 NPC": 0.225,
-      "💪 人上人": 0.275
+      "💪 人上人": 0.275,
+      "💩 拉完了": 0.175,
+      "☠️ 答辩": 0.05,
+      "👑 顶级": 0.225
     },
     "recent_30d": [
       {
@@ -17003,17 +17003,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 30,
-        "gold": 11,
-        "silver": 9,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-05",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 30,
@@ -17022,6 +17011,17 @@
         "bronze": 12,
         "best_rank": 1,
         "latest_period_key": "2026-05-06",
+        "period": "D"
+      },
+      {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 30,
+        "gold": 11,
+        "silver": 9,
+        "bronze": 10,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-05",
         "period": "D"
       },
       {
@@ -17058,17 +17058,6 @@
         "period": "W"
       },
       {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 15,
-        "gold": 9,
-        "silver": 2,
-        "bronze": 4,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-26",
-        "period": "D"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 15,
@@ -17077,6 +17066,17 @@
         "bronze": 6,
         "best_rank": 1,
         "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 15,
+        "gold": 9,
+        "silver": 2,
+        "bronze": 4,
+        "best_rank": 1,
+        "latest_period_key": "2026-02-26",
         "period": "D"
       },
       {
@@ -17089,17 +17089,6 @@
         "best_rank": 1,
         "latest_period_key": "2025-W49",
         "period": "W"
-      },
-      {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-05",
-        "period": "M"
       },
       {
         "code": "gambler",
@@ -17122,15 +17111,26 @@
         "best_rank": 3,
         "latest_period_key": "2026-05",
         "period": "M"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-05",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.1,
-      "😐 NPC": 0.2,
-      "💪 人上人": 0.275,
       "☠️ 答辩": 0.1,
       "💩 拉完了": 0.15,
-      "👑 顶级": 0.175
+      "👑 顶级": 0.175,
+      "🔥 夯死了": 0.1,
+      "😐 NPC": 0.2,
+      "💪 人上人": 0.275
     },
     "recent_30d": [
       {
@@ -17429,17 +17429,6 @@
         "period": "D"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 5,
-        "gold": 2,
-        "silver": 0,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-W18",
-        "period": "W"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 5,
@@ -17449,15 +17438,26 @@
         "best_rank": 2,
         "latest_period_key": "2025-W40",
         "period": "W"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 5,
+        "gold": 2,
+        "silver": 0,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-W18",
+        "period": "W"
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.025,
-      "☠️ 答辩": 0.05,
-      "👑 顶级": 0.1,
       "😐 NPC": 0.2,
       "🔥 夯死了": 0.2,
-      "💪 人上人": 0.425
+      "💪 人上人": 0.425,
+      "💩 拉完了": 0.025,
+      "☠️ 答辩": 0.05,
+      "👑 顶级": 0.1
     },
     "recent_30d": [
       {
@@ -17800,17 +17800,6 @@
         "period": "M"
       },
       {
-        "code": "npc_god",
-        "name": "💤 NPC 之光",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2024-11-06",
-        "period": "D"
-      },
-      {
         "code": "earnings_god",
         "name": "💼 财报封神",
         "count": 1,
@@ -17820,15 +17809,26 @@
         "best_rank": 1,
         "latest_period_key": "2025-01-30",
         "period": "E"
+      },
+      {
+        "code": "npc_god",
+        "name": "💤 NPC 之光",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2024-11-06",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.25,
-      "💩 拉完了": 0.225,
-      "☠️ 答辩": 0.15,
       "💪 人上人": 0.225,
       "😐 NPC": 0.075,
-      "🔥 夯死了": 0.075
+      "🔥 夯死了": 0.075,
+      "👑 顶级": 0.25,
+      "💩 拉完了": 0.225,
+      "☠️ 答辩": 0.15
     },
     "recent_30d": [
       {
@@ -18061,17 +18061,6 @@
         "period": "D"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 10,
-        "gold": 2,
-        "silver": 2,
-        "bronze": 6,
-        "best_rank": 1,
-        "latest_period_key": "2025-11-21",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 10,
@@ -18081,6 +18070,17 @@
         "best_rank": 1,
         "latest_period_key": "2025-W28",
         "period": "W"
+      },
+      {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 10,
+        "gold": 2,
+        "silver": 2,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2025-11-21",
+        "period": "D"
       },
       {
         "code": "comeback",
@@ -18150,10 +18150,10 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.2,
-      "👑 顶级": 0.1,
       "😐 NPC": 0.5,
-      "💪 人上人": 0.2
+      "💪 人上人": 0.2,
+      "💩 拉完了": 0.2,
+      "👑 顶级": 0.1
     },
     "recent_30d": [
       {
@@ -18452,17 +18452,6 @@
         "period": "D"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-04-30",
-        "period": "E"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 1,
@@ -18472,14 +18461,25 @@
         "best_rank": 2,
         "latest_period_key": "2025-02-13",
         "period": "D"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2025-04-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.375,
-      "😐 NPC": 0.35,
       "👑 顶级": 0.025,
       "💩 拉完了": 0.15,
-      "☠️ 答辩": 0.1
+      "☠️ 答辩": 0.1,
+      "💪 人上人": 0.375,
+      "😐 NPC": 0.35
     },
     "recent_30d": [
       {
@@ -18768,11 +18768,11 @@
       }
     ],
     "tier_distribution": {
+      "💪 人上人": 0.325,
+      "😐 NPC": 0.375,
       "👑 顶级": 0.075,
       "💩 拉完了": 0.175,
-      "☠️ 答辩": 0.05,
-      "💪 人上人": 0.325,
-      "😐 NPC": 0.375
+      "☠️ 答辩": 0.05
     },
     "recent_30d": [
       {
@@ -19127,12 +19127,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.25,
-      "😐 NPC": 0.1,
-      "🔥 夯死了": 0.125,
       "👑 顶级": 0.225,
       "☠️ 答辩": 0.2,
-      "💩 拉完了": 0.1
+      "💩 拉完了": 0.1,
+      "💪 人上人": 0.25,
+      "😐 NPC": 0.1,
+      "🔥 夯死了": 0.125
     },
     "recent_30d": [
       {
@@ -19376,17 +19376,6 @@
         "period": "W"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 4,
-        "gold": 2,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2025-04-29",
-        "period": "D"
-      },
-      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 4,
@@ -19420,6 +19409,17 @@
         "period": "D"
       },
       {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 4,
+        "gold": 2,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2025-04-29",
+        "period": "D"
+      },
+      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 3,
@@ -19432,11 +19432,11 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.05,
-      "💩 拉完了": 0.2,
       "💪 人上人": 0.2,
       "😐 NPC": 0.5,
-      "🔥 夯死了": 0.05
+      "🔥 夯死了": 0.05,
+      "👑 顶级": 0.05,
+      "💩 拉完了": 0.2
     },
     "recent_30d": [
       {
@@ -19791,12 +19791,12 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.1,
-      "😐 NPC": 0.05,
-      "💪 人上人": 0.25,
       "☠️ 答辩": 0.2,
       "💩 拉完了": 0.225,
-      "👑 顶级": 0.175
+      "👑 顶级": 0.175,
+      "🔥 夯死了": 0.1,
+      "😐 NPC": 0.05,
+      "💪 人上人": 0.25
     },
     "recent_30d": [
       {
@@ -20107,12 +20107,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1,
-      "😐 NPC": 0.375,
-      "🔥 夯死了": 0.025,
       "👑 顶级": 0.2,
       "☠️ 答辩": 0.025,
-      "💩 拉完了": 0.275
+      "💩 拉完了": 0.275,
+      "💪 人上人": 0.1,
+      "😐 NPC": 0.375,
+      "🔥 夯死了": 0.025
     },
     "recent_30d": [
       {
@@ -20434,11 +20434,11 @@
       }
     ],
     "tier_distribution": {
+      "😐 NPC": 0.375,
+      "💪 人上人": 0.425,
       "☠️ 答辩": 0.075,
       "💩 拉完了": 0.05,
-      "👑 顶级": 0.075,
-      "😐 NPC": 0.375,
-      "💪 人上人": 0.425
+      "👑 顶级": 0.075
     },
     "recent_30d": [
       {
@@ -20793,12 +20793,12 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.225,
-      "💩 拉完了": 0.075,
-      "👑 顶级": 0.225,
       "😐 NPC": 0.175,
       "🔥 夯死了": 0.225,
-      "💪 人上人": 0.075
+      "💪 人上人": 0.075,
+      "☠️ 答辩": 0.225,
+      "💩 拉完了": 0.075,
+      "👑 顶级": 0.225
     },
     "recent_30d": [
       {
@@ -21086,17 +21086,6 @@
         "period": "W"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-04-30",
-        "period": "E"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 1,
@@ -21117,14 +21106,25 @@
         "best_rank": 3,
         "latest_period_key": "2026-03-30",
         "period": "D"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-04-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
+      "👑 顶级": 0.15,
+      "💩 拉完了": 0.275,
       "💪 人上人": 0.05,
       "🔥 夯死了": 0.125,
-      "😐 NPC": 0.4,
-      "👑 顶级": 0.15,
-      "💩 拉完了": 0.275
+      "😐 NPC": 0.4
     },
     "recent_30d": [
       {
@@ -21677,12 +21677,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.325,
-      "🔥 夯死了": 0.05,
-      "😐 NPC": 0.2,
       "👑 顶级": 0.15,
       "☠️ 答辩": 0.1,
-      "💩 拉完了": 0.175
+      "💩 拉完了": 0.175,
+      "💪 人上人": 0.325,
+      "🔥 夯死了": 0.05,
+      "😐 NPC": 0.2
     },
     "recent_30d": [
       {
@@ -21982,11 +21982,11 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.275,
       "👑 顶级": 0.25,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.075
+      "☠️ 答辩": 0.075,
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.275
     },
     "recent_30d": [
       {
@@ -22308,12 +22308,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.35,
-      "😐 NPC": 0.225,
-      "🔥 夯死了": 0.1,
       "👑 顶级": 0.15,
       "☠️ 答辩": 0.025,
-      "💩 拉完了": 0.15
+      "💩 拉完了": 0.15,
+      "💪 人上人": 0.35,
+      "😐 NPC": 0.225,
+      "🔥 夯死了": 0.1
     },
     "recent_30d": [
       {
@@ -22579,17 +22579,6 @@
         "period": "D"
       },
       {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 2,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-Q2",
-        "period": "M"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 2,
@@ -22621,15 +22610,26 @@
         "best_rank": 2,
         "latest_period_key": "2026-Q2",
         "period": "M"
+      },
+      {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 2,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2026-Q2",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1176,
-      "😐 NPC": 0.0882,
-      "🔥 夯死了": 0.2941,
       "👑 顶级": 0.1471,
       "☠️ 答辩": 0.3235,
-      "💩 拉完了": 0.0294
+      "💩 拉完了": 0.0294,
+      "💪 人上人": 0.1176,
+      "😐 NPC": 0.0882,
+      "🔥 夯死了": 0.2941
     },
     "recent_30d": [
       {
@@ -22973,12 +22973,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3,
-      "😐 NPC": 0.225,
-      "🔥 夯死了": 0.05,
       "👑 顶级": 0.125,
       "☠️ 答辩": 0.1,
-      "💩 拉完了": 0.2
+      "💩 拉完了": 0.2,
+      "💪 人上人": 0.3,
+      "😐 NPC": 0.225,
+      "🔥 夯死了": 0.05
     },
     "recent_30d": [
       {
@@ -23288,6 +23288,17 @@
         "period": "W"
       },
       {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 2,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 2,
+        "latest_period_key": "2026-Q1",
+        "period": "M"
+      },
+      {
         "code": "buy_low",
         "name": "🧠 人间清醒奖",
         "count": 2,
@@ -23321,28 +23332,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-Q1",
-        "period": "M"
-      },
-      {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-01-30",
-        "period": "E"
-      },
-      {
         "code": "npc_god",
         "name": "💤 NPC 之光",
         "count": 1,
@@ -23363,15 +23352,26 @@
         "best_rank": 2,
         "latest_period_key": "2026-05-08",
         "period": "D"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-01-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.175,
-      "😐 NPC": 0.3,
-      "🔥 夯死了": 0.075,
       "👑 顶级": 0.3,
       "☠️ 答辩": 0.125,
-      "💩 拉完了": 0.025
+      "💩 拉完了": 0.025,
+      "💪 人上人": 0.175,
+      "😐 NPC": 0.3,
+      "🔥 夯死了": 0.075
     },
     "recent_30d": [
       {
@@ -23682,12 +23682,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2,
-      "🔥 夯死了": 0.025,
-      "😐 NPC": 0.325,
       "👑 顶级": 0.125,
       "☠️ 答辩": 0.025,
-      "💩 拉完了": 0.3
+      "💩 拉完了": 0.3,
+      "💪 人上人": 0.2,
+      "🔥 夯死了": 0.025,
+      "😐 NPC": 0.325
     },
     "recent_30d": [
       {
@@ -23998,12 +23998,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.4,
-      "🔥 夯死了": 0.05,
-      "😐 NPC": 0.2,
       "👑 顶级": 0.2,
       "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.05
+      "☠️ 答辩": 0.05,
+      "💪 人上人": 0.4,
+      "🔥 夯死了": 0.05,
+      "😐 NPC": 0.2
     },
     "recent_30d": [
       {
@@ -24247,17 +24247,6 @@
         "period": "D"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 22,
-        "gold": 7,
-        "silver": 5,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2026-W15",
-        "period": "Q"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 22,
@@ -24267,6 +24256,17 @@
         "best_rank": 1,
         "latest_period_key": "2025-12-16",
         "period": "D"
+      },
+      {
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 22,
+        "gold": 7,
+        "silver": 5,
+        "bronze": 10,
+        "best_rank": 1,
+        "latest_period_key": "2026-W15",
+        "period": "Q"
       },
       {
         "code": "steady_grind",
@@ -24313,17 +24313,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2023-10",
-        "period": "M"
-      },
-      {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
         "count": 1,
@@ -24333,14 +24322,25 @@
         "best_rank": 3,
         "latest_period_key": "2024-W31",
         "period": "W"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2023-10",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.175,
-      "💪 人上人": 0.425,
       "💩 拉完了": 0.25,
       "☠️ 答辩": 0.05,
-      "👑 顶级": 0.1
+      "👑 顶级": 0.1,
+      "😐 NPC": 0.175,
+      "💪 人上人": 0.425
     },
     "recent_30d": [
       {
@@ -24573,17 +24573,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 15,
-        "gold": 3,
-        "silver": 6,
-        "bronze": 6,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-22",
-        "period": "D"
-      },
-      {
         "code": "daily_king",
         "name": "🏆 今日股王",
         "count": 15,
@@ -24592,6 +24581,17 @@
         "bronze": 6,
         "best_rank": 1,
         "latest_period_key": "2026-03-19",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 15,
+        "gold": 3,
+        "silver": 6,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-22",
         "period": "D"
       },
       {
@@ -24651,12 +24651,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.225,
-      "💩 拉完了": 0.15,
-      "☠️ 答辩": 0.05,
       "💪 人上人": 0.275,
       "😐 NPC": 0.25,
-      "🔥 夯死了": 0.05
+      "🔥 夯死了": 0.05,
+      "👑 顶级": 0.225,
+      "💩 拉完了": 0.15,
+      "☠️ 答辩": 0.05
     },
     "recent_30d": [
       {
@@ -24900,17 +24900,6 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 3,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 3,
-        "best_rank": 3,
-        "latest_period_key": "2025-02-11",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 3,
@@ -24922,6 +24911,17 @@
         "period": "D"
       },
       {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 3,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 3,
+        "best_rank": 3,
+        "latest_period_key": "2025-02-11",
+        "period": "D"
+      },
+      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 2,
@@ -24930,6 +24930,17 @@
         "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2025-09-23",
+        "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-02-12",
         "period": "D"
       },
       {
@@ -24953,25 +24964,14 @@
         "best_rank": 2,
         "latest_period_key": "2024-W21",
         "period": "W"
-      },
-      {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-02-12",
-        "period": "D"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.5,
-      "💪 人上人": 0.3,
       "💩 拉完了": 0.15,
       "☠️ 答辩": 0.025,
-      "👑 顶级": 0.025
+      "👑 顶级": 0.025,
+      "😐 NPC": 0.5,
+      "💪 人上人": 0.3
     },
     "recent_30d": [
       {
@@ -25293,12 +25293,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2,
-      "💩 拉完了": 0.1,
-      "☠️ 答辩": 0.15,
       "💪 人上人": 0.35,
       "🔥 夯死了": 0.05,
-      "😐 NPC": 0.15
+      "😐 NPC": 0.15,
+      "👑 顶级": 0.2,
+      "💩 拉完了": 0.1,
+      "☠️ 答辩": 0.15
     },
     "recent_30d": [
       {
@@ -25620,12 +25620,12 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.025,
-      "☠️ 答辩": 0.1,
-      "💩 拉完了": 0.15,
       "💪 人上人": 0.325,
       "😐 NPC": 0.375,
-      "🔥 夯死了": 0.025
+      "🔥 夯死了": 0.025,
+      "👑 顶级": 0.025,
+      "☠️ 答辩": 0.1,
+      "💩 拉完了": 0.15
     },
     "recent_30d": [
       {
@@ -25969,12 +25969,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2,
-      "😐 NPC": 0.175,
-      "🔥 夯死了": 0.025,
       "👑 顶级": 0.125,
       "💩 拉完了": 0.425,
-      "☠️ 答辩": 0.05
+      "☠️ 答辩": 0.05,
+      "💪 人上人": 0.2,
+      "😐 NPC": 0.175,
+      "🔥 夯死了": 0.025
     },
     "recent_30d": [
       {
@@ -26196,17 +26196,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 13,
-        "gold": 3,
-        "silver": 2,
-        "bronze": 8,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-01",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 13,
@@ -26215,6 +26204,17 @@
         "bronze": 11,
         "best_rank": 1,
         "latest_period_key": "2026-03-17",
+        "period": "D"
+      },
+      {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 13,
+        "gold": 3,
+        "silver": 2,
+        "bronze": 8,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-01",
         "period": "D"
       },
       {
@@ -26262,6 +26262,17 @@
         "period": "W"
       },
       {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 2,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2026-01-06",
+        "period": "D"
+      },
+      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 2,
@@ -26273,14 +26284,14 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 2,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-01-06",
+        "code": "pillar",
+        "name": "💰 顶梁柱奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-06-12",
         "period": "D"
       },
       {
@@ -26304,26 +26315,15 @@
         "best_rank": 3,
         "latest_period_key": "2026-01-30",
         "period": "E"
-      },
-      {
-        "code": "pillar",
-        "name": "💰 顶梁柱奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-12",
-        "period": "D"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.25,
-      "🔥 夯死了": 0.05,
-      "💪 人上人": 0.325,
       "☠️ 答辩": 0.075,
       "💩 拉完了": 0.025,
-      "👑 顶级": 0.275
+      "👑 顶级": 0.275,
+      "😐 NPC": 0.25,
+      "🔥 夯死了": 0.05,
+      "💪 人上人": 0.325
     },
     "recent_30d": [
       {
@@ -26611,39 +26611,6 @@
         "period": "W"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2025-W41",
-        "period": "W"
-      },
-      {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2025-11-17",
-        "period": "D"
-      },
-      {
-        "code": "earnings_clown",
-        "name": "💼 财报现形",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-10-30",
-        "period": "E"
-      },
-      {
         "code": "npc_god",
         "name": "💤 NPC 之光",
         "count": 1,
@@ -26675,15 +26642,48 @@
         "best_rank": 1,
         "latest_period_key": "2026-04-30",
         "period": "E"
+      },
+      {
+        "code": "earnings_clown",
+        "name": "💼 财报现形",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2025-10-30",
+        "period": "E"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2025-W41",
+        "period": "W"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2025-11-17",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.175,
-      "🔥 夯死了": 0.225,
-      "💪 人上人": 0.175,
       "💩 拉完了": 0.075,
       "☠️ 答辩": 0.15,
-      "👑 顶级": 0.2
+      "👑 顶级": 0.2,
+      "😐 NPC": 0.175,
+      "🔥 夯死了": 0.225,
+      "💪 人上人": 0.175
     },
     "recent_30d": [
       {
