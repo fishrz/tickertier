@@ -123,25 +123,25 @@
           "metric": 0.2005,
           "meta": {
             "pct_change": 0.17909224618297181,
-            "fade": -0.000696273542143241
+            "fade": -0.0015652200450067934
           }
         },
         {
           "rank": 2,
-          "ticker": "BE",
-          "metric": 0.1157,
+          "ticker": "MX",
+          "metric": 0.1191,
           "meta": {
-            "pct_change": 0.1541107229471978,
-            "fade": -0.001820534240713951
+            "pct_change": 0.12121209110876646,
+            "fade": -0.013333320617675781
           }
         },
         {
           "rank": 3,
-          "ticker": "MX",
-          "metric": 0.1069,
+          "ticker": "BE",
+          "metric": 0.1157,
           "meta": {
-            "pct_change": 0.12121209110876646,
-            "fade": -0.013333320617675781
+            "pct_change": 0.1541107229471978,
+            "fade": -0.0018209040263826868
           }
         }
       ]
@@ -157,7 +157,7 @@
           "metric": -0.0819,
           "meta": {
             "intraday_amp": 0.18477903083580757,
-            "vol_ratio_20": 1.3152227092844513
+            "vol_ratio_20": 1.3396994743160169
           }
         },
         {
@@ -174,8 +174,8 @@
           "ticker": "AAOI",
           "metric": -0.0328,
           "meta": {
-            "intraday_amp": 0.09985662172554714,
-            "vol_ratio_20": 1.159624565985247
+            "intraday_amp": 0.0999163474758439,
+            "vol_ratio_20": 1.2064957833382803
           }
         }
       ]
@@ -190,8 +190,8 @@
           "ticker": "KORU",
           "metric": 0.1928,
           "meta": {
-            "intraday_amp": 0.09322505778782274,
-            "vol_ratio_20": 0.7007582541786291
+            "intraday_amp": 0.09405074114593102,
+            "vol_ratio_20": 0.7255400447563519
           }
         },
         {
@@ -199,8 +199,8 @@
           "ticker": "WOLF",
           "metric": 0.1791,
           "meta": {
-            "intraday_amp": 0.19777987590050636,
-            "vol_ratio_20": 1.0887454853165248
+            "intraday_amp": 0.19880880218110747,
+            "vol_ratio_20": 1.0968300082152675
           }
         },
         {
@@ -208,8 +208,8 @@
           "ticker": "BE",
           "metric": 0.1541,
           "meta": {
-            "intraday_amp": 0.12175827687204611,
-            "vol_ratio_20": 1.4585508164128378
+            "intraday_amp": 0.12175870520397594,
+            "vol_ratio_20": 1.4654702485977331
           }
         }
       ]
@@ -233,7 +233,7 @@
           "ticker": "CAMT",
           "metric": 0.0442,
           "meta": {
-            "vol_ratio_20": 0.654580305226812,
+            "vol_ratio_20": 0.6558270902171187,
             "pct_change": 0.09554285579193707
           }
         },
@@ -242,7 +242,7 @@
           "ticker": "GFS",
           "metric": 0.0447,
           "meta": {
-            "vol_ratio_20": 0.4698038591296579,
+            "vol_ratio_20": 0.4755220186050226,
             "pct_change": 0.0643601498101261
           }
         }
@@ -258,14 +258,14 @@
           "ticker": "AXTI",
           "metric": -0.1372,
           "meta": {
-            "gap": 0.0461404838979273,
+            "gap": 0.04766039909411398,
             "pct_change": -0.08185865666664624
           }
         },
         {
           "rank": 2,
           "ticker": "AAOI",
-          "metric": -0.0738,
+          "metric": -0.0739,
           "meta": {
             "gap": 0.043683504951401476,
             "pct_change": -0.03280740023018578
@@ -276,7 +276,7 @@
           "ticker": "WDC",
           "metric": -0.0671,
           "meta": {
-            "gap": 0.07283781719845267,
+            "gap": 0.07304848717870042,
             "pct_change": 0.0478844808562012
           }
         }
@@ -324,7 +324,7 @@
         {
           "rank": 1,
           "ticker": "MRVL",
-          "metric": 3.5377,
+          "metric": 3.5468,
           "meta": {
             "pct_change": 0.07266691098435682
           }
@@ -332,7 +332,7 @@
         {
           "rank": 2,
           "ticker": "ALAB",
-          "metric": 3.3635,
+          "metric": 3.3659,
           "meta": {
             "pct_change": 0.11313658449096455
           }
@@ -340,7 +340,7 @@
         {
           "rank": 3,
           "ticker": "AOSL",
-          "metric": 2.6974,
+          "metric": 2.698,
           "meta": {
             "pct_change": 0.11332559019066767
           }
@@ -355,7 +355,7 @@
         {
           "rank": 1,
           "ticker": "WOLF",
-          "metric": 0.1978,
+          "metric": 0.1988,
           "meta": {
             "pct_change": 0.17909224618297181
           }
@@ -371,7 +371,7 @@
         {
           "rank": 3,
           "ticker": "MX",
-          "metric": 0.1234,
+          "metric": 0.1345,
           "meta": {
             "pct_change": 0.12121209110876646
           }
@@ -451,12 +451,12 @@
     }
   ],
   "tier_distribution": {
-    "🔥 夯死了": 4,
+    "🔥 夯死了": 5,
     "😐 NPC": 24,
-    "👑 顶级": 12,
     "💩 拉完了": 15,
     "☠️ 答辩": 1,
-    "💪 人上人": 24
+    "💪 人上人": 24,
+    "👑 顶级": 12
   },
   "tier_movers": [
     {
@@ -464,6 +464,12 @@
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
       "delta": 3
+    },
+    {
+      "ticker": "ALAB",
+      "prev": "💪 人上人",
+      "now": "🔥 夯死了",
+      "delta": 2
     },
     {
       "ticker": "AOSL",
@@ -532,9 +538,9 @@
       "delta": 1
     },
     {
-      "ticker": "ALAB",
-      "prev": "💪 人上人",
-      "now": "👑 顶级",
+      "ticker": "ADI",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
       "delta": 1
     },
     {
@@ -545,6 +551,12 @@
     },
     {
       "ticker": "CEG",
+      "prev": "💩 拉完了",
+      "now": "😐 NPC",
+      "delta": 1
+    },
+    {
+      "ticker": "ETN",
       "prev": "💩 拉完了",
       "now": "😐 NPC",
       "delta": 1
@@ -568,9 +580,21 @@
       "delta": 1
     },
     {
+      "ticker": "KLAC",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
       "ticker": "LSCC",
       "prev": "💪 人上人",
       "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "LSRCY",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
       "delta": 1
     },
     {
@@ -682,12 +706,6 @@
       "delta": -1
     },
     {
-      "ticker": "CSCO",
-      "prev": "💪 人上人",
-      "now": "😐 NPC",
-      "delta": -1
-    },
-    {
       "ticker": "DRAM",
       "prev": "👑 顶级",
       "now": "💪 人上人",
@@ -736,6 +754,12 @@
       "delta": -1
     },
     {
+      "ticker": "SIMO",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
       "ticker": "SNPS",
       "prev": "😐 NPC",
       "now": "💩 拉完了",
@@ -755,6 +779,12 @@
     },
     {
       "ticker": "ASML",
+      "prev": "💪 人上人",
+      "now": "💩 拉完了",
+      "delta": -2
+    },
+    {
+      "ticker": "CSCO",
       "prev": "💪 人上人",
       "now": "💩 拉完了",
       "delta": -2
