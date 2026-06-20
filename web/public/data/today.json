@@ -451,12 +451,12 @@
     }
   ],
   "tier_distribution": {
-    "🔥 夯死了": 5,
+    "🔥 夯死了": 4,
     "😐 NPC": 24,
     "💩 拉完了": 15,
     "☠️ 答辩": 1,
-    "💪 人上人": 24,
-    "👑 顶级": 12
+    "👑 顶级": 12,
+    "💪 人上人": 24
   },
   "tier_movers": [
     {
@@ -464,12 +464,6 @@
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
       "delta": 3
-    },
-    {
-      "ticker": "ALAB",
-      "prev": "💪 人上人",
-      "now": "🔥 夯死了",
-      "delta": 2
     },
     {
       "ticker": "AOSL",
@@ -520,12 +514,6 @@
       "delta": 2
     },
     {
-      "ticker": "TLN",
-      "prev": "💩 拉完了",
-      "now": "💪 人上人",
-      "delta": 2
-    },
-    {
       "ticker": "WOLF",
       "prev": "💪 人上人",
       "now": "🔥 夯死了",
@@ -541,6 +529,12 @@
       "ticker": "ADI",
       "prev": "😐 NPC",
       "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "ALAB",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
       "delta": 1
     },
     {
@@ -575,12 +569,6 @@
     },
     {
       "ticker": "GLW",
-      "prev": "💪 人上人",
-      "now": "👑 顶级",
-      "delta": 1
-    },
-    {
-      "ticker": "KLAC",
       "prev": "💪 人上人",
       "now": "👑 顶级",
       "delta": 1
