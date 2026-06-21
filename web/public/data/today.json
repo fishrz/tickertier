@@ -166,7 +166,7 @@
           "metric": -0.0353,
           "meta": {
             "intraday_amp": 0.0371782985540697,
-            "vol_ratio_20": 0.3705694448245048
+            "vol_ratio_20": 0.3705550675165522
           }
         },
         {
@@ -224,7 +224,7 @@
           "ticker": "SIVEF",
           "metric": 0.0372,
           "meta": {
-            "vol_ratio_20": 0.3705694448245048,
+            "vol_ratio_20": 0.3705550675165522,
             "pct_change": -0.03527167718132777
           }
         },
@@ -451,12 +451,12 @@
     }
   ],
   "tier_distribution": {
-    "🔥 夯死了": 4,
-    "😐 NPC": 24,
     "💩 拉完了": 15,
     "☠️ 答辩": 1,
-    "👑 顶级": 12,
-    "💪 人上人": 24
+    "🔥 夯死了": 4,
+    "😐 NPC": 24,
+    "💪 人上人": 24,
+    "👑 顶级": 12
   },
   "tier_movers": [
     {
@@ -514,6 +514,12 @@
       "delta": 2
     },
     {
+      "ticker": "TLN",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
       "ticker": "WOLF",
       "prev": "💪 人上人",
       "now": "🔥 夯死了",
@@ -523,12 +529,6 @@
       "ticker": "AAOI",
       "prev": "☠️ 答辩",
       "now": "💩 拉完了",
-      "delta": 1
-    },
-    {
-      "ticker": "ADI",
-      "prev": "😐 NPC",
-      "now": "💪 人上人",
       "delta": 1
     },
     {
@@ -766,12 +766,6 @@
       "delta": -2
     },
     {
-      "ticker": "ASML",
-      "prev": "💪 人上人",
-      "now": "💩 拉完了",
-      "delta": -2
-    },
-    {
       "ticker": "CSCO",
       "prev": "💪 人上人",
       "now": "💩 拉完了",
@@ -796,13 +790,13 @@
       "delta": -2
     },
     {
-      "ticker": "POET",
+      "ticker": "DELL",
       "prev": "👑 顶级",
-      "now": "😐 NPC",
-      "delta": -2
+      "now": "💩 拉完了",
+      "delta": -3
     },
     {
-      "ticker": "DELL",
+      "ticker": "POET",
       "prev": "👑 顶级",
       "now": "💩 拉完了",
       "delta": -3
