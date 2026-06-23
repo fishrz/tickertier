@@ -3,11 +3,11 @@
     "ticker": "AAOI",
     "name": "Applied Optoelectronics",
     "theme": "optical",
-    "close": 171.23,
-    "pct_change": 0.058,
-    "intraday_amp": 0.1323,
-    "vol_ratio_20": 1.008,
-    "tier": "👑 顶级",
+    "close": 147.44,
+    "pct_change": -0.1389,
+    "intraday_amp": 0.0919,
+    "vol_ratio_20": 0.9392,
+    "tier": "☠️ 答辩",
     "awards_count": 1101,
     "persona": "财报戏精",
     "medal_history": [
@@ -25,12 +25,12 @@
       {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
-        "count": 168,
+        "count": 167,
         "gold": 80,
         "silver": 57,
-        "bronze": 31,
+        "bronze": 30,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-04-24",
         "period": "D"
       },
       {
@@ -69,12 +69,12 @@
       {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
-        "count": 109,
+        "count": 110,
         "gold": 22,
         "silver": 54,
-        "bronze": 33,
+        "bronze": 34,
         "best_rank": 1,
-        "latest_period_key": "2026-W14",
+        "latest_period_key": "2026-W26",
         "period": "W"
       },
       {
@@ -125,9 +125,9 @@
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 16,
-        "gold": 6,
+        "gold": 4,
         "silver": 4,
-        "bronze": 6,
+        "bronze": 8,
         "best_rank": 1,
         "latest_period_key": "2026-W16",
         "period": "W"
@@ -155,17 +155,6 @@
         "period": "D"
       },
       {
-        "code": "tear_jerker",
-        "name": "😭 我的眼泪奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
-      },
-      {
         "code": "traitor",
         "name": "🩸 拖后腿奖",
         "count": 1,
@@ -173,6 +162,17 @@
         "silver": 0,
         "bronze": 0,
         "best_rank": 1,
+        "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
+        "code": "tear_jerker",
+        "name": "😭 我的眼泪奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
         "latest_period_key": "2026-05-08",
         "period": "D"
       },
@@ -189,20 +189,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0882,
-      "😐 NPC": 0.0882,
-      "🔥 夯死了": 0.2647,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.2647,
-      "💪 人上人": 0.2353
+      "💪 人上人": 0.2424,
+      "😐 NPC": 0.0909,
+      "🔥 夯死了": 0.2424,
+      "💩 拉完了": 0.0606,
+      "☠️ 答辩": 0.303,
+      "👑 顶级": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 148.94,
-        "pct_change": -0.0546,
-        "tier": "☠️ 答辩"
-      },
       {
         "date": "2026-05-11",
         "close": 184.9,
@@ -375,21 +369,27 @@
         "date": "2026-06-22",
         "close": 171.23,
         "pct_change": 0.058,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 147.44,
+        "pct_change": -0.1389,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "ADI",
     "name": "Analog Devices",
     "theme": "analog_power",
-    "close": 445.48,
-    "pct_change": 0.0254,
-    "intraday_amp": 0.0215,
-    "vol_ratio_20": 0.823,
-    "tier": "😐 NPC",
+    "close": 407.26,
+    "pct_change": -0.0858,
+    "intraday_amp": 0.0531,
+    "vol_ratio_20": 1.3776,
+    "tier": "☠️ 答辩",
     "awards_count": 84,
     "persona": "NPC 系",
     "medal_history": [
@@ -494,18 +494,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1471,
-      "💩 拉完了": 0.1765,
-      "😐 NPC": 0.5588,
-      "👑 顶级": 0.1176
+      "👑 顶级": 0.1212,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.1818,
+      "😐 NPC": 0.5455,
+      "💪 人上人": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 416.52,
-        "pct_change": 0.0196,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 422.73,
@@ -678,7 +673,13 @@
         "date": "2026-06-22",
         "close": 445.48,
         "pct_change": 0.0254,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 407.26,
+        "pct_change": -0.0858,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -688,11 +689,11 @@
     "ticker": "AEHR",
     "name": "Aehr Test Systems",
     "theme": "semicap_metrology",
-    "close": 113.33,
-    "pct_change": -0.0171,
-    "intraday_amp": 0.061,
-    "vol_ratio_20": 0.5594,
-    "tier": "💩 拉完了",
+    "close": 102.39,
+    "pct_change": -0.0965,
+    "intraday_amp": 0.0555,
+    "vol_ratio_20": 0.7949,
+    "tier": "☠️ 答辩",
     "awards_count": 489,
     "persona": "财报戏精",
     "medal_history": [
@@ -774,17 +775,6 @@
         "period": "W"
       },
       {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 12,
-        "gold": 5,
-        "silver": 7,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-07-22",
-        "period": "D"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 12,
@@ -794,6 +784,17 @@
         "best_rank": 1,
         "latest_period_key": "2025-W31",
         "period": "M"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 12,
+        "gold": 5,
+        "silver": 7,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2025-07-22",
+        "period": "D"
       },
       {
         "code": "npc_god",
@@ -841,20 +842,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2941,
-      "🔥 夯死了": 0.1471,
-      "😐 NPC": 0.1176,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.2059,
-      "💪 人上人": 0.2059
+      "💪 人上人": 0.2121,
+      "🔥 夯死了": 0.1515,
+      "😐 NPC": 0.1212,
+      "☠️ 答辩": 0.2424,
+      "👑 顶级": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 97.23,
-        "pct_change": 0.0654,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 104.56,
@@ -1027,7 +1021,13 @@
         "date": "2026-06-22",
         "close": 113.33,
         "pct_change": -0.0171,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 102.39,
+        "pct_change": -0.0965,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -1037,23 +1037,23 @@
     "ticker": "AKAM",
     "name": "Akamai Technologies",
     "theme": "networking",
-    "close": 120.74,
-    "pct_change": -0.0334,
-    "intraday_amp": 0.0474,
-    "vol_ratio_20": 1.0934,
-    "tier": "💩 拉完了",
-    "awards_count": 293,
+    "close": 119.87,
+    "pct_change": -0.0072,
+    "intraday_amp": 0.0338,
+    "vol_ratio_20": 0.6921,
+    "tier": "👑 顶级",
+    "awards_count": 294,
     "persona": "NPC 系",
     "medal_history": [
       {
         "code": "npc_god",
         "name": "💤 NPC 之光",
-        "count": 140,
-        "gold": 40,
+        "count": 141,
+        "gold": 41,
         "silver": 63,
         "bronze": 37,
         "best_rank": 1,
-        "latest_period_key": "2026-04-28",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -1071,8 +1071,8 @@
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 24,
-        "gold": 12,
-        "silver": 10,
+        "gold": 14,
+        "silver": 8,
         "bronze": 2,
         "best_rank": 1,
         "latest_period_key": "2026-W16",
@@ -1145,17 +1145,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2025-11",
-        "period": "M"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 1,
@@ -1165,23 +1154,28 @@
         "best_rank": 3,
         "latest_period_key": "2026-04-10",
         "period": "D"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2025-11",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.2059,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.1176,
-      "💪 人上人": 0.3235,
-      "💩 拉完了": 0.2353,
-      "☠️ 答辩": 0.0882
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.2121,
+      "👑 顶级": 0.1515,
+      "💪 人上人": 0.3333,
+      "😐 NPC": 0.1818,
+      "🔥 夯死了": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 147.71,
-        "pct_change": 0.2658,
-        "tier": "🔥 夯死了"
-      },
       {
         "date": "2026-05-11",
         "close": 153.01,
@@ -1354,21 +1348,27 @@
         "date": "2026-06-22",
         "close": 120.74,
         "pct_change": -0.0334,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 119.87,
+        "pct_change": -0.0072,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
-    "streak_in_awards_days": 0
+    "streak_top_tier_days": 2,
+    "streak_in_awards_days": 2
   },
   {
     "ticker": "ALAB",
     "name": "Astera Labs",
     "theme": "compute_core",
-    "close": 439.66,
-    "pct_change": 0.0542,
-    "intraday_amp": 0.0689,
-    "vol_ratio_20": 0.8172,
-    "tier": "👑 顶级",
+    "close": 397.02,
+    "pct_change": -0.097,
+    "intraday_amp": 0.0608,
+    "vol_ratio_20": 0.9716,
+    "tier": "☠️ 答辩",
     "awards_count": 242,
     "persona": "财报戏精",
     "medal_history": [
@@ -1461,17 +1461,6 @@
         "period": "M"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 5,
-        "gold": 1,
-        "silver": 2,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-Q2",
-        "period": "Q"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 5,
@@ -1483,11 +1472,22 @@
         "period": "D"
       },
       {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 5,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2026-Q2",
+        "period": "Q"
+      },
+      {
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
         "count": 4,
-        "gold": 2,
-        "silver": 1,
+        "gold": 1,
+        "silver": 2,
         "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2026-06",
@@ -1497,10 +1497,10 @@
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 3,
-        "gold": 0,
-        "silver": 2,
+        "gold": 1,
+        "silver": 1,
         "bronze": 1,
-        "best_rank": 2,
+        "best_rank": 1,
         "latest_period_key": "2026-06",
         "period": "M"
       },
@@ -1519,22 +1519,22 @@
         "code": "cash_king",
         "name": "💸 钞能力之王",
         "count": 2,
-        "gold": 0,
-        "silver": 1,
+        "gold": 1,
+        "silver": 0,
         "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-22",
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
-        "code": "pillar",
-        "name": "💰 顶梁柱奖",
+        "code": "traitor",
+        "name": "🩸 拖后腿奖",
         "count": 1,
         "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-06-22",
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -1545,7 +1545,7 @@
         "silver": 1,
         "bronze": 0,
         "best_rank": 2,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -1567,25 +1567,19 @@
         "silver": 0,
         "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1176,
-      "🔥 夯死了": 0.0882,
-      "😐 NPC": 0.1471,
-      "☠️ 答辩": 0.1471,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3824
+      "💪 人上人": 0.3939,
+      "😐 NPC": 0.1515,
+      "🔥 夯死了": 0.0909,
+      "💩 拉完了": 0.0909,
+      "☠️ 答辩": 0.1818,
+      "👑 顶级": 0.0909
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 199.79,
-        "pct_change": 0.0212,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 207.35,
@@ -1758,21 +1752,27 @@
         "date": "2026-06-22",
         "close": 439.66,
         "pct_change": 0.0542,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 397.02,
+        "pct_change": -0.097,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 1
   },
   {
     "ticker": "AMAT",
     "name": "Applied Materials",
     "theme": "semicap_metrology",
-    "close": 640.18,
-    "pct_change": 0.0374,
-    "intraday_amp": 0.0332,
-    "vol_ratio_20": 1.0936,
-    "tier": "💪 人上人",
+    "close": 585.88,
+    "pct_change": -0.0848,
+    "intraday_amp": 0.0291,
+    "vol_ratio_20": 1.2102,
+    "tier": "☠️ 答辩",
     "awards_count": 37,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -1846,27 +1846,21 @@
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 2,
-        "gold": 1,
+        "gold": 0,
         "silver": 0,
-        "bronze": 1,
-        "best_rank": 1,
+        "bronze": 2,
+        "best_rank": 3,
         "latest_period_key": "2026-06",
         "period": "W"
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.1765,
-      "💪 人上人": 0.4118,
-      "😐 NPC": 0.3529
+      "😐 NPC": 0.3636,
+      "💪 人上人": 0.3636,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 435.44,
-        "pct_change": 0.0604,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 443.62,
@@ -2039,7 +2033,13 @@
         "date": "2026-06-22",
         "close": 640.18,
         "pct_change": 0.0374,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 585.88,
+        "pct_change": -0.0848,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -2049,10 +2049,10 @@
     "ticker": "AMD",
     "name": "Advanced Micro Devices",
     "theme": "compute_core",
-    "close": 551.63,
-    "pct_change": 0.0265,
-    "intraday_amp": 0.0508,
-    "vol_ratio_20": 0.7929,
+    "close": 519.85,
+    "pct_change": -0.0576,
+    "intraday_amp": 0.0393,
+    "vol_ratio_20": 0.8591,
     "tier": "💪 人上人",
     "awards_count": 99,
     "persona": "蒸蒸日上",
@@ -2158,20 +2158,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1176,
-      "☠️ 答辩": 0.0588,
-      "💪 人上人": 0.5,
-      "👑 顶级": 0.2059,
-      "😐 NPC": 0.0882,
-      "🔥 夯死了": 0.0294
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.0606,
+      "💪 人上人": 0.5152,
+      "👑 顶级": 0.2121,
+      "☠️ 答辩": 0.0606,
+      "💩 拉完了": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 455.19,
-        "pct_change": 0.1144,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 458.79,
@@ -2344,6 +2338,12 @@
         "date": "2026-06-22",
         "close": 551.63,
         "pct_change": 0.0265,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 519.85,
+        "pct_change": -0.0576,
         "tier": "💪 人上人"
       }
     ],
@@ -2354,11 +2354,11 @@
     "ticker": "AMKR",
     "name": "Amkor Technology",
     "theme": "foundry_osat",
-    "close": 93.55,
-    "pct_change": 0.0342,
-    "intraday_amp": 0.0705,
-    "vol_ratio_20": 1.1058,
-    "tier": "💪 人上人",
+    "close": 86.72,
+    "pct_change": -0.073,
+    "intraday_amp": 0.0477,
+    "vol_ratio_20": 0.9755,
+    "tier": "☠️ 答辩",
     "awards_count": 81,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -2418,17 +2418,6 @@
         "period": "D"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 7,
-        "gold": 1,
-        "silver": 5,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-01-29",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 7,
@@ -2437,6 +2426,17 @@
         "bronze": 2,
         "best_rank": 1,
         "latest_period_key": "2026-03-24",
+        "period": "D"
+      },
+      {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 7,
+        "gold": 1,
+        "silver": 5,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2026-01-29",
         "period": "D"
       },
       {
@@ -2463,19 +2463,13 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.2647,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.1471,
-      "💪 人上人": 0.4412,
-      "☠️ 答辩": 0.1176
+      "☠️ 答辩": 0.1515,
+      "👑 顶级": 0.1212,
+      "💪 人上人": 0.4242,
+      "😐 NPC": 0.2727,
+      "🔥 夯死了": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 76.61,
-        "pct_change": 0.0601,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 76.69,
@@ -2648,7 +2642,13 @@
         "date": "2026-06-22",
         "close": 93.55,
         "pct_change": 0.0342,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 86.72,
+        "pct_change": -0.073,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -2658,11 +2658,11 @@
     "ticker": "AMSC",
     "name": "American Superconductor",
     "theme": "datacenter_power_cooling",
-    "close": 45.33,
-    "pct_change": 0.0444,
-    "intraday_amp": 0.0562,
-    "vol_ratio_20": 0.7159,
-    "tier": "💪 人上人",
+    "close": 41.63,
+    "pct_change": -0.0816,
+    "intraday_amp": 0.0553,
+    "vol_ratio_20": 0.5131,
+    "tier": "☠️ 答辩",
     "awards_count": 431,
     "persona": "财报戏精",
     "medal_history": [
@@ -2822,20 +2822,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.2059,
-      "👑 顶级": 0.3235,
-      "🔥 夯死了": 0.0882,
-      "😐 NPC": 0.1765
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.1818,
+      "💪 人上人": 0.1515,
+      "👑 顶级": 0.3333,
+      "💩 拉完了": 0.1818,
+      "☠️ 答辩": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 55.19,
-        "pct_change": 0.037,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 58.72,
@@ -3007,8 +3001,14 @@
       {
         "date": "2026-06-22",
         "close": 45.33,
-        "pct_change": 0.0444,
-        "tier": "💪 人上人"
+        "pct_change": 0.0445,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 41.63,
+        "pct_change": -0.0816,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -3018,11 +3018,11 @@
     "ticker": "ANET",
     "name": "Arista Networks",
     "theme": "networking",
-    "close": 174.56,
-    "pct_change": 0.0288,
-    "intraday_amp": 0.0502,
-    "vol_ratio_20": 0.917,
-    "tier": "💪 人上人",
+    "close": 162.2,
+    "pct_change": -0.0708,
+    "intraday_amp": 0.0348,
+    "vol_ratio_20": 0.8963,
+    "tier": "☠️ 答辩",
     "awards_count": 93,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -3115,17 +3115,6 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2023-08-01",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 1,
@@ -3135,22 +3124,27 @@
         "best_rank": 3,
         "latest_period_key": "2025-04-08",
         "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2023-08-01",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0588,
-      "😐 NPC": 0.4706,
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.2941
+      "💪 人上人": 0.2727,
+      "😐 NPC": 0.4848,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.0909,
+      "👑 顶级": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 141.77,
-        "pct_change": 0.0001,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 136.43,
@@ -3323,7 +3317,13 @@
         "date": "2026-06-22",
         "close": 174.56,
         "pct_change": 0.0288,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 162.2,
+        "pct_change": -0.0708,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -3333,11 +3333,11 @@
     "ticker": "AOSL",
     "name": "Alpha and Omega Semiconductor",
     "theme": "analog_power",
-    "close": 49.36,
-    "pct_change": 0.0275,
-    "intraday_amp": 0.0679,
-    "vol_ratio_20": 0.6603,
-    "tier": "💪 人上人",
+    "close": 45.07,
+    "pct_change": -0.0869,
+    "intraday_amp": 0.0767,
+    "vol_ratio_20": 0.5992,
+    "tier": "☠️ 答辩",
     "awards_count": 213,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -3475,19 +3475,13 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.2353,
-      "🔥 夯死了": 0.1176,
-      "👑 顶级": 0.1471,
-      "💪 人上人": 0.4118,
-      "☠️ 答辩": 0.0882
+      "☠️ 答辩": 0.1212,
+      "👑 顶级": 0.1515,
+      "💪 人上人": 0.3636,
+      "😐 NPC": 0.2424,
+      "🔥 夯死了": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 37.9,
-        "pct_change": 0.0123,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 38.62,
@@ -3660,7 +3654,13 @@
         "date": "2026-06-22",
         "close": 49.36,
         "pct_change": 0.0275,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 45.07,
+        "pct_change": -0.0869,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -3670,12 +3670,12 @@
     "ticker": "ARM",
     "name": "Arm Holdings",
     "theme": "compute_core",
-    "close": 407.72,
-    "pct_change": -0.0722,
-    "intraday_amp": 0.0977,
-    "vol_ratio_20": 0.6813,
+    "close": 366.39,
+    "pct_change": -0.1014,
+    "intraday_amp": 0.066,
+    "vol_ratio_20": 0.8141,
     "tier": "☠️ 答辩",
-    "awards_count": 209,
+    "awards_count": 205,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -3703,12 +3703,12 @@
       {
         "code": "oscar",
         "name": "🎭 影帝奖",
-        "count": 31,
+        "count": 30,
         "gold": 8,
         "silver": 10,
-        "bronze": 13,
+        "bronze": 12,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-04-10",
         "period": "D"
       },
       {
@@ -3725,12 +3725,12 @@
       {
         "code": "daily_clown",
         "name": "💩 今日答辩",
-        "count": 26,
+        "count": 25,
         "gold": 12,
-        "silver": 6,
+        "silver": 5,
         "bronze": 8,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-04-02",
         "period": "D"
       },
       {
@@ -3811,54 +3811,26 @@
         "period": "M"
       },
       {
-        "code": "traitor",
-        "name": "🩸 拖后腿奖",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
         "code": "buy_low",
         "name": "🧠 人间清醒奖",
         "count": 1,
         "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
+        "silver": 1,
         "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-06",
-        "period": "M"
+        "best_rank": 2,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.0882,
-      "😐 NPC": 0.2647,
-      "👑 顶级": 0.1471,
-      "💪 人上人": 0.2059,
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.1471
+      "💩 拉完了": 0.1515,
+      "☠️ 答辩": 0.1515,
+      "👑 顶级": 0.1515,
+      "💪 人上人": 0.2121,
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 213.27,
-        "pct_change": -0.0002,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 212.65,
@@ -4031,21 +4003,27 @@
         "date": "2026-06-22",
         "close": 407.72,
         "pct_change": -0.0722,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 366.39,
+        "pct_change": -0.1014,
         "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
-    "streak_in_awards_days": 1
+    "streak_in_awards_days": 0
   },
   {
     "ticker": "ASML",
     "name": "ASML",
     "theme": "semicap_metrology",
-    "close": 1929.25,
-    "pct_change": -0.0002,
-    "intraday_amp": 0.0371,
-    "vol_ratio_20": 0.8893,
-    "tier": "😐 NPC",
+    "close": 1778.46,
+    "pct_change": -0.0782,
+    "intraday_amp": 0.0294,
+    "vol_ratio_20": 1.1814,
+    "tier": "☠️ 答辩",
     "awards_count": 114,
     "persona": "NPC 系",
     "medal_history": [
@@ -4128,17 +4106,12 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3235,
-      "😐 NPC": 0.5588
+      "😐 NPC": 0.5455,
+      "💪 人上人": 0.303,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 1592.02,
-        "pct_change": 0.0497,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 1565.81,
@@ -4311,7 +4284,13 @@
         "date": "2026-06-22",
         "close": 1929.25,
         "pct_change": -0.0002,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 1778.46,
+        "pct_change": -0.0782,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -4321,11 +4300,11 @@
     "ticker": "ASX",
     "name": "ASE Technology",
     "theme": "foundry_osat",
-    "close": 43.62,
-    "pct_change": 0.0754,
-    "intraday_amp": 0.0518,
-    "vol_ratio_20": 1.1017,
-    "tier": "👑 顶级",
+    "close": 39.77,
+    "pct_change": -0.0883,
+    "intraday_amp": 0.0303,
+    "vol_ratio_20": 0.9936,
+    "tier": "☠️ 答辩",
     "awards_count": 101,
     "persona": "NPC 系",
     "medal_history": [
@@ -4374,17 +4353,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 5,
-        "gold": 4,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2025-09-09",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 5,
@@ -4394,6 +4362,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-W03",
         "period": "W"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 5,
+        "gold": 4,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2025-09-09",
+        "period": "D"
       },
       {
         "code": "reverse_idx",
@@ -4419,18 +4398,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0588,
-      "😐 NPC": 0.3235,
-      "💩 拉完了": 0.0882,
-      "💪 人上人": 0.5294
+      "💪 人上人": 0.5455,
+      "😐 NPC": 0.303,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.0909,
+      "👑 顶级": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 34.23,
-        "pct_change": 0.0267,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 35.3,
@@ -4603,21 +4577,27 @@
         "date": "2026-06-22",
         "close": 43.62,
         "pct_change": 0.0754,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 39.77,
+        "pct_change": -0.0883,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "AVGO",
     "name": "Broadcom",
     "theme": "compute_core",
-    "close": 392.13,
-    "pct_change": -0.0467,
-    "intraday_amp": 0.0548,
-    "vol_ratio_20": 0.6818,
-    "tier": "💩 拉完了",
+    "close": 380.15,
+    "pct_change": -0.0306,
+    "intraday_amp": 0.0366,
+    "vol_ratio_20": 0.7867,
+    "tier": "💪 人上人",
     "awards_count": 75,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -4711,18 +4691,12 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.6176,
-      "👑 顶级": 0.0882,
-      "💪 人上人": 0.1765,
-      "💩 拉完了": 0.1176
+      "💩 拉完了": 0.0606,
+      "👑 顶级": 0.0909,
+      "💪 人上人": 0.2121,
+      "😐 NPC": 0.6364
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 430.0,
-        "pct_change": 0.0423,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 428.43,
@@ -4895,7 +4869,13 @@
         "date": "2026-06-22",
         "close": 392.13,
         "pct_change": -0.0467,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 380.15,
+        "pct_change": -0.0306,
+        "tier": "💪 人上人"
       }
     ],
     "streak_top_tier_days": 0,
@@ -4905,23 +4885,23 @@
     "ticker": "AXTI",
     "name": "AXT Inc.",
     "theme": "optical",
-    "close": 92.44,
-    "pct_change": 0.0931,
-    "intraday_amp": 0.1346,
-    "vol_ratio_20": 1.2712,
-    "tier": "🔥 夯死了",
-    "awards_count": 760,
+    "close": 77.91,
+    "pct_change": -0.1572,
+    "intraday_amp": 0.13,
+    "vol_ratio_20": 1.3472,
+    "tier": "☠️ 答辩",
+    "awards_count": 763,
     "persona": "财报戏精",
     "medal_history": [
       {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
-        "count": 159,
+        "count": 160,
         "gold": 53,
         "silver": 52,
-        "bronze": 54,
+        "bronze": 55,
         "best_rank": 1,
-        "latest_period_key": "2026-05-06",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -4949,12 +4929,12 @@
       {
         "code": "daily_clown",
         "name": "💩 今日答辩",
-        "count": 99,
+        "count": 100,
         "gold": 41,
-        "silver": 31,
+        "silver": 32,
         "bronze": 27,
         "best_rank": 1,
-        "latest_period_key": "2026-04-23",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -4971,12 +4951,12 @@
       {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
-        "count": 60,
+        "count": 61,
         "gold": 29,
-        "silver": 21,
+        "silver": 22,
         "bronze": 10,
         "best_rank": 1,
-        "latest_period_key": "2026-W19",
+        "latest_period_key": "2026-W26",
         "period": "W"
       },
       {
@@ -5002,14 +4982,14 @@
         "period": "D"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
         "count": 15,
-        "gold": 6,
-        "silver": 5,
+        "gold": 11,
+        "silver": 0,
         "bronze": 4,
         "best_rank": 1,
-        "latest_period_key": "2026-W19",
+        "latest_period_key": "2026-Q2",
         "period": "M"
       },
       {
@@ -5024,14 +5004,14 @@
         "period": "W"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
         "count": 14,
-        "gold": 11,
-        "silver": 0,
-        "bronze": 3,
+        "gold": 6,
+        "silver": 4,
+        "bronze": 4,
         "best_rank": 1,
-        "latest_period_key": "2026-Q2",
+        "latest_period_key": "2026-W19",
         "period": "M"
       },
       {
@@ -5039,8 +5019,8 @@
         "name": "🏅 劳模奖",
         "count": 14,
         "gold": 7,
-        "silver": 4,
-        "bronze": 3,
+        "silver": 5,
+        "bronze": 2,
         "best_rank": 1,
         "latest_period_key": "2026-Q2",
         "period": "M"
@@ -5080,20 +5060,14 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.3235,
-      "😐 NPC": 0.1176,
-      "👑 顶级": 0.1471,
-      "💪 人上人": 0.1765,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.2059
+      "💩 拉完了": 0.0303,
+      "☠️ 答辩": 0.2424,
+      "👑 顶级": 0.1212,
+      "💪 人上人": 0.1818,
+      "😐 NPC": 0.1212,
+      "🔥 夯死了": 0.303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 116.36,
-        "pct_change": 0.0732,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 125.81,
@@ -5266,21 +5240,27 @@
         "date": "2026-06-22",
         "close": 92.44,
         "pct_change": 0.0931,
-        "tier": "🔥 夯死了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 77.91,
+        "pct_change": -0.1572,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 3,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "BE",
     "name": "Bloom Energy",
     "theme": "power_generation",
-    "close": 345.85,
-    "pct_change": 0.0515,
-    "intraday_amp": 0.059,
-    "vol_ratio_20": 1.0367,
-    "tier": "💪 人上人",
+    "close": 321.98,
+    "pct_change": -0.069,
+    "intraday_amp": 0.085,
+    "vol_ratio_20": 0.8883,
+    "tier": "☠️ 答辩",
     "awards_count": 403,
     "persona": "财报戏精",
     "medal_history": [
@@ -5440,20 +5420,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "🔥 夯死了": 0.1176,
-      "😐 NPC": 0.1471,
-      "☠️ 答辩": 0.0882,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3824
+      "💪 人上人": 0.3333,
+      "🔥 夯死了": 0.1212,
+      "😐 NPC": 0.1515,
+      "💩 拉完了": 0.1212,
+      "☠️ 答辩": 0.1212,
+      "👑 顶级": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 261.03,
-        "pct_change": 0.0092,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 283.92,
@@ -5626,7 +5600,13 @@
         "date": "2026-06-22",
         "close": 345.85,
         "pct_change": 0.0515,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 321.98,
+        "pct_change": -0.069,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -5636,11 +5616,11 @@
     "ticker": "CAMT",
     "name": "Camtek",
     "theme": "semicap_metrology",
-    "close": 195.72,
-    "pct_change": 0.0029,
-    "intraday_amp": 0.0525,
-    "vol_ratio_20": 0.9176,
-    "tier": "😐 NPC",
+    "close": 169.39,
+    "pct_change": -0.1345,
+    "intraday_amp": 0.0698,
+    "vol_ratio_20": 1.2674,
+    "tier": "☠️ 答辩",
     "awards_count": 190,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -5755,17 +5735,6 @@
         "period": "W"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2025-04-30",
-        "period": "E"
-      },
-      {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
         "count": 1,
@@ -5775,22 +5744,27 @@
         "best_rank": 3,
         "latest_period_key": "2023-W42",
         "period": "W"
+      },
+      {
+        "code": "earnings_god",
+        "name": "💼 财报封神",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2025-04-30",
+        "period": "E"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2941,
-      "☠️ 答辩": 0.1176,
-      "💩 拉完了": 0.1471,
-      "😐 NPC": 0.3529,
-      "👑 顶级": 0.0882
+      "👑 顶级": 0.0909,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.1515,
+      "😐 NPC": 0.3333,
+      "💪 人上人": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 205.54,
-        "pct_change": 0.0645,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 207.46,
@@ -5963,7 +5937,13 @@
         "date": "2026-06-22",
         "close": 195.72,
         "pct_change": 0.0029,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 169.39,
+        "pct_change": -0.1345,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -5973,23 +5953,23 @@
     "ticker": "CEG",
     "name": "Constellation Energy",
     "theme": "power_generation",
-    "close": 275.53,
-    "pct_change": 0.0054,
-    "intraday_amp": 0.0278,
-    "vol_ratio_20": 0.6333,
-    "tier": "💩 拉完了",
-    "awards_count": 150,
+    "close": 270.26,
+    "pct_change": -0.0191,
+    "intraday_amp": 0.0287,
+    "vol_ratio_20": 0.7721,
+    "tier": "👑 顶级",
+    "awards_count": 148,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
         "code": "npc_god",
         "name": "💤 NPC 之光",
-        "count": 27,
+        "count": 26,
         "gold": 3,
-        "silver": 15,
+        "silver": 14,
         "bronze": 9,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-03-17",
         "period": "D"
       },
       {
@@ -6092,17 +6072,6 @@
         "period": "D"
       },
       {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 2,
-        "best_rank": 3,
-        "latest_period_key": "2026-06",
-        "period": "M"
-      },
-      {
         "code": "earnings_clown",
         "name": "💼 财报现形",
         "count": 1,
@@ -6123,22 +6092,27 @@
         "best_rank": 3,
         "latest_period_key": "2026-05-08",
         "period": "D"
+      },
+      {
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2024-02",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2353,
-      "💩 拉完了": 0.4118,
-      "☠️ 答辩": 0.0294,
-      "😐 NPC": 0.1765,
-      "👑 顶级": 0.1471
+      "👑 顶级": 0.1818,
+      "💩 拉完了": 0.3939,
+      "☠️ 答辩": 0.0303,
+      "😐 NPC": 0.1515,
+      "💪 人上人": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 303.63,
-        "pct_change": -0.0246,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 299.69,
@@ -6311,22 +6285,28 @@
         "date": "2026-06-22",
         "close": 275.53,
         "pct_change": 0.0054,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 270.26,
+        "pct_change": -0.0191,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "CIEN",
     "name": "Ciena",
     "theme": "optical",
-    "close": 460.33,
-    "pct_change": 0.075,
-    "intraday_amp": 0.0721,
-    "vol_ratio_20": 0.8235,
+    "close": 459.85,
+    "pct_change": -0.001,
+    "intraday_amp": 0.0764,
+    "vol_ratio_20": 0.7884,
     "tier": "👑 顶级",
-    "awards_count": 137,
+    "awards_count": 139,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -6352,6 +6332,17 @@
         "period": "D"
       },
       {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 15,
+        "gold": 5,
+        "silver": 2,
+        "bronze": 8,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 14,
@@ -6360,17 +6351,6 @@
         "bronze": 5,
         "best_rank": 1,
         "latest_period_key": "2026-04-13",
-        "period": "D"
-      },
-      {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 14,
-        "gold": 5,
-        "silver": 2,
-        "bronze": 7,
-        "best_rank": 1,
-        "latest_period_key": "2026-03-27",
         "period": "D"
       },
       {
@@ -6398,13 +6378,24 @@
       {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
-        "count": 7,
+        "count": 8,
         "gold": 2,
         "silver": 2,
-        "bronze": 3,
+        "bronze": 4,
         "best_rank": 1,
-        "latest_period_key": "2026-03-27",
+        "latest_period_key": "2026-06-23",
         "period": "D"
+      },
+      {
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 7,
+        "gold": 4,
+        "silver": 2,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2026-06",
+        "period": "W"
       },
       {
         "code": "steady_grind",
@@ -6418,17 +6409,6 @@
         "period": "W"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 6,
-        "gold": 4,
-        "silver": 2,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2024-W37",
-        "period": "W"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 3,
@@ -6438,34 +6418,17 @@
         "best_rank": 2,
         "latest_period_key": "2026-01-08",
         "period": "D"
-      },
-      {
-        "code": "tear_jerker",
-        "name": "😭 我的眼泪奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2059,
-      "☠️ 答辩": 0.1176,
-      "💩 拉完了": 0.1471,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.2647,
-      "👑 顶级": 0.2353
+      "👑 顶级": 0.2424,
+      "☠️ 答辩": 0.1212,
+      "💩 拉完了": 0.1515,
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.2727,
+      "💪 人上人": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 548.11,
-        "pct_change": 0.0174,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 581.47,
@@ -6638,6 +6601,12 @@
         "date": "2026-06-22",
         "close": 460.33,
         "pct_change": 0.075,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 459.85,
+        "pct_change": -0.001,
         "tier": "👑 顶级"
       }
     ],
@@ -6648,11 +6617,11 @@
     "ticker": "CLS",
     "name": "Celestica",
     "theme": "foundry_osat",
-    "close": 376.84,
-    "pct_change": 0.0115,
-    "intraday_amp": 0.0509,
-    "vol_ratio_20": 0.7771,
-    "tier": "😐 NPC",
+    "close": 351.2,
+    "pct_change": -0.068,
+    "intraday_amp": 0.0292,
+    "vol_ratio_20": 0.8355,
+    "tier": "☠️ 答辩",
     "awards_count": 168,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -6768,20 +6737,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.4118,
-      "☠️ 答辩": 0.1176,
-      "💩 拉完了": 0.1471,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.1765,
-      "👑 顶级": 0.1176
+      "👑 顶级": 0.1212,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.1515,
+      "😐 NPC": 0.1515,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.3939
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 375.55,
-        "pct_change": -0.0251,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 380.99,
@@ -6954,7 +6917,13 @@
         "date": "2026-06-22",
         "close": 376.84,
         "pct_change": 0.0115,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 351.2,
+        "pct_change": -0.068,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -6964,12 +6933,12 @@
     "ticker": "COHR",
     "name": "Coherent",
     "theme": "optical",
-    "close": 425.48,
-    "pct_change": 0.0922,
-    "intraday_amp": 0.153,
-    "vol_ratio_20": 1.4323,
-    "tier": "🔥 夯死了",
-    "awards_count": 138,
+    "close": 381.22,
+    "pct_change": -0.104,
+    "intraday_amp": 0.0461,
+    "vol_ratio_20": 0.9364,
+    "tier": "☠️ 答辩",
+    "awards_count": 135,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -6997,12 +6966,12 @@
       {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
-        "count": 21,
-        "gold": 6,
+        "count": 20,
+        "gold": 5,
         "silver": 6,
         "bronze": 9,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-02-27",
         "period": "D"
       },
       {
@@ -7017,17 +6986,6 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 17,
-        "gold": 2,
-        "silver": 6,
-        "bronze": 9,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 17,
@@ -7036,6 +6994,17 @@
         "bronze": 11,
         "best_rank": 1,
         "latest_period_key": "2026-03-09",
+        "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 16,
+        "gold": 2,
+        "silver": 5,
+        "bronze": 9,
+        "best_rank": 1,
+        "latest_period_key": "2026-03-20",
         "period": "D"
       },
       {
@@ -7072,17 +7041,6 @@
         "period": "W"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-W26",
-        "period": "W"
-      },
-      {
         "code": "npc_god",
         "name": "💤 NPC 之光",
         "count": 1,
@@ -7092,23 +7050,27 @@
         "best_rank": 2,
         "latest_period_key": "2024-09-09",
         "period": "D"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2023-W25",
+        "period": "W"
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.2647,
-      "👑 顶级": 0.1176,
-      "💪 人上人": 0.3824,
-      "💩 拉完了": 0.0882,
-      "☠️ 答辩": 0.1176
+      "💩 拉完了": 0.0909,
+      "☠️ 答辩": 0.1515,
+      "👑 顶级": 0.0909,
+      "💪 人上人": 0.3939,
+      "😐 NPC": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 335.26,
-        "pct_change": 0.0503,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 379.69,
@@ -7281,22 +7243,28 @@
         "date": "2026-06-22",
         "close": 425.48,
         "pct_change": 0.0922,
-        "tier": "🔥 夯死了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 381.22,
+        "pct_change": -0.104,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
-    "streak_in_awards_days": 1
+    "streak_top_tier_days": 0,
+    "streak_in_awards_days": 0
   },
   {
     "ticker": "COHU",
     "name": "Cohu",
     "theme": "semicap_metrology",
-    "close": 70.07,
-    "pct_change": 0.0097,
-    "intraday_amp": 0.0313,
-    "vol_ratio_20": 0.525,
-    "tier": "😐 NPC",
-    "awards_count": 69,
+    "close": 64.37,
+    "pct_change": -0.0813,
+    "intraday_amp": 0.041,
+    "vol_ratio_20": 0.8129,
+    "tier": "☠️ 答辩",
+    "awards_count": 68,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -7355,17 +7323,6 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 4,
-        "gold": 1,
-        "silver": 2,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-W15",
-        "period": "W"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 4,
@@ -7386,6 +7343,17 @@
         "best_rank": 2,
         "latest_period_key": "2025-08-01",
         "period": "D"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 3,
+        "gold": 1,
+        "silver": 2,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-W15",
+        "period": "W"
       },
       {
         "code": "tank",
@@ -7411,18 +7379,13 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.0294,
-      "💪 人上人": 0.6176,
-      "👑 顶级": 0.1176,
-      "😐 NPC": 0.2353
+      "😐 NPC": 0.2121,
+      "💪 人上人": 0.6364,
+      "👑 顶级": 0.0909,
+      "💩 拉完了": 0.0303,
+      "☠️ 答辩": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 49.54,
-        "pct_change": 0.0434,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 51.28,
@@ -7595,7 +7558,13 @@
         "date": "2026-06-22",
         "close": 70.07,
         "pct_change": 0.0097,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 64.37,
+        "pct_change": -0.0813,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -7605,12 +7574,12 @@
     "ticker": "CRDO",
     "name": "Credo Technology",
     "theme": "compute_core",
-    "close": 302.52,
-    "pct_change": 0.1129,
-    "intraday_amp": 0.0788,
-    "vol_ratio_20": 0.939,
-    "tier": "🔥 夯死了",
-    "awards_count": 264,
+    "close": 272.01,
+    "pct_change": -0.1009,
+    "intraday_amp": 0.0611,
+    "vol_ratio_20": 1.0242,
+    "tier": "☠️ 答辩",
+    "awards_count": 262,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -7627,12 +7596,12 @@
       {
         "code": "daily_king",
         "name": "🏆 今日股王",
-        "count": 41,
+        "count": 40,
         "gold": 15,
-        "silver": 14,
+        "silver": 13,
         "bronze": 12,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-04-14",
         "period": "D"
       },
       {
@@ -7735,43 +7704,26 @@
         "period": "W"
       },
       {
-        "code": "pillar",
-        "name": "💰 顶梁柱奖",
+        "code": "buy_low",
+        "name": "🧠 人间清醒奖",
         "count": 1,
         "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-22",
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-06-23",
         "period": "D"
-      },
-      {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-06",
-        "period": "M"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2353,
-      "💩 拉完了": 0.1176,
-      "☠️ 答辩": 0.1765,
-      "😐 NPC": 0.1471,
-      "🔥 夯死了": 0.0882,
-      "👑 顶级": 0.2353
+      "👑 顶级": 0.2424,
+      "💩 拉完了": 0.0909,
+      "☠️ 答辩": 0.2121,
+      "😐 NPC": 0.1515,
+      "🔥 夯死了": 0.0606,
+      "💪 人上人": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 188.51,
-        "pct_change": 0.0011,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 210.22,
@@ -7944,22 +7896,28 @@
         "date": "2026-06-22",
         "close": 302.52,
         "pct_change": 0.1129,
-        "tier": "🔥 夯死了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 272.01,
+        "pct_change": -0.1009,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "CRWV",
     "name": "CoreWeave",
     "theme": "gpu_cloud",
-    "close": 111.29,
-    "pct_change": -0.0565,
-    "intraday_amp": 0.1067,
-    "vol_ratio_20": 0.9241,
-    "tier": "☠️ 答辩",
-    "awards_count": 238,
+    "close": 105.72,
+    "pct_change": -0.05,
+    "intraday_amp": 0.0903,
+    "vol_ratio_20": 0.8166,
+    "tier": "👑 顶级",
+    "awards_count": 237,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -7974,17 +7932,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 37,
-        "gold": 12,
-        "silver": 10,
-        "bronze": 15,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 36,
@@ -7993,6 +7940,17 @@
         "bronze": 8,
         "best_rank": 1,
         "latest_period_key": "2026-03-20",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 36,
+        "gold": 12,
+        "silver": 10,
+        "bronze": 14,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-08",
         "period": "D"
       },
       {
@@ -8118,20 +8076,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1471,
-      "☠️ 答辩": 0.2353,
-      "💩 拉完了": 0.1471,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.0882,
-      "👑 顶级": 0.3529
+      "👑 顶级": 0.3939,
+      "☠️ 答辩": 0.2121,
+      "💩 拉完了": 0.1515,
+      "😐 NPC": 0.0606,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 114.15,
-        "pct_change": -0.114,
-        "tier": "☠️ 答辩"
-      },
       {
         "date": "2026-05-11",
         "close": 114.7,
@@ -8304,21 +8256,27 @@
         "date": "2026-06-22",
         "close": 111.29,
         "pct_change": -0.0565,
-        "tier": "☠️ 答辩"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 105.72,
+        "pct_change": -0.05,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "CSCO",
     "name": "Cisco Systems",
     "theme": "networking",
-    "close": 121.53,
-    "pct_change": 0.0166,
-    "intraday_amp": 0.0208,
-    "vol_ratio_20": 0.7759,
-    "tier": "😐 NPC",
+    "close": 121.15,
+    "pct_change": -0.0031,
+    "intraday_amp": 0.0384,
+    "vol_ratio_20": 0.834,
+    "tier": "👑 顶级",
     "awards_count": 172,
     "persona": "NPC 系",
     "medal_history": [
@@ -8423,18 +8381,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2353,
-      "💩 拉完了": 0.2353,
-      "😐 NPC": 0.4706,
-      "👑 顶级": 0.0588
+      "👑 顶级": 0.0909,
+      "💩 拉完了": 0.2424,
+      "😐 NPC": 0.4242,
+      "💪 人上人": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 96.57,
-        "pct_change": 0.0479,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 98.72,
@@ -8607,33 +8559,39 @@
         "date": "2026-06-22",
         "close": 121.53,
         "pct_change": 0.0166,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 121.15,
+        "pct_change": -0.0031,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "DELL",
     "name": "Dell Technologies",
     "theme": "foundry_osat",
-    "close": 418.71,
-    "pct_change": 0.0225,
-    "intraday_amp": 0.0721,
-    "vol_ratio_20": 0.529,
-    "tier": "😐 NPC",
-    "awards_count": 152,
-    "persona": "蒸蒸日上",
+    "close": 427.78,
+    "pct_change": 0.0217,
+    "intraday_amp": 0.105,
+    "vol_ratio_20": 0.4467,
+    "tier": "🔥 夯死了",
+    "awards_count": 159,
+    "persona": "NPC 系",
     "medal_history": [
       {
         "code": "pump_army",
         "name": "📈 暴兵奖",
-        "count": 37,
+        "count": 38,
         "gold": 8,
-        "silver": 15,
+        "silver": 16,
         "bronze": 14,
         "best_rank": 1,
-        "latest_period_key": "2026-03-20",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -8661,12 +8619,23 @@
       {
         "code": "daily_king",
         "name": "🏆 今日股王",
-        "count": 17,
+        "count": 18,
         "gold": 8,
-        "silver": 2,
+        "silver": 3,
         "bronze": 7,
         "best_rank": 1,
-        "latest_period_key": "2026-03-20",
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 14,
+        "gold": 1,
+        "silver": 9,
+        "bronze": 4,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -8681,37 +8650,37 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 13,
-        "gold": 1,
-        "silver": 8,
-        "bronze": 4,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-27",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
-        "count": 9,
+        "count": 10,
         "gold": 4,
-        "silver": 0,
+        "silver": 1,
         "bronze": 5,
         "best_rank": 1,
-        "latest_period_key": "2026-03-20",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
-        "count": 6,
+        "count": 7,
         "gold": 0,
         "silver": 2,
-        "bronze": 4,
+        "bronze": 5,
         "best_rank": 2,
         "latest_period_key": "2026-W14",
         "period": "W"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 4,
+        "gold": 0,
+        "silver": 2,
+        "bronze": 2,
+        "best_rank": 2,
+        "latest_period_key": "2025-W20",
+        "period": "M"
       },
       {
         "code": "roller_coaster",
@@ -8725,30 +8694,36 @@
         "period": "D"
       },
       {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 4,
+        "code": "silver_curse",
+        "name": "🪑 万年老二奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-06",
+        "period": "M"
+      },
+      {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 1,
         "gold": 0,
-        "silver": 2,
-        "bronze": 2,
-        "best_rank": 2,
-        "latest_period_key": "2025-W20",
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-06",
         "period": "M"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2059,
-      "😐 NPC": 0.3235,
-      "💩 拉完了": 0.2353,
-      "💪 人上人": 0.2353
+      "💪 人上人": 0.2424,
+      "😐 NPC": 0.303,
+      "🔥 夯死了": 0.0303,
+      "💩 拉完了": 0.2424,
+      "👑 顶级": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 260.46,
-        "pct_change": 0.1311,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 247.04,
@@ -8921,22 +8896,28 @@
         "date": "2026-06-22",
         "close": 418.71,
         "pct_change": 0.0225,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 427.78,
+        "pct_change": 0.0217,
+        "tier": "🔥 夯死了"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 2,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "DRAM",
     "name": "Roundhill Memory ETF",
     "theme": "memory",
-    "close": 80.72,
-    "pct_change": 0.0523,
-    "intraday_amp": 0.0296,
-    "vol_ratio_20": 1.2562,
-    "tier": "💪 人上人",
-    "awards_count": 10,
+    "close": 69.22,
+    "pct_change": -0.1425,
+    "intraday_amp": 0.0555,
+    "vol_ratio_20": 1.7171,
+    "tier": "☠️ 答辩",
+    "awards_count": 11,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -8982,22 +8963,28 @@
         "best_rank": 3,
         "latest_period_key": "2026-05-08",
         "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1154,
-      "💪 人上人": 0.4231,
-      "👑 顶级": 0.1923,
+      "🔥 夯死了": 0.0769,
       "😐 NPC": 0.1923,
-      "🔥 夯死了": 0.0769
+      "💪 人上人": 0.3846,
+      "👑 顶级": 0.1923,
+      "💩 拉完了": 0.1154,
+      "☠️ 答辩": 0.0385
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 52.8,
-        "pct_change": 0.1343,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 55.08,
@@ -9170,7 +9157,13 @@
         "date": "2026-06-22",
         "close": 80.72,
         "pct_change": 0.0523,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 69.22,
+        "pct_change": -0.1425,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -9180,11 +9173,11 @@
     "ticker": "ENPH",
     "name": "Enphase Energy",
     "theme": "power_generation",
-    "close": 52.41,
-    "pct_change": 0.0025,
-    "intraday_amp": 0.0683,
-    "vol_ratio_20": 0.7362,
-    "tier": "😐 NPC",
+    "close": 47.22,
+    "pct_change": -0.099,
+    "intraday_amp": 0.0798,
+    "vol_ratio_20": 0.802,
+    "tier": "☠️ 答辩",
     "awards_count": 295,
     "persona": "财报戏精",
     "medal_history": [
@@ -9300,19 +9293,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "😐 NPC": 0.2941,
-      "💩 拉完了": 0.2059,
-      "☠️ 答辩": 0.1471,
-      "💪 人上人": 0.2059
+      "💪 人上人": 0.2121,
+      "😐 NPC": 0.2424,
+      "💩 拉完了": 0.2121,
+      "☠️ 答辩": 0.1818,
+      "👑 顶级": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 36.45,
-        "pct_change": 0.0276,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 37.65,
@@ -9485,7 +9472,13 @@
         "date": "2026-06-22",
         "close": 52.41,
         "pct_change": 0.0025,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 47.22,
+        "pct_change": -0.099,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -9495,11 +9488,11 @@
     "ticker": "ENTG",
     "name": "Entegris",
     "theme": "semicap_metrology",
-    "close": 184.0,
-    "pct_change": 0.0293,
-    "intraday_amp": 0.0404,
-    "vol_ratio_20": 1.1746,
-    "tier": "💪 人上人",
+    "close": 168.22,
+    "pct_change": -0.0858,
+    "intraday_amp": 0.0452,
+    "vol_ratio_20": 1.6254,
+    "tier": "☠️ 答辩",
     "awards_count": 58,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -9581,17 +9574,6 @@
         "period": "E"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-02-10",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 2,
@@ -9601,6 +9583,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-01",
         "period": "W"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 2,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 2,
+        "latest_period_key": "2026-02-10",
+        "period": "D"
       },
       {
         "code": "reverse_idx",
@@ -9626,19 +9619,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0588,
-      "😐 NPC": 0.2647,
-      "💩 拉完了": 0.0882,
-      "☠️ 答辩": 0.1176,
-      "💪 人上人": 0.4706
+      "💪 人上人": 0.4242,
+      "😐 NPC": 0.2727,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.0909,
+      "👑 顶级": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 149.11,
-        "pct_change": 0.0098,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 149.15,
@@ -9811,7 +9798,13 @@
         "date": "2026-06-22",
         "close": 184.0,
         "pct_change": 0.0293,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 168.22,
+        "pct_change": -0.0858,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -9821,11 +9814,11 @@
     "ticker": "ETN",
     "name": "Eaton",
     "theme": "datacenter_power_cooling",
-    "close": 435.78,
-    "pct_change": 0.0332,
-    "intraday_amp": 0.0335,
-    "vol_ratio_20": 1.0228,
-    "tier": "💪 人上人",
+    "close": 405.28,
+    "pct_change": -0.07,
+    "intraday_amp": 0.0373,
+    "vol_ratio_20": 0.9736,
+    "tier": "☠️ 答辩",
     "awards_count": 86,
     "persona": "NPC 系",
     "medal_history": [
@@ -9930,19 +9923,13 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.3235,
-      "👑 顶级": 0.0588,
-      "💪 人上人": 0.2647,
-      "☠️ 答辩": 0.0294,
-      "💩 拉完了": 0.3235
+      "💩 拉完了": 0.3333,
+      "☠️ 答辩": 0.0606,
+      "👑 顶级": 0.0606,
+      "💪 人上人": 0.2121,
+      "😐 NPC": 0.3333
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 401.51,
-        "pct_change": 0.0059,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 419.0,
@@ -10115,7 +10102,13 @@
         "date": "2026-06-22",
         "close": 435.78,
         "pct_change": 0.0332,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 405.28,
+        "pct_change": -0.07,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -10125,11 +10118,11 @@
     "ticker": "FN",
     "name": "Fabrinet",
     "theme": "optical",
-    "close": 617.09,
-    "pct_change": 0.0755,
-    "intraday_amp": 0.0935,
-    "vol_ratio_20": 0.7474,
-    "tier": "👑 顶级",
+    "close": 583.55,
+    "pct_change": -0.0544,
+    "intraday_amp": 0.0556,
+    "vol_ratio_20": 0.6999,
+    "tier": "💪 人上人",
     "awards_count": 124,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -10248,28 +10241,21 @@
         "name": "😭 我的眼泪奖",
         "count": 2,
         "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-22",
+        "silver": 0,
+        "bronze": 2,
+        "best_rank": 3,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3824,
-      "☠️ 答辩": 0.1471,
-      "💩 拉完了": 0.0882,
-      "😐 NPC": 0.2353,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.1176
+      "👑 顶级": 0.0909,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.0909,
+      "😐 NPC": 0.2424,
+      "💪 人上人": 0.4242
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 621.28,
-        "pct_change": -0.0077,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 649.53,
@@ -10442,21 +10428,27 @@
         "date": "2026-06-22",
         "close": 617.09,
         "pct_change": 0.0755,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 583.55,
+        "pct_change": -0.0544,
+        "tier": "💪 人上人"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "FORM",
     "name": "FormFactor",
     "theme": "semicap_metrology",
-    "close": 156.66,
-    "pct_change": 0.0475,
-    "intraday_amp": 0.0587,
-    "vol_ratio_20": 0.7899,
-    "tier": "💪 人上人",
+    "close": 142.79,
+    "pct_change": -0.0885,
+    "intraday_amp": 0.0435,
+    "vol_ratio_20": 0.864,
+    "tier": "☠️ 答辩",
     "awards_count": 112,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -10583,20 +10575,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.5,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.1176,
-      "😐 NPC": 0.2059,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.1176
+      "👑 顶级": 0.1212,
+      "💩 拉完了": 0.0303,
+      "☠️ 答辩": 0.1515,
+      "😐 NPC": 0.2121,
+      "💪 人上人": 0.4848
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 147.87,
-        "pct_change": 0.022,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 151.4,
@@ -10769,7 +10754,13 @@
         "date": "2026-06-22",
         "close": 156.66,
         "pct_change": 0.0475,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 142.79,
+        "pct_change": -0.0885,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -10779,11 +10770,11 @@
     "ticker": "GEV",
     "name": "GE Vernova",
     "theme": "power_generation",
-    "close": 1127.59,
-    "pct_change": 0.0161,
-    "intraday_amp": 0.025,
-    "vol_ratio_20": 1.0736,
-    "tier": "😐 NPC",
+    "close": 1034.98,
+    "pct_change": -0.0821,
+    "intraday_amp": 0.0346,
+    "vol_ratio_20": 1.0419,
+    "tier": "☠️ 答辩",
     "awards_count": 114,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -10899,19 +10890,13 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.3235,
-      "👑 顶级": 0.0588,
-      "💪 人上人": 0.3235,
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.2353
+      "💩 拉完了": 0.2424,
+      "☠️ 答辩": 0.0909,
+      "👑 顶级": 0.0606,
+      "💪 人上人": 0.303,
+      "😐 NPC": 0.303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 1040.15,
-        "pct_change": -0.0052,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 1073.08,
@@ -11084,7 +11069,13 @@
         "date": "2026-06-22",
         "close": 1127.59,
         "pct_change": 0.0161,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 1034.98,
+        "pct_change": -0.0821,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -11094,11 +11085,11 @@
     "ticker": "GFS",
     "name": "GlobalFoundries",
     "theme": "foundry_osat",
-    "close": 89.67,
-    "pct_change": 0.0447,
-    "intraday_amp": 0.0311,
-    "vol_ratio_20": 0.6589,
-    "tier": "💪 人上人",
+    "close": 83.39,
+    "pct_change": -0.07,
+    "intraday_amp": 0.0449,
+    "vol_ratio_20": 0.6263,
+    "tier": "☠️ 答辩",
     "awards_count": 114,
     "persona": "NPC 系",
     "medal_history": [
@@ -11203,19 +11194,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1765,
-      "💪 人上人": 0.3235,
-      "👑 顶级": 0.2059,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.2647
+      "😐 NPC": 0.2727,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.2727,
+      "👑 顶级": 0.2121,
+      "💩 拉完了": 0.1818,
+      "☠️ 答辩": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 74.12,
-        "pct_change": 0.045,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 74.99,
@@ -11388,7 +11374,13 @@
         "date": "2026-06-22",
         "close": 89.67,
         "pct_change": 0.0447,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 83.39,
+        "pct_change": -0.07,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -11398,11 +11390,11 @@
     "ticker": "GLW",
     "name": "Corning",
     "theme": "optical",
-    "close": 209.83,
-    "pct_change": 0.0765,
-    "intraday_amp": 0.0837,
-    "vol_ratio_20": 1.1218,
-    "tier": "👑 顶级",
+    "close": 194.07,
+    "pct_change": -0.0751,
+    "intraday_amp": 0.0391,
+    "vol_ratio_20": 1.0819,
+    "tier": "☠️ 答辩",
     "awards_count": 166,
     "persona": "NPC 系",
     "medal_history": [
@@ -11518,19 +11510,13 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.0882,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.2647,
-      "👑 顶级": 0.2353,
-      "😐 NPC": 0.2941
+      "😐 NPC": 0.303,
+      "💪 人上人": 0.2727,
+      "👑 顶级": 0.1818,
+      "☠️ 答辩": 0.1212,
+      "💩 拉完了": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 186.94,
-        "pct_change": 0.0249,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 207.39,
@@ -11703,21 +11689,27 @@
         "date": "2026-06-22",
         "close": 209.83,
         "pct_change": 0.0765,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 194.07,
+        "pct_change": -0.0751,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "GOOG",
     "name": "Alphabet Class C",
     "theme": "software_cloud",
-    "close": 348.78,
-    "pct_change": -0.0508,
-    "intraday_amp": 0.047,
-    "vol_ratio_20": 1.3011,
-    "tier": "☠️ 答辩",
+    "close": 346.08,
+    "pct_change": -0.0077,
+    "intraday_amp": 0.0258,
+    "vol_ratio_20": 0.8618,
+    "tier": "👑 顶级",
     "awards_count": 137,
     "persona": "NPC 系",
     "medal_history": [
@@ -11833,20 +11825,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1176,
-      "😐 NPC": 0.3824,
-      "🔥 夯死了": 0.0294,
-      "☠️ 答辩": 0.0294,
-      "💩 拉完了": 0.2647,
-      "💪 人上人": 0.1765
+      "💪 人上人": 0.1818,
+      "😐 NPC": 0.3939,
+      "🔥 夯死了": 0.0303,
+      "💩 拉完了": 0.2424,
+      "👑 顶级": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 397.05,
-        "pct_change": 0.0044,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 386.77,
@@ -12019,35 +12004,30 @@
         "date": "2026-06-22",
         "close": 348.78,
         "pct_change": -0.0508,
-        "tier": "☠️ 答辩"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 346.08,
+        "pct_change": -0.0077,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "INTC",
     "name": "Intel",
     "theme": "compute_core",
-    "close": 140.94,
-    "pct_change": 0.0519,
-    "intraday_amp": 0.0391,
-    "vol_ratio_20": 0.9258,
+    "close": 132.28,
+    "pct_change": -0.0614,
+    "intraday_amp": 0.0683,
+    "vol_ratio_20": 0.9733,
     "tier": "💪 人上人",
     "awards_count": 206,
     "persona": "NPC 系",
     "medal_history": [
-      {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 41,
-        "gold": 12,
-        "silver": 10,
-        "bronze": 19,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-24",
-        "period": "D"
-      },
       {
         "code": "pump_army",
         "name": "📈 暴兵奖",
@@ -12057,6 +12037,17 @@
         "bronze": 10,
         "best_rank": 1,
         "latest_period_key": "2026-04-08",
+        "period": "D"
+      },
+      {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 41,
+        "gold": 12,
+        "silver": 10,
+        "bronze": 19,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-24",
         "period": "D"
       },
       {
@@ -12149,20 +12140,14 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.1176,
-      "🔥 夯死了": 0.0882,
-      "👑 顶级": 0.3235,
-      "💪 人上人": 0.2647,
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0294
+      "💩 拉完了": 0.1818,
+      "☠️ 答辩": 0.0303,
+      "👑 顶级": 0.3333,
+      "💪 人上人": 0.2727,
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.0909
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 124.92,
-        "pct_change": 0.1396,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 129.44,
@@ -12335,6 +12320,12 @@
         "date": "2026-06-22",
         "close": 140.94,
         "pct_change": 0.0519,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 132.28,
+        "pct_change": -0.0614,
         "tier": "💪 人上人"
       }
     ],
@@ -12345,11 +12336,11 @@
     "ticker": "JBL",
     "name": "Jabil",
     "theme": "foundry_osat",
-    "close": 377.24,
-    "pct_change": 0.0144,
-    "intraday_amp": 0.0457,
-    "vol_ratio_20": 1.1033,
-    "tier": "💪 人上人",
+    "close": 372.99,
+    "pct_change": -0.0113,
+    "intraday_amp": 0.0391,
+    "vol_ratio_20": 1.6423,
+    "tier": "👑 顶级",
     "awards_count": 127,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -12442,17 +12433,6 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 4,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2025-06-17",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 4,
@@ -12462,22 +12442,27 @@
         "best_rank": 1,
         "latest_period_key": "2025-12-17",
         "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 4,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2025-06-17",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0294,
-      "😐 NPC": 0.3824,
-      "☠️ 答辩": 0.0882,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3824
+      "💪 人上人": 0.3333,
+      "😐 NPC": 0.3939,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1212,
+      "👑 顶级": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 355.15,
-        "pct_change": 0.0159,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 365.24,
@@ -12650,21 +12635,27 @@
         "date": "2026-06-22",
         "close": 377.24,
         "pct_change": 0.0144,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 372.99,
+        "pct_change": -0.0113,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "KLAC",
     "name": "KLA",
     "theme": "semicap_metrology",
-    "close": 269.16,
-    "pct_change": 0.037,
-    "intraday_amp": 0.0287,
-    "vol_ratio_20": 0.8359,
-    "tier": "💪 人上人",
+    "close": 244.49,
+    "pct_change": -0.0917,
+    "intraday_amp": 0.0396,
+    "vol_ratio_20": 1.3377,
+    "tier": "☠️ 答辩",
     "awards_count": 44,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -12717,22 +12708,11 @@
         "name": "🪦 反指奖",
         "count": 4,
         "gold": 1,
-        "silver": 0,
-        "bronze": 3,
+        "silver": 2,
+        "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2026-Q2",
         "period": "W"
-      },
-      {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 2,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 2,
-        "best_rank": 3,
-        "latest_period_key": "2025-12-15",
-        "period": "D"
       },
       {
         "code": "earnings_clown",
@@ -12746,6 +12726,17 @@
         "period": "E"
       },
       {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 2,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2,
+        "best_rank": 3,
+        "latest_period_key": "2025-12-15",
+        "period": "D"
+      },
+      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 2,
@@ -12757,17 +12748,6 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2024-10-15",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 1,
@@ -12776,6 +12756,17 @@
         "bronze": 1,
         "best_rank": 3,
         "latest_period_key": "2025-12-15",
+        "period": "D"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2024-10-15",
         "period": "D"
       },
       {
@@ -12791,18 +12782,12 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.4706,
-      "☠️ 答辩": 0.0294,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3824
+      "💪 人上人": 0.3333,
+      "😐 NPC": 0.4848,
+      "☠️ 答辩": 0.0606,
+      "💩 拉完了": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 1869.19,
-        "pct_change": 0.0601,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 184.52,
@@ -12975,7 +12960,13 @@
         "date": "2026-06-22",
         "close": 269.16,
         "pct_change": 0.037,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 244.49,
+        "pct_change": -0.0917,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -12985,12 +12976,12 @@
     "ticker": "KLIC",
     "name": "Kulicke & Soffa Industries",
     "theme": "semicap_metrology",
-    "close": 124.22,
-    "pct_change": 0.0193,
-    "intraday_amp": 0.0624,
-    "vol_ratio_20": 1.8005,
-    "tier": "💪 人上人",
-    "awards_count": 93,
+    "close": 127.1,
+    "pct_change": 0.0232,
+    "intraday_amp": 0.1269,
+    "vol_ratio_20": 2.2296,
+    "tier": "🔥 夯死了",
+    "awards_count": 99,
     "persona": "NPC 系",
     "medal_history": [
       {
@@ -13001,7 +12992,7 @@
         "silver": 10,
         "bronze": 10,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -13018,12 +13009,34 @@
       {
         "code": "daily_king",
         "name": "🏆 今日股王",
-        "count": 8,
-        "gold": 2,
+        "count": 9,
+        "gold": 3,
         "silver": 2,
         "bronze": 4,
         "best_rank": 1,
-        "latest_period_key": "2026-05-07",
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
+        "code": "steady_grind",
+        "name": "🐢 细水长流奖",
+        "count": 7,
+        "gold": 3,
+        "silver": 1,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-W19",
+        "period": "W"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 7,
+        "gold": 2,
+        "silver": 2,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -13038,26 +13051,15 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 6,
-        "gold": 1,
-        "silver": 2,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-07",
-        "period": "D"
-      },
-      {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 5,
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 4,
         "gold": 3,
-        "silver": 0,
-        "bronze": 2,
+        "silver": 1,
+        "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-W19",
-        "period": "W"
+        "latest_period_key": "2026-06-23",
+        "period": "D"
       },
       {
         "code": "roller_coaster",
@@ -13071,15 +13073,15 @@
         "period": "D"
       },
       {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 3,
-        "gold": 2,
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 2,
+        "gold": 1,
         "silver": 1,
         "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-02-05",
-        "period": "D"
+        "latest_period_key": "2025-W47",
+        "period": "W"
       },
       {
         "code": "daily_clown",
@@ -13093,32 +13095,26 @@
         "period": "D"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 2,
-        "gold": 1,
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 1,
+        "gold": 0,
         "silver": 1,
         "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-W47",
-        "period": "W"
+        "best_rank": 2,
+        "latest_period_key": "2026-06",
+        "period": "M"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.0588,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.3824,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.4706
+      "💪 人上人": 0.4242,
+      "😐 NPC": 0.3939,
+      "🔥 夯死了": 0.0606,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.0303,
+      "👑 顶级": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 102.66,
-        "pct_change": 0.046,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 104.28,
@@ -13291,22 +13287,28 @@
         "date": "2026-06-22",
         "close": 124.22,
         "pct_change": 0.0193,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 127.1,
+        "pct_change": 0.0232,
+        "tier": "🔥 夯死了"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 1
   },
   {
     "ticker": "KORU",
     "name": "Direxion Daily MSCI South Korea Bull 3X ETF",
     "theme": "thematic_etf",
-    "close": 1088.62,
-    "pct_change": -0.0019,
-    "intraday_amp": 0.0495,
-    "vol_ratio_20": 0.5683,
-    "tier": "😐 NPC",
-    "awards_count": 296,
+    "close": 700.01,
+    "pct_change": -0.357,
+    "intraday_amp": 0.1137,
+    "vol_ratio_20": 2.129,
+    "tier": "☠️ 答辩",
+    "awards_count": 297,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -13323,12 +13325,12 @@
       {
         "code": "daily_clown",
         "name": "💩 今日答辩",
-        "count": 68,
-        "gold": 26,
+        "count": 69,
+        "gold": 27,
         "silver": 22,
         "bronze": 20,
         "best_rank": 1,
-        "latest_period_key": "2026-04-23",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -13443,20 +13445,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2647,
-      "😐 NPC": 0.0882,
-      "🔥 夯死了": 0.2059,
-      "☠️ 答辩": 0.2059,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.1176
+      "💪 人上人": 0.1212,
+      "😐 NPC": 0.0606,
+      "🔥 夯死了": 0.2121,
+      "☠️ 答辩": 0.2121,
+      "💩 拉完了": 0.1212,
+      "👑 顶级": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 942.18,
-        "pct_change": 0.2261,
-        "tier": "🔥 夯死了"
-      },
       {
         "date": "2026-05-11",
         "close": 983.09,
@@ -13629,21 +13625,27 @@
         "date": "2026-06-22",
         "close": 1088.62,
         "pct_change": -0.0019,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 700.01,
+        "pct_change": -0.357,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
-    "streak_in_awards_days": 0
+    "streak_in_awards_days": 1
   },
   {
     "ticker": "LEU",
     "name": "Centrus Energy",
     "theme": "power_generation",
-    "close": 183.68,
-    "pct_change": -0.0403,
-    "intraday_amp": 0.0592,
-    "vol_ratio_20": 0.9966,
-    "tier": "💩 拉完了",
+    "close": 177.5,
+    "pct_change": -0.0336,
+    "intraday_amp": 0.1033,
+    "vol_ratio_20": 0.983,
+    "tier": "👑 顶级",
     "awards_count": 502,
     "persona": "财报戏精",
     "medal_history": [
@@ -13792,20 +13794,14 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.2353,
-      "💩 拉完了": 0.1765,
-      "💪 人上人": 0.2353,
-      "👑 顶级": 0.1471,
-      "😐 NPC": 0.1471,
-      "🔥 夯死了": 0.0588
+      "😐 NPC": 0.1212,
+      "🔥 夯死了": 0.0606,
+      "💪 人上人": 0.2424,
+      "👑 顶级": 0.1818,
+      "☠️ 答辩": 0.2424,
+      "💩 拉完了": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 207.33,
-        "pct_change": 0.005,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 213.22,
@@ -13978,22 +13974,28 @@
         "date": "2026-06-22",
         "close": 183.68,
         "pct_change": -0.0403,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 177.5,
+        "pct_change": -0.0336,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "LITE",
     "name": "Lumentum",
     "theme": "optical",
-    "close": 893.93,
-    "pct_change": 0.0517,
-    "intraday_amp": 0.0908,
-    "vol_ratio_20": 1.1363,
-    "tier": "👑 顶级",
-    "awards_count": 188,
+    "close": 827.92,
+    "pct_change": -0.0738,
+    "intraday_amp": 0.049,
+    "vol_ratio_20": 0.7194,
+    "tier": "☠️ 答辩",
+    "awards_count": 189,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -14107,6 +14109,17 @@
         "period": "W"
       },
       {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-W12",
+        "period": "W"
+      },
+      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 1,
@@ -14118,15 +14131,15 @@
         "period": "M"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
+        "code": "tear_jerker",
+        "name": "😭 我的眼泪奖",
         "count": 1,
-        "gold": 0,
-        "silver": 1,
+        "gold": 1,
+        "silver": 0,
         "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-W12",
-        "period": "W"
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
       },
       {
         "code": "big_position",
@@ -14141,20 +14154,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2059,
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.2059,
-      "😐 NPC": 0.1176,
-      "🔥 夯死了": 0.0588,
-      "👑 顶级": 0.2647
+      "👑 顶级": 0.2424,
+      "☠️ 答辩": 0.2424,
+      "💩 拉完了": 0.1515,
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.1212,
+      "💪 人上人": 0.2121
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 903.8,
-        "pct_change": 0.0126,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 1053.09,
@@ -14327,21 +14334,27 @@
         "date": "2026-06-22",
         "close": 893.93,
         "pct_change": 0.0517,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 827.92,
+        "pct_change": -0.0738,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
-    "streak_in_awards_days": 0
+    "streak_top_tier_days": 0,
+    "streak_in_awards_days": 2
   },
   {
     "ticker": "LRCX",
     "name": "Lam Research",
     "theme": "semicap_metrology",
-    "close": 409.54,
-    "pct_change": 0.0527,
-    "intraday_amp": 0.0454,
-    "vol_ratio_20": 1.225,
-    "tier": "👑 顶级",
+    "close": 371.33,
+    "pct_change": -0.0933,
+    "intraday_amp": 0.0289,
+    "vol_ratio_20": 1.3214,
+    "tier": "☠️ 答辩",
     "awards_count": 29,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -14435,19 +14448,13 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.0588,
-      "💪 人上人": 0.3235,
-      "👑 顶级": 0.0588,
-      "😐 NPC": 0.4118
+      "😐 NPC": 0.3939,
+      "💪 人上人": 0.3333,
+      "👑 顶级": 0.0303,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 294.05,
-        "pct_change": 0.0263,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 296.05,
@@ -14620,21 +14627,27 @@
         "date": "2026-06-22",
         "close": 409.54,
         "pct_change": 0.0527,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 371.33,
+        "pct_change": -0.0933,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "LSCC",
     "name": "Lattice Semiconductor",
     "theme": "analog_power",
-    "close": 155.27,
-    "pct_change": 0.0101,
-    "intraday_amp": 0.0337,
-    "vol_ratio_20": 1.1212,
-    "tier": "😐 NPC",
+    "close": 144.6,
+    "pct_change": -0.0687,
+    "intraday_amp": 0.0461,
+    "vol_ratio_20": 0.7335,
+    "tier": "☠️ 答辩",
     "awards_count": 78,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -14750,19 +14763,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "😐 NPC": 0.3235,
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.3529
+      "💪 人上人": 0.3636,
+      "😐 NPC": 0.303,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1212,
+      "👑 顶级": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 127.19,
-        "pct_change": 0.0606,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 128.96,
@@ -14935,347 +14942,27 @@
         "date": "2026-06-22",
         "close": 155.27,
         "pct_change": 0.0101,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 144.6,
+        "pct_change": -0.0687,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
-    "ticker": "LSRCY",
-    "name": "Lasertec ADR",
-    "theme": "thematic_etf",
-    "close": 71.71,
-    "pct_change": 0.0059,
-    "intraday_amp": 0.0198,
-    "vol_ratio_20": 0.2999,
-    "tier": "💩 拉完了",
-    "awards_count": 430,
-    "persona": "NPC 系",
-    "medal_history": [
-      {
-        "code": "npc_god",
-        "name": "💤 NPC 之光",
-        "count": 227,
-        "gold": 134,
-        "silver": 60,
-        "bronze": 33,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "pump_army",
-        "name": "📈 暴兵奖",
-        "count": 56,
-        "gold": 25,
-        "silver": 19,
-        "bronze": 12,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-01",
-        "period": "D"
-      },
-      {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 37,
-        "gold": 13,
-        "silver": 15,
-        "bronze": 9,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-02",
-        "period": "D"
-      },
-      {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 32,
-        "gold": 7,
-        "silver": 15,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-06",
-        "period": "D"
-      },
-      {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 28,
-        "gold": 9,
-        "silver": 11,
-        "bronze": 8,
-        "best_rank": 1,
-        "latest_period_key": "2026-03-26",
-        "period": "D"
-      },
-      {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 21,
-        "gold": 4,
-        "silver": 7,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2025-W44",
-        "period": "W"
-      },
-      {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 11,
-        "gold": 4,
-        "silver": 4,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-03-30",
-        "period": "D"
-      },
-      {
-        "code": "steady_grind",
-        "name": "🐢 细水长流奖",
-        "count": 9,
-        "gold": 4,
-        "silver": 5,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-W03",
-        "period": "W"
-      },
-      {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 7,
-        "gold": 0,
-        "silver": 4,
-        "bronze": 3,
-        "best_rank": 2,
-        "latest_period_key": "2026-03-30",
-        "period": "D"
-      },
-      {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2025-04-17",
-        "period": "D"
-      },
-      {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2025-10-30",
-        "period": "E"
-      }
-    ],
-    "tier_distribution": {
-      "😐 NPC": 0.2941,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.0588,
-      "💪 人上人": 0.2941,
-      "💩 拉完了": 0.3235
-    },
-    "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 57.6,
-        "pct_change": 0.0255,
-        "tier": "😐 NPC"
-      },
-      {
-        "date": "2026-05-11",
-        "close": 56.65,
-        "pct_change": -0.0165,
-        "tier": null
-      },
-      {
-        "date": "2026-05-12",
-        "close": 54.4,
-        "pct_change": -0.0397,
-        "tier": null
-      },
-      {
-        "date": "2026-05-13",
-        "close": 54.03,
-        "pct_change": -0.0068,
-        "tier": null
-      },
-      {
-        "date": "2026-05-14",
-        "close": 51.8,
-        "pct_change": -0.0413,
-        "tier": null
-      },
-      {
-        "date": "2026-05-15",
-        "close": 48.99,
-        "pct_change": -0.0542,
-        "tier": null
-      },
-      {
-        "date": "2026-05-18",
-        "close": 48.47,
-        "pct_change": -0.0106,
-        "tier": null
-      },
-      {
-        "date": "2026-05-19",
-        "close": 45.51,
-        "pct_change": -0.0611,
-        "tier": null
-      },
-      {
-        "date": "2026-05-20",
-        "close": 46.42,
-        "pct_change": 0.02,
-        "tier": null
-      },
-      {
-        "date": "2026-05-21",
-        "close": 48.34,
-        "pct_change": 0.0414,
-        "tier": null
-      },
-      {
-        "date": "2026-05-22",
-        "close": 47.96,
-        "pct_change": -0.0079,
-        "tier": null
-      },
-      {
-        "date": "2026-05-26",
-        "close": 53.62,
-        "pct_change": 0.118,
-        "tier": null
-      },
-      {
-        "date": "2026-05-27",
-        "close": 52.35,
-        "pct_change": -0.0237,
-        "tier": null
-      },
-      {
-        "date": "2026-05-28",
-        "close": 51.21,
-        "pct_change": -0.0218,
-        "tier": null
-      },
-      {
-        "date": "2026-05-29",
-        "close": 50.66,
-        "pct_change": -0.0107,
-        "tier": null
-      },
-      {
-        "date": "2026-06-01",
-        "close": 48.8,
-        "pct_change": -0.0367,
-        "tier": null
-      },
-      {
-        "date": "2026-06-02",
-        "close": 50.07,
-        "pct_change": 0.026,
-        "tier": null
-      },
-      {
-        "date": "2026-06-03",
-        "close": 52.52,
-        "pct_change": 0.0489,
-        "tier": null
-      },
-      {
-        "date": "2026-06-04",
-        "close": 53.44,
-        "pct_change": 0.0175,
-        "tier": null
-      },
-      {
-        "date": "2026-06-05",
-        "close": 50.37,
-        "pct_change": -0.0575,
-        "tier": null
-      },
-      {
-        "date": "2026-06-08",
-        "close": 50.57,
-        "pct_change": 0.0041,
-        "tier": null
-      },
-      {
-        "date": "2026-06-09",
-        "close": 49.39,
-        "pct_change": -0.0233,
-        "tier": null
-      },
-      {
-        "date": "2026-06-10",
-        "close": 49.72,
-        "pct_change": 0.0067,
-        "tier": null
-      },
-      {
-        "date": "2026-06-11",
-        "close": 52.79,
-        "pct_change": 0.0617,
-        "tier": null
-      },
-      {
-        "date": "2026-06-12",
-        "close": 56.07,
-        "pct_change": 0.0621,
-        "tier": null
-      },
-      {
-        "date": "2026-06-15",
-        "close": 60.75,
-        "pct_change": 0.0835,
-        "tier": null
-      },
-      {
-        "date": "2026-06-16",
-        "close": 57.19,
-        "pct_change": -0.0586,
-        "tier": null
-      },
-      {
-        "date": "2026-06-17",
-        "close": 65.82,
-        "pct_change": 0.1509,
-        "tier": null
-      },
-      {
-        "date": "2026-06-18",
-        "close": 71.29,
-        "pct_change": 0.0831,
-        "tier": null
-      },
-      {
-        "date": "2026-06-22",
-        "close": 71.71,
-        "pct_change": 0.0059,
-        "tier": "💩 拉完了"
-      }
-    ],
-    "streak_top_tier_days": 0,
-    "streak_in_awards_days": 2
-  },
-  {
     "ticker": "LWLG",
     "name": "Lightwave Logic",
     "theme": "optical",
-    "close": 10.03,
-    "pct_change": 0.0256,
-    "intraday_amp": 0.1288,
-    "vol_ratio_20": 0.7479,
-    "tier": "💪 人上人",
+    "close": 9.26,
+    "pct_change": -0.0768,
+    "intraday_amp": 0.0499,
+    "vol_ratio_20": 0.4942,
+    "tier": "☠️ 答辩",
     "awards_count": 730,
     "persona": "财报戏精",
     "medal_history": [
@@ -15448,29 +15135,23 @@
         "code": "tear_jerker",
         "name": "😭 我的眼泪奖",
         "count": 1,
-        "gold": 1,
-        "silver": 0,
+        "gold": 0,
+        "silver": 1,
         "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "best_rank": 2,
+        "latest_period_key": "2026-06-23",
         "period": "D"
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.2647,
-      "😐 NPC": 0.0588,
-      "👑 顶级": 0.2059,
-      "💪 人上人": 0.1765,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.2353
+      "☠️ 答辩": 0.2727,
+      "💩 拉完了": 0.0606,
+      "👑 顶级": 0.2121,
+      "💪 人上人": 0.1515,
+      "🔥 夯死了": 0.2727,
+      "😐 NPC": 0.0303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 16.43,
-        "pct_change": 0.1079,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 16.86,
@@ -15643,21 +15324,27 @@
         "date": "2026-06-22",
         "close": 10.03,
         "pct_change": 0.0256,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 9.26,
+        "pct_change": -0.0768,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
-    "streak_in_awards_days": 1
+    "streak_in_awards_days": 0
   },
   {
     "ticker": "MCHP",
     "name": "Microchip Technology",
     "theme": "analog_power",
-    "close": 102.71,
-    "pct_change": 0.0295,
-    "intraday_amp": 0.0294,
-    "vol_ratio_20": 0.8373,
-    "tier": "😐 NPC",
+    "close": 93.26,
+    "pct_change": -0.092,
+    "intraday_amp": 0.061,
+    "vol_ratio_20": 1.3203,
+    "tier": "☠️ 答辩",
     "awards_count": 67,
     "persona": "NPC 系",
     "medal_history": [
@@ -15751,19 +15438,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3529,
-      "💩 拉完了": 0.0588,
-      "😐 NPC": 0.4706,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.0882
+      "👑 顶级": 0.0909,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.0606,
+      "😐 NPC": 0.4242,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.3636
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 99.09,
-        "pct_change": -0.0245,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 99.03,
@@ -15936,7 +15618,13 @@
         "date": "2026-06-22",
         "close": 102.71,
         "pct_change": 0.0295,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 93.26,
+        "pct_change": -0.092,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -15946,11 +15634,11 @@
     "ticker": "MOD",
     "name": "Modine Manufacturing",
     "theme": "datacenter_power_cooling",
-    "close": 295.58,
-    "pct_change": -0.006,
-    "intraday_amp": 0.0385,
-    "vol_ratio_20": 0.9058,
-    "tier": "😐 NPC",
+    "close": 277.46,
+    "pct_change": -0.0613,
+    "intraday_amp": 0.0643,
+    "vol_ratio_20": 1.0156,
+    "tier": "💪 人上人",
     "awards_count": 189,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -16066,19 +15754,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3235,
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.0882,
-      "😐 NPC": 0.3235,
-      "👑 顶级": 0.1176
+      "👑 顶级": 0.0909,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1515,
+      "😐 NPC": 0.303,
+      "💪 人上人": 0.3636
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 273.0,
-        "pct_change": 0.0124,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 284.8,
@@ -16251,7 +15933,13 @@
         "date": "2026-06-22",
         "close": 295.58,
         "pct_change": -0.006,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 277.46,
+        "pct_change": -0.0613,
+        "tier": "💪 人上人"
       }
     ],
     "streak_top_tier_days": 0,
@@ -16261,11 +15949,11 @@
     "ticker": "MRVL",
     "name": "Marvell Technology",
     "theme": "compute_core",
-    "close": 307.86,
-    "pct_change": -0.0088,
-    "intraday_amp": 0.0515,
-    "vol_ratio_20": 0.647,
-    "tier": "💩 拉完了",
+    "close": 279.04,
+    "pct_change": -0.0936,
+    "intraday_amp": 0.0477,
+    "vol_ratio_20": 0.6112,
+    "tier": "☠️ 答辩",
     "awards_count": 86,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -16392,19 +16080,12 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2941,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.0588,
-      "😐 NPC": 0.3235,
-      "👑 顶级": 0.2941
+      "👑 顶级": 0.303,
+      "☠️ 答辩": 0.0909,
+      "😐 NPC": 0.303,
+      "💪 人上人": 0.303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 170.13,
-        "pct_change": 0.0632,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 170.84,
@@ -16577,7 +16258,13 @@
         "date": "2026-06-22",
         "close": 307.86,
         "pct_change": -0.0088,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 279.04,
+        "pct_change": -0.0936,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -16587,12 +16274,12 @@
     "ticker": "MU",
     "name": "Micron Technology",
     "theme": "memory",
-    "close": 1211.38,
-    "pct_change": 0.0682,
-    "intraday_amp": 0.0397,
-    "vol_ratio_20": 0.8765,
-    "tier": "👑 顶级",
-    "awards_count": 104,
+    "close": 1051.77,
+    "pct_change": -0.1318,
+    "intraday_amp": 0.0714,
+    "vol_ratio_20": 1.0368,
+    "tier": "☠️ 答辩",
+    "awards_count": 102,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -16607,17 +16294,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 17,
-        "gold": 2,
-        "silver": 6,
-        "bronze": 9,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-01",
-        "period": "D"
-      },
-      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 17,
@@ -16626,6 +16302,17 @@
         "bronze": 10,
         "best_rank": 1,
         "latest_period_key": "2026-03-25",
+        "period": "D"
+      },
+      {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 17,
+        "gold": 2,
+        "silver": 6,
+        "bronze": 9,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-01",
         "period": "D"
       },
       {
@@ -16691,51 +16378,18 @@
         "silver": 1,
         "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "pillar",
-        "name": "💰 顶梁柱奖",
-        "count": 2,
-        "gold": 2,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
         "code": "cash_king",
         "name": "💸 钞能力之王",
         "count": 2,
-        "gold": 2,
-        "silver": 0,
+        "gold": 1,
+        "silver": 1,
         "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "buy_low",
-        "name": "🧠 人间清醒奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2024-02-20",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -16750,32 +16404,59 @@
         "period": "D"
       },
       {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
+        "code": "pillar",
+        "name": "💰 顶梁柱奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
+        "code": "traitor",
+        "name": "🩸 拖后腿奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
         "count": 1,
         "gold": 0,
         "silver": 0,
         "bronze": 1,
         "best_rank": 3,
-        "latest_period_key": "2026-06",
-        "period": "M"
+        "latest_period_key": "2024-02-20",
+        "period": "D"
+      },
+      {
+        "code": "buy_low",
+        "name": "🧠 人间清醒奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-05-08",
+        "period": "D"
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.0588,
-      "😐 NPC": 0.2353,
-      "👑 顶级": 0.2647,
-      "💪 人上人": 0.2647,
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.1176
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.0909,
+      "👑 顶级": 0.2424,
+      "💪 人上人": 0.2727,
+      "😐 NPC": 0.2424,
+      "🔥 夯死了": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 746.81,
-        "pct_change": 0.1549,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 795.33,
@@ -16948,22 +16629,28 @@
         "date": "2026-06-22",
         "close": 1211.38,
         "pct_change": 0.0682,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 1051.77,
+        "pct_change": -0.1318,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 2,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 2
   },
   {
     "ticker": "MX",
     "name": "Magnachip Semiconductor",
     "theme": "analog_power",
-    "close": 5.76,
-    "pct_change": -0.027,
-    "intraday_amp": 0.1166,
-    "vol_ratio_20": 0.5046,
-    "tier": "💩 拉完了",
-    "awards_count": 261,
+    "close": 5.22,
+    "pct_change": -0.0938,
+    "intraday_amp": 0.0868,
+    "vol_ratio_20": 0.3306,
+    "tier": "☠️ 答辩",
+    "awards_count": 260,
     "persona": "NPC 系",
     "medal_history": [
       {
@@ -16991,12 +16678,12 @@
       {
         "code": "oscar",
         "name": "🎭 影帝奖",
-        "count": 31,
+        "count": 30,
         "gold": 9,
-        "silver": 10,
+        "silver": 9,
         "bronze": 12,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-05-06",
         "period": "D"
       },
       {
@@ -17077,17 +16764,6 @@
         "period": "W"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-W18",
-        "period": "W"
-      },
-      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 1,
@@ -17097,6 +16773,17 @@
         "best_rank": 3,
         "latest_period_key": "2026-05",
         "period": "M"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-W18",
+        "period": "W"
       },
       {
         "code": "silver_curse",
@@ -17111,20 +16798,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0882,
-      "💪 人上人": 0.2941,
-      "👑 顶级": 0.2059,
-      "🔥 夯死了": 0.1176,
-      "😐 NPC": 0.1176
+      "🔥 夯死了": 0.1212,
+      "😐 NPC": 0.1212,
+      "💪 人上人": 0.2727,
+      "👑 顶级": 0.2121,
+      "☠️ 答辩": 0.1212,
+      "💩 拉完了": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 4.53,
-        "pct_change": 0.1736,
-        "tier": "🔥 夯死了"
-      },
       {
         "date": "2026-05-11",
         "close": 4.3,
@@ -17297,7 +16978,13 @@
         "date": "2026-06-22",
         "close": 5.76,
         "pct_change": -0.027,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 5.22,
+        "pct_change": -0.0938,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -17307,11 +16994,11 @@
     "ticker": "MXL",
     "name": "MaxLinear",
     "theme": "optical",
-    "close": 96.44,
-    "pct_change": 0.0865,
-    "intraday_amp": 0.1058,
-    "vol_ratio_20": 0.7907,
-    "tier": "👑 顶级",
+    "close": 89.08,
+    "pct_change": -0.0763,
+    "intraday_amp": 0.0902,
+    "vol_ratio_20": 0.6046,
+    "tier": "☠️ 答辩",
     "awards_count": 224,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -17327,17 +17014,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 37,
-        "gold": 11,
-        "silver": 16,
-        "bronze": 10,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
-      },
-      {
         "code": "pump_army",
         "name": "📈 暴兵奖",
         "count": 37,
@@ -17346,6 +17022,17 @@
         "bronze": 10,
         "best_rank": 1,
         "latest_period_key": "2026-04-29",
+        "period": "D"
+      },
+      {
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 37,
+        "gold": 11,
+        "silver": 16,
+        "bronze": 10,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-08",
         "period": "D"
       },
       {
@@ -17438,19 +17125,13 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.2353,
-      "😐 NPC": 0.1765,
-      "👑 顶级": 0.1471,
-      "💪 人上人": 0.3824,
-      "☠️ 答辩": 0.0588
+      "☠️ 答辩": 0.0909,
+      "👑 顶级": 0.1212,
+      "💪 人上人": 0.3636,
+      "😐 NPC": 0.1818,
+      "🔥 夯死了": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 99.83,
-        "pct_change": 0.212,
-        "tier": "🔥 夯死了"
-      },
       {
         "date": "2026-05-11",
         "close": 102.27,
@@ -17623,22 +17304,28 @@
         "date": "2026-06-22",
         "close": 96.44,
         "pct_change": 0.0865,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 89.08,
+        "pct_change": -0.0763,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 3,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "NBIS",
     "name": "Nebius Group",
     "theme": "gpu_cloud",
-    "close": 283.61,
-    "pct_change": -0.0107,
-    "intraday_amp": 0.0762,
-    "vol_ratio_20": 0.7916,
-    "tier": "😐 NPC",
-    "awards_count": 241,
+    "close": 275.25,
+    "pct_change": -0.0295,
+    "intraday_amp": 0.1399,
+    "vol_ratio_20": 1.0039,
+    "tier": "🔥 夯死了",
+    "awards_count": 242,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -17666,12 +17353,12 @@
       {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
-        "count": 37,
+        "count": 38,
         "gold": 12,
-        "silver": 10,
+        "silver": 11,
         "bronze": 15,
         "best_rank": 1,
-        "latest_period_key": "2026-02-27",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -17808,20 +17495,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.1765,
-      "💩 拉完了": 0.2353,
-      "☠️ 答辩": 0.1471,
-      "🔥 夯死了": 0.0588,
-      "😐 NPC": 0.1176,
-      "👑 顶级": 0.2647
+      "👑 顶级": 0.2727,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.2424,
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.0606,
+      "💪 人上人": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 177.05,
-        "pct_change": -0.0418,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 186.1,
@@ -17994,22 +17675,28 @@
         "date": "2026-06-22",
         "close": 283.61,
         "pct_change": -0.0107,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 275.25,
+        "pct_change": -0.0295,
+        "tier": "🔥 夯死了"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "NVDA",
     "name": "NVIDIA",
     "theme": "compute_core",
-    "close": 208.65,
-    "pct_change": -0.0097,
-    "intraday_amp": 0.0298,
-    "vol_ratio_20": 0.6718,
-    "tier": "💩 拉完了",
-    "awards_count": 81,
+    "close": 200.04,
+    "pct_change": -0.0413,
+    "intraday_amp": 0.0181,
+    "vol_ratio_20": 0.8909,
+    "tier": "💪 人上人",
+    "awards_count": 80,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -18037,12 +17724,12 @@
       {
         "code": "npc_god",
         "name": "💤 NPC 之光",
-        "count": 11,
+        "count": 10,
         "gold": 4,
         "silver": 5,
-        "bronze": 2,
+        "bronze": 1,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-04-09",
         "period": "D"
       },
       {
@@ -18101,6 +17788,17 @@
         "period": "W"
       },
       {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2024-03-08",
+        "period": "D"
+      },
+      {
         "code": "earnings_clown",
         "name": "💼 财报现形",
         "count": 1,
@@ -18121,32 +17819,15 @@
         "best_rank": 1,
         "latest_period_key": "2023-08-24",
         "period": "D"
-      },
-      {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2024-03-08",
-        "period": "D"
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.4412,
-      "👑 顶级": 0.1176,
-      "💪 人上人": 0.2353,
-      "💩 拉完了": 0.2059
+      "💩 拉完了": 0.1515,
+      "👑 顶级": 0.1212,
+      "💪 人上人": 0.2727,
+      "😐 NPC": 0.4545
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 215.2,
-        "pct_change": 0.0175,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 219.44,
@@ -18319,7 +18000,13 @@
         "date": "2026-06-22",
         "close": 208.65,
         "pct_change": -0.0097,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 200.04,
+        "pct_change": -0.0413,
+        "tier": "💪 人上人"
       }
     ],
     "streak_top_tier_days": 0,
@@ -18329,11 +18016,11 @@
     "ticker": "NVMI",
     "name": "Nova",
     "theme": "semicap_metrology",
-    "close": 583.1,
-    "pct_change": 0.0135,
-    "intraday_amp": 0.0418,
-    "vol_ratio_20": 0.8447,
-    "tier": "😐 NPC",
+    "close": 527.88,
+    "pct_change": -0.0947,
+    "intraday_amp": 0.0398,
+    "vol_ratio_20": 1.4458,
+    "tier": "☠️ 答辩",
     "awards_count": 112,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -18460,18 +18147,12 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.3824,
-      "☠️ 答辩": 0.1176,
-      "💩 拉完了": 0.1765,
-      "💪 人上人": 0.3235
+      "💪 人上人": 0.303,
+      "😐 NPC": 0.3636,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 521.16,
-        "pct_change": 0.0329,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 526.01,
@@ -18644,7 +18325,13 @@
         "date": "2026-06-22",
         "close": 583.1,
         "pct_change": 0.0135,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 527.88,
+        "pct_change": -0.0947,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -18654,11 +18341,11 @@
     "ticker": "NVT",
     "name": "nVent Electric",
     "theme": "datacenter_power_cooling",
-    "close": 184.34,
-    "pct_change": 0.0414,
-    "intraday_amp": 0.0458,
-    "vol_ratio_20": 1.1704,
-    "tier": "💪 人上人",
+    "close": 168.37,
+    "pct_change": -0.0866,
+    "intraday_amp": 0.0384,
+    "vol_ratio_20": 1.2012,
+    "tier": "☠️ 答辩",
     "awards_count": 82,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -18752,19 +18439,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3235,
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0294,
-      "😐 NPC": 0.4118,
-      "👑 顶级": 0.0588
+      "👑 顶级": 0.0606,
+      "☠️ 答辩": 0.0606,
+      "💩 拉完了": 0.1818,
+      "😐 NPC": 0.4242,
+      "💪 人上人": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 169.95,
-        "pct_change": 0.0193,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 173.39,
@@ -18937,7 +18618,13 @@
         "date": "2026-06-22",
         "close": 184.34,
         "pct_change": 0.0414,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 168.37,
+        "pct_change": -0.0866,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -18947,11 +18634,11 @@
     "ticker": "NVTS",
     "name": "Navitas Semiconductor",
     "theme": "analog_power",
-    "close": 23.7,
-    "pct_change": -0.0133,
-    "intraday_amp": 0.0691,
-    "vol_ratio_20": 0.7548,
-    "tier": "😐 NPC",
+    "close": 21.4,
+    "pct_change": -0.097,
+    "intraday_amp": 0.1131,
+    "vol_ratio_20": 0.6135,
+    "tier": "☠️ 答辩",
     "awards_count": 549,
     "persona": "财报戏精",
     "medal_history": [
@@ -19077,17 +18764,6 @@
         "period": "M"
       },
       {
-        "code": "npc_god",
-        "name": "💤 NPC 之光",
-        "count": 2,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2025-04-10",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 2,
@@ -19097,6 +18773,17 @@
         "best_rank": 2,
         "latest_period_key": "2025-W14",
         "period": "W"
+      },
+      {
+        "code": "npc_god",
+        "name": "💤 NPC 之光",
+        "count": 2,
+        "gold": 0,
+        "silver": 2,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2025-04-10",
+        "period": "D"
       },
       {
         "code": "earnings_clown",
@@ -19111,20 +18798,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2059,
-      "🔥 夯死了": 0.1471,
-      "😐 NPC": 0.1176,
-      "☠️ 答辩": 0.1765,
-      "💩 拉完了": 0.1176,
-      "💪 人上人": 0.2353
+      "💪 人上人": 0.2424,
+      "🔥 夯死了": 0.1515,
+      "😐 NPC": 0.0606,
+      "💩 拉完了": 0.1212,
+      "☠️ 答辩": 0.2121,
+      "👑 顶级": 0.2121
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 18.2,
-        "pct_change": 0.1526,
-        "tier": "🔥 夯死了"
-      },
       {
         "date": "2026-05-11",
         "close": 22.65,
@@ -19297,7 +18978,13 @@
         "date": "2026-06-22",
         "close": 23.7,
         "pct_change": -0.0133,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 21.4,
+        "pct_change": -0.097,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -19307,11 +18994,11 @@
     "ticker": "NXPI",
     "name": "NXP Semiconductors",
     "theme": "analog_power",
-    "close": 323.24,
-    "pct_change": 0.0318,
-    "intraday_amp": 0.0367,
-    "vol_ratio_20": 0.955,
-    "tier": "💪 人上人",
+    "close": 299.94,
+    "pct_change": -0.0721,
+    "intraday_amp": 0.0404,
+    "vol_ratio_20": 1.3991,
+    "tier": "☠️ 答辩",
     "awards_count": 56,
     "persona": "NPC 系",
     "medal_history": [
@@ -19416,19 +19103,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2353,
-      "💩 拉完了": 0.1471,
-      "🔥 夯死了": 0.0588,
-      "😐 NPC": 0.5,
-      "👑 顶级": 0.0588
+      "👑 顶级": 0.0606,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.1515,
+      "🔥 夯死了": 0.0606,
+      "😐 NPC": 0.4848,
+      "💪 人上人": 0.2121
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 294.75,
-        "pct_change": 0.0156,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 305.99,
@@ -19601,7 +19283,13 @@
         "date": "2026-06-22",
         "close": 323.24,
         "pct_change": 0.0318,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 299.94,
+        "pct_change": -0.0721,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -19611,11 +19299,11 @@
     "ticker": "OKLO",
     "name": "Oklo",
     "theme": "power_generation",
-    "close": 58.4,
-    "pct_change": -0.0453,
-    "intraday_amp": 0.043,
-    "vol_ratio_20": 0.5819,
-    "tier": "💩 拉完了",
+    "close": 57.19,
+    "pct_change": -0.0207,
+    "intraday_amp": 0.1012,
+    "vol_ratio_20": 0.6725,
+    "tier": "👑 顶级",
     "awards_count": 880,
     "persona": "财报戏精",
     "medal_history": [
@@ -19775,20 +19463,14 @@
       }
     ],
     "tier_distribution": {
-      "☠️ 答辩": 0.2059,
-      "💩 拉完了": 0.2353,
-      "💪 人上人": 0.2353,
-      "👑 顶级": 0.1471,
-      "🔥 夯死了": 0.1176,
-      "😐 NPC": 0.0588
+      "😐 NPC": 0.0606,
+      "🔥 夯死了": 0.1212,
+      "💪 人上人": 0.2424,
+      "👑 顶级": 0.1818,
+      "💩 拉完了": 0.1818,
+      "☠️ 答辩": 0.2121
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 72.51,
-        "pct_change": 0.0095,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 78.13,
@@ -19961,22 +19643,28 @@
         "date": "2026-06-22",
         "close": 58.4,
         "pct_change": -0.0453,
-        "tier": "💩 拉完了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 57.19,
+        "pct_change": -0.0207,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "ORCL",
     "name": "Oracle",
     "theme": "software_cloud",
-    "close": 175.07,
-    "pct_change": -0.05,
-    "intraday_amp": 0.0552,
-    "vol_ratio_20": 0.8391,
-    "tier": "☠️ 答辩",
-    "awards_count": 182,
+    "close": 165.16,
+    "pct_change": -0.0566,
+    "intraday_amp": 0.0555,
+    "vol_ratio_20": 1.1292,
+    "tier": "💪 人上人",
+    "awards_count": 180,
     "persona": "NPC 系",
     "medal_history": [
       {
@@ -20048,12 +19736,12 @@
       {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
-        "count": 8,
+        "count": 7,
         "gold": 3,
-        "silver": 5,
+        "silver": 4,
         "bronze": 0,
         "best_rank": 1,
-        "latest_period_key": "2026-06",
+        "latest_period_key": "2025-W43",
         "period": "W"
       },
       {
@@ -20088,34 +19776,17 @@
         "best_rank": 2,
         "latest_period_key": "2024-09-13",
         "period": "D"
-      },
-      {
-        "code": "traitor",
-        "name": "🩸 拖后腿奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2353,
-      "😐 NPC": 0.2647,
-      "🔥 夯死了": 0.0294,
-      "☠️ 答辩": 0.0588,
-      "💩 拉完了": 0.2941,
-      "💪 人上人": 0.1176
+      "💪 人上人": 0.1515,
+      "😐 NPC": 0.2727,
+      "🔥 夯死了": 0.0303,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.2727,
+      "👑 顶级": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 195.95,
-        "pct_change": 0.007,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 193.84,
@@ -20288,7 +19959,13 @@
         "date": "2026-06-22",
         "close": 175.07,
         "pct_change": -0.05,
-        "tier": "☠️ 答辩"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 165.16,
+        "pct_change": -0.0566,
+        "tier": "💪 人上人"
       }
     ],
     "streak_top_tier_days": 0,
@@ -20298,23 +19975,23 @@
     "ticker": "PLAB",
     "name": "Photronics",
     "theme": "semicap_metrology",
-    "close": 34.06,
-    "pct_change": 0.0128,
-    "intraday_amp": 0.0449,
-    "vol_ratio_20": 0.4832,
-    "tier": "😐 NPC",
-    "awards_count": 128,
+    "close": 31.55,
+    "pct_change": -0.0737,
+    "intraday_amp": 0.0401,
+    "vol_ratio_20": 0.4729,
+    "tier": "☠️ 答辩",
+    "awards_count": 129,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
         "code": "npc_god",
         "name": "💤 NPC 之光",
-        "count": 28,
+        "count": 29,
         "gold": 9,
         "silver": 14,
-        "bronze": 5,
+        "bronze": 6,
         "best_rank": 1,
-        "latest_period_key": "2026-05-05",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -20384,17 +20061,6 @@
         "period": "D"
       },
       {
-        "code": "tank",
-        "name": "🛡️ 抗揍奖",
-        "count": 6,
-        "gold": 0,
-        "silver": 3,
-        "bronze": 3,
-        "best_rank": 2,
-        "latest_period_key": "2025-07-01",
-        "period": "D"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 6,
@@ -20404,6 +20070,17 @@
         "best_rank": 2,
         "latest_period_key": "2026-W17",
         "period": "M"
+      },
+      {
+        "code": "tank",
+        "name": "🛡️ 抗揍奖",
+        "count": 6,
+        "gold": 0,
+        "silver": 3,
+        "bronze": 3,
+        "best_rank": 2,
+        "latest_period_key": "2025-07-01",
+        "period": "D"
       },
       {
         "code": "gambler",
@@ -20429,19 +20106,13 @@
       }
     ],
     "tier_distribution": {
-      "😐 NPC": 0.4118,
-      "👑 顶级": 0.0588,
-      "💪 人上人": 0.3824,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.0882
+      "💩 拉完了": 0.0606,
+      "☠️ 答辩": 0.1212,
+      "👑 顶级": 0.0303,
+      "💪 人上人": 0.3939,
+      "😐 NPC": 0.3939
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 53.64,
-        "pct_change": 0.0651,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 54.96,
@@ -20614,7 +20285,13 @@
         "date": "2026-06-22",
         "close": 34.06,
         "pct_change": 0.0128,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 31.55,
+        "pct_change": -0.0737,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -20624,12 +20301,12 @@
     "ticker": "POET",
     "name": "POET Technologies",
     "theme": "optical",
-    "close": 12.09,
-    "pct_change": -0.0049,
-    "intraday_amp": 0.0807,
-    "vol_ratio_20": 0.4994,
-    "tier": "😐 NPC",
-    "awards_count": 909,
+    "close": 10.73,
+    "pct_change": -0.1125,
+    "intraday_amp": 0.091,
+    "vol_ratio_20": 0.5322,
+    "tier": "☠️ 答辩",
+    "awards_count": 910,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -20690,10 +20367,10 @@
       {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
-        "count": 77,
+        "count": 78,
         "gold": 28,
         "silver": 22,
-        "bronze": 27,
+        "bronze": 28,
         "best_rank": 1,
         "latest_period_key": "2026-W19",
         "period": "W"
@@ -20736,8 +20413,8 @@
         "name": "🏅 劳模奖",
         "count": 20,
         "gold": 7,
-        "silver": 10,
-        "bronze": 3,
+        "silver": 9,
+        "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2026-Q2",
         "period": "M"
@@ -20788,20 +20465,14 @@
       }
     ],
     "tier_distribution": {
-      "🔥 夯死了": 0.2353,
-      "😐 NPC": 0.1471,
-      "👑 顶级": 0.2647,
-      "💪 人上人": 0.0588,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.2353
+      "💩 拉完了": 0.0606,
+      "☠️ 答辩": 0.2424,
+      "👑 顶级": 0.2727,
+      "💪 人上人": 0.0606,
+      "🔥 夯死了": 0.2424,
+      "😐 NPC": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 10.95,
-        "pct_change": 0.143,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 13.9,
@@ -20974,7 +20645,13 @@
         "date": "2026-06-22",
         "close": 12.09,
         "pct_change": -0.0049,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 10.73,
+        "pct_change": -0.1125,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -20984,11 +20661,11 @@
     "ticker": "QCOM",
     "name": "Qualcomm",
     "theme": "compute_core",
-    "close": 221.9,
-    "pct_change": -0.0186,
-    "intraday_amp": 0.0794,
-    "vol_ratio_20": 0.8133,
-    "tier": "😐 NPC",
+    "close": 204.13,
+    "pct_change": -0.0801,
+    "intraday_amp": 0.0484,
+    "vol_ratio_20": 1.0706,
+    "tier": "☠️ 答辩",
     "awards_count": 76,
     "persona": "NPC 系",
     "medal_history": [
@@ -21048,17 +20725,6 @@
         "period": "D"
       },
       {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 3,
-        "gold": 2,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-07",
-        "period": "D"
-      },
-      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 3,
@@ -21068,6 +20734,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-W05",
         "period": "W"
+      },
+      {
+        "code": "roller_coaster",
+        "name": "🎢 过山车之王",
+        "count": 3,
+        "gold": 2,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-07",
+        "period": "D"
       },
       {
         "code": "comeback",
@@ -21115,18 +20792,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "🔥 夯死了": 0.1471,
-      "😐 NPC": 0.4412,
-      "💩 拉完了": 0.2647
+      "😐 NPC": 0.4242,
+      "🔥 夯死了": 0.1515,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.2424,
+      "👑 顶级": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 219.09,
-        "pct_change": 0.0817,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 237.53,
@@ -21299,7 +20971,13 @@
         "date": "2026-06-22",
         "close": 221.9,
         "pct_change": -0.0186,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 204.13,
+        "pct_change": -0.0801,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -21309,22 +20987,16 @@
     "ticker": "QQQ",
     "name": "QQQ",
     "theme": null,
-    "close": 737.95,
-    "pct_change": -0.0036,
-    "intraday_amp": 0.0149,
-    "vol_ratio_20": 0.8419,
+    "close": 713.65,
+    "pct_change": -0.0329,
+    "intraday_amp": 0.0156,
+    "vol_ratio_20": 1.0386,
     "tier": null,
     "awards_count": 0,
     "persona": null,
     "medal_history": [],
     "tier_distribution": {},
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 711.23,
-        "pct_change": 0.0234,
-        "tier": null
-      },
       {
         "date": "2026-05-11",
         "close": 713.29,
@@ -21498,6 +21170,12 @@
         "close": 737.95,
         "pct_change": -0.0036,
         "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 713.65,
+        "pct_change": -0.0329,
+        "tier": null
       }
     ],
     "streak_top_tier_days": 0,
@@ -21507,11 +21185,11 @@
     "ticker": "RGTI",
     "name": "Rigetti Computing",
     "theme": "quantum",
-    "close": 21.38,
-    "pct_change": 0.0009,
-    "intraday_amp": 0.0969,
-    "vol_ratio_20": 0.6215,
-    "tier": "😐 NPC",
+    "close": 21.28,
+    "pct_change": -0.0047,
+    "intraday_amp": 0.109,
+    "vol_ratio_20": 0.8853,
+    "tier": "🔥 夯死了",
     "awards_count": 1234,
     "persona": "财报戏精",
     "medal_history": [
@@ -21671,20 +21349,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "😐 NPC": 0.2353,
-      "🔥 夯死了": 0.0588,
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.1176,
-      "💪 人上人": 0.2941
+      "💪 人上人": 0.303,
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.1818,
+      "☠️ 答辩": 0.1212,
+      "💩 拉完了": 0.1515,
+      "👑 顶级": 0.1515
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 18.94,
-        "pct_change": 0.0327,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 20.51,
@@ -21857,21 +21529,27 @@
         "date": "2026-06-22",
         "close": 21.38,
         "pct_change": 0.0009,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 21.28,
+        "pct_change": -0.0047,
+        "tier": "🔥 夯死了"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "RMBS",
     "name": "Rambus",
     "theme": "memory",
-    "close": 140.35,
-    "pct_change": -0.0058,
-    "intraday_amp": 0.0813,
-    "vol_ratio_20": 0.8832,
-    "tier": "😐 NPC",
+    "close": 128.21,
+    "pct_change": -0.0865,
+    "intraday_amp": 0.0488,
+    "vol_ratio_20": 1.2954,
+    "tier": "☠️ 答辩",
     "awards_count": 101,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -21976,19 +21654,13 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2941,
-      "😐 NPC": 0.2941,
-      "💩 拉完了": 0.0882,
-      "☠️ 答辩": 0.0882,
-      "💪 人上人": 0.2353
+      "💪 人上人": 0.2424,
+      "😐 NPC": 0.2727,
+      "💩 拉完了": 0.0606,
+      "☠️ 答辩": 0.1212,
+      "👑 顶级": 0.303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 129.24,
-        "pct_change": 0.0209,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 134.51,
@@ -22161,7 +21833,13 @@
         "date": "2026-06-22",
         "close": 140.35,
         "pct_change": -0.0058,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 128.21,
+        "pct_change": -0.0865,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -22171,10 +21849,10 @@
     "ticker": "SIMO",
     "name": "Silicon Motion",
     "theme": "memory",
-    "close": 336.9,
-    "pct_change": 0.0474,
-    "intraday_amp": 0.0801,
-    "vol_ratio_20": 0.964,
+    "close": 319.0,
+    "pct_change": -0.0531,
+    "intraday_amp": 0.0558,
+    "vol_ratio_20": 0.7168,
     "tier": "💪 人上人",
     "awards_count": 196,
     "persona": "NPC 系",
@@ -22302,20 +21980,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1765,
-      "🔥 夯死了": 0.1176,
-      "😐 NPC": 0.2059,
-      "☠️ 答辩": 0.0294,
-      "💩 拉完了": 0.1471,
-      "💪 人上人": 0.3235
+      "💪 人上人": 0.3333,
+      "😐 NPC": 0.2121,
+      "🔥 夯死了": 0.1212,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.1212,
+      "👑 顶级": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 253.59,
-        "pct_change": 0.0448,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 262.05,
@@ -22488,312 +22160,13 @@
         "date": "2026-06-22",
         "close": 336.9,
         "pct_change": 0.0474,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 319.0,
+        "pct_change": -0.0531,
         "tier": "💪 人上人"
-      }
-    ],
-    "streak_top_tier_days": 0,
-    "streak_in_awards_days": 0
-  },
-  {
-    "ticker": "SIVEF",
-    "name": "Sivers Semiconductors",
-    "theme": "optical",
-    "close": 10.05,
-    "pct_change": -0.0069,
-    "intraday_amp": 0.0642,
-    "vol_ratio_20": 0.1127,
-    "tier": "💩 拉完了",
-    "awards_count": 64,
-    "persona": "财报戏精",
-    "medal_history": [
-      {
-        "code": "roller_coaster",
-        "name": "🎢 过山车之王",
-        "count": 16,
-        "gold": 6,
-        "silver": 7,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-04-30",
-        "period": "D"
-      },
-      {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 11,
-        "gold": 4,
-        "silver": 5,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-05",
-        "period": "D"
-      },
-      {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 8,
-        "gold": 2,
-        "silver": 3,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2026-W18",
-        "period": "W"
-      },
-      {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 7,
-        "gold": 4,
-        "silver": 1,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
-      },
-      {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 7,
-        "gold": 4,
-        "silver": 2,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-04",
-        "period": "D"
-      },
-      {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 7,
-        "gold": 2,
-        "silver": 3,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-04",
-        "period": "D"
-      },
-      {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 4,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 2,
-        "best_rank": 2,
-        "latest_period_key": "2026-W19",
-        "period": "W"
-      },
-      {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-Q2",
-        "period": "M"
-      },
-      {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 2,
-        "gold": 2,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-Q2",
-        "period": "M"
-      }
-    ],
-    "tier_distribution": {
-      "👑 顶级": 0.1176,
-      "😐 NPC": 0.0882,
-      "🔥 夯死了": 0.2941,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.3235,
-      "💪 人上人": 0.1176
-    },
-    "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 4.8,
-        "pct_change": -0.0541,
-        "tier": "☠️ 答辩"
-      },
-      {
-        "date": "2026-05-11",
-        "close": 5.59,
-        "pct_change": 0.1634,
-        "tier": null
-      },
-      {
-        "date": "2026-05-12",
-        "close": 4.82,
-        "pct_change": -0.1377,
-        "tier": null
-      },
-      {
-        "date": "2026-05-13",
-        "close": 5.86,
-        "pct_change": 0.2162,
-        "tier": null
-      },
-      {
-        "date": "2026-05-14",
-        "close": 6.38,
-        "pct_change": 0.0884,
-        "tier": null
-      },
-      {
-        "date": "2026-05-15",
-        "close": 5.95,
-        "pct_change": -0.0674,
-        "tier": null
-      },
-      {
-        "date": "2026-05-18",
-        "close": 5.02,
-        "pct_change": -0.156,
-        "tier": null
-      },
-      {
-        "date": "2026-05-19",
-        "close": 5.13,
-        "pct_change": 0.0215,
-        "tier": null
-      },
-      {
-        "date": "2026-05-20",
-        "close": 5.8,
-        "pct_change": 0.1306,
-        "tier": null
-      },
-      {
-        "date": "2026-05-21",
-        "close": 6.3,
-        "pct_change": 0.0862,
-        "tier": null
-      },
-      {
-        "date": "2026-05-22",
-        "close": 7.42,
-        "pct_change": 0.1778,
-        "tier": null
-      },
-      {
-        "date": "2026-05-26",
-        "close": 9.4,
-        "pct_change": 0.2668,
-        "tier": null
-      },
-      {
-        "date": "2026-05-27",
-        "close": 8.43,
-        "pct_change": -0.1032,
-        "tier": null
-      },
-      {
-        "date": "2026-05-28",
-        "close": 7.71,
-        "pct_change": -0.0854,
-        "tier": null
-      },
-      {
-        "date": "2026-05-29",
-        "close": 7.33,
-        "pct_change": -0.0493,
-        "tier": null
-      },
-      {
-        "date": "2026-06-01",
-        "close": 6.65,
-        "pct_change": -0.0928,
-        "tier": null
-      },
-      {
-        "date": "2026-06-02",
-        "close": 9.9,
-        "pct_change": 0.4887,
-        "tier": null
-      },
-      {
-        "date": "2026-06-03",
-        "close": 9.4,
-        "pct_change": -0.05,
-        "tier": null
-      },
-      {
-        "date": "2026-06-04",
-        "close": 9.29,
-        "pct_change": -0.0122,
-        "tier": null
-      },
-      {
-        "date": "2026-06-05",
-        "close": 7.77,
-        "pct_change": -0.1636,
-        "tier": null
-      },
-      {
-        "date": "2026-06-08",
-        "close": 9.16,
-        "pct_change": 0.1789,
-        "tier": null
-      },
-      {
-        "date": "2026-06-09",
-        "close": 8.39,
-        "pct_change": -0.0841,
-        "tier": null
-      },
-      {
-        "date": "2026-06-10",
-        "close": 7.95,
-        "pct_change": -0.0525,
-        "tier": null
-      },
-      {
-        "date": "2026-06-11",
-        "close": 8.91,
-        "pct_change": 0.1208,
-        "tier": null
-      },
-      {
-        "date": "2026-06-12",
-        "close": 9.6,
-        "pct_change": 0.0774,
-        "tier": null
-      },
-      {
-        "date": "2026-06-15",
-        "close": 9.63,
-        "pct_change": 0.0031,
-        "tier": null
-      },
-      {
-        "date": "2026-06-16",
-        "close": 9.84,
-        "pct_change": 0.0222,
-        "tier": null
-      },
-      {
-        "date": "2026-06-17",
-        "close": 10.49,
-        "pct_change": 0.0656,
-        "tier": null
-      },
-      {
-        "date": "2026-06-18",
-        "close": 10.12,
-        "pct_change": -0.0353,
-        "tier": null
-      },
-      {
-        "date": "2026-06-22",
-        "close": 10.05,
-        "pct_change": -0.0069,
-        "tier": "💩 拉完了"
       }
     ],
     "streak_top_tier_days": 0,
@@ -22803,23 +22176,23 @@
     "ticker": "SMCI",
     "name": "Super Micro Computer",
     "theme": "foundry_osat",
-    "close": 35.46,
-    "pct_change": 0.1566,
-    "intraday_amp": 0.1471,
-    "vol_ratio_20": 1.6616,
-    "tier": "🔥 夯死了",
-    "awards_count": 440,
+    "close": 33.32,
+    "pct_change": -0.0603,
+    "intraday_amp": 0.0453,
+    "vol_ratio_20": 0.7333,
+    "tier": "💪 人上人",
+    "awards_count": 436,
     "persona": "财报戏精",
     "medal_history": [
       {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
-        "count": 75,
+        "count": 74,
         "gold": 20,
         "silver": 24,
-        "bronze": 31,
+        "bronze": 30,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-03-23",
         "period": "D"
       },
       {
@@ -22836,12 +22209,12 @@
       {
         "code": "daily_king",
         "name": "🏆 今日股王",
-        "count": 67,
-        "gold": 25,
+        "count": 66,
+        "gold": 24,
         "silver": 23,
         "bronze": 19,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-05-06",
         "period": "D"
       },
       {
@@ -22869,34 +22242,23 @@
       {
         "code": "pump_army",
         "name": "📈 暴兵奖",
-        "count": 39,
+        "count": 38,
         "gold": 10,
-        "silver": 13,
+        "silver": 12,
         "bronze": 16,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-05-06",
         "period": "D"
       },
       {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
-        "count": 21,
+        "count": 20,
         "gold": 4,
         "silver": 7,
-        "bronze": 10,
+        "bronze": 9,
         "best_rank": 1,
-        "latest_period_key": "2026-W26",
-        "period": "W"
-      },
-      {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 9,
-        "gold": 2,
-        "silver": 4,
-        "bronze": 3,
-        "best_rank": 1,
-        "latest_period_key": "2025-W52",
+        "latest_period_key": "2025-W08",
         "period": "W"
       },
       {
@@ -22920,6 +22282,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-02-04",
         "period": "D"
+      },
+      {
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 9,
+        "gold": 2,
+        "silver": 4,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2025-W52",
+        "period": "W"
       },
       {
         "code": "silver_curse",
@@ -22956,20 +22329,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1176,
-      "😐 NPC": 0.2059,
-      "🔥 夯死了": 0.0882,
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0882,
-      "💪 人上人": 0.3235
+      "💪 人上人": 0.3333,
+      "😐 NPC": 0.2121,
+      "🔥 夯死了": 0.0606,
+      "💩 拉完了": 0.1818,
+      "☠️ 答辩": 0.0909,
+      "👑 顶级": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 35.37,
-        "pct_change": 0.0521,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 33.52,
@@ -23142,22 +22509,28 @@
         "date": "2026-06-22",
         "close": 35.46,
         "pct_change": 0.1566,
-        "tier": "🔥 夯死了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 33.32,
+        "pct_change": -0.0603,
+        "tier": "💪 人上人"
       }
     ],
-    "streak_top_tier_days": 2,
-    "streak_in_awards_days": 1
+    "streak_top_tier_days": 0,
+    "streak_in_awards_days": 0
   },
   {
     "ticker": "SNDK",
     "name": "SanDisk",
     "theme": "memory",
-    "close": 2273.73,
-    "pct_change": 0.0407,
-    "intraday_amp": 0.0472,
-    "vol_ratio_20": 0.9205,
-    "tier": "💪 人上人",
-    "awards_count": 195,
+    "close": 1963.6,
+    "pct_change": -0.1364,
+    "intraday_amp": 0.0484,
+    "vol_ratio_20": 1.1611,
+    "tier": "☠️ 答辩",
+    "awards_count": 196,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -23293,6 +22666,17 @@
         "period": "M"
       },
       {
+        "code": "traitor",
+        "name": "🩸 拖后腿奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
         "code": "npc_god",
         "name": "💤 NPC 之光",
         "count": 1,
@@ -23349,20 +22733,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.2647,
-      "🔥 夯死了": 0.0882,
-      "😐 NPC": 0.3235,
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.1176,
-      "💪 人上人": 0.1765
+      "💪 人上人": 0.1515,
+      "🔥 夯死了": 0.0909,
+      "😐 NPC": 0.303,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.0303,
+      "👑 顶级": 0.2727
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 1562.34,
-        "pct_change": 0.166,
-        "tier": "👑 顶级"
-      },
       {
         "date": "2026-05-11",
         "close": 1547.56,
@@ -23535,7 +22913,13 @@
         "date": "2026-06-22",
         "close": 2273.73,
         "pct_change": 0.0407,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 1963.6,
+        "pct_change": -0.1364,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -23545,12 +22929,12 @@
     "ticker": "SNPS",
     "name": "Synopsys",
     "theme": "eda_ip",
-    "close": 464.58,
-    "pct_change": 0.0199,
-    "intraday_amp": 0.0364,
-    "vol_ratio_20": 1.1132,
-    "tier": "💪 人上人",
-    "awards_count": 128,
+    "close": 461.5,
+    "pct_change": -0.0066,
+    "intraday_amp": 0.0394,
+    "vol_ratio_20": 0.9443,
+    "tier": "👑 顶级",
+    "awards_count": 129,
     "persona": "NPC 系",
     "medal_history": [
       {
@@ -23598,6 +22982,17 @@
         "period": "D"
       },
       {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 10,
+        "gold": 1,
+        "silver": 6,
+        "bronze": 3,
+        "best_rank": 1,
+        "latest_period_key": "2026-06-23",
+        "period": "D"
+      },
+      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 9,
@@ -23607,17 +23002,6 @@
         "best_rank": 1,
         "latest_period_key": "2026-W19",
         "period": "W"
-      },
-      {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 9,
-        "gold": 0,
-        "silver": 6,
-        "bronze": 3,
-        "best_rank": 2,
-        "latest_period_key": "2025-12-01",
-        "period": "D"
       },
       {
         "code": "reverse_idx",
@@ -23665,20 +23049,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1471,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.3235,
-      "💩 拉完了": 0.2941,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.1765
+      "💪 人上人": 0.1515,
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.3333,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.2727,
+      "👑 顶级": 0.1818
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 516.48,
-        "pct_change": 0.0223,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 516.19,
@@ -23851,22 +23229,28 @@
         "date": "2026-06-22",
         "close": 464.58,
         "pct_change": 0.0199,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 461.5,
+        "pct_change": -0.0066,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
-    "streak_in_awards_days": 0
+    "streak_top_tier_days": 1,
+    "streak_in_awards_days": 1
   },
   {
     "ticker": "STX",
     "name": "Seagate Technology",
     "theme": "memory",
-    "close": 1094.04,
-    "pct_change": 0.0222,
-    "intraday_amp": 0.0552,
-    "vol_ratio_20": 1.3818,
-    "tier": "💪 人上人",
-    "awards_count": 148,
+    "close": 1038.59,
+    "pct_change": -0.0507,
+    "intraday_amp": 0.0566,
+    "vol_ratio_20": 1.2734,
+    "tier": "👑 顶级",
+    "awards_count": 146,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -23905,10 +23289,10 @@
       {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
-        "count": 15,
+        "count": 13,
         "gold": 5,
         "silver": 4,
-        "bronze": 6,
+        "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2026-W18",
         "period": "W"
@@ -23981,20 +23365,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1765,
-      "😐 NPC": 0.2353,
-      "🔥 夯死了": 0.0294,
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.4706
+      "💪 人上人": 0.4242,
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.2424,
+      "💩 拉完了": 0.0606,
+      "☠️ 答辩": 0.0303,
+      "👑 顶级": 0.2121
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 782.64,
-        "pct_change": 0.0211,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 834.01,
@@ -24167,21 +23545,27 @@
         "date": "2026-06-22",
         "close": 1094.04,
         "pct_change": 0.0222,
-        "tier": "💪 人上人"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 1038.59,
+        "pct_change": -0.0507,
+        "tier": "👑 顶级"
       }
     ],
-    "streak_top_tier_days": 0,
+    "streak_top_tier_days": 1,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "TLN",
     "name": "Talen Energy",
     "theme": "power_generation",
-    "close": 438.12,
-    "pct_change": 0.0042,
-    "intraday_amp": 0.027,
-    "vol_ratio_20": 0.9425,
-    "tier": "😐 NPC",
+    "close": 411.92,
+    "pct_change": -0.0598,
+    "intraday_amp": 0.0377,
+    "vol_ratio_20": 1.1968,
+    "tier": "💪 人上人",
     "awards_count": 307,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -24319,19 +23703,13 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.2353,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.4118,
-      "👑 顶级": 0.0882,
-      "😐 NPC": 0.2353
+      "😐 NPC": 0.1818,
+      "💪 人上人": 0.4545,
+      "👑 顶级": 0.0909,
+      "☠️ 答辩": 0.0303,
+      "💩 拉完了": 0.2424
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 386.37,
-        "pct_change": -0.0107,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 383.44,
@@ -24504,7 +23882,13 @@
         "date": "2026-06-22",
         "close": 438.12,
         "pct_change": 0.0042,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 411.92,
+        "pct_change": -0.0598,
+        "tier": "💪 人上人"
       }
     ],
     "streak_top_tier_days": 0,
@@ -24514,12 +23898,12 @@
     "ticker": "TSEM",
     "name": "Tower Semiconductor",
     "theme": "semicap_metrology",
-    "close": 316.85,
-    "pct_change": 0.105,
-    "intraday_amp": 0.1159,
-    "vol_ratio_20": 1.5137,
-    "tier": "🔥 夯死了",
-    "awards_count": 172,
+    "close": 282.65,
+    "pct_change": -0.1079,
+    "intraday_amp": 0.0544,
+    "vol_ratio_20": 0.9197,
+    "tier": "☠️ 答辩",
+    "awards_count": 169,
     "persona": "NPC 系",
     "medal_history": [
       {
@@ -24536,12 +23920,12 @@
       {
         "code": "pump_army",
         "name": "📈 暴兵奖",
-        "count": 36,
+        "count": 35,
         "gold": 13,
         "silver": 13,
-        "bronze": 10,
+        "bronze": 9,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-03-25",
         "period": "D"
       },
       {
@@ -24556,17 +23940,6 @@
         "period": "D"
       },
       {
-        "code": "daily_king",
-        "name": "🏆 今日股王",
-        "count": 16,
-        "gold": 3,
-        "silver": 6,
-        "bronze": 7,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 15,
@@ -24578,14 +23951,25 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 12,
-        "gold": 2,
-        "silver": 4,
+        "code": "daily_king",
+        "name": "🏆 今日股王",
+        "count": 15,
+        "gold": 3,
+        "silver": 6,
         "bronze": 6,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-03-19",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 11,
+        "gold": 2,
+        "silver": 3,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2026-03-19",
         "period": "D"
       },
       {
@@ -24634,20 +24018,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3235,
-      "💩 拉完了": 0.1765,
-      "☠️ 答辩": 0.0588,
-      "😐 NPC": 0.2353,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.1765
+      "👑 顶级": 0.1515,
+      "☠️ 答辩": 0.0909,
+      "💩 拉完了": 0.1818,
+      "😐 NPC": 0.2424,
+      "💪 人上人": 0.3333
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 211.02,
-        "pct_change": 0.0049,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 228.88,
@@ -24820,21 +24197,27 @@
         "date": "2026-06-22",
         "close": 316.85,
         "pct_change": 0.105,
-        "tier": "🔥 夯死了"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 282.65,
+        "pct_change": -0.1079,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "TSM",
     "name": "Taiwan Semiconductor Manufacturing",
     "theme": "foundry_osat",
-    "close": 467.67,
-    "pct_change": 0.012,
-    "intraday_amp": 0.0241,
-    "vol_ratio_20": 1.0347,
-    "tier": "😐 NPC",
+    "close": 436.39,
+    "pct_change": -0.0669,
+    "intraday_amp": 0.0281,
+    "vol_ratio_20": 1.2664,
+    "tier": "☠️ 答辩",
     "awards_count": 85,
     "persona": "NPC 系",
     "medal_history": [
@@ -24950,19 +24333,13 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.0294,
-      "💪 人上人": 0.2941,
-      "👑 顶级": 0.0294,
-      "😐 NPC": 0.5
+      "😐 NPC": 0.4545,
+      "💪 人上人": 0.303,
+      "👑 顶级": 0.0303,
+      "💩 拉完了": 0.1515,
+      "☠️ 答辩": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 411.68,
-        "pct_change": -0.006,
-        "tier": "😐 NPC"
-      },
       {
         "date": "2026-05-11",
         "close": 404.54,
@@ -25135,7 +24512,13 @@
         "date": "2026-06-22",
         "close": 467.67,
         "pct_change": 0.012,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 436.39,
+        "pct_change": -0.0669,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -25145,11 +24528,11 @@
     "ticker": "VICR",
     "name": "Vicor",
     "theme": "analog_power",
-    "close": 365.53,
-    "pct_change": 0.1031,
-    "intraday_amp": 0.0585,
-    "vol_ratio_20": 1.2225,
-    "tier": "👑 顶级",
+    "close": 336.12,
+    "pct_change": -0.0805,
+    "intraday_amp": 0.0786,
+    "vol_ratio_20": 1.3191,
+    "tier": "☠️ 答辩",
     "awards_count": 194,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -25276,20 +24659,14 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.3824,
-      "☠️ 答辩": 0.1471,
-      "💩 拉完了": 0.1176,
-      "😐 NPC": 0.1176,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.2059
+      "👑 顶级": 0.1818,
+      "☠️ 答辩": 0.1818,
+      "💩 拉完了": 0.1212,
+      "😐 NPC": 0.1212,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.3636
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 256.47,
-        "pct_change": -0.0186,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 312.96,
@@ -25462,21 +24839,27 @@
         "date": "2026-06-22",
         "close": 365.53,
         "pct_change": 0.1031,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 336.12,
+        "pct_change": -0.0805,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "VRT",
     "name": "Vertiv",
     "theme": "datacenter_power_cooling",
-    "close": 357.96,
-    "pct_change": 0.0748,
-    "intraday_amp": 0.061,
-    "vol_ratio_20": 1.1909,
-    "tier": "👑 顶级",
+    "close": 318.32,
+    "pct_change": -0.1107,
+    "intraday_amp": 0.06,
+    "vol_ratio_20": 1.6132,
+    "tier": "☠️ 答辩",
     "awards_count": 154,
     "persona": "蒸蒸日上",
     "medal_history": [
@@ -25603,20 +24986,13 @@
       }
     ],
     "tier_distribution": {
-      "💪 人上人": 0.2941,
-      "💩 拉完了": 0.1471,
-      "☠️ 答辩": 0.1176,
-      "😐 NPC": 0.3529,
-      "🔥 夯死了": 0.0294,
-      "👑 顶级": 0.0588
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.1515,
+      "😐 NPC": 0.3636,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.303
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 339.97,
-        "pct_change": -0.0001,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 367.92,
@@ -25789,22 +25165,28 @@
         "date": "2026-06-22",
         "close": 357.96,
         "pct_change": 0.0748,
-        "tier": "👑 顶级"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 318.32,
+        "pct_change": -0.1107,
+        "tier": "☠️ 答辩"
       }
     ],
-    "streak_top_tier_days": 1,
+    "streak_top_tier_days": 0,
     "streak_in_awards_days": 0
   },
   {
     "ticker": "VST",
     "name": "Vistra",
     "theme": "power_generation",
-    "close": 167.26,
-    "pct_change": 0.0214,
-    "intraday_amp": 0.0462,
-    "vol_ratio_20": 1.015,
+    "close": 162.39,
+    "pct_change": -0.0291,
+    "intraday_amp": 0.0398,
+    "vol_ratio_20": 0.6603,
     "tier": "💪 人上人",
-    "awards_count": 217,
+    "awards_count": 218,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -25876,12 +25258,12 @@
       {
         "code": "npc_god",
         "name": "💤 NPC 之光",
-        "count": 20,
+        "count": 21,
         "gold": 5,
-        "silver": 7,
+        "silver": 8,
         "bronze": 8,
         "best_rank": 1,
-        "latest_period_key": "2026-02-03",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -25918,17 +25300,6 @@
         "period": "D"
       },
       {
-        "code": "tear_jerker",
-        "name": "😭 我的眼泪奖",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
-      },
-      {
         "code": "traitor",
         "name": "🩸 拖后腿奖",
         "count": 1,
@@ -25936,6 +25307,17 @@
         "silver": 1,
         "bronze": 0,
         "best_rank": 2,
+        "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
+        "code": "tear_jerker",
+        "name": "😭 我的眼泪奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
         "latest_period_key": "2026-05-08",
         "period": "D"
       },
@@ -25952,20 +25334,14 @@
       }
     ],
     "tier_distribution": {
-      "👑 顶级": 0.1176,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.1471,
-      "☠️ 答辩": 0.0294,
-      "💩 拉完了": 0.4706,
-      "💪 人上人": 0.2059
+      "💪 人上人": 0.2121,
+      "🔥 夯死了": 0.0303,
+      "😐 NPC": 0.1212,
+      "💩 拉完了": 0.4848,
+      "☠️ 答辩": 0.0303,
+      "👑 顶级": 0.1212
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 147.72,
-        "pct_change": -0.0405,
-        "tier": "💩 拉完了"
-      },
       {
         "date": "2026-05-11",
         "close": 152.05,
@@ -26138,6 +25514,12 @@
         "date": "2026-06-22",
         "close": 167.26,
         "pct_change": 0.0214,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 162.39,
+        "pct_change": -0.0291,
         "tier": "💪 人上人"
       }
     ],
@@ -26148,12 +25530,12 @@
     "ticker": "WDC",
     "name": "Western Digital",
     "theme": "memory",
-    "close": 732.62,
-    "pct_change": -0.0182,
-    "intraday_amp": 0.0713,
-    "vol_ratio_20": 1.5402,
-    "tier": "😐 NPC",
-    "awards_count": 113,
+    "close": 670.75,
+    "pct_change": -0.0845,
+    "intraday_amp": 0.0403,
+    "vol_ratio_20": 1.4201,
+    "tier": "☠️ 答辩",
+    "awards_count": 111,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -26214,12 +25596,12 @@
       {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
-        "count": 10,
+        "count": 9,
         "gold": 4,
         "silver": 3,
-        "bronze": 3,
+        "bronze": 2,
         "best_rank": 1,
-        "latest_period_key": "2026-Q2",
+        "latest_period_key": "2025-W45",
         "period": "W"
       },
       {
@@ -26252,7 +25634,7 @@
         "silver": 0,
         "bronze": 2,
         "best_rank": 3,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -26285,18 +25667,7 @@
         "silver": 0,
         "bronze": 1,
         "best_rank": 3,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
-        "code": "traitor",
-        "name": "🩸 拖后腿奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
@@ -26312,20 +25683,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.0294,
-      "☠️ 答辩": 0.0588,
-      "💪 人上人": 0.3529,
-      "👑 顶级": 0.2353,
-      "🔥 夯死了": 0.0294,
-      "😐 NPC": 0.2941
+      "😐 NPC": 0.2727,
+      "🔥 夯死了": 0.0303,
+      "💪 人上人": 0.3333,
+      "👑 顶级": 0.2424,
+      "💩 拉完了": 0.0303,
+      "☠️ 答辩": 0.0909
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 480.0,
-        "pct_change": 0.0347,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 515.83,
@@ -26498,7 +25863,13 @@
         "date": "2026-06-22",
         "close": 732.62,
         "pct_change": -0.0182,
-        "tier": "😐 NPC"
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 670.75,
+        "pct_change": -0.0845,
+        "tier": "☠️ 答辩"
       }
     ],
     "streak_top_tier_days": 0,
@@ -26508,12 +25879,12 @@
     "ticker": "WOLF",
     "name": "Wolfspeed",
     "theme": "analog_power",
-    "close": 52.97,
-    "pct_change": -0.0773,
-    "intraday_amp": 0.1544,
-    "vol_ratio_20": 0.8168,
+    "close": 48.91,
+    "pct_change": -0.0766,
+    "intraday_amp": 0.1404,
+    "vol_ratio_20": 0.5835,
     "tier": "☠️ 答辩",
-    "awards_count": 118,
+    "awards_count": 116,
     "persona": "财报戏精",
     "medal_history": [
       {
@@ -26524,18 +25895,18 @@
         "silver": 4,
         "bronze": 8,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-06-23",
         "period": "D"
       },
       {
         "code": "oscar",
         "name": "🎭 影帝奖",
-        "count": 23,
-        "gold": 9,
+        "count": 22,
+        "gold": 8,
         "silver": 7,
         "bronze": 7,
         "best_rank": 1,
-        "latest_period_key": "2026-06-22",
+        "latest_period_key": "2026-05-08",
         "period": "D"
       },
       {
@@ -26561,17 +25932,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 11,
-        "gold": 4,
-        "silver": 5,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-06-22",
-        "period": "D"
-      },
-      {
         "code": "gambler",
         "name": "🎰 赌狗之友奖",
         "count": 10,
@@ -26581,6 +25941,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-W26",
         "period": "W"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 10,
+        "gold": 3,
+        "silver": 5,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2026-04-17",
+        "period": "D"
       },
       {
         "code": "pump_army",
@@ -26672,20 +26043,14 @@
       }
     ],
     "tier_distribution": {
-      "💩 拉完了": 0.0588,
-      "☠️ 答辩": 0.1471,
-      "💪 人上人": 0.1765,
-      "👑 顶级": 0.2353,
-      "😐 NPC": 0.1471,
-      "🔥 夯死了": 0.2353
+      "😐 NPC": 0.1212,
+      "🔥 夯死了": 0.2424,
+      "💪 人上人": 0.1818,
+      "👑 顶级": 0.2424,
+      "☠️ 答辩": 0.1515,
+      "💩 拉完了": 0.0606
     },
     "recent_30d": [
-      {
-        "date": "2026-05-08",
-        "close": 46.6,
-        "pct_change": 0.0319,
-        "tier": "💪 人上人"
-      },
       {
         "date": "2026-05-11",
         "close": 50.31,
@@ -26858,6 +26223,12 @@
         "date": "2026-06-22",
         "close": 52.97,
         "pct_change": -0.0773,
+        "tier": null
+      },
+      {
+        "date": "2026-06-23",
+        "close": 48.91,
+        "pct_change": -0.0766,
         "tier": "☠️ 答辩"
       }
     ],
