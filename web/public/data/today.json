@@ -9,31 +9,31 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 0.1331,
+          "metric": 0.1328,
           "meta": {
             "shares": 17.0,
-            "last_close": 1213.56005859375,
-            "market_value": 20630.52099609375
+            "last_close": 1132.3299560546875,
+            "market_value": 19249.609252929688
           }
         },
         {
           "rank": 2,
           "ticker": "ALAB",
-          "metric": 0.0976,
+          "metric": 0.1027,
           "meta": {
             "shares": 38.0,
-            "last_close": 398.0,
-            "market_value": 15124.0
+            "last_close": 391.739990234375,
+            "market_value": 14886.11962890625
           }
         },
         {
           "rank": 3,
           "ticker": "LITE",
-          "metric": 0.089,
+          "metric": 0.0901,
           "meta": {
             "shares": 16.0,
-            "last_close": 861.969970703125,
-            "market_value": 13791.51953125
+            "last_close": 816.97998046875,
+            "market_value": 13071.6796875
           }
         }
       ]
@@ -46,31 +46,31 @@
         {
           "rank": 1,
           "ticker": "ALAB",
-          "metric": 1.7292,
+          "metric": 1.6863,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 398.0
+            "last_close": 391.739990234375
           }
         },
         {
           "rank": 2,
           "ticker": "MU",
-          "metric": 1.3071,
+          "metric": 1.1527,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 1213.56005859375
+            "last_close": 1132.3299560546875
           }
         },
         {
           "rank": 3,
           "ticker": "SNDK",
-          "metric": 1.267,
+          "metric": 1.0298,
           "meta": {
             "shares": 5.0,
             "avg_cost": 1030.0,
-            "last_close": 2335.0
+            "last_close": 2090.7099609375
           }
         }
       ]
@@ -83,31 +83,65 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 11688.3,
+          "metric": 10307.3883,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 1213.56005859375
+            "last_close": 1132.3299560546875
           }
         },
         {
           "rank": 2,
           "ticker": "ALAB",
-          "metric": 9582.422,
+          "metric": 9344.5416,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 398.0
+            "last_close": 391.739990234375
           }
         },
         {
           "rank": 3,
           "ticker": "SNDK",
-          "metric": 6525.0,
+          "metric": 5303.5498,
           "meta": {
             "shares": 5.0,
             "avg_cost": 1030.0,
-            "last_close": 2335.0
+            "last_close": 2090.7099609375
+          }
+        }
+      ]
+    },
+    {
+      "code": "comeback",
+      "name": "🪄 绝地翻身奖",
+      "description": "主打一个不装了",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "MXL",
+          "metric": 0.1087,
+          "meta": {
+            "pct_change": 0.02254681090182075,
+            "fade": -0.004123727070916559
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "AXTI",
+          "metric": 0.0764,
+          "meta": {
+            "pct_change": 0.015783434778727665,
+            "fade": -0.007358096172909052
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "AKAM",
+          "metric": 0.0409,
+          "meta": {
+            "pct_change": 0.0035432857475556404,
+            "fade": -0.014441027201264561
           }
         }
       ]
@@ -119,11 +153,29 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": -0.0793,
+          "ticker": "BE",
+          "metric": -0.1849,
           "meta": {
-            "intraday_amp": 0.11271659905710105,
-            "vol_ratio_20": 0.9929354796645263
+            "intraday_amp": 0.16427322106638792,
+            "vol_ratio_20": 4.141219733771426
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "WDC",
+          "metric": -0.1317,
+          "meta": {
+            "intraday_amp": 0.10054927030551467,
+            "vol_ratio_20": 2.29239911791942
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "STX",
+          "metric": -0.1224,
+          "meta": {
+            "intraday_amp": 0.11312123731316258,
+            "vol_ratio_20": 2.0561727193928996
           }
         }
       ]
@@ -135,11 +187,94 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": -0.0793,
+          "ticker": "MXL",
+          "metric": 0.0225,
           "meta": {
-            "intraday_amp": 0.11271659905710105,
-            "vol_ratio_20": 0.9929354796645263
+            "intraday_amp": 0.10447763966387054,
+            "vol_ratio_20": 1.9098252786022287
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "AXTI",
+          "metric": 0.0158,
+          "meta": {
+            "intraday_amp": 0.07964089479345175,
+            "vol_ratio_20": 1.6150163854344615
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "ENPH",
+          "metric": 0.0078,
+          "meta": {
+            "intraday_amp": 0.05486126250402196,
+            "vol_ratio_20": 1.10508363799759
+          }
+        }
+      ]
+    },
+    {
+      "code": "npc_god",
+      "name": "💤 NPC 之光",
+      "description": "在的，活着，不动",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "ARM",
+          "metric": 0.0377,
+          "meta": {
+            "vol_ratio_20": 0.5972902630221364,
+            "pct_change": -0.038652908376786206
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "MRVL",
+          "metric": 0.0434,
+          "meta": {
+            "vol_ratio_20": 0.5834009002410417,
+            "pct_change": -0.05151824023624159
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "MX",
+          "metric": 0.0448,
+          "meta": {
+            "vol_ratio_20": 0.240460495775694,
+            "pct_change": -0.05295310796836676
+          }
+        }
+      ]
+    },
+    {
+      "code": "pump_army",
+      "name": "📈 暴兵奖",
+      "description": "主力进场了家人们",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "MXL",
+          "metric": 1.9098,
+          "meta": {
+            "pct_change": 0.02254681090182075
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "AXTI",
+          "metric": 1.615,
+          "meta": {
+            "pct_change": 0.015783434778727665
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "ENPH",
+          "metric": 1.1051,
+          "meta": {
+            "pct_change": 0.007837380931102898
           }
         }
       ]
@@ -151,10 +286,57 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": 0.1127,
+          "ticker": "BE",
+          "metric": 0.1643,
           "meta": {
-            "pct_change": -0.07925465602009196
+            "pct_change": -0.18487609081244985
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "CRDO",
+          "metric": 0.1174,
+          "meta": {
+            "pct_change": -0.11203969300475349
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "STX",
+          "metric": 0.1131,
+          "meta": {
+            "pct_change": -0.12235698947670937
+          }
+        }
+      ]
+    },
+    {
+      "code": "tank",
+      "name": "🛡️ 抗揍奖",
+      "description": "大盘崩我不崩，反向 indicator 王",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "MXL",
+          "metric": 0.0225,
+          "meta": {
+            "qqq_pct": -0.013763624451209279
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "AXTI",
+          "metric": 0.0158,
+          "meta": {
+            "qqq_pct": -0.013763624451209279
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "ENPH",
+          "metric": 0.0078,
+          "meta": {
+            "qqq_pct": -0.013763624451209279
           }
         }
       ]
@@ -166,39 +348,486 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "LWLG",
-          "metric": -726.0,
+          "ticker": "LITE",
+          "metric": -1358.3203,
           "meta": {
-            "shares": 150.0,
-            "avg_cost": 13.0,
-            "last_close": 8.15999984741211
+            "shares": 16.0,
+            "avg_cost": 901.875,
+            "last_close": 816.97998046875
           }
         },
         {
           "rank": 2,
-          "ticker": "LITE",
-          "metric": -638.4805,
+          "ticker": "LWLG",
+          "metric": -766.5,
           "meta": {
-            "shares": 16.0,
-            "avg_cost": 901.875,
-            "last_close": 861.969970703125
+            "shares": 150.0,
+            "avg_cost": 13.0,
+            "last_close": 7.889999866485596
           }
         },
         {
           "rank": 3,
           "ticker": "AAOI",
-          "metric": -601.8902,
+          "metric": -687.3899,
           "meta": {
             "shares": 30.0,
             "avg_cost": 158.603,
-            "last_close": 138.5399932861328
+            "last_close": 135.69000244140625
+          }
+        }
+      ]
+    },
+    {
+      "code": "traitor",
+      "name": "🩸 拖后腿奖",
+      "description": "建议清仓谢罪",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "WDC",
+          "metric": -1778.8,
+          "meta": {
+            "shares": 20.0,
+            "d_price": -88.94000244140625
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "MU",
+          "metric": -1380.9117,
+          "meta": {
+            "shares": 17.0,
+            "d_price": -81.2301025390625
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "SNDK",
+          "metric": -1221.4502,
+          "meta": {
+            "shares": 5.0,
+            "d_price": -244.2900390625
           }
         }
       ]
     }
   ],
   "tier_distribution": {
-    "☠️ 答辩": 1
+    "🔥 夯死了": 5,
+    "😐 NPC": 5,
+    "☠️ 答辩": 37,
+    "👑 顶级": 12,
+    "💪 人上人": 22
   },
-  "tier_movers": []
+  "tier_movers": [
+    {
+      "ticker": "AAOI",
+      "prev": "☠️ 答辩",
+      "now": "👑 顶级",
+      "delta": 4
+    },
+    {
+      "ticker": "CRWV",
+      "prev": "☠️ 答辩",
+      "now": "👑 顶级",
+      "delta": 4
+    },
+    {
+      "ticker": "VICR",
+      "prev": "💩 拉完了",
+      "now": "🔥 夯死了",
+      "delta": 4
+    },
+    {
+      "ticker": "ENPH",
+      "prev": "😐 NPC",
+      "now": "🔥 夯死了",
+      "delta": 3
+    },
+    {
+      "ticker": "AMSC",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "ARM",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "CEG",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "CIEN",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "ETN",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "GOOG",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "JBL",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "SNPS",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "TLN",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "TSM",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "VST",
+      "prev": "💩 拉完了",
+      "now": "💪 人上人",
+      "delta": 2
+    },
+    {
+      "ticker": "ALAB",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "AOSL",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "AXTI",
+      "prev": "👑 顶级",
+      "now": "🔥 夯死了",
+      "delta": 1
+    },
+    {
+      "ticker": "GEV",
+      "prev": "💩 拉完了",
+      "now": "😐 NPC",
+      "delta": 1
+    },
+    {
+      "ticker": "GLW",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "LEU",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "NVDA",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "OKLO",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "ORCL",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "RGTI",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "WOLF",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
+      "ticker": "AVGO",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "CLS",
+      "prev": "💩 拉完了",
+      "now": "☠️ 答辩",
+      "delta": -1
+    },
+    {
+      "ticker": "CSCO",
+      "prev": "💪 人上人",
+      "now": "😐 NPC",
+      "delta": -1
+    },
+    {
+      "ticker": "DELL",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "FN",
+      "prev": "💩 拉完了",
+      "now": "☠️ 答辩",
+      "delta": -1
+    },
+    {
+      "ticker": "INTC",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "MOD",
+      "prev": "💩 拉完了",
+      "now": "☠️ 答辩",
+      "delta": -1
+    },
+    {
+      "ticker": "NBIS",
+      "prev": "💩 拉完了",
+      "now": "☠️ 答辩",
+      "delta": -1
+    },
+    {
+      "ticker": "SMCI",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
+      "ticker": "VRT",
+      "prev": "💩 拉完了",
+      "now": "☠️ 答辩",
+      "delta": -1
+    },
+    {
+      "ticker": "ADI",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "CRDO",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "ENTG",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "FORM",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "LRCX",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "MCHP",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "NVT",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "NVTS",
+      "prev": "🔥 夯死了",
+      "now": "💪 人上人",
+      "delta": -2
+    },
+    {
+      "ticker": "NXPI",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "RMBS",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "STX",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "TSEM",
+      "prev": "😐 NPC",
+      "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "AMAT",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "AMKR",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "BE",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "CAMT",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "COHR",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "GFS",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "LITE",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "MRVL",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "NVMI",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "PLAB",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "SIMO",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "WDC",
+      "prev": "💪 人上人",
+      "now": "☠️ 答辩",
+      "delta": -3
+    },
+    {
+      "ticker": "AEHR",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "DRAM",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "MU",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "POET",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "QCOM",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "SNDK",
+      "prev": "👑 顶级",
+      "now": "☠️ 答辩",
+      "delta": -4
+    },
+    {
+      "ticker": "KORU",
+      "prev": "🔥 夯死了",
+      "now": "☠️ 答辩",
+      "delta": -5
+    },
+    {
+      "ticker": "MX",
+      "prev": "🔥 夯死了",
+      "now": "☠️ 答辩",
+      "delta": -5
+    }
+  ]
 }
