@@ -123,7 +123,7 @@
           "metric": 0.033,
           "meta": {
             "pct_change": 0.003191211932830487,
-            "fade": -0.017177084552192436
+            "fade": -0.017194992016466504
           }
         },
         {
@@ -141,7 +141,7 @@
           "metric": 0.0108,
           "meta": {
             "pct_change": 0.011627906976744186,
-            "fade": -0.019845219254594204
+            "fade": -0.019844790354957797
           }
         }
       ]
@@ -156,8 +156,8 @@
           "ticker": "VICR",
           "metric": -0.1921,
           "meta": {
-            "intraday_amp": 0.20123633621394668,
-            "vol_ratio_20": 1.2251559800141296
+            "intraday_amp": 0.20133628670925935,
+            "vol_ratio_20": 1.2297693318228478
           }
         },
         {
@@ -166,7 +166,7 @@
           "metric": -0.1715,
           "meta": {
             "intraday_amp": 0.21158465084471836,
-            "vol_ratio_20": 1.2352950502405575
+            "vol_ratio_20": 1.2382286763904906
           }
         },
         {
@@ -175,7 +175,7 @@
           "metric": -0.1714,
           "meta": {
             "intraday_amp": 0.2219589932018598,
-            "vol_ratio_20": 2.0016635304930643
+            "vol_ratio_20": 2.0263696466676953
           }
         }
       ]
@@ -190,8 +190,8 @@
           "ticker": "CEG",
           "metric": 0.0116,
           "meta": {
-            "intraday_amp": 0.03133787514039376,
-            "vol_ratio_20": 0.9974857921632199
+            "intraday_amp": 0.03133613312219213,
+            "vol_ratio_20": 1.0327700774758914
           }
         },
         {
@@ -200,7 +200,7 @@
           "metric": 0.0108,
           "meta": {
             "intraday_amp": 0.05284237919529989,
-            "vol_ratio_20": 0.8720158389732688
+            "vol_ratio_20": 0.8808749915606524
           }
         },
         {
@@ -208,8 +208,8 @@
           "ticker": "AKAM",
           "metric": 0.0032,
           "meta": {
-            "intraday_amp": 0.0496223784396187,
-            "vol_ratio_20": 0.9869551631412907
+            "intraday_amp": 0.04964097682222219,
+            "vol_ratio_20": 0.9986260015179876
           }
         }
       ]
@@ -224,7 +224,7 @@
           "ticker": "GOOG",
           "metric": 0.0298,
           "meta": {
-            "vol_ratio_20": 0.596096087792728,
+            "vol_ratio_20": 0.6037632135798976,
             "pct_change": -0.004778065614197252
           }
         },
@@ -233,17 +233,17 @@
           "ticker": "SNPS",
           "metric": 0.0423,
           "meta": {
-            "vol_ratio_20": 0.6359395372958279,
+            "vol_ratio_20": 0.662725539298859,
             "pct_change": -0.03821528868025658
           }
         },
         {
           "rank": 3,
-          "ticker": "GEV",
-          "metric": 0.0496,
+          "ticker": "SMCI",
+          "metric": 0.0911,
           "meta": {
-            "vol_ratio_20": 0.6469910238940333,
-            "pct_change": -0.018724371394642725
+            "vol_ratio_20": 0.5683963413401186,
+            "pct_change": -0.015551548322178161
           }
         }
       ]
@@ -276,7 +276,7 @@
           "ticker": "SNDK",
           "metric": -0.1498,
           "meta": {
-            "gap": 0.006608563002306711,
+            "gap": 0.005698240491649841,
             "pct_change": -0.14133311100360368
           }
         }
@@ -306,7 +306,7 @@
         {
           "rank": 1,
           "ticker": "CEG",
-          "metric": 0.9975,
+          "metric": 1.0328,
           "meta": {
             "pct_change": 0.011627906976744186
           }
@@ -314,7 +314,7 @@
         {
           "rank": 2,
           "ticker": "AKAM",
-          "metric": 0.987,
+          "metric": 0.9986,
           "meta": {
             "pct_change": 0.003191211932830487
           }
@@ -322,7 +322,7 @@
         {
           "rank": 3,
           "ticker": "TLN",
-          "metric": 0.872,
+          "metric": 0.8809,
           "meta": {
             "pct_change": 0.010754191609852748
           }
@@ -419,11 +419,11 @@
         {
           "rank": 3,
           "ticker": "LWLG",
-          "metric": -845.25,
+          "metric": -844.5,
           "meta": {
             "shares": 150.0,
             "avg_cost": 13.0,
-            "last_close": 7.364999771118164
+            "last_close": 7.369999885559082
           }
         }
       ]
@@ -465,9 +465,10 @@
   ],
   "tier_distribution": {
     "🔥 夯死了": 5,
+    "😐 NPC": 1,
     "☠️ 答辩": 51,
     "👑 顶级": 10,
-    "💪 人上人": 15
+    "💪 人上人": 14
   },
   "tier_movers": [
     {
@@ -501,13 +502,13 @@
       "delta": 3
     },
     {
-      "ticker": "OKLO",
+      "ticker": "LSRCY",
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
       "delta": 3
     },
     {
-      "ticker": "ORCL",
+      "ticker": "OKLO",
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
       "delta": 3
@@ -517,12 +518,6 @@
       "prev": "💩 拉完了",
       "now": "👑 顶级",
       "delta": 3
-    },
-    {
-      "ticker": "ADI",
-      "prev": "😐 NPC",
-      "now": "👑 顶级",
-      "delta": 2
     },
     {
       "ticker": "ETN",
@@ -549,6 +544,12 @@
       "delta": 2
     },
     {
+      "ticker": "ORCL",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
       "ticker": "TSM",
       "prev": "😐 NPC",
       "now": "👑 顶级",
@@ -559,6 +560,12 @@
       "prev": "💩 拉完了",
       "now": "💪 人上人",
       "delta": 2
+    },
+    {
+      "ticker": "ADI",
+      "prev": "😐 NPC",
+      "now": "💪 人上人",
+      "delta": 1
     },
     {
       "ticker": "ANET",
@@ -573,12 +580,6 @@
       "delta": 1
     },
     {
-      "ticker": "LSRCY",
-      "prev": "😐 NPC",
-      "now": "💪 人上人",
-      "delta": 1
-    },
-    {
       "ticker": "MCHP",
       "prev": "😐 NPC",
       "now": "💪 人上人",
@@ -586,12 +587,6 @@
     },
     {
       "ticker": "NVT",
-      "prev": "😐 NPC",
-      "now": "💪 人上人",
-      "delta": 1
-    },
-    {
-      "ticker": "SNPS",
       "prev": "😐 NPC",
       "now": "💪 人上人",
       "delta": 1
