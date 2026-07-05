@@ -191,7 +191,7 @@
           "metric": 0.0116,
           "meta": {
             "intraday_amp": 0.03133613312219213,
-            "vol_ratio_20": 1.0327700774758914
+            "vol_ratio_20": 1.0318527403223
           }
         },
         {
@@ -224,7 +224,7 @@
           "ticker": "GOOG",
           "metric": 0.0298,
           "meta": {
-            "vol_ratio_20": 0.6037632135798976,
+            "vol_ratio_20": 0.6029989423284652,
             "pct_change": -0.004778065614197252
           }
         },
@@ -306,7 +306,7 @@
         {
           "rank": 1,
           "ticker": "CEG",
-          "metric": 1.0328,
+          "metric": 1.0319,
           "meta": {
             "pct_change": 0.011627906976744186
           }
@@ -464,11 +464,11 @@
     }
   ],
   "tier_distribution": {
-    "☠️ 答辩": 51,
-    "👑 顶级": 10,
+    "🔥 夯死了": 4,
+    "😐 NPC": 1,
+    "👑 顶级": 11,
     "💪 人上人": 14,
-    "🔥 夯死了": 5,
-    "😐 NPC": 1
+    "☠️ 答辩": 50
   },
   "tier_movers": [
     {
@@ -502,12 +502,6 @@
       "delta": 3
     },
     {
-      "ticker": "LSRCY",
-      "prev": "😐 NPC",
-      "now": "🔥 夯死了",
-      "delta": 3
-    },
-    {
       "ticker": "OKLO",
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
@@ -527,6 +521,12 @@
     },
     {
       "ticker": "LEU",
+      "prev": "😐 NPC",
+      "now": "👑 顶级",
+      "delta": 2
+    },
+    {
+      "ticker": "LSRCY",
       "prev": "😐 NPC",
       "now": "👑 顶级",
       "delta": 2
@@ -875,12 +875,6 @@
     },
     {
       "ticker": "KORU",
-      "prev": "🔥 夯死了",
-      "now": "☠️ 答辩",
-      "delta": -5
-    },
-    {
-      "ticker": "MX",
       "prev": "🔥 夯死了",
       "now": "☠️ 答辩",
       "delta": -5
