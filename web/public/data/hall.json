@@ -10,8 +10,8 @@
     },
     {
       "ticker": "AAOI",
-      "gold": 422,
-      "silver": 410,
+      "gold": 424,
+      "silver": 408,
       "bronze": 271,
       "total": 1103,
       "persona": "财报戏精"
@@ -155,8 +155,8 @@
     {
       "ticker": "ALAB",
       "gold": 78,
-      "silver": 81,
-      "bronze": 82,
+      "silver": 80,
+      "bronze": 83,
       "total": 241,
       "persona": "财报戏精"
     },
@@ -170,8 +170,8 @@
     },
     {
       "ticker": "CSCO",
-      "gold": 77,
-      "silver": 52,
+      "gold": 78,
+      "silver": 51,
       "bronze": 45,
       "total": 174,
       "persona": "NPC 系"
@@ -276,8 +276,8 @@
       "ticker": "WOLF",
       "gold": 46,
       "silver": 29,
-      "bronze": 39,
-      "total": 114,
+      "bronze": 38,
+      "total": 113,
       "persona": "财报戏精"
     },
     {
@@ -308,8 +308,8 @@
       "ticker": "LITE",
       "gold": 41,
       "silver": 71,
-      "bronze": 80,
-      "total": 192,
+      "bronze": 79,
+      "total": 191,
       "persona": "蒸蒸日上"
     },
     {
@@ -350,7 +350,7 @@
       "silver": 50,
       "bronze": 66,
       "total": 152,
-      "persona": "蒸蒸日上"
+      "persona": "NPC 系"
     },
     {
       "ticker": "CEG",
@@ -374,7 +374,7 @@
       "silver": 48,
       "bronze": 46,
       "total": 128,
-      "persona": "NPC 系"
+      "persona": "蒸蒸日上"
     },
     {
       "ticker": "JBL",
@@ -446,11 +446,11 @@
         "total": 2
       },
       {
-        "ticker": "NVDA",
+        "ticker": "CSCO",
         "gold": 1,
-        "silver": 1,
+        "silver": 0,
         "bronze": 0,
-        "total": 2
+        "total": 1
       },
       {
         "ticker": "GOOG",
@@ -475,6 +475,13 @@
       },
       {
         "ticker": "AAOI",
+        "gold": 0,
+        "silver": 2,
+        "bronze": 0,
+        "total": 2
+      },
+      {
+        "ticker": "NVDA",
         "gold": 0,
         "silver": 2,
         "bronze": 0,
@@ -510,13 +517,6 @@
       },
       {
         "ticker": "CEG",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
-      },
-      {
-        "ticker": "CSCO",
         "gold": 0,
         "silver": 1,
         "bronze": 0,
@@ -2432,11 +2432,11 @@
         "total": 2
       },
       {
-        "ticker": "NVDA",
+        "ticker": "CSCO",
         "gold": 1,
-        "silver": 1,
+        "silver": 0,
         "bronze": 0,
-        "total": 2
+        "total": 1
       },
       {
         "ticker": "GOOG",
@@ -2461,6 +2461,13 @@
       },
       {
         "ticker": "AAOI",
+        "gold": 0,
+        "silver": 2,
+        "bronze": 0,
+        "total": 2
+      },
+      {
+        "ticker": "NVDA",
         "gold": 0,
         "silver": 2,
         "bronze": 0,
@@ -2496,13 +2503,6 @@
       },
       {
         "ticker": "CEG",
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "total": 1
-      },
-      {
-        "ticker": "CSCO",
         "gold": 0,
         "silver": 1,
         "bronze": 0,
@@ -3853,8 +3853,8 @@
       },
       {
         "ticker": "CSCO",
-        "gold": 6,
-        "silver": 9,
+        "gold": 7,
+        "silver": 8,
         "bronze": 4,
         "total": 19
       },
@@ -4104,13 +4104,6 @@
         "total": 7
       },
       {
-        "ticker": "NVDA",
-        "gold": 2,
-        "silver": 3,
-        "bronze": 0,
-        "total": 5
-      },
-      {
         "ticker": "STX",
         "gold": 1,
         "silver": 10,
@@ -4151,6 +4144,13 @@
         "silver": 3,
         "bronze": 4,
         "total": 8
+      },
+      {
+        "ticker": "NVDA",
+        "gold": 1,
+        "silver": 4,
+        "bronze": 0,
+        "total": 5
       },
       {
         "ticker": "NXPI",
@@ -4784,20 +4784,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "NVDA",
-          "gold": 5,
-          "silver": 2,
-          "bronze": 3,
-          "total": 10,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "SNDK",
           "gold": 5,
           "silver": 1,
           "bronze": 3,
           "total": 9,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "NVDA",
+          "gold": 4,
+          "silver": 5,
+          "bronze": 3,
+          "total": 12,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "GOOG",
@@ -4808,20 +4808,28 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
-          "gold": 3,
-          "silver": 3,
-          "bronze": 2,
-          "total": 8,
-          "persona": "蒸蒸日上"
+          "ticker": "AAOI",
+          "gold": 2,
+          "silver": 7,
+          "bronze": 0,
+          "total": 9,
+          "persona": "财报戏精"
         },
         {
           "ticker": "ALAB",
           "gold": 2,
-          "silver": 2,
-          "bronze": 2,
+          "silver": 1,
+          "bronze": 3,
           "total": 6,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "MU",
+          "gold": 1,
+          "silver": 4,
+          "bronze": 3,
+          "total": 8,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -4837,7 +4845,7 @@
           "silver": 3,
           "bronze": 1,
           "total": 5,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SIVEF",
@@ -4851,8 +4859,8 @@
           "ticker": "LITE",
           "gold": 1,
           "silver": 1,
-          "bronze": 2,
-          "total": 4,
+          "bronze": 1,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
@@ -4862,6 +4870,14 @@
           "bronze": 0,
           "total": 2,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "CSCO",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2,
+          "persona": "NPC 系"
         },
         {
           "ticker": "DRAM",
@@ -4888,14 +4904,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 9,
-          "bronze": 0,
-          "total": 9,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "LWLG",
           "gold": 0,
           "silver": 1,
@@ -4912,20 +4920,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "WOLF",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 3,
-          "total": 4,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "ANET",
           "gold": 0,
           "silver": 0,
           "bronze": 3,
           "total": 3,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "WOLF",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3,
+          "persona": "财报戏精"
         },
         {
           "ticker": "ASX",
@@ -4942,14 +4950,6 @@
           "bronze": 1,
           "total": 2,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "total": 2,
-          "persona": "NPC 系"
         },
         {
           "ticker": "STX",
@@ -5042,12 +5042,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "CSCO",
           "gold": 1,
-          "silver": 1,
+          "silver": 0,
           "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "total": 1,
+          "persona": "NPC 系"
         },
         {
           "ticker": "GOOG",
@@ -5082,6 +5082,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "NVDA",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "STX",
           "gold": 0,
           "silver": 0,
@@ -5111,7 +5119,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CEG",
@@ -5120,14 +5128,6 @@
           "bronze": 0,
           "total": 1,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "NPC 系"
         },
         {
           "ticker": "LWLG",
@@ -5177,7 +5177,7 @@
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AXTI",
@@ -5230,20 +5230,20 @@
       ],
       "M": [
         {
-          "ticker": "MU",
+          "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 1,
-          "total": 2,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "AAOI",
           "gold": 1,
           "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
         },
         {
           "ticker": "AXTI",
@@ -5270,12 +5270,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
+          "ticker": "MU",
           "gold": 0,
           "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -5288,8 +5288,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 1,
-          "bronze": 0,
+          "silver": 0,
+          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         },
@@ -5307,7 +5307,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -5324,32 +5324,24 @@
           "bronze": 0,
           "total": 1,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "财报戏精"
         }
       ],
       "Q": [
         {
-          "ticker": "MU",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
-          "bronze": 0,
-          "total": 2,
+          "bronze": 1,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "AAOI",
           "gold": 1,
           "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
         },
         {
           "ticker": "AXTI",
@@ -5376,12 +5368,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
+          "ticker": "MU",
           "gold": 0,
           "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -5413,7 +5405,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -5422,14 +5414,6 @@
           "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SIVEF",
@@ -5602,7 +5586,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -5641,20 +5625,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "NVDA",
-          "gold": 5,
-          "silver": 2,
-          "bronze": 3,
-          "total": 10,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "SNDK",
           "gold": 5,
           "silver": 1,
           "bronze": 3,
           "total": 9,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "NVDA",
+          "gold": 4,
+          "silver": 5,
+          "bronze": 3,
+          "total": 12,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SIVEF",
@@ -5673,20 +5657,28 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
-          "gold": 3,
-          "silver": 3,
-          "bronze": 2,
-          "total": 8,
-          "persona": "蒸蒸日上"
+          "ticker": "AAOI",
+          "gold": 2,
+          "silver": 7,
+          "bronze": 0,
+          "total": 9,
+          "persona": "财报戏精"
         },
         {
           "ticker": "ALAB",
           "gold": 2,
-          "silver": 2,
-          "bronze": 2,
+          "silver": 1,
+          "bronze": 3,
           "total": 6,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "MU",
+          "gold": 1,
+          "silver": 4,
+          "bronze": 3,
+          "total": 8,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -5702,14 +5694,14 @@
           "silver": 3,
           "bronze": 1,
           "total": 5,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "LITE",
           "gold": 1,
           "silver": 1,
-          "bronze": 2,
-          "total": 4,
+          "bronze": 1,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
@@ -5727,6 +5719,14 @@
           "bronze": 0,
           "total": 2,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "CSCO",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 1,
+          "total": 2,
+          "persona": "NPC 系"
         },
         {
           "ticker": "DRAM",
@@ -5753,14 +5753,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 9,
-          "bronze": 0,
-          "total": 9,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "LWLG",
           "gold": 0,
           "silver": 1,
@@ -5773,14 +5765,6 @@
           "gold": 0,
           "silver": 0,
           "bronze": 4,
-          "total": 4,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 3,
           "total": 4,
           "persona": "财报戏精"
         },
@@ -5801,6 +5785,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "WOLF",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 2,
+          "total": 3,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "ASX",
           "gold": 0,
           "silver": 0,
@@ -5815,14 +5807,6 @@
           "bronze": 1,
           "total": 2,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
-          "total": 2,
-          "persona": "NPC 系"
         },
         {
           "ticker": "NBIS",
@@ -5931,12 +5915,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "CSCO",
           "gold": 1,
-          "silver": 1,
+          "silver": 0,
           "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "total": 1,
+          "persona": "NPC 系"
         },
         {
           "ticker": "GOOG",
@@ -5971,6 +5955,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "NVDA",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "STX",
           "gold": 0,
           "silver": 0,
@@ -6000,7 +5992,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CEG",
@@ -6009,14 +6001,6 @@
           "bronze": 0,
           "total": 1,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "NPC 系"
         },
         {
           "ticker": "LWLG",
@@ -6066,7 +6050,7 @@
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AXTI",
@@ -6119,20 +6103,20 @@
       ],
       "M": [
         {
-          "ticker": "MU",
+          "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 1,
-          "total": 2,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "AAOI",
           "gold": 1,
           "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
         },
         {
           "ticker": "AXTI",
@@ -6159,12 +6143,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
+          "ticker": "MU",
           "gold": 0,
           "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -6177,8 +6161,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 1,
-          "bronze": 0,
+          "silver": 0,
+          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         },
@@ -6196,7 +6180,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -6211,14 +6195,6 @@
           "gold": 0,
           "silver": 1,
           "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         }
@@ -6241,20 +6217,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "MU",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
-          "bronze": 0,
-          "total": 2,
+          "bronze": 1,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "AAOI",
           "gold": 1,
           "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
         },
         {
           "ticker": "GOOG",
@@ -6289,12 +6265,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
+          "ticker": "MU",
           "gold": 0,
           "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -6326,7 +6302,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -6343,14 +6319,6 @@
           "bronze": 1,
           "total": 1,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "MCHP",
@@ -6539,7 +6507,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -6613,8 +6581,8 @@
           "ticker": "WOLF",
           "gold": 9,
           "silver": 8,
-          "bronze": 16,
-          "total": 33,
+          "bronze": 15,
+          "total": 32,
           "persona": "财报戏精"
         },
         {
@@ -6658,14 +6626,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "NVDA",
-          "gold": 6,
-          "silver": 4,
-          "bronze": 3,
-          "total": 13,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "GOOG",
           "gold": 6,
           "silver": 2,
@@ -6674,11 +6634,19 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
+          "ticker": "AAOI",
           "gold": 5,
-          "silver": 4,
-          "bronze": 4,
-          "total": 13,
+          "silver": 13,
+          "bronze": 2,
+          "total": 20,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "NVDA",
+          "gold": 5,
+          "silver": 7,
+          "bronze": 3,
+          "total": 15,
           "persona": "蒸蒸日上"
         },
         {
@@ -6706,20 +6674,20 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "AAOI",
-          "gold": 3,
-          "silver": 15,
-          "bronze": 2,
-          "total": 20,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "NVTS",
           "gold": 3,
           "silver": 6,
           "bronze": 9,
           "total": 18,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "MU",
+          "gold": 3,
+          "silver": 5,
+          "bronze": 5,
+          "total": 13,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "DRAM",
@@ -6740,8 +6708,8 @@
         {
           "ticker": "ALAB",
           "gold": 3,
-          "silver": 2,
-          "bronze": 3,
+          "silver": 1,
+          "bronze": 4,
           "total": 8,
           "persona": "财报戏精"
         },
@@ -6786,14 +6754,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "LITE",
-          "gold": 2,
-          "silver": 2,
-          "bronze": 2,
-          "total": 6,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "AMSC",
           "gold": 2,
           "silver": 2,
@@ -6816,6 +6776,14 @@
           "bronze": 1,
           "total": 5,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "LITE",
+          "gold": 2,
+          "silver": 2,
+          "bronze": 1,
+          "total": 5,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "MCHP",
@@ -6871,7 +6839,7 @@
           "silver": 3,
           "bronze": 2,
           "total": 6,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "STX",
@@ -6904,6 +6872,14 @@
           "bronze": 4,
           "total": 5,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "CSCO",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 2,
+          "total": 4,
+          "persona": "NPC 系"
         },
         {
           "ticker": "RMBS",
@@ -6958,14 +6934,6 @@
           "gold": 1,
           "silver": 0,
           "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "JBL",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
           "total": 2,
           "persona": "蒸蒸日上"
         }
@@ -7268,18 +7236,18 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "FORM",
+          "ticker": "CSCO",
           "gold": 1,
           "silver": 1,
           "bronze": 1,
           "total": 3,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "FORM",
           "gold": 1,
-          "silver": 2,
-          "bronze": 0,
+          "silver": 1,
+          "bronze": 1,
           "total": 3,
           "persona": "蒸蒸日上"
         },
@@ -7451,7 +7419,7 @@
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "JBL",
@@ -7587,7 +7555,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "QCOM",
@@ -7656,11 +7624,19 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "WOLF",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
           "bronze": 1,
           "total": 3,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "AAOI",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2,
           "persona": "财报戏精"
         },
         {
@@ -7672,20 +7648,12 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
+          "ticker": "WOLF",
           "gold": 1,
-          "silver": 0,
-          "bronze": 1,
+          "silver": 1,
+          "bronze": 0,
           "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "persona": "财报戏精"
         },
         {
           "ticker": "COHU",
@@ -7728,18 +7696,18 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 2,
-          "bronze": 0,
-          "total": 2,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "ANET",
           "gold": 0,
           "silver": 0,
           "bronze": 2,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
           "total": 2,
           "persona": "蒸蒸日上"
         },
@@ -7754,8 +7722,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 1,
-          "bronze": 0,
+          "silver": 0,
+          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         },
@@ -7765,7 +7733,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -7850,20 +7818,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "MU",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
-          "bronze": 0,
-          "total": 2,
+          "bronze": 1,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
+          "ticker": "AAOI",
           "gold": 1,
           "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
         },
         {
           "ticker": "GOOG",
@@ -7898,12 +7866,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
+          "ticker": "MU",
           "gold": 0,
           "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "财报戏精"
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AKAM",
@@ -7935,7 +7903,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -7952,14 +7920,6 @@
           "bronze": 1,
           "total": 1,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "MCHP",
@@ -8197,7 +8157,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -8229,26 +8189,26 @@
       "ALL": [
         {
           "ticker": "AXTI",
-          "gold": 101,
+          "gold": 100,
           "silver": 57,
           "bronze": 25,
-          "total": 183,
+          "total": 182,
           "persona": "财报戏精"
         },
         {
           "ticker": "LWLG",
-          "gold": 41,
+          "gold": 40,
           "silver": 24,
           "bronze": 36,
-          "total": 101,
+          "total": 100,
           "persona": "财报戏精"
         },
         {
           "ticker": "AAOI",
-          "gold": 32,
-          "silver": 58,
-          "bronze": 37,
-          "total": 127,
+          "gold": 34,
+          "silver": 56,
+          "bronze": 36,
+          "total": 126,
           "persona": "财报戏精"
         },
         {
@@ -8295,8 +8255,8 @@
           "ticker": "WOLF",
           "gold": 22,
           "silver": 18,
-          "bronze": 23,
-          "total": 63,
+          "bronze": 22,
+          "total": 62,
           "persona": "财报戏精"
         },
         {
@@ -8308,18 +8268,18 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "SNDK",
-          "gold": 18,
-          "silver": 18,
-          "bronze": 19,
-          "total": 55,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "NVTS",
           "gold": 18,
           "silver": 21,
           "bronze": 15,
+          "total": 54,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "SNDK",
+          "gold": 18,
+          "silver": 17,
+          "bronze": 19,
           "total": 54,
           "persona": "财报戏精"
         },
@@ -8351,8 +8311,8 @@
           "ticker": "LITE",
           "gold": 12,
           "silver": 20,
-          "bronze": 24,
-          "total": 56,
+          "bronze": 23,
+          "total": 55,
           "persona": "蒸蒸日上"
         },
         {
@@ -8388,14 +8348,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "BE",
-          "gold": 9,
-          "silver": 12,
-          "bronze": 13,
-          "total": 34,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "QCOM",
           "gold": 9,
           "silver": 6,
@@ -8407,9 +8359,17 @@
           "ticker": "GOOG",
           "gold": 9,
           "silver": 5,
-          "bronze": 3,
-          "total": 17,
+          "bronze": 2,
+          "total": 16,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "BE",
+          "gold": 8,
+          "silver": 11,
+          "bronze": 13,
+          "total": 32,
+          "persona": "财报戏精"
         },
         {
           "ticker": "AOSL",
@@ -8447,8 +8407,8 @@
           "ticker": "OKLO",
           "gold": 7,
           "silver": 9,
-          "bronze": 18,
-          "total": 34,
+          "bronze": 17,
+          "total": 33,
           "persona": "财报戏精"
         },
         {
@@ -8468,6 +8428,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "CSCO",
+          "gold": 7,
+          "silver": 8,
+          "bronze": 5,
+          "total": 20,
+          "persona": "NPC 系"
+        },
+        {
           "ticker": "SMCI",
           "gold": 7,
           "silver": 5,
@@ -8484,35 +8452,19 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "NVDA",
-          "gold": 7,
-          "silver": 5,
-          "bronze": 3,
-          "total": 15,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "MU",
-          "gold": 6,
-          "silver": 9,
-          "bronze": 12,
-          "total": 27,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 6,
-          "silver": 9,
-          "bronze": 5,
-          "total": 20,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "MRVL",
           "gold": 6,
           "silver": 5,
           "bronze": 7,
           "total": 18,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "NVDA",
+          "gold": 6,
+          "silver": 8,
+          "bronze": 3,
+          "total": 17,
           "persona": "蒸蒸日上"
         },
         {
@@ -8550,8 +8502,8 @@
         {
           "ticker": "ALAB",
           "gold": 5,
-          "silver": 4,
-          "bronze": 10,
+          "silver": 3,
+          "bronze": 11,
           "total": 19,
           "persona": "财报戏精"
         },
@@ -8561,7 +8513,7 @@
           "silver": 6,
           "bronze": 8,
           "total": 19,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CLS",
@@ -8569,6 +8521,14 @@
           "silver": 3,
           "bronze": 3,
           "total": 11,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "MU",
+          "gold": 4,
+          "silver": 10,
+          "bronze": 13,
+          "total": 27,
           "persona": "蒸蒸日上"
         },
         {
@@ -8622,9 +8582,9 @@
         {
           "ticker": "SNPS",
           "gold": 3,
-          "silver": 8,
+          "silver": 7,
           "bronze": 6,
-          "total": 17,
+          "total": 16,
           "persona": "NPC 系"
         }
       ],
@@ -8838,6 +8798,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "CSCO",
+          "gold": 7,
+          "silver": 7,
+          "bronze": 4,
+          "total": 18,
+          "persona": "NPC 系"
+        },
+        {
           "ticker": "MOD",
           "gold": 7,
           "silver": 5,
@@ -8859,14 +8827,6 @@
           "silver": 8,
           "bronze": 6,
           "total": 20,
-          "persona": "NPC 系"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 6,
-          "silver": 8,
-          "bronze": 4,
-          "total": 18,
           "persona": "NPC 系"
         },
         {
@@ -8963,7 +8923,7 @@
           "silver": 3,
           "bronze": 7,
           "total": 14,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ETN",
@@ -9011,7 +8971,7 @@
           "silver": 2,
           "bronze": 8,
           "total": 13,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "WDC",
@@ -9033,18 +8993,10 @@
       "W": [
         {
           "ticker": "AXTI",
-          "gold": 12,
+          "gold": 11,
           "silver": 6,
           "bronze": 3,
-          "total": 21,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "LWLG",
-          "gold": 5,
-          "silver": 1,
-          "bronze": 2,
-          "total": 8,
+          "total": 20,
           "persona": "财报戏精"
         },
         {
@@ -9054,6 +9006,14 @@
           "bronze": 0,
           "total": 8,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "LWLG",
+          "gold": 4,
+          "silver": 1,
+          "bronze": 2,
+          "total": 7,
+          "persona": "财报戏精"
         },
         {
           "ticker": "GEV",
@@ -9067,8 +9027,8 @@
           "ticker": "AAOI",
           "gold": 2,
           "silver": 3,
-          "bronze": 5,
-          "total": 10,
+          "bronze": 4,
+          "total": 9,
           "persona": "财报戏精"
         },
         {
@@ -9112,14 +9072,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "BE",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 2,
-          "total": 4,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "MRVL",
           "gold": 1,
           "silver": 2,
@@ -9160,28 +9112,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "SNDK",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "SNPS",
-          "gold": 1,
-          "silver": 2,
-          "bronze": 0,
-          "total": 3,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "AVGO",
           "gold": 1,
           "silver": 0,
           "bronze": 1,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "KORU",
@@ -9200,12 +9136,20 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "OKLO",
+          "ticker": "SNDK",
           "gold": 1,
           "silver": 0,
           "bronze": 1,
           "total": 2,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "SNPS",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2,
+          "persona": "NPC 系"
         },
         {
           "ticker": "AMSC",
@@ -9256,6 +9200,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "OKLO",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "SIMO",
           "gold": 1,
           "silver": 0,
@@ -9288,6 +9240,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "BE",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 2,
+          "total": 2,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "CSCO",
           "gold": 0,
           "silver": 1,
@@ -9301,21 +9261,13 @@
           "silver": 0,
           "bronze": 2,
           "total": 2,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "GLW",
           "gold": 0,
           "silver": 0,
           "bronze": 2,
-          "total": 2,
-          "persona": "NPC 系"
-        },
-        {
-          "ticker": "GOOG",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 1,
           "total": 2,
           "persona": "NPC 系"
         },
@@ -9430,6 +9382,14 @@
           "bronze": 0,
           "total": 1,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "GOOG",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1,
+          "persona": "NPC 系"
         }
       ],
       "M": [
@@ -9466,6 +9426,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "AAOI",
+          "gold": 1,
+          "silver": 6,
+          "bronze": 2,
+          "total": 9,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "POET",
           "gold": 1,
           "silver": 2,
@@ -9482,12 +9450,12 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "WOLF",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
           "bronze": 1,
           "total": 3,
-          "persona": "财报戏精"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "LITE",
@@ -9498,20 +9466,12 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "MU",
+          "ticker": "WOLF",
           "gold": 1,
-          "silver": 0,
-          "bronze": 1,
+          "silver": 1,
+          "bronze": 0,
           "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "persona": "财报戏精"
         },
         {
           "ticker": "CEG",
@@ -9562,14 +9522,6 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 7,
-          "bronze": 2,
-          "total": 9,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "LWLG",
           "gold": 0,
           "silver": 2,
@@ -9602,6 +9554,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "MX",
           "gold": 0,
           "silver": 0,
@@ -9620,8 +9580,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 1,
-          "bronze": 0,
+          "silver": 0,
+          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         },
@@ -9631,7 +9591,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "DELL",
@@ -9639,7 +9599,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "ENPH",
@@ -9748,19 +9708,19 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "MU",
+          "ticker": "AAOI",
           "gold": 1,
-          "silver": 1,
+          "silver": 3,
           "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
+          "total": 4,
+          "persona": "财报戏精"
         },
         {
           "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 1,
-          "total": 2,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
@@ -9788,14 +9748,6 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 4,
-          "bronze": 0,
-          "total": 4,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "LWLG",
           "gold": 0,
           "silver": 0,
@@ -9820,6 +9772,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "ALAB",
           "gold": 0,
           "silver": 0,
@@ -9841,7 +9801,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -9866,14 +9826,6 @@
           "bronze": 1,
           "total": 1,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "MCHP",
@@ -10143,7 +10095,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -10175,10 +10127,10 @@
       "ALL": [
         {
           "ticker": "AXTI",
-          "gold": 201,
+          "gold": 200,
           "silver": 122,
           "bronze": 69,
-          "total": 392,
+          "total": 391,
           "persona": "财报戏精"
         },
         {
@@ -10191,18 +10143,18 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 80,
-          "silver": 92,
+          "gold": 82,
+          "silver": 90,
           "bronze": 84,
           "total": 256,
           "persona": "财报戏精"
         },
         {
           "ticker": "POET",
-          "gold": 72,
+          "gold": 70,
           "silver": 64,
-          "bronze": 60,
-          "total": 196,
+          "bronze": 58,
+          "total": 192,
           "persona": "财报戏精"
         },
         {
@@ -10249,8 +10201,8 @@
           "ticker": "WOLF",
           "gold": 46,
           "silver": 29,
-          "bronze": 39,
-          "total": 114,
+          "bronze": 38,
+          "total": 113,
           "persona": "财报戏精"
         },
         {
@@ -10262,19 +10214,19 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AEHR",
-          "gold": 39,
-          "silver": 48,
+          "ticker": "BE",
+          "gold": 38,
+          "silver": 51,
           "bronze": 49,
-          "total": 136,
+          "total": 138,
           "persona": "财报戏精"
         },
         {
-          "ticker": "BE",
+          "ticker": "AEHR",
           "gold": 38,
-          "silver": 52,
-          "bronze": 49,
-          "total": 139,
+          "silver": 47,
+          "bronze": 47,
+          "total": 132,
           "persona": "财报戏精"
         },
         {
@@ -10289,16 +10241,16 @@
           "ticker": "CRWV",
           "gold": 38,
           "silver": 19,
-          "bronze": 34,
-          "total": 91,
+          "bronze": 33,
+          "total": 90,
           "persona": "财报戏精"
         },
         {
           "ticker": "CSCO",
           "gold": 32,
-          "silver": 17,
+          "silver": 16,
           "bronze": 9,
-          "total": 58,
+          "total": 57,
           "persona": "NPC 系"
         },
         {
@@ -10337,24 +10289,24 @@
           "ticker": "LITE",
           "gold": 24,
           "silver": 30,
-          "bronze": 46,
-          "total": 100,
+          "bronze": 45,
+          "total": 99,
           "persona": "蒸蒸日上"
         },
         {
           "ticker": "ALAB",
           "gold": 24,
-          "silver": 19,
-          "bronze": 26,
-          "total": 69,
+          "silver": 17,
+          "bronze": 27,
+          "total": 68,
           "persona": "财报戏精"
         },
         {
           "ticker": "LEU",
-          "gold": 23,
-          "silver": 44,
+          "gold": 22,
+          "silver": 43,
           "bronze": 49,
-          "total": 116,
+          "total": 114,
           "persona": "财报戏精"
         },
         {
@@ -10416,9 +10368,9 @@
         {
           "ticker": "ASX",
           "gold": 18,
-          "silver": 15,
+          "silver": 14,
           "bronze": 19,
-          "total": 52,
+          "total": 51,
           "persona": "NPC 系"
         },
         {
@@ -10455,10 +10407,10 @@
         },
         {
           "ticker": "MOD",
-          "gold": 14,
+          "gold": 13,
           "silver": 15,
-          "bronze": 20,
-          "total": 49,
+          "bronze": 19,
+          "total": 47,
           "persona": "蒸蒸日上"
         },
         {
@@ -10467,7 +10419,7 @@
           "silver": 16,
           "bronze": 18,
           "total": 47,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "FORM",
@@ -10544,18 +10496,10 @@
         {
           "ticker": "SNPS",
           "gold": 10,
-          "silver": 25,
+          "silver": 24,
           "bronze": 14,
-          "total": 49,
+          "total": 48,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 10,
-          "silver": 11,
-          "bronze": 7,
-          "total": 28,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "VST",
@@ -10572,15 +10516,23 @@
           "bronze": 21,
           "total": 49,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "ARM",
+          "gold": 9,
+          "silver": 7,
+          "bronze": 16,
+          "total": 32,
+          "persona": "蒸蒸日上"
         }
       ],
       "D": [
         {
           "ticker": "AXTI",
-          "gold": 149,
+          "gold": 148,
           "silver": 98,
           "bronze": 54,
-          "total": 301,
+          "total": 300,
           "persona": "财报戏精"
         },
         {
@@ -10609,10 +10561,10 @@
         },
         {
           "ticker": "POET",
-          "gold": 63,
+          "gold": 61,
           "silver": 53,
-          "bronze": 45,
-          "total": 161,
+          "bronze": 43,
+          "total": 157,
           "persona": "财报戏精"
         },
         {
@@ -10657,10 +10609,10 @@
         },
         {
           "ticker": "AEHR",
-          "gold": 39,
-          "silver": 43,
-          "bronze": 40,
-          "total": 122,
+          "gold": 38,
+          "silver": 42,
+          "bronze": 38,
+          "total": 118,
           "persona": "财报戏精"
         },
         {
@@ -10675,8 +10627,8 @@
           "ticker": "CRWV",
           "gold": 36,
           "silver": 18,
-          "bronze": 30,
-          "total": 84,
+          "bronze": 29,
+          "total": 83,
           "persona": "财报戏精"
         },
         {
@@ -10690,17 +10642,17 @@
         {
           "ticker": "BE",
           "gold": 32,
-          "silver": 45,
+          "silver": 44,
           "bronze": 38,
-          "total": 115,
+          "total": 114,
           "persona": "财报戏精"
         },
         {
           "ticker": "CSCO",
           "gold": 28,
-          "silver": 16,
+          "silver": 15,
           "bronze": 5,
-          "total": 49,
+          "total": 48,
           "persona": "NPC 系"
         },
         {
@@ -10728,19 +10680,19 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "LEU",
+          "ticker": "ALAB",
           "gold": 23,
-          "silver": 38,
-          "bronze": 46,
-          "total": 107,
+          "silver": 16,
+          "bronze": 24,
+          "total": 63,
           "persona": "财报戏精"
         },
         {
-          "ticker": "ALAB",
-          "gold": 23,
-          "silver": 17,
-          "bronze": 24,
-          "total": 64,
+          "ticker": "LEU",
+          "gold": 22,
+          "silver": 37,
+          "bronze": 46,
+          "total": 105,
           "persona": "财报戏精"
         },
         {
@@ -10818,9 +10770,9 @@
         {
           "ticker": "ASX",
           "gold": 15,
-          "silver": 13,
+          "silver": 12,
           "bronze": 17,
-          "total": 45,
+          "total": 44,
           "persona": "NPC 系"
         },
         {
@@ -10830,14 +10782,6 @@
           "bronze": 8,
           "total": 36,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "MOD",
-          "gold": 14,
-          "silver": 13,
-          "bronze": 18,
-          "total": 45,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SMCI",
@@ -10861,7 +10805,15 @@
           "silver": 14,
           "bronze": 17,
           "total": 44,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "MOD",
+          "gold": 13,
+          "silver": 13,
+          "bronze": 17,
+          "total": 43,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "RMBS",
@@ -10946,9 +10898,9 @@
         {
           "ticker": "SNPS",
           "gold": 9,
-          "silver": 21,
+          "silver": 20,
           "bronze": 14,
-          "total": 44,
+          "total": 43,
           "persona": "NPC 系"
         },
         {
@@ -11271,7 +11223,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ENTG",
@@ -11468,6 +11420,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "AAOI",
+          "gold": 1,
+          "silver": 9,
+          "bronze": 4,
+          "total": 14,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "KORU",
           "gold": 1,
           "silver": 3,
@@ -11492,12 +11452,12 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "WOLF",
+          "ticker": "NVDA",
           "gold": 1,
           "silver": 1,
           "bronze": 1,
           "total": 3,
-          "persona": "财报戏精"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ASX",
@@ -11516,28 +11476,20 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 0,
-          "bronze": 1,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "VICR",
           "gold": 1,
           "silver": 1,
           "bronze": 0,
           "total": 2,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "WOLF",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2,
+          "persona": "财报戏精"
         },
         {
           "ticker": "CEG",
@@ -11588,14 +11540,6 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 10,
-          "bronze": 4,
-          "total": 14,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "AEHR",
           "gold": 0,
           "silver": 1,
@@ -11636,6 +11580,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "MX",
           "gold": 0,
           "silver": 0,
@@ -11654,8 +11606,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 1,
-          "bronze": 0,
+          "silver": 0,
+          "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
         },
@@ -11689,7 +11641,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CIEN",
@@ -11729,7 +11681,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "ENTG",
@@ -11814,6 +11766,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "AAOI",
+          "gold": 1,
+          "silver": 3,
+          "bronze": 1,
+          "total": 5,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "AKAM",
           "gold": 1,
           "silver": 2,
@@ -11822,19 +11782,11 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 1,
-          "total": 2,
+          "total": 3,
           "persona": "蒸蒸日上"
         },
         {
@@ -11886,14 +11838,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AAOI",
-          "gold": 0,
-          "silver": 4,
-          "bronze": 1,
-          "total": 5,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "RGTI",
           "gold": 0,
           "silver": 4,
@@ -11910,20 +11854,20 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 2,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "MCHP",
           "gold": 0,
           "silver": 1,
           "bronze": 1,
           "total": 2,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "VICR",
@@ -11955,7 +11899,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "FORM",
@@ -11996,6 +11940,14 @@
           "bronze": 1,
           "total": 1,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "LITE",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "LSRCY",
@@ -12377,7 +12329,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -12465,10 +12417,10 @@
       "ALL": [
         {
           "ticker": "RGTI",
-          "gold": 493,
+          "gold": 491,
           "silver": 330,
-          "bronze": 268,
-          "total": 1091,
+          "bronze": 267,
+          "total": 1088,
           "persona": "财报戏精"
         },
         {
@@ -12482,17 +12434,17 @@
         {
           "ticker": "AAOI",
           "gold": 375,
-          "silver": 369,
+          "silver": 365,
           "bronze": 256,
-          "total": 1000,
+          "total": 996,
           "persona": "财报戏精"
         },
         {
           "ticker": "POET",
-          "gold": 371,
-          "silver": 254,
+          "gold": 370,
+          "silver": 253,
           "bronze": 244,
-          "total": 869,
+          "total": 867,
           "persona": "财报戏精"
         },
         {
@@ -12506,17 +12458,17 @@
         {
           "ticker": "LWLG",
           "gold": 241,
-          "silver": 214,
+          "silver": 212,
           "bronze": 223,
-          "total": 678,
+          "total": 676,
           "persona": "财报戏精"
         },
         {
           "ticker": "LSRCY",
           "gold": 192,
           "silver": 129,
-          "bronze": 83,
-          "total": 404,
+          "bronze": 82,
+          "total": 403,
           "persona": "NPC 系"
         },
         {
@@ -12530,9 +12482,9 @@
         {
           "ticker": "AEHR",
           "gold": 140,
-          "silver": 150,
+          "silver": 149,
           "bronze": 172,
-          "total": 462,
+          "total": 461,
           "persona": "财报戏精"
         },
         {
@@ -12547,8 +12499,8 @@
           "ticker": "SMCI",
           "gold": 128,
           "silver": 130,
-          "bronze": 150,
-          "total": 408,
+          "bronze": 148,
+          "total": 406,
           "persona": "财报戏精"
         },
         {
@@ -12595,8 +12547,8 @@
           "ticker": "KORU",
           "gold": 90,
           "silver": 83,
-          "bronze": 112,
-          "total": 285,
+          "bronze": 111,
+          "total": 284,
           "persona": "财报戏精"
         },
         {
@@ -12610,8 +12562,8 @@
         {
           "ticker": "ALAB",
           "gold": 78,
-          "silver": 81,
-          "bronze": 82,
+          "silver": 80,
+          "bronze": 83,
           "total": 241,
           "persona": "财报戏精"
         },
@@ -12625,8 +12577,8 @@
         },
         {
           "ticker": "CSCO",
-          "gold": 76,
-          "silver": 51,
+          "gold": 77,
+          "silver": 50,
           "bronze": 42,
           "total": 169,
           "persona": "NPC 系"
@@ -12713,10 +12665,10 @@
         },
         {
           "ticker": "GLW",
-          "gold": 48,
+          "gold": 47,
           "silver": 54,
           "bronze": 54,
-          "total": 156,
+          "total": 155,
           "persona": "NPC 系"
         },
         {
@@ -12731,8 +12683,8 @@
           "ticker": "WOLF",
           "gold": 46,
           "silver": 29,
-          "bronze": 39,
-          "total": 114,
+          "bronze": 38,
+          "total": 113,
           "persona": "财报戏精"
         },
         {
@@ -12744,19 +12696,11 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "TSEM",
-          "gold": 41,
-          "silver": 50,
-          "bronze": 68,
-          "total": 159,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "LITE",
           "gold": 40,
           "silver": 68,
-          "bronze": 78,
-          "total": 186,
+          "bronze": 77,
+          "total": 185,
           "persona": "蒸蒸日上"
         },
         {
@@ -12766,6 +12710,14 @@
           "bronze": 80,
           "total": 182,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "TSEM",
+          "gold": 40,
+          "silver": 50,
+          "bronze": 68,
+          "total": 158,
+          "persona": "NPC 系"
         },
         {
           "ticker": "CIEN",
@@ -12786,17 +12738,17 @@
         {
           "ticker": "VST",
           "gold": 36,
-          "silver": 73,
+          "silver": 72,
           "bronze": 90,
-          "total": 199,
+          "total": 198,
           "persona": "蒸蒸日上"
         },
         {
           "ticker": "CLS",
           "gold": 36,
           "silver": 63,
-          "bronze": 62,
-          "total": 161,
+          "bronze": 61,
+          "total": 160,
           "persona": "蒸蒸日上"
         },
         {
@@ -12805,7 +12757,7 @@
           "silver": 49,
           "bronze": 64,
           "total": 148,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "VRT",
@@ -12837,7 +12789,7 @@
           "silver": 42,
           "bronze": 41,
           "total": 116,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ASX",
@@ -12867,10 +12819,10 @@
       "D": [
         {
           "ticker": "RGTI",
-          "gold": 403,
+          "gold": 401,
           "silver": 287,
-          "bronze": 217,
-          "total": 907,
+          "bronze": 216,
+          "total": 904,
           "persona": "财报戏精"
         },
         {
@@ -12883,18 +12835,18 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 340,
-          "silver": 280,
+          "gold": 338,
+          "silver": 278,
           "bronze": 206,
-          "total": 826,
+          "total": 822,
           "persona": "财报戏精"
         },
         {
           "ticker": "POET",
-          "gold": 322,
-          "silver": 209,
+          "gold": 321,
+          "silver": 208,
           "bronze": 189,
-          "total": 720,
+          "total": 718,
           "persona": "财报戏精"
         },
         {
@@ -12908,17 +12860,17 @@
         {
           "ticker": "LWLG",
           "gold": 204,
-          "silver": 187,
+          "silver": 185,
           "bronze": 186,
-          "total": 577,
+          "total": 575,
           "persona": "财报戏精"
         },
         {
           "ticker": "LSRCY",
           "gold": 185,
           "silver": 118,
-          "bronze": 74,
-          "total": 377,
+          "bronze": 73,
+          "total": 376,
           "persona": "NPC 系"
         },
         {
@@ -12932,9 +12884,9 @@
         {
           "ticker": "AEHR",
           "gold": 138,
-          "silver": 136,
+          "silver": 135,
           "bronze": 148,
-          "total": 422,
+          "total": 421,
           "persona": "财报戏精"
         },
         {
@@ -12949,8 +12901,8 @@
           "ticker": "SMCI",
           "gold": 118,
           "silver": 112,
-          "bronze": 132,
-          "total": 362,
+          "bronze": 130,
+          "total": 360,
           "persona": "财报戏精"
         },
         {
@@ -12981,8 +12933,8 @@
           "ticker": "KORU",
           "gold": 86,
           "silver": 79,
-          "bronze": 105,
-          "total": 270,
+          "bronze": 104,
+          "total": 269,
           "persona": "财报戏精"
         },
         {
@@ -13035,8 +12987,8 @@
         },
         {
           "ticker": "CSCO",
-          "gold": 64,
-          "silver": 44,
+          "gold": 65,
+          "silver": 43,
           "bronze": 33,
           "total": 141,
           "persona": "NPC 系"
@@ -13115,10 +13067,10 @@
         },
         {
           "ticker": "GLW",
-          "gold": 44,
+          "gold": 43,
           "silver": 47,
           "bronze": 47,
-          "total": 138,
+          "total": 137,
           "persona": "NPC 系"
         },
         {
@@ -13128,14 +13080,6 @@
           "bronze": 34,
           "total": 101,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "TSEM",
-          "gold": 39,
-          "silver": 45,
-          "bronze": 61,
-          "total": 145,
-          "persona": "NPC 系"
         },
         {
           "ticker": "ASML",
@@ -13152,6 +13096,14 @@
           "bronze": 74,
           "total": 168,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "TSEM",
+          "gold": 38,
+          "silver": 45,
+          "bronze": 61,
+          "total": 144,
+          "persona": "NPC 系"
         },
         {
           "ticker": "LITE",
@@ -13183,7 +13135,7 @@
           "silver": 45,
           "bronze": 58,
           "total": 138,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "CIEN",
@@ -13197,8 +13149,8 @@
           "ticker": "CLS",
           "gold": 32,
           "silver": 56,
-          "bronze": 58,
-          "total": 146,
+          "bronze": 57,
+          "total": 145,
           "persona": "蒸蒸日上"
         },
         {
@@ -13207,7 +13159,7 @@
           "silver": 38,
           "bronze": 39,
           "total": 109,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "VRT",
@@ -13228,9 +13180,9 @@
         {
           "ticker": "VST",
           "gold": 27,
-          "silver": 56,
+          "silver": 55,
           "bronze": 75,
-          "total": 158,
+          "total": 157,
           "persona": "蒸蒸日上"
         },
         {
@@ -13703,8 +13655,8 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 7,
-          "silver": 34,
+          "gold": 8,
+          "silver": 33,
           "bronze": 16,
           "total": 57,
           "persona": "财报戏精"
@@ -13808,8 +13760,8 @@
         {
           "ticker": "ALAB",
           "gold": 2,
-          "silver": 4,
-          "bronze": 4,
+          "silver": 3,
+          "bronze": 5,
           "total": 10,
           "persona": "财报戏精"
         },
@@ -13918,6 +13870,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "NVDA",
+          "gold": 1,
+          "silver": 2,
+          "bronze": 1,
+          "total": 4,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "CEG",
           "gold": 1,
           "silver": 0,
@@ -13934,22 +13894,6 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "VRT",
           "gold": 1,
           "silver": 1,
@@ -13964,14 +13908,6 @@
           "bronze": 0,
           "total": 3,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "财报戏精"
         },
         {
           "ticker": "ASX",
@@ -14038,6 +13974,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "WOLF",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "FORM",
           "gold": 1,
           "silver": 0,
@@ -14068,6 +14012,14 @@
           "bronze": 4,
           "total": 5,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "GLW",
+          "gold": 0,
+          "silver": 3,
+          "bronze": 1,
+          "total": 4,
+          "persona": "NPC 系"
         }
       ],
       "Q": [
@@ -14112,6 +14064,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "AAOI",
+          "gold": 3,
+          "silver": 13,
+          "bronze": 5,
+          "total": 21,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "SIVEF",
           "gold": 3,
           "silver": 2,
@@ -14133,14 +14093,6 @@
           "silver": 0,
           "bronze": 1,
           "total": 4,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "AAOI",
-          "gold": 2,
-          "silver": 14,
-          "bronze": 5,
-          "total": 21,
           "persona": "财报戏精"
         },
         {
@@ -14194,9 +14146,9 @@
         {
           "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 2,
-          "total": 3,
+          "total": 4,
           "persona": "蒸蒸日上"
         },
         {
@@ -14238,14 +14190,6 @@
           "bronze": 0,
           "total": 2,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "WDC",
@@ -14320,20 +14264,20 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 2,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "MCHP",
           "gold": 0,
           "silver": 1,
           "bronze": 1,
           "total": 2,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "VICR",
@@ -14381,7 +14325,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "FORM",
@@ -14406,6 +14350,14 @@
           "bronze": 1,
           "total": 1,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "LITE",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "QCOM",
@@ -14971,7 +14923,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CIEN",
@@ -15035,7 +14987,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SIVEF",
@@ -15083,8 +15035,8 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 422,
-          "silver": 410,
+          "gold": 424,
+          "silver": 408,
           "bronze": 271,
           "total": 1103,
           "persona": "财报戏精"
@@ -15228,8 +15180,8 @@
         {
           "ticker": "ALAB",
           "gold": 78,
-          "silver": 81,
-          "bronze": 82,
+          "silver": 80,
+          "bronze": 83,
           "total": 241,
           "persona": "财报戏精"
         },
@@ -15243,8 +15195,8 @@
         },
         {
           "ticker": "CSCO",
-          "gold": 77,
-          "silver": 52,
+          "gold": 78,
+          "silver": 51,
           "bronze": 45,
           "total": 174,
           "persona": "NPC 系"
@@ -15349,8 +15301,8 @@
           "ticker": "WOLF",
           "gold": 46,
           "silver": 29,
-          "bronze": 39,
-          "total": 114,
+          "bronze": 38,
+          "total": 113,
           "persona": "财报戏精"
         },
         {
@@ -15381,8 +15333,8 @@
           "ticker": "LITE",
           "gold": 41,
           "silver": 71,
-          "bronze": 80,
-          "total": 192,
+          "bronze": 79,
+          "total": 191,
           "persona": "蒸蒸日上"
         },
         {
@@ -15423,7 +15375,7 @@
           "silver": 50,
           "bronze": 66,
           "total": 152,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "CEG",
@@ -15447,7 +15399,7 @@
           "silver": 48,
           "bronze": 46,
           "total": 128,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "JBL",
@@ -15652,6 +15604,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "CSCO",
+          "gold": 66,
+          "silver": 44,
+          "bronze": 36,
+          "total": 146,
+          "persona": "NPC 系"
+        },
+        {
           "ticker": "ENPH",
           "gold": 65,
           "silver": 89,
@@ -15666,14 +15626,6 @@
           "bronze": 46,
           "total": 171,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "CSCO",
-          "gold": 65,
-          "silver": 45,
-          "bronze": 36,
-          "total": 146,
-          "persona": "NPC 系"
         },
         {
           "ticker": "AOSL",
@@ -15793,7 +15745,7 @@
           "silver": 46,
           "bronze": 60,
           "total": 142,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "CIEN",
@@ -15825,7 +15777,7 @@
           "silver": 43,
           "bronze": 43,
           "total": 119,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "VRT",
@@ -16313,8 +16265,8 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 8,
-          "silver": 37,
+          "gold": 9,
+          "silver": 36,
           "bronze": 16,
           "total": 61,
           "persona": "财报戏精"
@@ -16418,8 +16370,8 @@
         {
           "ticker": "ALAB",
           "gold": 2,
-          "silver": 4,
-          "bronze": 4,
+          "silver": 3,
+          "bronze": 5,
           "total": 10,
           "persona": "财报戏精"
         },
@@ -16536,6 +16488,14 @@
           "persona": "蒸蒸日上"
         },
         {
+          "ticker": "NVDA",
+          "gold": 1,
+          "silver": 2,
+          "bronze": 1,
+          "total": 4,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "CEG",
           "gold": 1,
           "silver": 0,
@@ -16560,36 +16520,12 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "WDC",
           "gold": 1,
           "silver": 2,
           "bronze": 0,
           "total": 3,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 1,
-          "total": 3,
-          "persona": "财报戏精"
         },
         {
           "ticker": "ASX",
@@ -16648,6 +16584,14 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "WOLF",
+          "gold": 1,
+          "silver": 1,
+          "bronze": 0,
+          "total": 2,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "FORM",
           "gold": 1,
           "silver": 0,
@@ -16678,6 +16622,14 @@
           "bronze": 4,
           "total": 5,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "GLW",
+          "gold": 0,
+          "silver": 3,
+          "bronze": 1,
+          "total": 4,
+          "persona": "NPC 系"
         }
       ],
       "Q": [
@@ -16722,6 +16674,14 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "AAOI",
+          "gold": 3,
+          "silver": 16,
+          "bronze": 6,
+          "total": 25,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "SIVEF",
           "gold": 3,
           "silver": 2,
@@ -16743,14 +16703,6 @@
           "silver": 0,
           "bronze": 1,
           "total": 4,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "AAOI",
-          "gold": 2,
-          "silver": 17,
-          "bronze": 6,
-          "total": 25,
           "persona": "财报戏精"
         },
         {
@@ -16812,9 +16764,9 @@
         {
           "ticker": "NVDA",
           "gold": 1,
-          "silver": 0,
+          "silver": 1,
           "bronze": 2,
-          "total": 3,
+          "total": 4,
           "persona": "蒸蒸日上"
         },
         {
@@ -16848,14 +16800,6 @@
           "bronze": 0,
           "total": 2,
           "persona": "NPC 系"
-        },
-        {
-          "ticker": "MU",
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "WDC",
@@ -16938,20 +16882,20 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 2,
-          "total": 2,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "MCHP",
           "gold": 0,
           "silver": 1,
           "bronze": 1,
           "total": 2,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 1,
+          "total": 2,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "TLN",
@@ -17007,7 +16951,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "FORM",
@@ -17034,12 +16978,20 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "LITE",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 1,
+          "total": 1,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "PLAB",
           "gold": 0,
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "QCOM",
@@ -17597,7 +17549,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CIEN",
@@ -17661,7 +17613,7 @@
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SIVEF",
@@ -18258,7 +18210,7 @@
         "silver": 3,
         "bronze": 11,
         "total": 22,
-        "persona": "蒸蒸日上"
+        "persona": "NPC 系"
       },
       {
         "ticker": "AKAM",
@@ -18962,7 +18914,7 @@
         "silver": 0,
         "bronze": 2,
         "total": 2,
-        "persona": "NPC 系"
+        "persona": "蒸蒸日上"
       },
       {
         "ticker": "CAMT",
@@ -19148,7 +19100,7 @@
         "silver": 14,
         "bronze": 5,
         "total": 28,
-        "persona": "NPC 系"
+        "persona": "蒸蒸日上"
       },
       {
         "ticker": "SNPS",
@@ -19228,7 +19180,7 @@
         "silver": 11,
         "bronze": 11,
         "total": 26,
-        "persona": "蒸蒸日上"
+        "persona": "NPC 系"
       },
       {
         "ticker": "CAMT",
@@ -19762,7 +19714,7 @@
         "silver": 8,
         "bronze": 6,
         "total": 24,
-        "persona": "NPC 系"
+        "persona": "蒸蒸日上"
       },
       {
         "ticker": "ENPH",
@@ -20275,19 +20227,19 @@
         "persona": "财报戏精"
       },
       {
+        "ticker": "AAOI",
+        "gold": 8,
+        "silver": 20,
+        "bronze": 4,
+        "total": 32,
+        "persona": "财报戏精"
+      },
+      {
         "ticker": "OKLO",
         "gold": 7,
         "silver": 3,
         "bronze": 3,
         "total": 13,
-        "persona": "财报戏精"
-      },
-      {
-        "ticker": "AAOI",
-        "gold": 6,
-        "silver": 22,
-        "bronze": 4,
-        "total": 32,
         "persona": "财报戏精"
       },
       {
@@ -20321,14 +20273,6 @@
         "bronze": 4,
         "total": 9,
         "persona": "财报戏精"
-      },
-      {
-        "ticker": "MU",
-        "gold": 2,
-        "silver": 0,
-        "bronze": 0,
-        "total": 2,
-        "persona": "蒸蒸日上"
       },
       {
         "ticker": "LEU",
@@ -20395,6 +20339,22 @@
         "persona": "财报戏精"
       },
       {
+        "ticker": "MU",
+        "gold": 0,
+        "silver": 0,
+        "bronze": 2,
+        "total": 2,
+        "persona": "蒸蒸日上"
+      },
+      {
+        "ticker": "NVDA",
+        "gold": 0,
+        "silver": 2,
+        "bronze": 0,
+        "total": 2,
+        "persona": "蒸蒸日上"
+      },
+      {
         "ticker": "SIVEF",
         "gold": 0,
         "silver": 2,
@@ -20443,14 +20403,6 @@
         "persona": "蒸蒸日上"
       },
       {
-        "ticker": "LITE",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1,
-        "persona": "蒸蒸日上"
-      },
-      {
         "ticker": "MX",
         "gold": 0,
         "silver": 0,
@@ -20465,14 +20417,6 @@
         "bronze": 1,
         "total": 1,
         "persona": "蒸蒸日上"
-      },
-      {
-        "ticker": "WOLF",
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "total": 1,
-        "persona": "财报戏精"
       }
     ],
     "steady_grind": [
@@ -20876,7 +20820,7 @@
         "silver": 0,
         "bronze": 5,
         "total": 9,
-        "persona": "蒸蒸日上"
+        "persona": "NPC 系"
       },
       {
         "ticker": "SNDK",
@@ -21151,8 +21095,8 @@
       {
         "ticker": "ALAB",
         "gold": 0,
-        "silver": 2,
-        "bronze": 2,
+        "silver": 1,
+        "bronze": 3,
         "total": 4,
         "persona": "财报戏精"
       },
@@ -21183,8 +21127,8 @@
       {
         "ticker": "MU",
         "gold": 0,
-        "silver": 1,
-        "bronze": 1,
+        "silver": 2,
+        "bronze": 0,
         "total": 2,
         "persona": "蒸蒸日上"
       },
@@ -21398,7 +21342,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CEG",
@@ -21463,20 +21407,20 @@
       ],
       "pump_army": [
         {
-          "ticker": "NVDA",
+          "ticker": "CSCO",
           "gold": 1,
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
-          "ticker": "CSCO",
+          "ticker": "NVDA",
           "gold": 0,
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SNDK",
@@ -21746,7 +21690,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CEG",
@@ -21811,20 +21755,20 @@
       ],
       "pump_army": [
         {
-          "ticker": "NVDA",
+          "ticker": "CSCO",
           "gold": 1,
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
-          "ticker": "CSCO",
+          "ticker": "NVDA",
           "gold": 0,
           "silver": 1,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SNDK",
@@ -22790,7 +22734,7 @@
           "silver": 0,
           "bronze": 0,
           "total": 1,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "QCOM",
@@ -22814,7 +22758,7 @@
           "silver": 0,
           "bronze": 2,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "BE",
@@ -22894,7 +22838,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 1,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "GFS",
@@ -23343,20 +23287,20 @@
           "persona": "NPC 系"
         },
         {
+          "ticker": "CSCO",
+          "gold": 1,
+          "silver": 0,
+          "bronze": 0,
+          "total": 1,
+          "persona": "NPC 系"
+        },
+        {
           "ticker": "LWLG",
           "gold": 1,
           "silver": 0,
           "bronze": 0,
           "total": 1,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "NVDA",
-          "gold": 1,
-          "silver": 0,
-          "bronze": 0,
-          "total": 1,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "NVTS",
@@ -23439,14 +23383,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "CSCO",
-          "gold": 0,
-          "silver": 1,
-          "bronze": 0,
-          "total": 1,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "GFS",
           "gold": 0,
           "silver": 1,
@@ -23480,6 +23416,14 @@
         },
         {
           "ticker": "LSCC",
+          "gold": 0,
+          "silver": 1,
+          "bronze": 0,
+          "total": 1,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "NVDA",
           "gold": 0,
           "silver": 1,
           "bronze": 0,
@@ -24683,7 +24627,7 @@
           "silver": 2,
           "bronze": 5,
           "total": 10,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ETN",
@@ -24851,7 +24795,7 @@
           "silver": 0,
           "bronze": 1,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "RMBS",
@@ -25596,7 +25540,7 @@
           "silver": 0,
           "bronze": 2,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "RGTI",
@@ -25800,7 +25744,7 @@
           "silver": 0,
           "bronze": 2,
           "total": 2,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "FN",
@@ -26125,8 +26069,8 @@
           "ticker": "POET",
           "gold": 8,
           "silver": 6,
-          "bronze": 8,
-          "total": 22,
+          "bronze": 7,
+          "total": 21,
           "persona": "财报戏精"
         },
         {
@@ -26178,19 +26122,11 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "LEU",
-          "gold": 5,
-          "silver": 9,
-          "bronze": 10,
-          "total": 24,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "AEHR",
           "gold": 5,
-          "silver": 8,
+          "silver": 7,
           "bronze": 7,
-          "total": 20,
+          "total": 19,
           "persona": "财报戏精"
         },
         {
@@ -26200,6 +26136,14 @@
           "bronze": 5,
           "total": 14,
           "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "LEU",
+          "gold": 4,
+          "silver": 9,
+          "bronze": 10,
+          "total": 23,
+          "persona": "财报戏精"
         },
         {
           "ticker": "ALAB",
@@ -26317,10 +26261,10 @@
       "daily_clown": [
         {
           "ticker": "AXTI",
-          "gold": 17,
+          "gold": 16,
           "silver": 11,
           "bronze": 2,
-          "total": 30,
+          "total": 29,
           "persona": "财报戏精"
         },
         {
@@ -26340,19 +26284,19 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "CRWV",
-          "gold": 8,
-          "silver": 2,
-          "bronze": 11,
-          "total": 21,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "KORU",
           "gold": 8,
           "silver": 6,
           "bronze": 7,
           "total": 21,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "CRWV",
+          "gold": 8,
+          "silver": 2,
+          "bronze": 10,
+          "total": 20,
           "persona": "财报戏精"
         },
         {
@@ -26390,9 +26334,9 @@
         {
           "ticker": "BE",
           "gold": 6,
-          "silver": 6,
+          "silver": 5,
           "bronze": 4,
-          "total": 16,
+          "total": 15,
           "persona": "财报戏精"
         },
         {
@@ -26537,7 +26481,7 @@
           "silver": 1,
           "bronze": 3,
           "total": 7,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "TLN",
@@ -26609,15 +26553,7 @@
           "ticker": "AEHR",
           "gold": 9,
           "silver": 5,
-          "bronze": 6,
-          "total": 20,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "POET",
-          "gold": 9,
-          "silver": 7,
-          "bronze": 3,
+          "bronze": 5,
           "total": 19,
           "persona": "财报戏精"
         },
@@ -26627,6 +26563,14 @@
           "silver": 2,
           "bronze": 4,
           "total": 15,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "POET",
+          "gold": 8,
+          "silver": 7,
+          "bronze": 3,
+          "total": 18,
           "persona": "财报戏精"
         },
         {
@@ -26812,10 +26756,10 @@
         },
         {
           "ticker": "CSCO",
-          "gold": 21,
+          "gold": 20,
           "silver": 8,
           "bronze": 3,
-          "total": 32,
+          "total": 31,
           "persona": "NPC 系"
         },
         {
@@ -26845,9 +26789,9 @@
         {
           "ticker": "ASX",
           "gold": 10,
-          "silver": 8,
+          "silver": 7,
           "bronze": 11,
-          "total": 29,
+          "total": 28,
           "persona": "NPC 系"
         },
         {
@@ -26920,7 +26864,7 @@
           "silver": 2,
           "bronze": 7,
           "total": 12,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CAMT",
@@ -26944,7 +26888,7 @@
           "silver": 2,
           "bronze": 3,
           "total": 8,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "KLIC",
@@ -27064,8 +27008,8 @@
           "ticker": "POET",
           "gold": 14,
           "silver": 9,
-          "bronze": 8,
-          "total": 31,
+          "bronze": 7,
+          "total": 30,
           "persona": "财报戏精"
         },
         {
@@ -27205,14 +27149,6 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "ALAB",
-          "gold": 3,
-          "silver": 2,
-          "bronze": 5,
-          "total": 10,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "MX",
           "gold": 3,
           "silver": 5,
@@ -27221,12 +27157,12 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "MOD",
+          "ticker": "ALAB",
           "gold": 3,
-          "silver": 3,
-          "bronze": 0,
-          "total": 6,
-          "persona": "蒸蒸日上"
+          "silver": 1,
+          "bronze": 5,
+          "total": 9,
+          "persona": "财报戏精"
         },
         {
           "ticker": "MXL",
@@ -27275,6 +27211,14 @@
           "bronze": 1,
           "total": 5,
           "persona": "NPC 系"
+        },
+        {
+          "ticker": "MOD",
+          "gold": 2,
+          "silver": 3,
+          "bronze": 0,
+          "total": 5,
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "MRVL",
@@ -27345,19 +27289,19 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "POET",
-          "gold": 10,
-          "silver": 4,
-          "bronze": 3,
-          "total": 17,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "NVTS",
           "gold": 9,
           "silver": 5,
           "bronze": 4,
           "total": 18,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "POET",
+          "gold": 9,
+          "silver": 4,
+          "bronze": 3,
+          "total": 16,
           "persona": "财报戏精"
         },
         {
@@ -27380,8 +27324,8 @@
           "ticker": "AEHR",
           "gold": 7,
           "silver": 5,
-          "bronze": 4,
-          "total": 16,
+          "bronze": 3,
+          "total": 15,
           "persona": "财报戏精"
         },
         {
@@ -27454,7 +27398,7 @@
           "silver": 5,
           "bronze": 1,
           "total": 10,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AMSC",
@@ -27478,6 +27422,14 @@
           "silver": 2,
           "bronze": 1,
           "total": 7,
+          "persona": "NPC 系"
+        },
+        {
+          "ticker": "CSCO",
+          "gold": 4,
+          "silver": 2,
+          "bronze": 0,
+          "total": 6,
           "persona": "NPC 系"
         },
         {
@@ -27513,28 +27465,12 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "CSCO",
-          "gold": 3,
-          "silver": 3,
-          "bronze": 0,
-          "total": 6,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "ENPH",
           "gold": 3,
           "silver": 1,
           "bronze": 2,
           "total": 6,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "SNPS",
-          "gold": 3,
-          "silver": 3,
-          "bronze": 0,
-          "total": 6,
-          "persona": "NPC 系"
         },
         {
           "ticker": "ADI",
@@ -27550,7 +27486,7 @@
           "silver": 1,
           "bronze": 1,
           "total": 5,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "GFS",
@@ -27562,6 +27498,14 @@
         },
         {
           "ticker": "QCOM",
+          "gold": 3,
+          "silver": 2,
+          "bronze": 0,
+          "total": 5,
+          "persona": "NPC 系"
+        },
+        {
+          "ticker": "SNPS",
           "gold": 3,
           "silver": 2,
           "bronze": 0,
@@ -27620,14 +27564,6 @@
           "persona": "财报戏精"
         },
         {
-          "ticker": "AEHR",
-          "gold": 8,
-          "silver": 16,
-          "bronze": 11,
-          "total": 35,
-          "persona": "财报戏精"
-        },
-        {
           "ticker": "RGTI",
           "gold": 8,
           "silver": 10,
@@ -27641,6 +27577,14 @@
           "silver": 8,
           "bronze": 7,
           "total": 23,
+          "persona": "财报戏精"
+        },
+        {
+          "ticker": "AEHR",
+          "gold": 7,
+          "silver": 16,
+          "bronze": 11,
+          "total": 34,
           "persona": "财报戏精"
         },
         {
@@ -27793,7 +27737,7 @@
           "silver": 1,
           "bronze": 3,
           "total": 5,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "AMKR",
@@ -28258,16 +28202,16 @@
           "ticker": "RGTI",
           "gold": 77,
           "silver": 37,
-          "bronze": 39,
-          "total": 153,
+          "bronze": 38,
+          "total": 152,
           "persona": "财报戏精"
         },
         {
           "ticker": "AAOI",
-          "gold": 71,
+          "gold": 70,
           "silver": 52,
           "bronze": 29,
-          "total": 152,
+          "total": 151,
           "persona": "财报戏精"
         },
         {
@@ -28297,9 +28241,9 @@
         {
           "ticker": "LWLG",
           "gold": 38,
-          "silver": 36,
+          "silver": 35,
           "bronze": 32,
-          "total": 106,
+          "total": 105,
           "persona": "财报戏精"
         },
         {
@@ -28514,10 +28458,10 @@
         },
         {
           "ticker": "POET",
-          "gold": 42,
+          "gold": 41,
           "silver": 37,
           "bronze": 29,
-          "total": 108,
+          "total": 107,
           "persona": "财报戏精"
         },
         {
@@ -28563,9 +28507,9 @@
         {
           "ticker": "AEHR",
           "gold": 24,
-          "silver": 14,
+          "silver": 13,
           "bronze": 22,
-          "total": 60,
+          "total": 59,
           "persona": "财报戏精"
         },
         {
@@ -28710,7 +28654,7 @@
           "silver": 3,
           "bronze": 11,
           "total": 22,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "AKAM",
@@ -28748,10 +28692,10 @@
         },
         {
           "ticker": "AAOI",
-          "gold": 52,
+          "gold": 51,
           "silver": 43,
           "bronze": 22,
-          "total": 117,
+          "total": 116,
           "persona": "财报戏精"
         },
         {
@@ -28781,9 +28725,9 @@
         {
           "ticker": "LWLG",
           "gold": 29,
-          "silver": 22,
+          "silver": 21,
           "bronze": 31,
-          "total": 82,
+          "total": 81,
           "persona": "财报戏精"
         },
         {
@@ -28830,8 +28774,8 @@
           "ticker": "KORU",
           "gold": 18,
           "silver": 25,
-          "bronze": 30,
-          "total": 73,
+          "bronze": 29,
+          "total": 72,
           "persona": "财报戏精"
         },
         {
@@ -28976,7 +28920,7 @@
           "silver": 2,
           "bronze": 7,
           "total": 17,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         }
       ],
       "earnings_clown": [],
@@ -28987,8 +28931,8 @@
           "ticker": "LSRCY",
           "gold": 127,
           "silver": 54,
-          "bronze": 30,
-          "total": 211,
+          "bronze": 29,
+          "total": 210,
           "persona": "NPC 系"
         },
         {
@@ -29017,10 +28961,10 @@
         },
         {
           "ticker": "GLW",
-          "gold": 36,
+          "gold": 35,
           "silver": 29,
           "bronze": 20,
-          "total": 85,
+          "total": 84,
           "persona": "NPC 系"
         },
         {
@@ -29125,7 +29069,7 @@
           "silver": 14,
           "bronze": 5,
           "total": 28,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SNPS",
@@ -29197,7 +29141,7 @@
           "silver": 11,
           "bronze": 10,
           "total": 25,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "CAMT",
@@ -29210,9 +29154,9 @@
         {
           "ticker": "VST",
           "gold": 4,
-          "silver": 7,
+          "silver": 6,
           "bronze": 6,
-          "total": 17,
+          "total": 16,
           "persona": "蒸蒸日上"
         },
         {
@@ -29227,18 +29171,18 @@
       "oscar": [
         {
           "ticker": "RGTI",
-          "gold": 76,
+          "gold": 75,
           "silver": 47,
           "bronze": 38,
-          "total": 161,
+          "total": 160,
           "persona": "财报戏精"
         },
         {
           "ticker": "POET",
           "gold": 67,
-          "silver": 46,
+          "silver": 45,
           "bronze": 30,
-          "total": 143,
+          "total": 142,
           "persona": "财报戏精"
         },
         {
@@ -29317,8 +29261,8 @@
           "ticker": "SMCI",
           "gold": 15,
           "silver": 20,
-          "bronze": 19,
-          "total": 54,
+          "bronze": 18,
+          "total": 53,
           "persona": "财报戏精"
         },
         {
@@ -29576,9 +29520,9 @@
         {
           "ticker": "AAOI",
           "gold": 16,
-          "silver": 18,
+          "silver": 17,
           "bronze": 11,
-          "total": 45,
+          "total": 44,
           "persona": "财报戏精"
         },
         {
@@ -29638,14 +29582,6 @@
           "persona": "NPC 系"
         },
         {
-          "ticker": "TSEM",
-          "gold": 13,
-          "silver": 13,
-          "bronze": 9,
-          "total": 35,
-          "persona": "NPC 系"
-        },
-        {
           "ticker": "VICR",
           "gold": 13,
           "silver": 9,
@@ -29676,6 +29612,14 @@
           "bronze": 14,
           "total": 35,
           "persona": "财报戏精"
+        },
+        {
+          "ticker": "TSEM",
+          "gold": 12,
+          "silver": 13,
+          "bronze": 9,
+          "total": 34,
+          "persona": "NPC 系"
         },
         {
           "ticker": "NBIS",
@@ -29739,7 +29683,7 @@
           "silver": 8,
           "bronze": 6,
           "total": 23,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "DELL",
@@ -29747,25 +29691,25 @@
           "silver": 14,
           "bronze": 13,
           "total": 35,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         }
       ],
       "reverse_idx": [],
       "roller_coaster": [
         {
           "ticker": "RGTI",
-          "gold": 120,
+          "gold": 119,
           "silver": 92,
           "bronze": 57,
-          "total": 269,
+          "total": 268,
           "persona": "财报戏精"
         },
         {
           "ticker": "AAOI",
           "gold": 85,
-          "silver": 76,
+          "silver": 75,
           "bronze": 78,
-          "total": 239,
+          "total": 238,
           "persona": "财报戏精"
         },
         {
@@ -29828,8 +29772,8 @@
           "ticker": "SMCI",
           "gold": 20,
           "silver": 24,
-          "bronze": 27,
-          "total": 71,
+          "bronze": 26,
+          "total": 70,
           "persona": "财报戏精"
         },
         {
@@ -30146,7 +30090,7 @@
           "silver": 0,
           "bronze": 5,
           "total": 9,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "VICR",
@@ -30891,7 +30835,7 @@
           "silver": 3,
           "bronze": 11,
           "total": 22,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "AKAM",
@@ -31595,7 +31539,7 @@
           "silver": 0,
           "bronze": 2,
           "total": 2,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "CAMT",
@@ -31781,7 +31725,7 @@
           "silver": 14,
           "bronze": 5,
           "total": 28,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "SNPS",
@@ -31861,7 +31805,7 @@
           "silver": 11,
           "bronze": 11,
           "total": 26,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "CAMT",
@@ -32395,7 +32339,7 @@
           "silver": 8,
           "bronze": 6,
           "total": 24,
-          "persona": "NPC 系"
+          "persona": "蒸蒸日上"
         },
         {
           "ticker": "ENPH",
@@ -32908,19 +32852,19 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "AAOI",
+          "gold": 8,
+          "silver": 20,
+          "bronze": 4,
+          "total": 32,
+          "persona": "财报戏精"
+        },
+        {
           "ticker": "OKLO",
           "gold": 7,
           "silver": 3,
           "bronze": 3,
           "total": 13,
-          "persona": "财报戏精"
-        },
-        {
-          "ticker": "AAOI",
-          "gold": 6,
-          "silver": 22,
-          "bronze": 4,
-          "total": 32,
           "persona": "财报戏精"
         },
         {
@@ -32954,14 +32898,6 @@
           "bronze": 4,
           "total": 9,
           "persona": "财报戏精"
-        },
-        {
-          "ticker": "MU",
-          "gold": 2,
-          "silver": 0,
-          "bronze": 0,
-          "total": 2,
-          "persona": "蒸蒸日上"
         },
         {
           "ticker": "LEU",
@@ -33028,6 +32964,22 @@
           "persona": "财报戏精"
         },
         {
+          "ticker": "MU",
+          "gold": 0,
+          "silver": 0,
+          "bronze": 2,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
+          "ticker": "NVDA",
+          "gold": 0,
+          "silver": 2,
+          "bronze": 0,
+          "total": 2,
+          "persona": "蒸蒸日上"
+        },
+        {
           "ticker": "SIVEF",
           "gold": 0,
           "silver": 2,
@@ -33076,14 +33028,6 @@
           "persona": "蒸蒸日上"
         },
         {
-          "ticker": "LITE",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "蒸蒸日上"
-        },
-        {
           "ticker": "MX",
           "gold": 0,
           "silver": 0,
@@ -33098,14 +33042,6 @@
           "bronze": 1,
           "total": 1,
           "persona": "蒸蒸日上"
-        },
-        {
-          "ticker": "WOLF",
-          "gold": 0,
-          "silver": 0,
-          "bronze": 1,
-          "total": 1,
-          "persona": "财报戏精"
         }
       ],
       "steady_grind": [
@@ -33509,7 +33445,7 @@
           "silver": 0,
           "bronze": 5,
           "total": 9,
-          "persona": "蒸蒸日上"
+          "persona": "NPC 系"
         },
         {
           "ticker": "SNDK",
@@ -33784,8 +33720,8 @@
         {
           "ticker": "ALAB",
           "gold": 0,
-          "silver": 2,
-          "bronze": 2,
+          "silver": 1,
+          "bronze": 3,
           "total": 4,
           "persona": "财报戏精"
         },
@@ -33816,8 +33752,8 @@
         {
           "ticker": "MU",
           "gold": 0,
-          "silver": 1,
-          "bronze": 1,
+          "silver": 2,
+          "bronze": 0,
           "total": 2,
           "persona": "蒸蒸日上"
         },
