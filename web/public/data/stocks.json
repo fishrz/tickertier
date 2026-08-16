@@ -93,8 +93,8 @@
         "name": "🪑 万年老二奖",
         "count": 32,
         "gold": 6,
-        "silver": 21,
-        "bronze": 5,
+        "silver": 22,
+        "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2026-Q3",
         "period": "M"
@@ -1038,7 +1038,7 @@
     "close": 124.99,
     "pct_change": -0.0024,
     "intraday_amp": 0.0223,
-    "vol_ratio_20": 0.5762,
+    "vol_ratio_20": 0.5817,
     "tier": "😐 NPC",
     "awards_count": 293,
     "persona": "NPC 系",
@@ -1170,6 +1170,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-01",
+        "close": 112.81,
+        "pct_change": -0.0457,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 113.17,
+        "pct_change": 0.0032,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 112.73,
         "pct_change": -0.0039,
@@ -1242,15 +1254,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-22",
-        "close": 124.3,
-        "pct_change": -0.0049,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 117.37,
-        "pct_change": -0.0558,
+        "pct_change": -0.0604,
         "tier": null
       },
       {
@@ -1284,15 +1290,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 115.18,
-        "pct_change": 0.0126,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 117.88,
-        "pct_change": 0.0234,
+        "pct_change": 0.0363,
         "tier": null
       },
       {
@@ -1469,8 +1469,8 @@
         "name": "🏅 劳模奖",
         "count": 4,
         "gold": 0,
-        "silver": 1,
-        "bronze": 3,
+        "silver": 2,
+        "bronze": 2,
         "best_rank": 2,
         "latest_period_key": "2026-Q3",
         "period": "M"
@@ -2665,17 +2665,6 @@
         "period": "D"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 57,
-        "gold": 17,
-        "silver": 26,
-        "bronze": 14,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-18",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 57,
@@ -2684,6 +2673,17 @@
         "bronze": 15,
         "best_rank": 1,
         "latest_period_key": "2026-04-23",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 57,
+        "gold": 17,
+        "silver": 26,
+        "bronze": 14,
+        "best_rank": 1,
+        "latest_period_key": "2026-02-18",
         "period": "D"
       },
       {
@@ -3292,7 +3292,7 @@
     "close": 30.77,
     "pct_change": 0.0049,
     "intraday_amp": 0.0555,
-    "vol_ratio_20": 1.0942,
+    "vol_ratio_20": 0.986,
     "tier": "💪 人上人",
     "awards_count": 213,
     "persona": "蒸蒸日上",
@@ -3435,6 +3435,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-01",
+        "close": 43.52,
+        "pct_change": -0.0805,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 37.11,
+        "pct_change": -0.1473,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 38.24,
         "pct_change": 0.0305,
@@ -3507,15 +3519,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-22",
-        "close": 34.75,
-        "pct_change": -0.0069,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 33.81,
-        "pct_change": -0.0271,
+        "pct_change": -0.0337,
         "tier": null
       },
       {
@@ -3549,15 +3555,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 31.74,
-        "pct_change": 0.0203,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 31.47,
-        "pct_change": -0.0085,
+        "pct_change": 0.0116,
         "tier": null
       },
       {
@@ -4930,17 +4930,6 @@
         "period": "W"
       },
       {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 14,
-        "gold": 7,
-        "silver": 5,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-Q2",
-        "period": "M"
-      },
-      {
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
         "count": 14,
@@ -4960,6 +4949,17 @@
         "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2026-W19",
+        "period": "M"
+      },
+      {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 14,
+        "gold": 7,
+        "silver": 5,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2026-Q2",
         "period": "M"
       },
       {
@@ -5546,7 +5546,7 @@
     "close": 165.38,
     "pct_change": -0.043,
     "intraday_amp": 0.0693,
-    "vol_ratio_20": 0.8285,
+    "vol_ratio_20": 0.8245,
     "tier": "💩 拉完了",
     "awards_count": 190,
     "persona": "蒸蒸日上",
@@ -5689,6 +5689,12 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-02",
+        "close": 142.5,
+        "pct_change": -0.0835,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 141.84,
         "pct_change": -0.0046,
@@ -5803,15 +5809,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 132.46,
-        "pct_change": -0.0348,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 139.79,
-        "pct_change": 0.0553,
+        "pct_change": 0.0187,
         "tier": null
       },
       {
@@ -5995,6 +5995,17 @@
         "period": "D"
       },
       {
+        "code": "traitor",
+        "name": "🩸 拖后腿奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
         "code": "earnings_clown",
         "name": "💼 财报现形",
         "count": 1,
@@ -6015,17 +6026,6 @@
         "best_rank": 3,
         "latest_period_key": "2024-02",
         "period": "M"
-      },
-      {
-        "code": "traitor",
-        "name": "🩸 拖后腿奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2026-05-08",
-        "period": "D"
       }
     ],
     "tier_distribution": {
@@ -6306,17 +6306,6 @@
         "period": "D"
       },
       {
-        "code": "reverse_idx",
-        "name": "🪦 反指奖",
-        "count": 6,
-        "gold": 4,
-        "silver": 2,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2024-W37",
-        "period": "W"
-      },
-      {
         "code": "steady_grind",
         "name": "🐢 细水长流奖",
         "count": 6,
@@ -6325,6 +6314,17 @@
         "bronze": 4,
         "best_rank": 1,
         "latest_period_key": "2025-H2",
+        "period": "W"
+      },
+      {
+        "code": "reverse_idx",
+        "name": "🪦 反指奖",
+        "count": 6,
+        "gold": 4,
+        "silver": 2,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2024-W37",
         "period": "W"
       },
       {
@@ -7627,36 +7627,14 @@
         "period": "W"
       },
       {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 2,
-        "gold": 0,
-        "silver": 2,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-Q3",
-        "period": "M"
-      },
-      {
-        "code": "traitor",
-        "name": "🩸 拖后腿奖",
-        "count": 1,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-08-14",
-        "period": "D"
-      },
-      {
         "code": "silver_curse",
         "name": "🪑 万年老二奖",
-        "count": 1,
+        "count": 2,
         "gold": 0,
         "silver": 0,
-        "bronze": 1,
+        "bronze": 2,
         "best_rank": 3,
-        "latest_period_key": "2026-08",
+        "latest_period_key": "2026-Q3",
         "period": "M"
       },
       {
@@ -7671,6 +7649,17 @@
         "period": "D"
       },
       {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2026-Q3",
+        "period": "Q"
+      },
+      {
         "code": "cash_king",
         "name": "💸 钞能力之王",
         "count": 1,
@@ -7678,6 +7667,17 @@
         "silver": 0,
         "bronze": 1,
         "best_rank": 3,
+        "latest_period_key": "2026-08-14",
+        "period": "D"
+      },
+      {
+        "code": "traitor",
+        "name": "🩸 拖后腿奖",
+        "count": 1,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 0,
+        "best_rank": 1,
         "latest_period_key": "2026-08-14",
         "period": "D"
       }
@@ -7971,6 +7971,17 @@
         "period": "D"
       },
       {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 5,
+        "gold": 3,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2025-Q2",
+        "period": "M"
+      },
+      {
         "code": "reverse_idx",
         "name": "🪦 反指奖",
         "count": 5,
@@ -7991,17 +8002,6 @@
         "best_rank": 1,
         "latest_period_key": "2025-W32",
         "period": "W"
-      },
-      {
-        "code": "workhorse",
-        "name": "🏅 劳模奖",
-        "count": 5,
-        "gold": 3,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2025-Q2",
-        "period": "M"
       },
       {
         "code": "npc_god",
@@ -9721,7 +9721,7 @@
     "close": 451.51,
     "pct_change": -0.004,
     "intraday_amp": 0.0169,
-    "vol_ratio_20": 0.5969,
+    "vol_ratio_20": 0.5698,
     "tier": "💩 拉完了",
     "awards_count": 86,
     "persona": "NPC 系",
@@ -9831,6 +9831,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-01",
+        "close": 412.31,
+        "pct_change": -0.0324,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 398.52,
+        "pct_change": -0.0334,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 413.42,
         "pct_change": 0.0374,
@@ -9897,21 +9909,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 402.95,
-        "pct_change": 0.0038,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 406.91,
-        "pct_change": 0.0098,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 415.13,
-        "pct_change": 0.0202,
+        "pct_change": 0.0342,
         "tier": null
       },
       {
@@ -10021,9 +10021,9 @@
     "close": 570.22,
     "pct_change": 0.0066,
     "intraday_amp": 0.0474,
-    "vol_ratio_20": 0.7781,
+    "vol_ratio_20": 0.7535,
     "tier": "💪 人上人",
-    "awards_count": 125,
+    "awards_count": 124,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -10146,23 +10146,30 @@
         "best_rank": 2,
         "latest_period_key": "2026-08-14",
         "period": "D"
-      },
-      {
-        "code": "silver_curse",
-        "name": "🪑 万年老二奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2026-Q3",
-        "period": "Q"
       }
     ],
     "tier_distribution": {
       "💪 人上人": 1.0
     },
     "recent_30d": [
+      {
+        "date": "2026-06-30",
+        "close": 562.08,
+        "pct_change": 0.0641,
+        "tier": null
+      },
+      {
+        "date": "2026-07-01",
+        "close": 547.18,
+        "pct_change": -0.0265,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 499.61,
+        "pct_change": -0.0869,
+        "tier": null
+      },
       {
         "date": "2026-07-06",
         "close": 500.75,
@@ -10230,21 +10237,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 527.35,
-        "pct_change": 0.0669,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 513.67,
-        "pct_change": -0.0259,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 517.73,
-        "pct_change": 0.0079,
+        "pct_change": 0.0475,
         "tier": null
       },
       {
@@ -10278,15 +10273,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 435.41,
-        "pct_change": -0.0089,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 455.94,
-        "pct_change": 0.0472,
+        "pct_change": 0.0378,
         "tier": null
       },
       {
@@ -10354,7 +10343,7 @@
     "close": 131.6,
     "pct_change": -0.0005,
     "intraday_amp": 0.0526,
-    "vol_ratio_20": 0.6048,
+    "vol_ratio_20": 0.6009,
     "tier": "😐 NPC",
     "awards_count": 112,
     "persona": "蒸蒸日上",
@@ -10486,6 +10475,12 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-02",
+        "close": 123.59,
+        "pct_change": -0.16,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 118.67,
         "pct_change": -0.0398,
@@ -10600,15 +10595,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 106.2,
-        "pct_change": 0.0078,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 108.8,
-        "pct_change": 0.0245,
+        "pct_change": 0.0325,
         "tier": null
       },
       {
@@ -12625,17 +12614,6 @@
         "period": "W"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 3,
-        "latest_period_key": "2023-10-12",
-        "period": "D"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 1,
@@ -12644,6 +12622,17 @@
         "bronze": 1,
         "best_rank": 3,
         "latest_period_key": "2024-10-15",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2023-10-12",
         "period": "D"
       },
       {
@@ -12853,7 +12842,7 @@
     "close": 99.09,
     "pct_change": 0.0343,
     "intraday_amp": 0.0497,
-    "vol_ratio_20": 0.4998,
+    "vol_ratio_20": 0.494,
     "tier": "💪 人上人",
     "awards_count": 93,
     "persona": "NPC 系",
@@ -12974,6 +12963,12 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-02",
+        "close": 121.33,
+        "pct_change": -0.0933,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 119.61,
         "pct_change": -0.0142,
@@ -13040,15 +13035,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 108.54,
-        "pct_change": 0.0847,
-        "tier": null
-      },
-      {
         "date": "2026-07-22",
         "close": 105.6,
-        "pct_change": -0.0271,
+        "pct_change": 0.0554,
         "tier": null
       },
       {
@@ -14257,17 +14246,6 @@
         "period": "W"
       },
       {
-        "code": "daily_clown",
-        "name": "💩 今日答辩",
-        "count": 2,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 2,
-        "latest_period_key": "2024-10-15",
-        "period": "D"
-      },
-      {
         "code": "comeback",
         "name": "🪄 绝地翻身奖",
         "count": 2,
@@ -14276,6 +14254,17 @@
         "bronze": 2,
         "best_rank": 3,
         "latest_period_key": "2025-08-19",
+        "period": "D"
+      },
+      {
+        "code": "daily_clown",
+        "name": "💩 今日答辩",
+        "count": 2,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 1,
+        "best_rank": 2,
+        "latest_period_key": "2024-10-15",
         "period": "D"
       },
       {
@@ -14485,7 +14474,7 @@
     "close": 130.46,
     "pct_change": 0.0158,
     "intraday_amp": 0.039,
-    "vol_ratio_20": 0.5956,
+    "vol_ratio_20": 0.5671,
     "tier": "💪 人上人",
     "awards_count": 78,
     "persona": "蒸蒸日上",
@@ -14606,6 +14595,24 @@
     },
     "recent_30d": [
       {
+        "date": "2026-06-30",
+        "close": 152.96,
+        "pct_change": 0.0421,
+        "tier": null
+      },
+      {
+        "date": "2026-07-01",
+        "close": 146.3,
+        "pct_change": -0.0435,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 136.53,
+        "pct_change": -0.0668,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 137.31,
         "pct_change": 0.0057,
@@ -14672,21 +14679,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 135.83,
-        "pct_change": 0.0818,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 137.17,
-        "pct_change": 0.0099,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 138.13,
-        "pct_change": 0.007,
+        "pct_change": 0.1001,
         "tier": null
       },
       {
@@ -14720,15 +14715,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 124.27,
-        "pct_change": -0.0021,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 127.18,
-        "pct_change": 0.0234,
+        "pct_change": 0.0213,
         "tier": null
       },
       {
@@ -14796,7 +14785,7 @@
     "close": 48.39,
     "pct_change": -0.0589,
     "intraday_amp": 0.0138,
-    "vol_ratio_20": 0.3258,
+    "vol_ratio_20": 0.289,
     "tier": "☠️ 答辩",
     "awards_count": 430,
     "persona": "NPC 系",
@@ -14928,6 +14917,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-06-30",
+        "close": 63.36,
+        "pct_change": 0.0086,
+        "tier": null
+      },
+      {
+        "date": "2026-07-01",
+        "close": 59.1,
+        "pct_change": -0.0672,
+        "tier": null
+      },
+      {
         "date": "2026-07-02",
         "close": 56.76,
         "pct_change": -0.0396,
@@ -15000,21 +15001,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 53.77,
-        "pct_change": 0.0339,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 53.3,
-        "pct_change": -0.0087,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 53.84,
-        "pct_change": 0.0101,
+        "pct_change": 0.0353,
         "tier": null
       },
       {
@@ -15048,15 +15037,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 46.16,
-        "pct_change": -0.0168,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 53.0,
-        "pct_change": 0.1482,
+        "pct_change": 0.1289,
         "tier": null
       },
       {
@@ -15090,9 +15073,15 @@
         "tier": null
       },
       {
+        "date": "2026-08-11",
+        "close": 49.5,
+        "pct_change": 0.0057,
+        "tier": null
+      },
+      {
         "date": "2026-08-12",
         "close": 49.7,
-        "pct_change": 0.0098,
+        "pct_change": 0.004,
         "tier": null
       },
       {
@@ -15267,8 +15256,8 @@
         "period": "D"
       },
       {
-        "code": "earnings_god",
-        "name": "💼 财报封神",
+        "code": "earnings_clown",
+        "name": "💼 财报现形",
         "count": 2,
         "gold": 2,
         "silver": 0,
@@ -15278,8 +15267,8 @@
         "period": "E"
       },
       {
-        "code": "earnings_clown",
-        "name": "💼 财报现形",
+        "code": "earnings_god",
+        "name": "💼 财报封神",
         "count": 2,
         "gold": 2,
         "silver": 0,
@@ -16419,7 +16408,7 @@
     "intraday_amp": 0.0293,
     "vol_ratio_20": 0.6617,
     "tier": "💪 人上人",
-    "awards_count": 102,
+    "awards_count": 103,
     "persona": "蒸蒸日上",
     "medal_history": [
       {
@@ -16511,6 +16500,17 @@
         "period": "W"
       },
       {
+        "code": "big_position",
+        "name": "👑 仓位之王",
+        "count": 2,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-08-14",
+        "period": "D"
+      },
+      {
         "code": "cash_king",
         "name": "💸 钞能力之王",
         "count": 2,
@@ -16533,17 +16533,6 @@
         "period": "D"
       },
       {
-        "code": "big_position",
-        "name": "👑 仓位之王",
-        "count": 2,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-08-14",
-        "period": "D"
-      },
-      {
         "code": "tank",
         "name": "🛡️ 抗揍奖",
         "count": 1,
@@ -16553,6 +16542,17 @@
         "best_rank": 3,
         "latest_period_key": "2024-02-20",
         "period": "D"
+      },
+      {
+        "code": "workhorse",
+        "name": "🏅 劳模奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 3,
+        "latest_period_key": "2026-08",
+        "period": "M"
       },
       {
         "code": "pillar",
@@ -17576,17 +17576,6 @@
         "period": "M"
       },
       {
-        "code": "earnings_clown",
-        "name": "💼 财报现形",
-        "count": 2,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 1,
-        "latest_period_key": "2026-01-30",
-        "period": "E"
-      },
-      {
         "code": "workhorse",
         "name": "🏅 劳模奖",
         "count": 2,
@@ -17596,6 +17585,17 @@
         "best_rank": 3,
         "latest_period_key": "2025-Q1",
         "period": "M"
+      },
+      {
+        "code": "earnings_clown",
+        "name": "💼 财报现形",
+        "count": 2,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-01-30",
+        "period": "E"
       },
       {
         "code": "npc_god",
@@ -18137,7 +18137,7 @@
     "close": 418.12,
     "pct_change": 0.0161,
     "intraday_amp": 0.036,
-    "vol_ratio_20": 0.825,
+    "vol_ratio_20": 0.7721,
     "tier": "💪 人上人",
     "awards_count": 112,
     "persona": "蒸蒸日上",
@@ -18269,6 +18269,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-01",
+        "close": 502.6,
+        "pct_change": -0.0743,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 470.14,
+        "pct_change": -0.0646,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 466.63,
         "pct_change": -0.0075,
@@ -18341,15 +18353,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-22",
-        "close": 454.42,
-        "pct_change": 0.0029,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 455.37,
-        "pct_change": 0.0021,
+        "pct_change": 0.005,
         "tier": null
       },
       {
@@ -18383,15 +18389,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 390.87,
-        "pct_change": -0.0081,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 393.69,
-        "pct_change": 0.0072,
+        "pct_change": -0.001,
         "tier": null
       },
       {
@@ -18459,7 +18459,7 @@
     "close": 171.39,
     "pct_change": 0.0081,
     "intraday_amp": 0.0336,
-    "vol_ratio_20": 0.6429,
+    "vol_ratio_20": 0.622,
     "tier": "😐 NPC",
     "awards_count": 83,
     "persona": "蒸蒸日上",
@@ -18558,6 +18558,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-07-01",
+        "close": 159.99,
+        "pct_change": -0.0567,
+        "tier": null
+      },
+      {
+        "date": "2026-07-02",
+        "close": 152.15,
+        "pct_change": -0.049,
+        "tier": null
+      },
+      {
         "date": "2026-07-06",
         "close": 156.89,
         "pct_change": 0.0312,
@@ -18624,21 +18636,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 160.68,
-        "pct_change": 0.0381,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 158.47,
-        "pct_change": -0.0138,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 158.78,
-        "pct_change": 0.002,
+        "pct_change": 0.0258,
         "tier": null
       },
       {
@@ -20818,23 +20818,23 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 3,
-        "gold": 1,
-        "silver": 1,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-07",
-        "period": "D"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 3,
         "gold": 2,
         "silver": 1,
         "bronze": 0,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-07",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 3,
+        "gold": 1,
+        "silver": 1,
+        "bronze": 1,
         "best_rank": 1,
         "latest_period_key": "2026-05-07",
         "period": "D"
@@ -22293,17 +22293,6 @@
         "period": "W"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 7,
-        "gold": 2,
-        "silver": 3,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-05-04",
-        "period": "D"
-      },
-      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 7,
@@ -22312,6 +22301,17 @@
         "bronze": 2,
         "best_rank": 1,
         "latest_period_key": "2026-05-08",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 7,
+        "gold": 2,
+        "silver": 3,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2026-05-04",
         "period": "D"
       },
       {
@@ -22937,17 +22937,6 @@
         "period": "D"
       },
       {
-        "code": "oscar",
-        "name": "🎭 影帝奖",
-        "count": 21,
-        "gold": 10,
-        "silver": 5,
-        "bronze": 6,
-        "best_rank": 1,
-        "latest_period_key": "2026-02-24",
-        "period": "D"
-      },
-      {
         "code": "daily_clown",
         "name": "💩 今日答辩",
         "count": 21,
@@ -22956,6 +22945,17 @@
         "bronze": 5,
         "best_rank": 1,
         "latest_period_key": "2026-04-15",
+        "period": "D"
+      },
+      {
+        "code": "oscar",
+        "name": "🎭 影帝奖",
+        "count": 21,
+        "gold": 10,
+        "silver": 5,
+        "bronze": 6,
+        "best_rank": 1,
+        "latest_period_key": "2026-02-24",
         "period": "D"
       },
       {
@@ -23380,17 +23380,6 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 2,
-        "gold": 1,
-        "silver": 0,
-        "bronze": 1,
-        "best_rank": 1,
-        "latest_period_key": "2026-03-30",
-        "period": "D"
-      },
-      {
         "code": "roller_coaster",
         "name": "🎢 过山车之王",
         "count": 2,
@@ -23399,6 +23388,17 @@
         "bronze": 1,
         "best_rank": 2,
         "latest_period_key": "2025-05-28",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 2,
+        "gold": 1,
+        "silver": 0,
+        "bronze": 1,
+        "best_rank": 1,
+        "latest_period_key": "2026-03-30",
         "period": "D"
       }
     ],
@@ -23658,17 +23658,6 @@
         "period": "D"
       },
       {
-        "code": "comeback",
-        "name": "🪄 绝地翻身奖",
-        "count": 10,
-        "gold": 1,
-        "silver": 7,
-        "bronze": 2,
-        "best_rank": 1,
-        "latest_period_key": "2026-01-28",
-        "period": "D"
-      },
-      {
         "code": "oscar",
         "name": "🎭 影帝奖",
         "count": 10,
@@ -23677,6 +23666,17 @@
         "bronze": 3,
         "best_rank": 1,
         "latest_period_key": "2026-04-29",
+        "period": "D"
+      },
+      {
+        "code": "comeback",
+        "name": "🪄 绝地翻身奖",
+        "count": 10,
+        "gold": 1,
+        "silver": 7,
+        "bronze": 2,
+        "best_rank": 1,
+        "latest_period_key": "2026-01-28",
         "period": "D"
       },
       {
@@ -23908,7 +23908,7 @@
     "close": 362.74,
     "pct_change": 0.0121,
     "intraday_amp": 0.0375,
-    "vol_ratio_20": 0.6744,
+    "vol_ratio_20": 0.6522,
     "tier": "😐 NPC",
     "awards_count": 307,
     "persona": "蒸蒸日上",
@@ -24051,6 +24051,18 @@
     },
     "recent_30d": [
       {
+        "date": "2026-06-30",
+        "close": 384.26,
+        "pct_change": -0.0378,
+        "tier": null
+      },
+      {
+        "date": "2026-07-01",
+        "close": 360.79,
+        "pct_change": -0.0611,
+        "tier": null
+      },
+      {
         "date": "2026-07-02",
         "close": 364.67,
         "pct_change": 0.0108,
@@ -24123,21 +24135,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-21",
-        "close": 366.14,
-        "pct_change": 0.0162,
-        "tier": null
-      },
-      {
-        "date": "2026-07-22",
-        "close": 377.41,
-        "pct_change": 0.0308,
-        "tier": null
-      },
-      {
         "date": "2026-07-23",
         "close": 379.27,
-        "pct_change": 0.0049,
+        "pct_change": 0.0526,
         "tier": null
       },
       {
@@ -24171,15 +24171,9 @@
         "tier": null
       },
       {
-        "date": "2026-07-31",
-        "close": 334.1,
-        "pct_change": 0.0047,
-        "tier": null
-      },
-      {
         "date": "2026-08-03",
         "close": 344.49,
-        "pct_change": 0.0311,
+        "pct_change": 0.0359,
         "tier": null
       },
       {
@@ -24213,9 +24207,15 @@
         "tier": null
       },
       {
+        "date": "2026-08-11",
+        "close": 357.88,
+        "pct_change": 0.0428,
+        "tier": null
+      },
+      {
         "date": "2026-08-12",
         "close": 365.07,
-        "pct_change": 0.0638,
+        "pct_change": 0.0201,
         "tier": null
       },
       {
@@ -25623,17 +25623,6 @@
         "period": "D"
       },
       {
-        "code": "gambler",
-        "name": "🎰 赌狗之友奖",
-        "count": 1,
-        "gold": 0,
-        "silver": 1,
-        "bronze": 0,
-        "best_rank": 2,
-        "latest_period_key": "2024-W23",
-        "period": "W"
-      },
-      {
         "code": "tear_jerker",
         "name": "😭 我的眼泪奖",
         "count": 1,
@@ -25643,6 +25632,17 @@
         "best_rank": 1,
         "latest_period_key": "2026-05-08",
         "period": "D"
+      },
+      {
+        "code": "gambler",
+        "name": "🎰 赌狗之友奖",
+        "count": 1,
+        "gold": 0,
+        "silver": 1,
+        "bronze": 0,
+        "best_rank": 2,
+        "latest_period_key": "2024-W23",
+        "period": "W"
       },
       {
         "code": "traitor",
