@@ -157,7 +157,7 @@
           "metric": -0.0557,
           "meta": {
             "intraday_amp": 0.07665035621774847,
-            "vol_ratio_20": 1.036203873538615
+            "vol_ratio_20": 1.055733452113745
           }
         },
         {
@@ -165,8 +165,8 @@
           "ticker": "AEHR",
           "metric": -0.04,
           "meta": {
-            "intraday_amp": 0.09823531105783423,
-            "vol_ratio_20": 0.7502599630187354
+            "intraday_amp": 0.09870717150118433,
+            "vol_ratio_20": 0.7579015286681839
           }
         },
         {
@@ -174,8 +174,8 @@
           "ticker": "VICR",
           "metric": -0.0342,
           "meta": {
-            "intraday_amp": 0.05823347402371932,
-            "vol_ratio_20": 0.5590067950638702
+            "intraday_amp": 0.05822583140155035,
+            "vol_ratio_20": 0.597980315947113
           }
         }
       ]
@@ -191,25 +191,25 @@
           "metric": 0.1148,
           "meta": {
             "intraday_amp": 0.1092437603344396,
-            "vol_ratio_20": 1.1437631703700317
+            "vol_ratio_20": 1.145788798631894
           }
         },
         {
           "rank": 2,
-          "ticker": "LEU",
-          "metric": 0.0575,
+          "ticker": "SIVEF",
+          "metric": 0.0596,
           "meta": {
-            "intraday_amp": 0.05586780256116857,
-            "vol_ratio_20": 0.6657620585207968
+            "intraday_amp": 0.056910578561117406,
+            "vol_ratio_20": 0.3335170093927846
           }
         },
         {
           "rank": 3,
-          "ticker": "SIVEF",
-          "metric": 0.0488,
+          "ticker": "LEU",
+          "metric": 0.0575,
           "meta": {
-            "intraday_amp": 0.048780505139826354,
-            "vol_ratio_20": 0.0928816183121514
+            "intraday_amp": 0.05586780256116857,
+            "vol_ratio_20": 0.7734704040378464
           }
         }
       ]
@@ -224,7 +224,7 @@
           "ticker": "NXPI",
           "metric": 0.0142,
           "meta": {
-            "vol_ratio_20": 0.49529027466434217,
+            "vol_ratio_20": 0.4961263323760969,
             "pct_change": 0.011615895966771603
           }
         },
@@ -233,17 +233,17 @@
           "ticker": "ASML",
           "metric": 0.0171,
           "meta": {
-            "vol_ratio_20": 0.5529260359537946,
+            "vol_ratio_20": 0.6239873200437638,
             "pct_change": 0.00768432490337231
           }
         },
         {
           "rank": 3,
-          "ticker": "ETN",
-          "metric": 0.0176,
+          "ticker": "DRAM",
+          "metric": 0.0247,
           "meta": {
-            "vol_ratio_20": 0.5749426792995744,
-            "pct_change": 0.009415116139704648
+            "vol_ratio_20": 0.42840050157714044,
+            "pct_change": 0.0017366875814714105
           }
         }
       ]
@@ -265,7 +265,7 @@
         {
           "rank": 2,
           "ticker": "AXTI",
-          "metric": -0.0676,
+          "metric": -0.0677,
           "meta": {
             "gap": 0.03145507844597002,
             "pct_change": -0.032549299691099265
@@ -323,26 +323,26 @@
       "winners": [
         {
           "rank": 1,
+          "ticker": "LSRCY",
+          "metric": 2.1674,
+          "meta": {
+            "pct_change": 0.03324036006414579
+          }
+        },
+        {
+          "rank": 2,
           "ticker": "ADI",
-          "metric": 1.2388,
+          "metric": 1.3513,
           "meta": {
             "pct_change": 0.007697726282110883
           }
         },
         {
-          "rank": 2,
+          "rank": 3,
           "ticker": "MOD",
-          "metric": 1.1802,
+          "metric": 1.1805,
           "meta": {
             "pct_change": 0.0363845390728266
-          }
-        },
-        {
-          "rank": 3,
-          "ticker": "RGTI",
-          "metric": 1.1438,
-          "meta": {
-            "pct_change": 0.11484589181575904
           }
         }
       ]
@@ -363,7 +363,7 @@
         {
           "rank": 2,
           "ticker": "AXTI",
-          "metric": 0.1035,
+          "metric": 0.1037,
           "meta": {
             "pct_change": -0.032549299691099265
           }
@@ -371,7 +371,7 @@
         {
           "rank": 3,
           "ticker": "AEHR",
-          "metric": 0.0982,
+          "metric": 0.0987,
           "meta": {
             "pct_change": -0.04001130333988495
           }
@@ -455,8 +455,8 @@
     "☠️ 答辩": 1,
     "🔥 夯死了": 5,
     "😐 NPC": 24,
-    "👑 顶级": 12,
-    "💪 人上人": 24
+    "💪 人上人": 24,
+    "👑 顶级": 12
   },
   "tier_movers": [
     {
@@ -473,6 +473,12 @@
     },
     {
       "ticker": "LEU",
+      "prev": "😐 NPC",
+      "now": "🔥 夯死了",
+      "delta": 3
+    },
+    {
+      "ticker": "LSRCY",
       "prev": "😐 NPC",
       "now": "🔥 夯死了",
       "delta": 3
@@ -514,12 +520,6 @@
       "delta": 2
     },
     {
-      "ticker": "LSRCY",
-      "prev": "😐 NPC",
-      "now": "👑 顶级",
-      "delta": 2
-    },
-    {
       "ticker": "NBIS",
       "prev": "💩 拉完了",
       "now": "💪 人上人",
@@ -539,12 +539,6 @@
     },
     {
       "ticker": "RGTI",
-      "prev": "💪 人上人",
-      "now": "🔥 夯死了",
-      "delta": 2
-    },
-    {
-      "ticker": "SIMO",
       "prev": "💪 人上人",
       "now": "🔥 夯死了",
       "delta": 2
@@ -607,6 +601,12 @@
       "ticker": "NXPI",
       "prev": "😐 NPC",
       "now": "💪 人上人",
+      "delta": 1
+    },
+    {
+      "ticker": "SIMO",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
       "delta": 1
     },
     {
