@@ -144,29 +144,29 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": -0.159,
+          "ticker": "AXTI",
+          "metric": -0.1239,
           "meta": {
-            "intraday_amp": 0.11292715451571518,
-            "vol_ratio_20": 1.1103778041592205
+            "intraday_amp": 0.10340702866541,
+            "vol_ratio_20": 0.6949194751356894
           }
         },
         {
           "rank": 2,
-          "ticker": "AXTI",
-          "metric": -0.1239,
-          "meta": {
-            "intraday_amp": 0.10333976412720614,
-            "vol_ratio_20": 0.6927238346974927
-          }
-        },
-        {
-          "rank": 3,
           "ticker": "AEHR",
           "metric": -0.1067,
           "meta": {
             "intraday_amp": 0.09120053154429118,
-            "vol_ratio_20": 0.9494360116042786
+            "vol_ratio_20": 0.9520193908244021
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "MRVL",
+          "metric": -0.1028,
+          "meta": {
+            "intraday_amp": 0.0552081259040651,
+            "vol_ratio_20": 1.9684776852075498
           }
         }
       ]
@@ -182,7 +182,7 @@
           "metric": 0.0153,
           "meta": {
             "intraday_amp": 0.024133114514524157,
-            "vol_ratio_20": 1.0523664392598997
+            "vol_ratio_20": 1.0722911855273287
           }
         },
         {
@@ -191,7 +191,7 @@
           "metric": 0.0,
           "meta": {
             "intraday_amp": 0.055315005454301826,
-            "vol_ratio_20": 0.5886509110167872
+            "vol_ratio_20": 0.589388608276643
           }
         },
         {
@@ -199,8 +199,8 @@
           "ticker": "MU",
           "metric": -0.0027,
           "meta": {
-            "intraday_amp": 0.040314627387290275,
-            "vol_ratio_20": 0.7487507244821405
+            "intraday_amp": 0.04031469263831423,
+            "vol_ratio_20": 0.7506385302210228
           }
         }
       ]
@@ -215,16 +215,16 @@
           "ticker": "CSCO",
           "metric": 0.0249,
           "meta": {
-            "vol_ratio_20": 0.6345484363940719,
+            "vol_ratio_20": 0.6348725688274385,
             "pct_change": -0.019794928136410716
           }
         },
         {
           "rank": 2,
           "ticker": "ANET",
-          "metric": 0.0268,
+          "metric": 0.0273,
           "meta": {
-            "vol_ratio_20": 0.40890562673305325,
+            "vol_ratio_20": 0.40912988771969194,
             "pct_change": -0.028395203933882677
           }
         },
@@ -233,7 +233,7 @@
           "ticker": "AMD",
           "metric": 0.0282,
           "meta": {
-            "vol_ratio_20": 0.6813111573070672,
+            "vol_ratio_20": 0.6836828158881775,
             "pct_change": -0.023265627253790017
           }
         }
@@ -297,7 +297,7 @@
         {
           "rank": 1,
           "ticker": "GOOG",
-          "metric": 1.0524,
+          "metric": 1.0723,
           "meta": {
             "pct_change": 0.01530903307141887
           }
@@ -305,7 +305,7 @@
         {
           "rank": 2,
           "ticker": "SNDK",
-          "metric": 0.5887,
+          "metric": 0.5894,
           "meta": {
             "pct_change": 2.022243029221412e-05
           }
@@ -319,14 +319,6 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": 0.1129,
-          "meta": {
-            "pct_change": -0.15898962386759147
-          }
-        },
-        {
-          "rank": 2,
           "ticker": "LEU",
           "metric": 0.1125,
           "meta": {
@@ -334,11 +326,19 @@
           }
         },
         {
-          "rank": 3,
+          "rank": 2,
           "ticker": "AXTI",
-          "metric": 0.1033,
+          "metric": 0.1034,
           "meta": {
             "pct_change": -0.1238792188831396
+          }
+        },
+        {
+          "rank": 3,
+          "ticker": "NVTS",
+          "metric": 0.0934,
+          "meta": {
+            "pct_change": -0.08153480728232099
           }
         }
       ]
@@ -447,11 +447,11 @@
     }
   ],
   "tier_distribution": {
-    "☠️ 答辩": 30,
-    "🔥 夯死了": 5,
+    "🔥 夯死了": 4,
     "😐 NPC": 12,
-    "💪 人上人": 22,
-    "👑 顶级": 12
+    "👑 顶级": 12,
+    "💪 人上人": 23,
+    "☠️ 答辩": 29
   },
   "tier_movers": [
     {
@@ -524,12 +524,6 @@
       "ticker": "TLN",
       "prev": "💩 拉完了",
       "now": "💪 人上人",
-      "delta": 2
-    },
-    {
-      "ticker": "WDC",
-      "prev": "💪 人上人",
-      "now": "🔥 夯死了",
       "delta": 2
     },
     {
@@ -641,6 +635,12 @@
       "delta": 1
     },
     {
+      "ticker": "WDC",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
       "ticker": "ALAB",
       "prev": "💪 人上人",
       "now": "😐 NPC",
@@ -696,12 +696,6 @@
     },
     {
       "ticker": "KORU",
-      "prev": "🔥 夯死了",
-      "now": "👑 顶级",
-      "delta": -1
-    },
-    {
-      "ticker": "MXL",
       "prev": "🔥 夯死了",
       "now": "👑 顶级",
       "delta": -1
@@ -770,6 +764,12 @@
       "ticker": "LRCX",
       "prev": "😐 NPC",
       "now": "☠️ 答辩",
+      "delta": -2
+    },
+    {
+      "ticker": "MXL",
+      "prev": "🔥 夯死了",
+      "now": "💪 人上人",
       "delta": -2
     },
     {
