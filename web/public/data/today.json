@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "awards": [
     {
       "code": "big_position",
@@ -9,31 +9,31 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 0.1399,
+          "metric": 0.1384,
           "meta": {
             "shares": 17.0,
-            "last_close": 1096.1600341796875,
-            "market_value": 18634.720581054688
+            "last_close": 1071.8800048828125,
+            "market_value": 18221.960083007812
           }
         },
         {
           "rank": 2,
           "ticker": "LITE",
-          "metric": 0.1136,
+          "metric": 0.1139,
           "meta": {
             "shares": 16.0,
-            "last_close": 945.6699829101562,
-            "market_value": 15130.7197265625
+            "last_close": 937.0,
+            "market_value": 14992.0
           }
         },
         {
           "rank": 3,
           "ticker": "ALAB",
-          "metric": 0.1037,
+          "metric": 0.1041,
           "meta": {
             "shares": 38.0,
-            "last_close": 363.4599914550781,
-            "market_value": 13811.479675292969
+            "last_close": 360.4599914550781,
+            "market_value": 13697.479675292969
           }
         }
       ]
@@ -46,31 +46,31 @@
         {
           "rank": 1,
           "ticker": "ALAB",
-          "metric": 1.4923,
+          "metric": 1.4718,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 363.4599914550781
+            "last_close": 360.4599914550781
           }
         },
         {
           "rank": 2,
           "ticker": "MU",
-          "metric": 1.0839,
+          "metric": 1.0377,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 1096.1600341796875
+            "last_close": 1071.8800048828125
           }
         },
         {
           "rank": 3,
-          "ticker": "SNDK",
-          "metric": 0.8321,
+          "ticker": "ARM",
+          "metric": 0.8241,
           "meta": {
-            "shares": 5.0,
-            "avg_cost": 1030.0,
-            "last_close": 1887.0400390625
+            "shares": 19.0,
+            "avg_cost": 182.316,
+            "last_close": 332.55999755859375
           }
         }
       ]
@@ -83,31 +83,47 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 9692.4996,
+          "metric": 9279.7391,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 1096.1600341796875
+            "last_close": 1071.8800048828125
           }
         },
         {
           "rank": 2,
           "ticker": "ALAB",
-          "metric": 8269.9017,
+          "metric": 8155.9017,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 363.4599914550781
+            "last_close": 360.4599914550781
           }
         },
         {
           "rank": 3,
           "ticker": "SNDK",
-          "metric": 4285.2002,
+          "metric": 3932.8497,
           "meta": {
             "shares": 5.0,
             "avg_cost": 1030.0,
-            "last_close": 1887.0400390625
+            "last_close": 1816.5699462890625
+          }
+        }
+      ]
+    },
+    {
+      "code": "comeback",
+      "name": "🪄 绝地翻身奖",
+      "description": "主打一个不装了",
+      "winners": [
+        {
+          "rank": 1,
+          "ticker": "SIVEF",
+          "metric": 0.0526,
+          "meta": {
+            "pct_change": 0.030303074089730497,
+            "fade": -0.022988483697581656
           }
         }
       ]
@@ -119,20 +135,20 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": -0.0909,
+          "ticker": "LSRCY",
+          "metric": -0.022,
           "meta": {
-            "intraday_amp": 0.04407715724144853,
-            "vol_ratio_20": 0.07654435285755985
+            "intraday_amp": 0.015461909762432252,
+            "vol_ratio_20": 0.10360887113631721
           }
         },
         {
           "rank": 2,
-          "ticker": "LSRCY",
-          "metric": -0.0139,
+          "ticker": "SIVEF",
+          "metric": 0.0303,
           "meta": {
-            "intraday_amp": 0.024077933832317783,
-            "vol_ratio_20": 0.08916849571038703
+            "intraday_amp": 0.07575757685224327,
+            "vol_ratio_20": 0.04857222111714463
           }
         }
       ]
@@ -144,20 +160,20 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "LSRCY",
-          "metric": -0.0139,
+          "ticker": "SIVEF",
+          "metric": 0.0303,
           "meta": {
-            "intraday_amp": 0.024077933832317783,
-            "vol_ratio_20": 0.08916849571038703
+            "intraday_amp": 0.07575757685224327,
+            "vol_ratio_20": 0.04857222111714463
           }
         },
         {
           "rank": 2,
-          "ticker": "SIVEF",
-          "metric": -0.0909,
+          "ticker": "LSRCY",
+          "metric": -0.022,
           "meta": {
-            "intraday_amp": 0.04407715724144853,
-            "vol_ratio_20": 0.07654435285755985
+            "intraday_amp": 0.015461909762432252,
+            "vol_ratio_20": 0.10360887113631721
           }
         }
       ]
@@ -170,35 +186,34 @@
         {
           "rank": 1,
           "ticker": "LSRCY",
-          "metric": 0.0241,
+          "metric": 0.0155,
           "meta": {
-            "vol_ratio_20": 0.08916849571038703,
-            "pct_change": -0.013949996777955031
+            "vol_ratio_20": 0.10360887113631721,
+            "pct_change": -0.022033304355692566
           }
         },
         {
           "rank": 2,
           "ticker": "SIVEF",
-          "metric": 0.0441,
+          "metric": 0.0758,
           "meta": {
-            "vol_ratio_20": 0.07654435285755985,
-            "pct_change": -0.09090913270548462
+            "vol_ratio_20": 0.04857222111714463,
+            "pct_change": 0.030303074089730497
           }
         }
       ]
     },
     {
-      "code": "oscar",
-      "name": "🎭 影帝奖",
-      "description": "开盘装大佬，收盘装死",
+      "code": "pump_army",
+      "name": "📈 暴兵奖",
+      "description": "主力进场了家人们",
       "winners": [
         {
           "rank": 1,
-          "ticker": "LSRCY",
-          "metric": -0.022,
+          "ticker": "SIVEF",
+          "metric": 0.0486,
           "meta": {
-            "gap": 0.00821701653798412,
-            "pct_change": -0.013949996777955031
+            "pct_change": 0.030303074089730497
           }
         }
       ]
@@ -211,17 +226,17 @@
         {
           "rank": 1,
           "ticker": "SIVEF",
-          "metric": 0.0441,
+          "metric": 0.0758,
           "meta": {
-            "pct_change": -0.09090913270548462
+            "pct_change": 0.030303074089730497
           }
         },
         {
           "rank": 2,
           "ticker": "LSRCY",
-          "metric": 0.0241,
+          "metric": 0.0155,
           "meta": {
-            "pct_change": -0.013949996777955031
+            "pct_change": -0.022033304355692566
           }
         }
       ]
@@ -234,46 +249,52 @@
         {
           "rank": 1,
           "ticker": "AAOI",
-          "metric": -1548.09,
+          "metric": -1726.2901,
           "meta": {
             "shares": 30.0,
             "avg_cost": 158.603,
-            "last_close": 107.0
+            "last_close": 101.05999755859375
           }
         },
         {
           "rank": 2,
           "ticker": "LWLG",
-          "metric": -1122.0,
+          "metric": -1159.5,
           "meta": {
             "shares": 150.0,
             "avg_cost": 13.0,
-            "last_close": 5.519999980926514
+            "last_close": 5.269999980926514
           }
         },
         {
           "rank": 3,
           "ticker": "FN",
-          "metric": -895.29,
+          "metric": -897.45,
           "meta": {
             "shares": 3.0,
             "avg_cost": 700.0,
-            "last_close": 401.57000732421875
+            "last_close": 400.8500061035156
           }
         }
       ]
     }
   ],
   "tier_distribution": {
-    "☠️ 答辩": 1,
-    "🔥 夯死了": 1
+    "🔥 夯死了": 1,
+    "💩 拉完了": 1
   },
   "tier_movers": [
     {
+      "ticker": "SIVEF",
+      "prev": "☠️ 答辩",
+      "now": "🔥 夯死了",
+      "delta": 5
+    },
+    {
       "ticker": "LSRCY",
       "prev": "😐 NPC",
-      "now": "🔥 夯死了",
-      "delta": 3
+      "now": "💩 拉完了",
+      "delta": -1
     }
   ]
 }
