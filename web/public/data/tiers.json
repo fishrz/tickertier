@@ -2,10 +2,490 @@
   "date": "2026-10-02",
   "tiers": [
     {
+      "ticker": "MOD",
+      "tier": "☠️ 答辩",
+      "score": -1.5015,
+      "rank_pct": 1.0
+    },
+    {
+      "ticker": "STX",
+      "tier": "☠️ 答辩",
+      "score": -1.2558,
+      "rank_pct": 0.975
+    },
+    {
+      "ticker": "WDC",
+      "tier": "☠️ 答辩",
+      "score": -1.3908,
+      "rank_pct": 0.9875
+    },
+    {
+      "ticker": "AEHR",
+      "tier": "👑 顶级",
+      "score": 0.6077,
+      "rank_pct": 0.125
+    },
+    {
+      "ticker": "AMKR",
+      "tier": "👑 顶级",
+      "score": 0.6528,
+      "rank_pct": 0.1125
+    },
+    {
+      "ticker": "ARM",
+      "tier": "👑 顶级",
+      "score": 0.4129,
+      "rank_pct": 0.175
+    },
+    {
+      "ticker": "ASX",
+      "tier": "👑 顶级",
+      "score": 0.7318,
+      "rank_pct": 0.1
+    },
+    {
+      "ticker": "AXTI",
+      "tier": "👑 顶级",
+      "score": 0.8075,
+      "rank_pct": 0.0875
+    },
+    {
+      "ticker": "COHR",
+      "tier": "👑 顶级",
+      "score": 0.9698,
+      "rank_pct": 0.0625
+    },
+    {
+      "ticker": "CRDO",
+      "tier": "👑 顶级",
+      "score": 0.5864,
+      "rank_pct": 0.1375
+    },
+    {
+      "ticker": "ENTG",
+      "tier": "👑 顶级",
+      "score": 0.406,
+      "rank_pct": 0.1875
+    },
+    {
       "ticker": "LSRCY",
+      "tier": "👑 顶级",
+      "score": 0.5046,
+      "rank_pct": 0.15
+    },
+    {
+      "ticker": "LWLG",
+      "tier": "👑 顶级",
+      "score": 0.8367,
+      "rank_pct": 0.075
+    },
+    {
+      "ticker": "NBIS",
+      "tier": "👑 顶级",
+      "score": 0.3933,
+      "rank_pct": 0.2
+    },
+    {
+      "ticker": "SMCI",
+      "tier": "👑 顶级",
+      "score": 0.4237,
+      "rank_pct": 0.1625
+    },
+    {
+      "ticker": "ALAB",
+      "tier": "💩 拉完了",
+      "score": -0.6218,
+      "rank_pct": 0.9
+    },
+    {
+      "ticker": "DRAM",
+      "tier": "💩 拉完了",
+      "score": -0.6791,
+      "rank_pct": 0.925
+    },
+    {
+      "ticker": "ETN",
+      "tier": "💩 拉完了",
+      "score": -0.5849,
+      "rank_pct": 0.85
+    },
+    {
+      "ticker": "INTC",
+      "tier": "💩 拉完了",
+      "score": -0.5957,
+      "rank_pct": 0.875
+    },
+    {
+      "ticker": "LEU",
+      "tier": "💩 拉完了",
+      "score": -0.5945,
+      "rank_pct": 0.8625
+    },
+    {
+      "ticker": "MU",
+      "tier": "💩 拉完了",
+      "score": -0.9311,
+      "rank_pct": 0.95
+    },
+    {
+      "ticker": "MX",
+      "tier": "💩 拉完了",
+      "score": -0.4277,
+      "rank_pct": 0.825
+    },
+    {
+      "ticker": "NVDA",
+      "tier": "💩 拉完了",
+      "score": -0.4143,
+      "rank_pct": 0.8125
+    },
+    {
+      "ticker": "OKLO",
+      "tier": "💩 拉完了",
+      "score": -0.632,
+      "rank_pct": 0.9125
+    },
+    {
+      "ticker": "RGTI",
+      "tier": "💩 拉完了",
+      "score": -0.8674,
+      "rank_pct": 0.9375
+    },
+    {
+      "ticker": "SNDK",
+      "tier": "💩 拉完了",
+      "score": -1.2359,
+      "rank_pct": 0.9625
+    },
+    {
+      "ticker": "SNPS",
+      "tier": "💩 拉完了",
+      "score": -0.4634,
+      "rank_pct": 0.8375
+    },
+    {
+      "ticker": "TSEM",
+      "tier": "💩 拉完了",
+      "score": -0.6212,
+      "rank_pct": 0.8875
+    },
+    {
+      "ticker": "AOSL",
+      "tier": "💪 人上人",
+      "score": 0.3683,
+      "rank_pct": 0.225
+    },
+    {
+      "ticker": "ASML",
+      "tier": "💪 人上人",
+      "score": -0.0798,
+      "rank_pct": 0.4625
+    },
+    {
+      "ticker": "AVGO",
+      "tier": "💪 人上人",
+      "score": 0.0476,
+      "rank_pct": 0.3875
+    },
+    {
+      "ticker": "BE",
+      "tier": "💪 人上人",
+      "score": 0.2369,
+      "rank_pct": 0.2625
+    },
+    {
+      "ticker": "CIEN",
+      "tier": "💪 人上人",
+      "score": 0.2237,
+      "rank_pct": 0.2875
+    },
+    {
+      "ticker": "CLS",
+      "tier": "💪 人上人",
+      "score": 0.1259,
+      "rank_pct": 0.325
+    },
+    {
+      "ticker": "COHU",
+      "tier": "💪 人上人",
+      "score": 0.2765,
+      "rank_pct": 0.25
+    },
+    {
+      "ticker": "CSCO",
+      "tier": "💪 人上人",
+      "score": 0.0613,
+      "rank_pct": 0.375
+    },
+    {
+      "ticker": "DELL",
+      "tier": "💪 人上人",
+      "score": 0.1241,
+      "rank_pct": 0.3375
+    },
+    {
+      "ticker": "FN",
+      "tier": "💪 人上人",
+      "score": -0.1154,
+      "rank_pct": 0.4875
+    },
+    {
+      "ticker": "GFS",
+      "tier": "💪 人上人",
+      "score": -0.1295,
+      "rank_pct": 0.5
+    },
+    {
+      "ticker": "GLW",
+      "tier": "💪 人上人",
+      "score": -0.057,
+      "rank_pct": 0.4375
+    },
+    {
+      "ticker": "KLAC",
+      "tier": "💪 人上人",
+      "score": -0.0899,
+      "rank_pct": 0.475
+    },
+    {
+      "ticker": "KLIC",
+      "tier": "💪 人上人",
+      "score": 0.3399,
+      "rank_pct": 0.2375
+    },
+    {
+      "ticker": "LITE",
+      "tier": "💪 人上人",
+      "score": 0.38,
+      "rank_pct": 0.2125
+    },
+    {
+      "ticker": "LSCC",
+      "tier": "💪 人上人",
+      "score": 0.2142,
+      "rank_pct": 0.3
+    },
+    {
+      "ticker": "MCHP",
+      "tier": "💪 人上人",
+      "score": -0.0039,
+      "rank_pct": 0.4125
+    },
+    {
+      "ticker": "NVTS",
+      "tier": "💪 人上人",
+      "score": 0.2295,
+      "rank_pct": 0.275
+    },
+    {
+      "ticker": "ORCL",
+      "tier": "💪 人上人",
+      "score": -0.0287,
+      "rank_pct": 0.425
+    },
+    {
+      "ticker": "POET",
+      "tier": "💪 人上人",
+      "score": -0.0038,
+      "rank_pct": 0.4
+    },
+    {
+      "ticker": "RMBS",
+      "tier": "💪 人上人",
+      "score": 0.0703,
+      "rank_pct": 0.3625
+    },
+    {
+      "ticker": "SIVEF",
+      "tier": "💪 人上人",
+      "score": 0.1566,
+      "rank_pct": 0.3125
+    },
+    {
+      "ticker": "TSM",
+      "tier": "💪 人上人",
+      "score": -0.067,
+      "rank_pct": 0.45
+    },
+    {
+      "ticker": "VST",
+      "tier": "💪 人上人",
+      "score": 0.0716,
+      "rank_pct": 0.35
+    },
+    {
+      "ticker": "AAOI",
       "tier": "🔥 夯死了",
-      "score": 0.0,
+      "score": 1.6451,
+      "rank_pct": 0.025
+    },
+    {
+      "ticker": "CAMT",
+      "tier": "🔥 夯死了",
+      "score": 1.0997,
+      "rank_pct": 0.05
+    },
+    {
+      "ticker": "KORU",
+      "tier": "🔥 夯死了",
+      "score": 1.1012,
+      "rank_pct": 0.0375
+    },
+    {
+      "ticker": "MXL",
+      "tier": "🔥 夯死了",
+      "score": 3.2979,
       "rank_pct": 0.0
+    },
+    {
+      "ticker": "WOLF",
+      "tier": "🔥 夯死了",
+      "score": 3.2533,
+      "rank_pct": 0.0125
+    },
+    {
+      "ticker": "ADI",
+      "tier": "😐 NPC",
+      "score": -0.169,
+      "rank_pct": 0.525
+    },
+    {
+      "ticker": "AKAM",
+      "tier": "😐 NPC",
+      "score": -0.2691,
+      "rank_pct": 0.6
+    },
+    {
+      "ticker": "AMAT",
+      "tier": "😐 NPC",
+      "score": -0.285,
+      "rank_pct": 0.6125
+    },
+    {
+      "ticker": "AMD",
+      "tier": "😐 NPC",
+      "score": -0.1346,
+      "rank_pct": 0.5125
+    },
+    {
+      "ticker": "AMSC",
+      "tier": "😐 NPC",
+      "score": -0.3133,
+      "rank_pct": 0.675
+    },
+    {
+      "ticker": "ANET",
+      "tier": "😐 NPC",
+      "score": -0.3978,
+      "rank_pct": 0.775
+    },
+    {
+      "ticker": "CEG",
+      "tier": "😐 NPC",
+      "score": -0.3028,
+      "rank_pct": 0.625
+    },
+    {
+      "ticker": "CRWV",
+      "tier": "😐 NPC",
+      "score": -0.3225,
+      "rank_pct": 0.6875
+    },
+    {
+      "ticker": "ENPH",
+      "tier": "😐 NPC",
+      "score": -0.2456,
+      "rank_pct": 0.575
+    },
+    {
+      "ticker": "FORM",
+      "tier": "😐 NPC",
+      "score": -0.2647,
+      "rank_pct": 0.5875
+    },
+    {
+      "ticker": "GEV",
+      "tier": "😐 NPC",
+      "score": -0.3465,
+      "rank_pct": 0.7125
+    },
+    {
+      "ticker": "GOOG",
+      "tier": "😐 NPC",
+      "score": -0.4031,
+      "rank_pct": 0.7875
+    },
+    {
+      "ticker": "JBL",
+      "tier": "😐 NPC",
+      "score": -0.3556,
+      "rank_pct": 0.725
+    },
+    {
+      "ticker": "LRCX",
+      "tier": "😐 NPC",
+      "score": -0.3071,
+      "rank_pct": 0.6375
+    },
+    {
+      "ticker": "MRVL",
+      "tier": "😐 NPC",
+      "score": -0.375,
+      "rank_pct": 0.7375
+    },
+    {
+      "ticker": "NVMI",
+      "tier": "😐 NPC",
+      "score": -0.3088,
+      "rank_pct": 0.6625
+    },
+    {
+      "ticker": "NVT",
+      "tier": "😐 NPC",
+      "score": -0.2089,
+      "rank_pct": 0.55
+    },
+    {
+      "ticker": "NXPI",
+      "tier": "😐 NPC",
+      "score": -0.3767,
+      "rank_pct": 0.75
+    },
+    {
+      "ticker": "PLAB",
+      "tier": "😐 NPC",
+      "score": -0.3071,
+      "rank_pct": 0.65
+    },
+    {
+      "ticker": "QCOM",
+      "tier": "😐 NPC",
+      "score": -0.3955,
+      "rank_pct": 0.7625
+    },
+    {
+      "ticker": "SIMO",
+      "tier": "😐 NPC",
+      "score": -0.1953,
+      "rank_pct": 0.5375
+    },
+    {
+      "ticker": "TLN",
+      "tier": "😐 NPC",
+      "score": -0.3399,
+      "rank_pct": 0.7
+    },
+    {
+      "ticker": "VICR",
+      "tier": "😐 NPC",
+      "score": -0.4055,
+      "rank_pct": 0.8
+    },
+    {
+      "ticker": "VRT",
+      "tier": "😐 NPC",
+      "score": -0.2346,
+      "rank_pct": 0.5625
     }
   ]
 }
