@@ -9,7 +9,7 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 0.1346,
+          "metric": 0.1362,
           "meta": {
             "shares": 17.0,
             "last_close": 989.0399780273438,
@@ -19,7 +19,7 @@
         {
           "rank": 2,
           "ticker": "LITE",
-          "metric": 0.1275,
+          "metric": 0.129,
           "meta": {
             "shares": 16.0,
             "last_close": 995.4099731445312,
@@ -29,7 +29,7 @@
         {
           "rank": 3,
           "ticker": "ALAB",
-          "metric": 0.0986,
+          "metric": 0.0998,
           "meta": {
             "shares": 38.0,
             "last_close": 324.1099853515625,
@@ -157,7 +157,7 @@
           "metric": -0.1182,
           "meta": {
             "intraday_amp": 0.053781513592770495,
-            "vol_ratio_20": 1.6552426477911597
+            "vol_ratio_20": 1.7016016560041203
           }
         },
         {
@@ -209,7 +209,7 @@
           "metric": 0.0032,
           "meta": {
             "intraday_amp": 0.015810959097354815,
-            "vol_ratio_20": 0.7122335909990825
+            "vol_ratio_20": 0.7134117828313437
           }
         }
       ]
@@ -233,7 +233,7 @@
           "ticker": "WDC",
           "metric": 0.0169,
           "meta": {
-            "vol_ratio_20": 0.6101006318214445,
+            "vol_ratio_20": 0.6139176450832581,
             "pct_change": -0.02602697434973277
           }
         },
@@ -242,7 +242,7 @@
           "ticker": "NVDA",
           "metric": 0.0173,
           "meta": {
-            "vol_ratio_20": 0.6627713362295281,
+            "vol_ratio_20": 0.6682673250806592,
             "pct_change": -0.012909941865131417
           }
         }
@@ -273,11 +273,11 @@
         },
         {
           "rank": 3,
-          "ticker": "ORCL",
-          "metric": -0.0295,
+          "ticker": "LSRCY",
+          "metric": -0.0298,
           "meta": {
-            "gap": 0.0011315676733798866,
-            "pct_change": -0.028359226873599163
+            "gap": 0.008264462809917356,
+            "pct_change": -0.021818176773954027
           }
         }
       ]
@@ -382,6 +382,16 @@
       "winners": [
         {
           "rank": 1,
+          "ticker": "AAOI",
+          "metric": -1737.69,
+          "meta": {
+            "shares": 30.0,
+            "avg_cost": 158.603,
+            "last_close": 100.68000030517578
+          }
+        },
+        {
+          "rank": 2,
           "ticker": "LWLG",
           "metric": -1278.0,
           "meta": {
@@ -391,23 +401,13 @@
           }
         },
         {
-          "rank": 2,
+          "rank": 3,
           "ticker": "VRT",
           "metric": -1012.8,
           "meta": {
             "shares": 20.0,
             "avg_cost": 290.0,
             "last_close": 239.36000061035156
-          }
-        },
-        {
-          "rank": 3,
-          "ticker": "NVTS",
-          "metric": -915.98,
-          "meta": {
-            "shares": 130.0,
-            "avg_cost": 17.036,
-            "last_close": 9.989999771118164
           }
         }
       ]
@@ -448,11 +448,11 @@
     }
   ],
   "tier_distribution": {
-    "☠️ 答辩": 26,
-    "🔥 夯死了": 4,
-    "😐 NPC": 15,
+    "☠️ 答辩": 27,
+    "👑 顶级": 12,
     "💪 人上人": 23,
-    "👑 顶级": 12
+    "🔥 夯死了": 5,
+    "😐 NPC": 14
   },
   "tier_movers": [
     {
@@ -466,6 +466,12 @@
       "prev": "💩 拉完了",
       "now": "🔥 夯死了",
       "delta": 4
+    },
+    {
+      "ticker": "ADI",
+      "prev": "😐 NPC",
+      "now": "🔥 夯死了",
+      "delta": 3
     },
     {
       "ticker": "CEG",
@@ -508,12 +514,6 @@
       "prev": "💩 拉完了",
       "now": "👑 顶级",
       "delta": 3
-    },
-    {
-      "ticker": "ADI",
-      "prev": "😐 NPC",
-      "now": "👑 顶级",
-      "delta": 2
     },
     {
       "ticker": "ASX",
@@ -600,6 +600,12 @@
       "delta": 1
     },
     {
+      "ticker": "MRVL",
+      "prev": "💪 人上人",
+      "now": "👑 顶级",
+      "delta": 1
+    },
+    {
       "ticker": "NBIS",
       "prev": "💩 拉完了",
       "now": "😐 NPC",
@@ -660,6 +666,12 @@
       "delta": -1
     },
     {
+      "ticker": "INTC",
+      "prev": "👑 顶级",
+      "now": "💪 人上人",
+      "delta": -1
+    },
+    {
       "ticker": "KLIC",
       "prev": "💪 人上人",
       "now": "😐 NPC",
@@ -693,12 +705,6 @@
       "ticker": "FORM",
       "prev": "😐 NPC",
       "now": "☠️ 答辩",
-      "delta": -2
-    },
-    {
-      "ticker": "INTC",
-      "prev": "👑 顶级",
-      "now": "😐 NPC",
       "delta": -2
     },
     {
