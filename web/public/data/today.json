@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "awards": [
     {
       "code": "big_position",
@@ -9,31 +9,31 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 0.1402,
+          "metric": 0.1415,
           "meta": {
             "shares": 17.0,
-            "last_close": 878.8400268554688,
-            "market_value": 14940.280456542969
+            "last_close": 904.9000244140625,
+            "market_value": 15383.300415039062
           }
         },
         {
           "rank": 2,
           "ticker": "LITE",
-          "metric": 0.1237,
+          "metric": 0.1229,
           "meta": {
             "shares": 16.0,
-            "last_close": 824.1300048828125,
-            "market_value": 13186.080078125
+            "last_close": 834.510009765625,
+            "market_value": 13352.16015625
           }
         },
         {
           "rank": 3,
           "ticker": "ALAB",
-          "metric": 0.1019,
+          "metric": 0.1002,
           "meta": {
             "shares": 38.0,
-            "last_close": 285.82000732421875,
-            "market_value": 10861.160278320312
+            "last_close": 286.5799865722656,
+            "market_value": 10890.039489746094
           }
         }
       ]
@@ -46,31 +46,31 @@
         {
           "rank": 1,
           "ticker": "ALAB",
-          "metric": 0.9599,
+          "metric": 0.9652,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 285.82000732421875
+            "last_close": 286.5799865722656
           }
         },
         {
           "rank": 2,
           "ticker": "MU",
-          "metric": 0.6708,
+          "metric": 0.7203,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 878.8400268554688
+            "last_close": 904.9000244140625
           }
         },
         {
           "rank": 3,
           "ticker": "MRVL",
-          "metric": 0.4699,
+          "metric": 0.5296,
           "meta": {
             "shares": 10.0,
             "avg_cost": 155.0,
-            "last_close": 227.8300018310547
+            "last_close": 237.08999633789062
           }
         }
       ]
@@ -83,31 +83,31 @@
         {
           "rank": 1,
           "ticker": "MU",
-          "metric": 5998.0595,
+          "metric": 6441.0794,
           "meta": {
             "shares": 17.0,
             "avg_cost": 526.013,
-            "last_close": 878.8400268554688
+            "last_close": 904.9000244140625
           }
         },
         {
           "rank": 2,
           "ticker": "ALAB",
-          "metric": 5319.5823,
+          "metric": 5348.4615,
           "meta": {
             "shares": 38.0,
             "avg_cost": 145.831,
-            "last_close": 285.82000732421875
+            "last_close": 286.5799865722656
           }
         },
         {
           "rank": 3,
           "ticker": "SNDK",
-          "metric": 1346.5002,
+          "metric": 1705.6,
           "meta": {
             "shares": 5.0,
             "avg_cost": 1030.0,
-            "last_close": 1299.300048828125
+            "last_close": 1371.1199951171875
           }
         }
       ]
@@ -120,10 +120,19 @@
         {
           "rank": 1,
           "ticker": "SIVEF",
-          "metric": 0.0,
+          "metric": 0.0437,
           "meta": {
-            "pct_change": 0.004444440205891927,
-            "fade": -0.05833337472544611
+            "pct_change": 0.05752217477411158,
+            "fade": -0.02448977208643987
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "LSRCY",
+          "metric": 0.0203,
+          "meta": {
+            "pct_change": 0.009242497091456236,
+            "fade": -0.004558056805575778
           }
         }
       ]
@@ -136,19 +145,19 @@
         {
           "rank": 1,
           "ticker": "LSRCY",
-          "metric": -0.0066,
+          "metric": 0.0092,
           "meta": {
-            "intraday_amp": 0.02475053325814598,
-            "vol_ratio_20": 0.11138837545203116
+            "intraday_amp": 0.02471367351664268,
+            "vol_ratio_20": 0.4612934385133736
           }
         },
         {
           "rank": 2,
           "ticker": "SIVEF",
-          "metric": 0.0044,
+          "metric": 0.0575,
           "meta": {
-            "intraday_amp": 0.062222268846299916,
-            "vol_ratio_20": 0.25872821255420586
+            "intraday_amp": 0.0707964984539188,
+            "vol_ratio_20": 0.23715306051456464
           }
         }
       ]
@@ -161,19 +170,19 @@
         {
           "rank": 1,
           "ticker": "SIVEF",
-          "metric": 0.0044,
+          "metric": 0.0575,
           "meta": {
-            "intraday_amp": 0.062222268846299916,
-            "vol_ratio_20": 0.25872821255420586
+            "intraday_amp": 0.0707964984539188,
+            "vol_ratio_20": 0.23715306051456464
           }
         },
         {
           "rank": 2,
           "ticker": "LSRCY",
-          "metric": -0.0066,
+          "metric": 0.0092,
           "meta": {
-            "intraday_amp": 0.02475053325814598,
-            "vol_ratio_20": 0.11138837545203116
+            "intraday_amp": 0.02471367351664268,
+            "vol_ratio_20": 0.4612934385133736
           }
         }
       ]
@@ -186,19 +195,19 @@
         {
           "rank": 1,
           "ticker": "LSRCY",
-          "metric": 0.0248,
+          "metric": 0.0247,
           "meta": {
-            "vol_ratio_20": 0.11138837545203116,
-            "pct_change": -0.0065867869542527175
+            "vol_ratio_20": 0.4612934385133736,
+            "pct_change": 0.009242497091456236
           }
         },
         {
           "rank": 2,
           "ticker": "SIVEF",
-          "metric": 0.0622,
+          "metric": 0.0708,
           "meta": {
-            "vol_ratio_20": 0.25872821255420586,
-            "pct_change": 0.004444440205891927
+            "vol_ratio_20": 0.23715306051456464,
+            "pct_change": 0.05752217477411158
           }
         }
       ]
@@ -211,10 +220,10 @@
         {
           "rank": 1,
           "ticker": "SIVEF",
-          "metric": -0.0583,
+          "metric": -0.0245,
           "meta": {
-            "gap": 0.06666670905219184,
-            "pct_change": 0.004444440205891927
+            "gap": 0.013274323679807222,
+            "pct_change": 0.05752217477411158
           }
         }
       ]
@@ -226,10 +235,18 @@
       "winners": [
         {
           "rank": 1,
-          "ticker": "SIVEF",
-          "metric": 0.2587,
+          "ticker": "LSRCY",
+          "metric": 0.4613,
           "meta": {
-            "pct_change": 0.004444440205891927
+            "pct_change": 0.009242497091456236
+          }
+        },
+        {
+          "rank": 2,
+          "ticker": "SIVEF",
+          "metric": 0.2372,
+          "meta": {
+            "pct_change": 0.05752217477411158
           }
         }
       ]
@@ -242,17 +259,17 @@
         {
           "rank": 1,
           "ticker": "SIVEF",
-          "metric": 0.0622,
+          "metric": 0.0708,
           "meta": {
-            "pct_change": 0.004444440205891927
+            "pct_change": 0.05752217477411158
           }
         },
         {
           "rank": 2,
           "ticker": "LSRCY",
-          "metric": 0.0248,
+          "metric": 0.0247,
           "meta": {
-            "pct_change": -0.0065867869542527175
+            "pct_change": 0.009242497091456236
           }
         }
       ]
@@ -265,39 +282,39 @@
         {
           "rank": 1,
           "ticker": "AAOI",
-          "metric": -2490.99,
+          "metric": -2412.0901,
           "meta": {
             "shares": 30.0,
             "avg_cost": 158.603,
-            "last_close": 75.56999969482422
+            "last_close": 78.19999694824219
           }
         },
         {
           "rank": 2,
-          "ticker": "WDC",
-          "metric": -1705.0,
+          "ticker": "VRT",
+          "metric": -1678.4,
           "meta": {
             "shares": 20.0,
-            "avg_cost": 417.25,
-            "last_close": 332.0
+            "avg_cost": 290.0,
+            "last_close": 206.0800018310547
           }
         },
         {
           "rank": 3,
-          "ticker": "VRT",
-          "metric": -1671.6,
+          "ticker": "LWLG",
+          "metric": -1356.0,
           "meta": {
-            "shares": 20.0,
-            "avg_cost": 290.0,
-            "last_close": 206.4199981689453
+            "shares": 150.0,
+            "avg_cost": 13.0,
+            "last_close": 3.9600000381469727
           }
         }
       ]
     }
   ],
   "tier_distribution": {
-    "🔥 夯死了": 1,
-    "💩 拉完了": 1
+    "💩 拉完了": 1,
+    "🔥 夯死了": 1
   },
   "tier_movers": [
     {
